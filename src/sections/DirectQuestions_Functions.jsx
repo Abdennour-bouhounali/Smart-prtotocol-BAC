@@ -15,7 +15,7 @@ const DirectQuestions_Functions = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -29,14 +29,14 @@ const DirectQuestions_Functions = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         1
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <span>{" احسب النهايات التالية:"}</span>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ const DirectQuestions_Functions = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -80,7 +80,7 @@ const DirectQuestions_Functions = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -94,14 +94,14 @@ const DirectQuestions_Functions = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         2
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <span>{" أجب عما يلي بخصوص المقاربات والوضع النسبي:"}</span>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ const DirectQuestions_Functions = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -144,7 +144,7 @@ const DirectQuestions_Functions = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -158,14 +158,14 @@ const DirectQuestions_Functions = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         3
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <span>{" عين الدالة المشتقة في كل حالة مما يلي:"}</span>
                     </div>
                 </div>
@@ -174,7 +174,7 @@ const DirectQuestions_Functions = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -210,7 +210,7 @@ const DirectQuestions_Functions = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -224,14 +224,14 @@ const DirectQuestions_Functions = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         4
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <span>{" مسائل البرهان ونظرية القيم المتوسطة:"}</span>
                     </div>
                 </div>
@@ -240,7 +240,7 @@ const DirectQuestions_Functions = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -281,7 +281,7 @@ const DirectQuestions_Functions = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -295,14 +295,14 @@ const DirectQuestions_Functions = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         5
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         
                         <span>{" ناقش بيانياً عدد وإشارة حلول المعادلات التالية:"}</span>
                     </div>
@@ -313,7 +313,7 @@ const DirectQuestions_Functions = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -384,7 +384,7 @@ const DirectQuestions_Functions = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -398,14 +398,14 @@ const DirectQuestions_Functions = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         6
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <span>{" دراسة اتجاه التغير والتركيب:"}</span>
                     </div>
                 </div>
@@ -414,7 +414,7 @@ const DirectQuestions_Functions = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -446,7 +446,7 @@ const DirectQuestions_Functions = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -460,14 +460,14 @@ const DirectQuestions_Functions = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         7
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <strong style={{ color: '#475569' }}>المعطيات:</strong> <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = (x+1)e^{-x}\\)"}</span>
                     </div>
                 </div>
@@ -476,7 +476,7 @@ const DirectQuestions_Functions = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -500,7 +500,7 @@ const DirectQuestions_Functions = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -514,14 +514,14 @@ const DirectQuestions_Functions = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         8
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <strong style={{ color: '#475569' }}>المعطيات:</strong> <span>{"لتكن الدالة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = \\frac{x^2+3}{x+1}\\)"}</span><span>{" ولتكن النقطة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(A(0, -1)\\)"}</span><span>{"."}</span>
                     </div>
                 </div>
@@ -530,7 +530,7 @@ const DirectQuestions_Functions = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -554,7 +554,7 @@ const DirectQuestions_Functions = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -568,14 +568,14 @@ const DirectQuestions_Functions = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         9
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <strong style={{ color: '#475569' }}>المعطيات:</strong> <span>{"لتكن الدالة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = \\frac{2x^2-4x+5}{x-1}\\)"}</span><span>{"."}</span>
                     </div>
                 </div>
@@ -584,7 +584,7 @@ const DirectQuestions_Functions = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -608,7 +608,7 @@ const DirectQuestions_Functions = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -622,7 +622,7 @@ const DirectQuestions_Functions = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
@@ -634,7 +634,7 @@ const DirectQuestions_Functions = () => {
                         lineHeight: '1.7',
                         color: '#1e3a5f',
                         fontWeight: '600',
-                        fontSize: '10pt',
+                        fontSize: '11pt',
                         paddingRight: '0px',
                         direction: 'rtl',
                         textAlign: 'right',
@@ -656,7 +656,7 @@ const DirectQuestions_Functions = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -670,14 +670,14 @@ const DirectQuestions_Functions = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         11
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <strong style={{ color: '#475569' }}>المعطيات:</strong> <span>{"لتكن الدالة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = \\ln|x|\\)"}</span><span>{" و "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(k(x) = |f(|x|)|\\)"}</span><span>{"."}</span>
                     </div>
                 </div>
@@ -686,7 +686,7 @@ const DirectQuestions_Functions = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',

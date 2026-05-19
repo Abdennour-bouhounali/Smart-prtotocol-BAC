@@ -10,25 +10,11 @@ const Exercice4 = () => {
             {/* ============================================================
                 STATEMENT
             ============================================================ */}
-            <div className="exercise-statement_2" style={{
-                backgroundColor: '#ffffff',
-                border: '2px solid #000000',
-                padding: '25px',
-                margin: '20px 0',
-                fontFamily: '"Times New Roman", Times, serif, "Cairo", "Amiri"',
-                fontSize: '13pt',
-                lineHeight: '1.8',
-                direction: 'rtl',
-                textAlign: 'right',
-                color: '#000000',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
-            }}>
-                <div style={{ textAlign: 'right', fontWeight: 'bold', fontSize: '15pt', borderBottom: '2px double #000000', paddingBottom: '5px', marginBottom: '15px' }}>
-                    التمرين الرابع: (06,5 نقطة)
-                </div>
+            <div className="exercise-statement_2">
+
 
                 {/* Part I */}
-                <div style={{ marginBottom: '20px' }}>
+                <div style={{ marginBottom: '5x' }}>
                     <strong>I)</strong> <span className="math">{"\\(g\\)"}</span> الدالة العددية المعرفة على المجال <span className="math">{"\\(]0; +\\infty[\\)"}</span> بـ: <span className="math">{"\\(g(x) = 1 + x^2 + 2\\ln x\\)"}</span>.
                     <div style={{ paddingRight: '20px', marginTop: '5px' }}>
                         1) ادرس اتجاه تغير الدالة <span className="math">{"\\(g\\)"}</span>.
@@ -40,9 +26,9 @@ const Exercice4 = () => {
                 </div>
 
                 {/* Part II */}
-                <div style={{ marginBottom: '20px' }}>
+                <div style={{ marginBottom: '5px' }}>
                     <strong>II)</strong> <span className="math">{"\\(f\\)"}</span> الدالة العددية المعرفة على المجال <span className="math">{"\\(]0; +\\infty[\\)"}</span> بـ: <span className="math">{"\\(f(x) = -x + \\dfrac{3+2\\ln x}{x}\\)"}</span>.
-                    <br />
+
                     <span className="math">{"\\((C_f)\\)"}</span> تمثيلها البياني في المستوي المنسوب إلى المعلم المتعامد و المتجانس <span className="math">{"\\((O;\\vec{i},\\vec{j})\\)"}</span>.
                     <div style={{ paddingRight: '20px', marginTop: '5px' }}>
                         1) احسب <span className="math">{"\\(\\lim_{x\\to0^+} f(x)\\)"}</span> و <span className="math">{"\\(\\lim_{x\\to+\\infty} f(x)\\)"}</span>.
@@ -72,7 +58,7 @@ const Exercice4 = () => {
                 {/* Part III */}
                 <div>
                     <strong>III)</strong> من أجل كل عدد طبيعي <span className="math">{"\\(n\\)"}</span> نضع: <span className="math">{"\\(u_n = \\int_{e^n}^{e^{n+1}} [f(x)+x]dx\\)"}</span>.
-                    <div style={{ paddingRight: '20px', marginTop: '5px' }}>
+                    <div style={{ paddingRight: '20px', marginTop: '0px' }}>
                         1) بيّن أنّه من أجل كل عدد طبيعي <span className="math">{"\\(n\\)"}</span>: <span className="math">{"\\(u_n > 0\\)"}</span>.
                         <br />
                         2) أعطِ تفسيراً هندسياً للعدد <span className="math">{"\\(u_0\\)"}</span>.
@@ -2100,7 +2086,7 @@ const Exercice4 = () => {
                     مع المستقيمات
                     <span className="math">{"\\((D_m)\\)"}</span> ذوات المعادلة
                     <span className="math">{"\\(y = -x + m\\)"}</span>.
-                    
+
                     <div className="why-box" style={{ margin: '8px 0', borderRight: '4px solid #3498db', padding: '6px 12px', background: '#ebf5fb', borderRadius: '4px' }}>
                         <strong>لماذا قمنا بالقسمة والربط؟</strong><br />
                         لأن الوسيط

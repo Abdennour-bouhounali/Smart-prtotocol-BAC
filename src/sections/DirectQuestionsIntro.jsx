@@ -45,10 +45,10 @@ const DirectQuestionsIntro = () => {
                     <div className="col-header right-h">الحل التفصيلي</div>
                 </div>
                 <div className="step-row-two" style={{ borderBottom: '1px solid #ddd' }}>
-                    <div className="left-col" style={{ fontSize: '10pt' }}>
+                    <div className="left-col" style={{ fontSize: '11pt' }}>
                         يشرح لك <strong>"كيف أفكر"</strong>. هنا نطبق مراحل SMART (تحديد الهدف، الترجمة، الربط..). نخبرك لماذا اخترنا هذه الطريقة دون غيرها، وما هي الفخاخ التي تجنبناها.
                     </div>
-                    <div className="right-col" style={{ fontSize: '10pt' }}>
+                    <div className="right-col" style={{ fontSize: '11pt' }}>
                         هو ما تكتبه في ورقة الامتحان. خطوات رياضية جافة، دقيقة، ومنظمة.
                     </div>
                 </div>

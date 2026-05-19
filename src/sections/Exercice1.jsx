@@ -110,7 +110,7 @@ const Exercice1 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أعوّض في قانون الكسر للحصول على عبارة <strong>واضحة الإشارة</strong>. أتذكر أن <span className="math">{"\\(v'=-1\\)"}</span> سيحوّل الطرح إلى جمع في البسط.
                     </div>
                     أفتح الأقواس:<br />
@@ -129,7 +129,7 @@ const Exercice1 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#f0fdf4", border: "1px dashed #16a34a", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#15803d", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#f0fdf4", border: "1px dashed #16a34a", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#15803d", fontSize: '11pt' }}>
                         <strong>✅ تحقيق الهدف:</strong> بسط موجب (<span className="math">{"\\(6>0\\)"}</span>) ومقام موجب صرف على <span className="math">{"\\(I\\)"}</span> (<span className="math">{"\\(x\\neq 4\\)"}</span>) ← <span className="math">{"\\(f'(x)>0\\)"}</span>. الهدف محقق!
                     </div>
                     <strong>فلتر المنطق:</strong> دالة كسرية بعيدة عن القطب — منطقي أن تكون متزايدة. الرابط للأمام: هذه النتيجة تُفعّل الطريقة السريعة في السؤال 1ب.
@@ -199,7 +199,7 @@ const Exercice1 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أحسب <span className="math">{"\\(f(1)\\)"}</span> و<span className="math">{"\\(f(2)\\)"}</span> <strong>فقط</strong> لأن التزايد يضمن أن كل قيمة وسطية محصورة بينهما تلقائياً.
                     </div>
                     • <span className="math">{"\\(f(1)\\)"}</span>: البسط <span className="math">{"\\(3\\)"}</span>، المقام <span className="math">{"\\(3\\)"}</span> ← <span className="math">{"\\(1\\)"}</span>.<br />
@@ -221,7 +221,7 @@ const Exercice1 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#f0fdf4", border: "1px dashed #16a34a", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#15803d", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#f0fdf4", border: "1px dashed #16a34a", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#15803d", fontSize: '11pt' }}>
                         <strong>✅ تحقيق الهدف:</strong> وجدنا أن <span className="math">{"\\(f(1)=1\\)"}</span> و<span className="math">{"\\(f(2)=2\\)"}</span>. وبما أن الدالة متزايدة، فكل قيمها للمجال <span className="math">{"\\([1, 2]\\)"}</span> محصورة بين 1 و 2.
                     </div>
                 </div>
@@ -286,7 +286,7 @@ const Exercice1 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> نبدأ بالتحقق من <span className="math">{"\\(n=0\\)"}</span> ثم ننتقل لبناء الجسر الوراثي.
                     </div>
                     <strong>1. من أجل <span className="math">{"\\(n=0\\)"}</span>:</strong> لدينا <span className="math">{"\\(u_0=1.5\\)"}</span> وهو ينتمي لـ <span className="math">{"\\([1, 2]\\)"}</span>. (محققة).<br /><br />
@@ -305,7 +305,7 @@ const Exercice1 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#f0fdf4", border: "1px dashed #16a34a", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#15803d", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#f0fdf4", border: "1px dashed #16a34a", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#15803d", fontSize: '11pt' }}>
                         <strong>✅ تحقيق الهدف:</strong> تم التحقق من البداية والوراثة. إذن الخاصية صادقة دوماً.
                     </div>
                 </div>
@@ -363,7 +363,7 @@ const Exercice1 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> نوحد المقامات ونحلل البسط للوصول إلى جداء يسهل دراسة إشارته.
                     </div>
                     بعد الحساب نجد:<br />
@@ -386,7 +386,7 @@ const Exercice1 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#f0fdf4", border: "1px dashed #16a34a", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#15803d", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#f0fdf4", border: "1px dashed #16a34a", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#15803d", fontSize: '11pt' }}>
                         <strong>✅ تحقيق الهدف:</strong> المتتالية متناقصة ومحدودة من الأسفل بـ 1، فهي إذن متقاربة حسب نظرية التقارب الرتيب.
                     </div>
                 </div>
@@ -514,7 +514,7 @@ const Exercice1 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> نريد التحقق من صحة الصيغة الصريحة عند <span className="math">{"\\(n=0\\)"}</span>.
                     </div>
                     <strong>1. الأساس (<span className="math">{"\\(n=0\\)"}</span>):</strong><br />
@@ -530,7 +530,7 @@ const Exercice1 = () => {
 
             <div className="step-row-two">
                 <div className="left-col">
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> ننتقل للوراثة. نفرض صحة الصيغة لـ <span className="math">{"\\(n\\)"}</span> ونثبتها لـ <span className="math">{"\\(n+1\\)"}</span>.
                     </div>
                     <strong>2. الفرضية:</strong> نفترض <span className="math">{"\\(u_n = 1 + \\frac{1}{a}\\)"}</span> حيث <span className="math">{"\\(a = (3/2)^n + 1\\)"}</span>.<br /><br />
@@ -572,7 +572,7 @@ const Exercice1 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#f0fdf4", border: "1px dashed #16a34a", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#15803d", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#f0fdf4", border: "1px dashed #16a34a", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#15803d", fontSize: '11pt' }}>
                         <strong>✅ تحقيق الهدف:</strong> الصيغة الصريحة برهنت بالتراجع. نلاحظ انسجامها مع الرتابة (المقام يزداد فالمقدار يقل).
                     </div>
                 </div>
@@ -607,7 +607,7 @@ const Exercice1 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> حساب نهاية المقام أولاً.
                     </div>
                     بما أن <span className="math">{"\\(3/2 > 1\\)"}</span> فإن <span className="math">{"\\((3/2)^n\\)"}</span> تؤول للمالانهاية.<br />
@@ -623,7 +623,7 @@ const Exercice1 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#f0fdf4", border: "1px dashed #16a34a", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#15803d", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#f0fdf4", border: "1px dashed #16a34a", padding: "5px", borderRadius: "5px", marginBottom: "4px", color: "#15803d", fontSize: '11pt' }}>
                         <strong>✅ تحقيق الهدف:</strong> النهاية هي 1، وهي تتوافق مع كون المتتالية متناقصة ومحدودة من الأسفل بـ 1. كما أنها تمثل نقطة ثبات الدالة <span className="math">{"\\(f(1)=1\\)"}</span>.
                     </div>
                 </div>

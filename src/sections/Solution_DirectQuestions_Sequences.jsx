@@ -39,7 +39,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أتحقق من الأساس، ثم أفرض صحة <span className="math">{"\\(P(n)\\)"}</span> وأبرهن <span className="math">{"\\(P(n+1)\\)"}</span> بدراسة اتجاه تغير الدالة المرفقة.
                     </div>
                     أولاً: <span className="math">{"\\(n=0\\)"}</span>، <span className="math">{"\\(u_0=1/2\\)"}</span> محققة.<br />
@@ -54,7 +54,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>✅ تحقيق الهدف:</strong> إدخال الدالة المتزايدة على الحصر أوصلنا للنتيجة بدقة متناهية.
                     </div>
                     لدينا <span className="math">{"\\(0 < u_n < 1\\)"}</span> <span className="math">{"\\(\\implies f(0) < f(u_n) < f(1)\\)"}</span>.
@@ -83,7 +83,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> بدلاً من برهان كل خاصية على حدة، سأقوم بجمع الخاصيتين في متباينة واحدة " <span className="math">{"\\(u_n < u_{n+1} < 2\\)"}</span> ".
                     </div>
                     الأساس: <span className="math">{"\\(u_0=1\\)"}</span> و <span className="math">{"\\(u_1=\\sqrt{3}\\)"}</span>.<br />
@@ -99,7 +99,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>✅ تحقيق الهدف:</strong> الجذر يحافظ على المتباينة ونصل بدقة للمطلوب.
                     </div>
                 </div>
@@ -126,7 +126,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أفرض صحة الحصر للحد <span className="math">{"\\(n\\)"}</span>، وأستعمل المعطى <span className="math">{"\\(u_{n+1} \\le \\frac{3}{4} u_n\\)"}</span> كجسر عبور لبرهنتها للحد <span className="math">{"\\(n+1\\)"}</span>.
                     </div>
                     أضرب الفرضية في <span className="math">{"\\(3/4\\)"}</span> للحصول على <span className="math">{"\\(\\frac{3}{4} u_n \\le (\\frac{3}{4})^{n+1}\\)"}</span>.
@@ -180,7 +180,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أدرس إشارة كثيرة الحدود في البسط وأتقاطع مع مجال <span className="math">{"\\(u_n\\)"}</span> لاستنتاج الإشارة.
                     </div>
                     جذرا <span className="math">{"\\(-x^2+x+2\\)"}</span> هما <span className="math">{"\\(-1\\)"}</span> و <span className="math">{"\\(2\\)"}</span>.
@@ -267,7 +267,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أبدأ بحساب <span className="math">{"\\(v_{n+1}\\)"}</span> بتعويض <span className="math">{"\\(u_{n+1} = \\frac{2u_n+3}{u_n+4}\\)"}</span>، أوحد المقامات، ثم أبحث عن الشرط الذي يجعل النسبة ثابتة.
                     </div>
                     أعوض <span className="math">{"\\(u_{n+1}\\)"}</span> في تعريف <span className="math">{"\\(v_n\\)"}</span> وأضرب البسط والمقام في <span className="math">{"\\((u_n+4)\\)"}</span> لإزالة الكسور.
@@ -379,7 +379,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أحسب المجموع الجديد في الأس الذي يمثل مجموع متتالية حسابية، ثم أرفعه كأس للعدد 2.
                     </div>
                 </div>
@@ -447,7 +447,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أكتب الحد العام بدلالة طرح حدين متعاقبين من متتالية جديدة، لكي تتساقط الحدود عند جمعها.
                     </div>
                 </div>
@@ -527,7 +527,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أختار <span className="math">{"\\(u\\)"}</span> لتقليل درجتها بالاشتقاق وتوليد الحد المألوف <span className="math">{"\\(x^n\\)"}</span>.
                     </div>
                     أشتق <span className="math">{"\\(x^{n+1}\\)"}</span> لأحصل على <span className="math">{"\\(n+1\\)"}</span> كعامل لـ <span className="math">{"\\(I_n\\)"}</span>.
@@ -604,7 +604,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أدرس المتتالية الفرقية <span className="math">{"\\(w_n = v_n - u_n\\)"}</span> وأثبت أنها هندسية متقاربة إلى الصفر لتأكيد التجاور.
                     </div>
                 </div>
@@ -644,7 +644,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 شرط الثبوت:</strong> <span className="math">{"\\(w_{n+1} = w_n\\)"}</span> يعني معامل <span className="math">{"\\(u_n\\)"}</span> يساوي <span className="math">{"\\(a\\)"}</span> ومعامل <span className="math">{"\\(v_n\\)"}</span> يساوي <span className="math">{"\\(b\\)"}</span>.
                     </div>
                     نحصل على جملة معادلتين في <span className="math">{"\\(a\\)"}</span> و<span className="math">{"\\(b\\)"}</span>، وسنرى أنهما متكافئتان.

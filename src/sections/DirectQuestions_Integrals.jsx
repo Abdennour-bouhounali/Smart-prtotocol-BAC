@@ -15,7 +15,7 @@ const DirectQuestions_Integrals = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -29,14 +29,14 @@ const DirectQuestions_Integrals = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         1
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <span>{" عين الدوال الأصلية للدوال التالية:"}</span>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ const DirectQuestions_Integrals = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -79,7 +79,7 @@ const DirectQuestions_Integrals = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -93,7 +93,7 @@ const DirectQuestions_Integrals = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
@@ -105,7 +105,7 @@ const DirectQuestions_Integrals = () => {
                         lineHeight: '1.7',
                         color: '#1e3a5f',
                         fontWeight: '600',
-                        fontSize: '10pt',
+                        fontSize: '11pt',
                         paddingRight: '0px',
                         direction: 'rtl',
                         textAlign: 'right',
@@ -126,7 +126,7 @@ const DirectQuestions_Integrals = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -140,7 +140,7 @@ const DirectQuestions_Integrals = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
@@ -152,7 +152,7 @@ const DirectQuestions_Integrals = () => {
                         lineHeight: '1.7',
                         color: '#1e3a5f',
                         fontWeight: '600',
-                        fontSize: '10pt',
+                        fontSize: '11pt',
                         paddingRight: '0px',
                         direction: 'rtl',
                         textAlign: 'right',
@@ -177,7 +177,7 @@ const DirectQuestions_Integrals = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -191,14 +191,14 @@ const DirectQuestions_Integrals = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         4
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <span>{" حل المعادلات التفاضلية التالية:"}</span>
                     </div>
                 </div>
@@ -207,7 +207,7 @@ const DirectQuestions_Integrals = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',

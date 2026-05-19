@@ -39,7 +39,7 @@ const Solution_DirectQuestions_Integrals = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أشتق <span className="math">{"\\(F(x)\\)"}</span> المجهولة كجداء دالتين وأطابق معاملاتها مع <span className="math">{"\\(x^2+1\\)"}</span>.
                     </div>
                     المشتقة: <span className="math">{"\\(F'(x) = [ax^2 + (2a+b)x + (b+c)]e^x\\)"}</span>.<br />
@@ -93,7 +93,7 @@ const Solution_DirectQuestions_Integrals = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أطبق قانون <span className="math">{"\\(u' u^n\\)"}</span> لرفع القوة بدرجة واحدة والقسمة عليها.
                     </div>
                 </div>
@@ -207,7 +207,7 @@ const Solution_DirectQuestions_Integrals = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أطبق القانون خطوة بخطوة للحصول على تكامل جديد أسهل حساباً.
                     </div>
                 </div>
@@ -271,7 +271,7 @@ const Solution_DirectQuestions_Integrals = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>✅ تحقيق الهدف:</strong> النتيجة <span className="math">{"\\(1 - \\ln 2\\)"}</span> عدد موجب (حوالي 0.3) وهذا منطقي جداً لمساحة.
                     </div>
                 </div>

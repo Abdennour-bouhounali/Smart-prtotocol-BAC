@@ -36,7 +36,7 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أنشر المتطابقة الشهيرة واستبدل <span className="math">{"\\(i^2\\)"}</span> بـ <span className="math">{"\\(-1\\)"}</span> لأصل إلى الجزء الحقيقي والتخيلي.
                     </div>
                     أحسب: <span className="math">{"\\(1 + 2i + i^2 = 1 + 2i - 1 = 2i\\)"}</span>.<br />
@@ -69,7 +69,7 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أضرب في <span className="math">{"\\((1-i)\\)"}</span> لتبسيط المقام إلى عدد حقيقي حقيقي (مجموع المربعات).
                     </div>
                 </div>

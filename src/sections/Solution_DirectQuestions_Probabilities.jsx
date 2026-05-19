@@ -48,7 +48,7 @@ const Solution_DirectQuestions_Probabilities = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أحسب عدد الحالات الملائمة (حالتين مستقلتين بينهما جمع) ثم أقسمها على عدد الحالات الممكنة.
                     </div>
                     حمراوين من أصل 5: <span className="math">{"\\(C_5^2 = 10\\)"}</span>.<br />
@@ -66,7 +66,7 @@ const Solution_DirectQuestions_Probabilities = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>✅ تحقيق الهدف:</strong> الاحتمال محصور بين 0 و 1 (حوالي 0.46) وهو منطقي.
                     </div>
                 </div>
@@ -106,7 +106,7 @@ const Solution_DirectQuestions_Probabilities = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أضرب كل قيمة في احتمالها لحساب <span className="math">{"\\(E(X)\\)"}</span>، ثم أربع القيم وأضربها في الاحتمالات لحساب <span className="math">{"\\(E(X^2)\\)"}</span>.
                     </div>
                     الأمل الرياضياتي: <span className="math">{"\\(0 \\times 0.2 + 1 \\times 0.5 + 2 \\times 0.3 = 1.1\\)"}</span>.<br />
@@ -129,7 +129,7 @@ const Solution_DirectQuestions_Probabilities = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: "0.85em" }}>
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>✅ تحقيق الهدف:</strong> التباين موجب تماماً وهذا يؤكد صحة الحساب (لو كان سالباً لعرفت بوجود خطأ حتمي).
                     </div>
                 </div>

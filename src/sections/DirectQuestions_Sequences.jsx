@@ -15,7 +15,7 @@ const DirectQuestions_Sequences = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -29,14 +29,14 @@ const DirectQuestions_Sequences = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         1
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <span>{" برهن بالتراجع صحة كل من الخاصيات التالية:"}</span>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ const DirectQuestions_Sequences = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -90,7 +90,7 @@ const DirectQuestions_Sequences = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -104,14 +104,14 @@ const DirectQuestions_Sequences = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         2
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <span>{" دراسة اتجاه التغير والنهايات:"}</span>
                     </div>
                 </div>
@@ -120,7 +120,7 @@ const DirectQuestions_Sequences = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -154,7 +154,7 @@ const DirectQuestions_Sequences = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -168,14 +168,14 @@ const DirectQuestions_Sequences = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         3
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <span>{" المتتاليات المساعدة والعبارات العامة:"}</span>
                     </div>
                 </div>
@@ -184,7 +184,7 @@ const DirectQuestions_Sequences = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -212,7 +212,7 @@ const DirectQuestions_Sequences = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -226,14 +226,14 @@ const DirectQuestions_Sequences = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         4
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <span>{" احسب المجاميع والجدائات التالية بدلالة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(n\\)"}</span><span>{":"}</span>
                     </div>
                 </div>
@@ -242,7 +242,7 @@ const DirectQuestions_Sequences = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -294,7 +294,7 @@ const DirectQuestions_Sequences = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -308,14 +308,14 @@ const DirectQuestions_Sequences = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         5
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <strong style={{ color: '#475569' }}>المعطيات:</strong> <span>{"لتكن المتتالية التكاملية "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(I_n = \\int_0^1 x^n e^x dx\\)"}</span><span>{"."}</span>
                     </div>
                 </div>
@@ -324,7 +324,7 @@ const DirectQuestions_Sequences = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',
@@ -360,7 +360,7 @@ const DirectQuestions_Sequences = () => {
                 border: '1px solid #e2e8f0',
                 marginBottom: '4px',
                 borderRight: '4px solid #1e3a5f',
-                fontSize: '10pt',
+                fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
@@ -374,14 +374,14 @@ const DirectQuestions_Sequences = () => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '9pt',
+                        fontSize: '11pt',
                         fontWeight: 'bold',
                         flexShrink: 0,
                         marginTop: '1px'
                     }}>
                         6
                     </span>
-                    <div style={{ lineHeight: '1.5', fontSize: '10pt', textAlign: 'right' }}>
+                    <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
                         <strong style={{ color: '#475569' }}>المعطيات:</strong> <span>{"لتكن "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(u_{n+1} = \\frac{u_n + v_n}{2}, v_{n+1} = \\frac{u_n + 2v_n}{3}\\)"}</span><span>{" مع "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(u_0 = 1, v_0 = 2\\)"}</span><span>{"."}</span>
                     </div>
                 </div>
@@ -390,7 +390,7 @@ const DirectQuestions_Sequences = () => {
                     lineHeight: '1.7',
                     color: '#1e3a5f',
                     fontWeight: '600',
-                    fontSize: '10pt',
+                    fontSize: '11pt',
                     paddingRight: '8px',
                     borderRight: '2px solid #93c5fd',
                     direction: 'rtl',

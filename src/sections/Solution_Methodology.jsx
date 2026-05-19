@@ -21,7 +21,7 @@ const SolutionCard = ({ number, phase, title, children }) => {
                 color: '#fff',
                 borderRadius: '20px',
                 padding: '3px 16px',
-                fontSize: '0.78rem',
+                fontSize: '11pt',
                 fontWeight: 700,
                 letterSpacing: '0.04em',
                 direction: 'rtl'
