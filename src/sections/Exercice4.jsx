@@ -10,129 +10,77 @@ const Exercice4 = () => {
             {/* ============================================================
                 STATEMENT
             ============================================================ */}
-            <div className="exercise-statement_2">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '2px solid #2c3e50', paddingBottom: '8px', marginBottom: '12px' }}>
-                    <h3 style={{ margin: 0, color: '#2c3e50', fontWeight: 'bold' }}>نص التمرين الرابع (06 نقاط)</h3>
+            <div className="exercise-statement_2" style={{
+                backgroundColor: '#ffffff',
+                border: '2px solid #000000',
+                padding: '25px',
+                margin: '20px 0',
+                fontFamily: '"Times New Roman", Times, serif, "Cairo", "Amiri"',
+                fontSize: '13pt',
+                lineHeight: '1.8',
+                direction: 'rtl',
+                textAlign: 'right',
+                color: '#000000',
+                boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+            }}>
+                <div style={{ textAlign: 'right', fontWeight: 'bold', fontSize: '15pt', borderBottom: '2px double #000000', paddingBottom: '5px', marginBottom: '15px' }}>
+                    التمرين الرابع: (06,5 نقطة)
                 </div>
 
-                <div style={{ marginBottom: '15px' }}>
-                    <h4 style={{ margin: '0 0 8px 0', color: '#2980b9' }}>الجزء الأول (I)</h4>
-                    لتكن الدالة
-                    <span className="math"> {"\\(g\\)"} </span>
-                    المعرفة على المجال
-                    <span className="math"> {"\\(]0,+\\infty[\\)"} </span> كما يلي:
-                    <div className="math-block">{"\\[g(x)=1+x^2+2\\ln x\\]"}</div>
-                    1. ادرس اتجاه تغير الدالة
-                    <span className="math"> {"\\(g\\)"} </span>.
-                    <br />
-                    2. بيّن أن المعادلة
-                    <span className="math"> {"\\(g(x)=0\\)"} </span>
-                    تقبل حلاً وحيداً
-                    <span className="math"> {"\\(\\alpha\\)"} </span>
-                    حيث:
-                    <span className="math"> {"\\(0.52<\\alpha<0.53\\)"} </span>.
-                    <br />
-                    3. استنتج إشارة
-                    <span className="math"> {"\\(g(x)\\)"} </span>.
+                {/* Part I */}
+                <div style={{ marginBottom: '20px' }}>
+                    <strong>I)</strong> <span className="math">{"\\(g\\)"}</span> الدالة العددية المعرفة على المجال <span className="math">{"\\(]0; +\\infty[\\)"}</span> بـ: <span className="math">{"\\(g(x) = 1 + x^2 + 2\\ln x\\)"}</span>.
+                    <div style={{ paddingRight: '20px', marginTop: '5px' }}>
+                        1) ادرس اتجاه تغير الدالة <span className="math">{"\\(g\\)"}</span>.
+                        <br />
+                        2) بيّن أنّ المعادلة <span className="math">{"\\(g(x) = 0\\)"}</span> تقبل في المجال <span className="math">{"\\(]0,52 ; 0,53[\\)"}</span> حلاً وحيداً <span className="math">{"\\(\\alpha\\)"}</span>.
+                        <br />
+                        3) استنتج إشارة <span className="math">{"\\(g(x)\\)"}</span> على المجال <span className="math">{"\\(]0; +\\infty[\\)"}</span>.
+                    </div>
                 </div>
 
-                <div style={{ marginBottom: '15px', borderTop: '1px dashed #ccc', paddingTop: '10px' }}>
-                    <h4 style={{ margin: '0 0 8px 0', color: '#2980b9' }}>الجزء الثاني (II)</h4>
-                    لتكن الدالة
-                    <span className="math"> {"\\(f\\)"} </span>
-                    المعرفة على المجال
-                    <span className="math"> {"\\(]0,+\\infty[\\)"} </span> كما يلي:
-                    <div className="math-block">{"\\[f(x)=-x+\\dfrac{3+2\\ln x}{x}\\]"}</div>
-                    وليكن
-                    <span className="math"> {"\\((C_f)\\)"} </span>
-                    تمثيلها البياني في المستوى المنسوب إلى معلم متعامد ومتجانس.
-                    <br /><br />
-                    1. احسب نهاية الدالة
-                    <span className="math"> {"\\(f\\)"} </span>
-                    عند
-                    <span className="math"> {"\\(0^+\\)"} </span>
-                    وعند
-                    <span className="math"> {"\\(+\\infty\\)"} </span>.
+                {/* Part II */}
+                <div style={{ marginBottom: '20px' }}>
+                    <strong>II)</strong> <span className="math">{"\\(f\\)"}</span> الدالة العددية المعرفة على المجال <span className="math">{"\\(]0; +\\infty[\\)"}</span> بـ: <span className="math">{"\\(f(x) = -x + \\dfrac{3+2\\ln x}{x}\\)"}</span>.
                     <br />
-                    2. أ. أثبت أنه من أجل كل
-                    <span className="math"> {"\\(x \\in ]0, +\\infty[\\)"} </span>:
-                    <span className="math"> {"\\(f'(x)=\\dfrac{-g(x)}{x^2}\\)"} </span>.
-                    <br />
-                    ب. ادرس اتجاه تغير الدالة
-                    <span className="math"> {"\\(f\\)"} </span>
-                    ثم شكّل جدول تغيراتها.
-                    <br />
-                    ج. تحقق أن:
-                    <span className="math"> {"\\(f(\\alpha)=2\\left(\\dfrac1\\alpha-\\alpha\\right)\\)"} </span>
-                    ثم عيّن حصراً لـ
-                    <span className="math"> {"\\(f(\\alpha)\\)"} </span>.
-                    <br />
-                    3. أ. احسب:
-                    <span className="math"> {"\\(\\lim_{x\\to+\\infty}[f(x)+x]\\)"} </span>
-                    وفسر هندسياً النتيجة.
-                    <br />
-                    ب. ادرس وضعية المنحنى
-                    <span className="math"> {"\\((C_f)\\)"} </span>
-                    بالنسبة للمستقيم المقارب المائل
-                    <span className="math"> {"\\((\\Delta): y = -x\\)"} </span>.
-                    <br />
-                    ج. بيّن أن المنحنى
-                    <span className="math"> {"\\((C_f)\\)"} </span>
-                    يقبل مماساً
-                    <span className="math"> {"\\((T)\\)"} </span>
-                    يقبل معامل توجيه مساوٍ لـ
-                    <span className="math"> {"\\(-1\\)"} </span> (يوازي
-                    <span className="math"> {"\\((\\Delta)\\)"} </span>).
-                    <br />
-                    4. بيّن أن المنحنى
-                    <span className="math"> {"\\((C_f)\\)"} </span>
-                    يقطع محور الفواصل في نقطتين فاصلتاهما
-                    <span className="math"> {"\\(x_0\\)"} </span>
-                    و
-                    <span className="math"> {"\\(x_1\\)"} </span>
-                    حيث:
-                    <span className="math"> {"\\(0.22<x_0<0.23\\)"} </span>
-                    و
-                    <span className="math"> {"\\(2.11<x_1<2.13\\)"} </span>.
+                    <span className="math">{"\\((C_f)\\)"}</span> تمثيلها البياني في المستوي المنسوب إلى المعلم المتعامد و المتجانس <span className="math">{"\\((O;\\vec{i},\\vec{j})\\)"}</span>.
+                    <div style={{ paddingRight: '20px', marginTop: '5px' }}>
+                        1) احسب <span className="math">{"\\(\\lim_{x\\to0^+} f(x)\\)"}</span> و <span className="math">{"\\(\\lim_{x\\to+\\infty} f(x)\\)"}</span>.
+                        <br />
+                        2) أ) بيّن أنّه من أجل كل عدد حقيقي <span className="math">{"\\(x\\)"}</span> من المجال <span className="math">{"\\(]0; +\\infty[\\)"}</span>: <span className="math">{"\\(f'(x) = \\dfrac{-g(x)}{x^2}\\)"}</span>.
+                        <br />
+                        ب) شكّل جدول تغيّرات الدالة <span className="math">{"\\(f\\)"}</span>.
+                        <br />
+                        جـ) تحقّق أنّ: <span className="math">{"\\(f(\\alpha) = 2\\left(\\dfrac{1}{\\alpha} - \\alpha\\right)\\)"}</span> ثم عيّن حصراً له.
+                        <br />
+                        3) أ) احسب <span className="math">{"\\(\\lim_{x\\to+\\infty} [f(x) + x]\\)"}</span> ثمّ فسّر النتيجة هندسياً.
+                        <br />
+                        ب) ادرس وضعية <span className="math">{"\\((C_f)\\)"}</span> بالنسبة إلى مستقيمه المقارب المائل <span className="math">{"\\((\\Delta)\\)"}</span>.
+                        <br />
+                        جـ) بيّن أنّ <span className="math">{"\\((C_f)\\)"}</span> يقبل مماساً <span className="math">{"\\((T)\\)"}</span> يوازي <span className="math">{"\\((\\Delta)\\)"}</span> يطلب كتابة معادلة ديكارتية له.
+                        <br />
+                        4) نقبل أنّ <span className="math">{"\\((C_f)\\)"}</span> يقطع حامل محور الفواصل في نقطتين فاصلتيهما <span className="math">{"\\(x_0\\)"}</span> و <span className="math">{"\\(x_1\\)"}</span> حيث:
+                        <div style={{ marginRight: '20px', margin: '5px 0' }}>
+                            <span className="math">{"\\(0,22 < x_0 < 0,23\\)"}</span> و <span className="math">{"\\(2,11 < x_1 < 2,13\\)"}</span>.
+                        </div>
+                        أنشئ <span className="math">{"\\((T)\\)"}</span> ، <span className="math">{"\\((\\Delta)\\)"}</span> و <span className="math">{"\\((C_f)\\)"}</span>.
+                        <br />
+                        5) <span className="math">{"\\(m\\)"}</span> وسيط حقيقي. ناقش بيانياً و حسب قيم <span className="math">{"\\(m\\)"}</span> ، عدد حلول المعادلة: <span className="math">{"\\(3 + 2\\ln x - mx = 0\\)"}</span>.
+                    </div>
                 </div>
 
-                <div style={{ marginBottom: '15px', borderTop: '1px dashed #ccc', paddingTop: '10px' }}>
-                    <h4 style={{ margin: '0 0 8px 0', color: '#2980b9' }}>الجزء الثالث (III)</h4>
-                    من أجل كل عدد طبيعي
-                    <span className="math"> {"\\(n\\)"} </span>
-                    نضع:
-                    <div className="math-block">{"\\[u_n=\\int_{e^n}^{e^{n+1}}[f(x)+x]dx\\]"}</div>
-                    1. بيّن أن:
-                    <span className="math"> {"\\(u_n>0\\)"} </span> من أجل كل عدد طبيعي
-                    <span className="math"> {"\\(n\\)"} </span>.
-                    <br />
-                    2. أعط تفسيراً هندسياً للعدد
-                    <span className="math"> {"\\(u_0\\)"} </span>.
-                    <br />
-                    3. احسب
-                    <span className="math"> {"\\(u_n\\)"} </span>
-                    بدلالة
-                    <span className="math"> {"\\(n\\)"} </span>.
-                    <br />
-                    4. نضع:
-                    <span className="math"> {"\\(S_n=u_0+u_1+...+u_n\\)"} </span>، احسب
-                    <span className="math"> {"\\(S_n\\)"} </span> بدلالة
-                    <span className="math"> {"\\(n\\)"} </span>.
-                </div>
-
-                <div style={{ borderTop: '1px dashed #ccc', paddingTop: '10px' }}>
-                    <h4 style={{ margin: '0 0 8px 0', color: '#e67e22' }}>الجزء الرابع (IV) — مسألة إضافية</h4>
-                    لتكن في المجال
-                    <span className="math"> {"\\(]0, +\\infty[\\)"} </span>
-                    المعادلة ذات المجهول الحقيقي
-                    <span className="math"> {"\\(x\\)"} </span> التالية:
-                    <div className="math-block">{"\\[3 + 2\\ln x - mx = 0\\]"}</div>
-                    حيث
-                    <span className="math"> {"\\(m\\)"} </span> وسيط حقيقي.
-                    <br />
-                    ناقش بيانياً، حسب قيم الوسيط الحقيقي
-                    <span className="math"> {"\\(m\\)"} </span>،
-                    عدد حلول هذه المعادلة.
+                {/* Part III */}
+                <div>
+                    <strong>III)</strong> من أجل كل عدد طبيعي <span className="math">{"\\(n\\)"}</span> نضع: <span className="math">{"\\(u_n = \\int_{e^n}^{e^{n+1}} [f(x)+x]dx\\)"}</span>.
+                    <div style={{ paddingRight: '20px', marginTop: '5px' }}>
+                        1) بيّن أنّه من أجل كل عدد طبيعي <span className="math">{"\\(n\\)"}</span>: <span className="math">{"\\(u_n > 0\\)"}</span>.
+                        <br />
+                        2) أعطِ تفسيراً هندسياً للعدد <span className="math">{"\\(u_0\\)"}</span>.
+                        <br />
+                        3) احسب <span className="math">{"\\(u_n\\)"}</span> بدلالة <span className="math">{"\\(n\\)"}</span>.
+                        <br />
+                        4) نضع: <span className="math">{"\\(S_n = u_0 + u_1 + u_2 + \\dots + u_n\\)"}</span>. احسب <span className="math">{"\\(S_n\\)"}</span> بدلالة <span className="math">{"\\(n\\)"}</span>.
+                    </div>
                 </div>
             </div>
 
