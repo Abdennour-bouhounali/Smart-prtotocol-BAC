@@ -11,115 +11,129 @@ const Exercice4 = () => {
                 STATEMENT
             ============================================================ */}
             <div className="exercise-statement_2">
-                <strong>نص التمرين:</strong><br />
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '2px solid #2c3e50', paddingBottom: '8px', marginBottom: '12px' }}>
+                    <h3 style={{ margin: 0, color: '#2c3e50', fontWeight: 'bold' }}>نص التمرين الرابع (06 نقاط)</h3>
+                </div>
 
-                لتكن الدالة:
-                <span className="math"> {"\\(g(x)=1+x^2+2\\ln x\\)"} </span>
-                المعرفة على
-                <span className="math"> {"\\(]0,+\\infty[\\)"} </span>.
+                <div style={{ marginBottom: '15px' }}>
+                    <h4 style={{ margin: '0 0 8px 0', color: '#2980b9' }}>الجزء الأول (I)</h4>
+                    لتكن الدالة
+                    <span className="math"> {"\\(g\\)"} </span>
+                    المعرفة على المجال
+                    <span className="math"> {"\\(]0,+\\infty[\\)"} </span> كما يلي:
+                    <div className="math-block">{"\\[g(x)=1+x^2+2\\ln x\\]"}</div>
+                    1. ادرس اتجاه تغير الدالة
+                    <span className="math"> {"\\(g\\)"} </span>.
+                    <br />
+                    2. بيّن أن المعادلة
+                    <span className="math"> {"\\(g(x)=0\\)"} </span>
+                    تقبل حلاً وحيداً
+                    <span className="math"> {"\\(\\alpha\\)"} </span>
+                    حيث:
+                    <span className="math"> {"\\(0.52<\\alpha<0.53\\)"} </span>.
+                    <br />
+                    3. استنتج إشارة
+                    <span className="math"> {"\\(g(x)\\)"} </span>.
+                </div>
 
-                <br /><br />
+                <div style={{ marginBottom: '15px', borderTop: '1px dashed #ccc', paddingTop: '10px' }}>
+                    <h4 style={{ margin: '0 0 8px 0', color: '#2980b9' }}>الجزء الثاني (II)</h4>
+                    لتكن الدالة
+                    <span className="math"> {"\\(f\\)"} </span>
+                    المعرفة على المجال
+                    <span className="math"> {"\\(]0,+\\infty[\\)"} </span> كما يلي:
+                    <div className="math-block">{"\\[f(x)=-x+\\dfrac{3+2\\ln x}{x}\\]"}</div>
+                    وليكن
+                    <span className="math"> {"\\((C_f)\\)"} </span>
+                    تمثيلها البياني في المستوى المنسوب إلى معلم متعامد ومتجانس.
+                    <br /><br />
+                    1. احسب نهاية الدالة
+                    <span className="math"> {"\\(f\\)"} </span>
+                    عند
+                    <span className="math"> {"\\(0^+\\)"} </span>
+                    وعند
+                    <span className="math"> {"\\(+\\infty\\)"} </span>.
+                    <br />
+                    2. أ. أثبت أنه من أجل كل
+                    <span className="math"> {"\\(x \\in ]0, +\\infty[\\)"} </span>:
+                    <span className="math"> {"\\(f'(x)=\\dfrac{-g(x)}{x^2}\\)"} </span>.
+                    <br />
+                    ب. ادرس اتجاه تغير الدالة
+                    <span className="math"> {"\\(f\\)"} </span>
+                    ثم شكّل جدول تغيراتها.
+                    <br />
+                    ج. تحقق أن:
+                    <span className="math"> {"\\(f(\\alpha)=2\\left(\\dfrac1\\alpha-\\alpha\\right)\\)"} </span>
+                    ثم عيّن حصراً لـ
+                    <span className="math"> {"\\(f(\\alpha)\\)"} </span>.
+                    <br />
+                    3. أ. احسب:
+                    <span className="math"> {"\\(\\lim_{x\\to+\\infty}[f(x)+x]\\)"} </span>
+                    وفسر هندسياً النتيجة.
+                    <br />
+                    ب. ادرس وضعية المنحنى
+                    <span className="math"> {"\\((C_f)\\)"} </span>
+                    بالنسبة للمستقيم المقارب المائل
+                    <span className="math"> {"\\((\\Delta): y = -x\\)"} </span>.
+                    <br />
+                    ج. بيّن أن المنحنى
+                    <span className="math"> {"\\((C_f)\\)"} </span>
+                    يقبل مماساً
+                    <span className="math"> {"\\((T)\\)"} </span>
+                    يقبل معامل توجيه مساوٍ لـ
+                    <span className="math"> {"\\(-1\\)"} </span> (يوازي
+                    <span className="math"> {"\\((\\Delta)\\)"} </span>).
+                    <br />
+                    4. بيّن أن المنحنى
+                    <span className="math"> {"\\((C_f)\\)"} </span>
+                    يقطع محور الفواصل في نقطتين فاصلتاهما
+                    <span className="math"> {"\\(x_0\\)"} </span>
+                    و
+                    <span className="math"> {"\\(x_1\\)"} </span>
+                    حيث:
+                    <span className="math"> {"\\(0.22<x_0<0.23\\)"} </span>
+                    و
+                    <span className="math"> {"\\(2.11<x_1<2.13\\)"} </span>.
+                </div>
 
-                <strong>I)</strong>
-                <br />
-                1. ادرس اتجاه تغير الدالة
-                <span className="math"> {"\\(g\\)"} </span>.
-                <br />
-                2. بيّن أن المعادلة
-                <span className="math"> {"\\(g(x)=0\\)"} </span>
-                تقبل حلاً وحيداً
-                <span className="math"> {"\\(\\alpha\\)"} </span>
-                حيث:
-                <span className="math"> {"\\(0.52<\\alpha<0.53\\)"} </span>.
-                <br />
-                3. استنتج إشارة
-                <span className="math"> {"\\(g(x)\\)"} </span>.
+                <div style={{ marginBottom: '15px', borderTop: '1px dashed #ccc', paddingTop: '10px' }}>
+                    <h4 style={{ margin: '0 0 8px 0', color: '#2980b9' }}>الجزء الثالث (III)</h4>
+                    من أجل كل عدد طبيعي
+                    <span className="math"> {"\\(n\\)"} </span>
+                    نضع:
+                    <div className="math-block">{"\\[u_n=\\int_{e^n}^{e^{n+1}}[f(x)+x]dx\\]"}</div>
+                    1. بيّن أن:
+                    <span className="math"> {"\\(u_n>0\\)"} </span> من أجل كل عدد طبيعي
+                    <span className="math"> {"\\(n\\)"} </span>.
+                    <br />
+                    2. أعط تفسيراً هندسياً للعدد
+                    <span className="math"> {"\\(u_0\\)"} </span>.
+                    <br />
+                    3. احسب
+                    <span className="math"> {"\\(u_n\\)"} </span>
+                    بدلالة
+                    <span className="math"> {"\\(n\\)"} </span>.
+                    <br />
+                    4. نضع:
+                    <span className="math"> {"\\(S_n=u_0+u_1+...+u_n\\)"} </span>، احسب
+                    <span className="math"> {"\\(S_n\\)"} </span> بدلالة
+                    <span className="math"> {"\\(n\\)"} </span>.
+                </div>
 
-                <br /><br />
-
-                <strong>II)</strong>
-                <br />
-                لتكن الدالة:
-                <span className="math"> {"\\(f(x)=-x+\\dfrac{3+2\\ln x}{x}\\)"} </span>
-                المعرفة على
-                <span className="math"> {"\\(]0,+\\infty[\\)"} </span>.
-
-                <br /><br />
-
-                1. احسب:
-                <span className="math"> {"\\(\\lim_{x\\to0^+}f(x)\\)"} </span>
-                و
-                <span className="math"> {"\\(\\lim_{x\\to+\\infty}f(x)\\)"} </span>.
-
-                <br /><br />
-
-                2. أ. أثبت أن:
-                <span className="math"> {"\\(f'(x)=\\dfrac{-g(x)}{x^2}\\)"} </span>.
-                <br />
-                ب. شكّل جدول تغيرات
-                <span className="math"> {"\\(f\\)"} </span>.
-                <br />
-                ج. تحقق أن:
-                <span className="math"> {"\\(f(\\alpha)=2\\left(\\dfrac1\\alpha-\\alpha\\right)\\)"} </span>
-                ثم عيّن حصراً لها.
-
-                <br /><br />
-
-                3. أ. احسب:
-                <span className="math"> {"\\(\\lim_{x\\to+\\infty}[f(x)+x]\\)"} </span>
-                وفسر هندسياً النتيجة.
-                <br />
-                ب. ادرس وضعية
-                <span className="math"> {"\\((C_f)\\)"} </span>
-                بالنسبة للمقارب المائل
-                <span className="math"> {"\\((\\Delta)\\)"} </span>.
-                <br />
-                ج. بيّن أن
-                <span className="math"> {"\\((C_f)\\)"} </span>
-                يقبل مماساً
-                <span className="math"> {"\\((T)\\)"} </span>
-                يوازي
-                <span className="math"> {"\\((\\Delta)\\)"} </span>.
-
-                <br /><br />
-
-                4. بيّن أن
-                <span className="math"> {"\\((C_f)\\)"} </span>
-                يقطع محور الفواصل في نقطتين فاصلتاهما
-                <span className="math"> {"\\(x_0\\)"} </span>
-                و
-                <span className="math"> {"\\(x_1\\)"} </span>
-                حيث:
-                <span className="math"> {"\\(0.22<x_0<0.23\\)"} </span>
-                و
-                <span className="math"> {"\\(2.11<x_1<2.13\\)"} </span>.
-
-                <br /><br />
-
-                <strong>III)</strong>
-                <br />
-                من أجل كل عدد طبيعي
-                <span className="math"> {"\\(n\\)"} </span>
-                نضع:
-                <span className="math"> {"\\(u_n=\\int_{e^n}^{e^{n+1}}[f(x)+x]dx\\)"} </span>.
-
-                <br /><br />
-
-                1. بيّن أن:
-                <span className="math"> {"\\(u_n>0\\)"} </span>.
-                <br />
-                2. أعط تفسيراً هندسياً للعدد
-                <span className="math"> {"\\(u_0\\)"} </span>.
-                <br />
-                3. احسب
-                <span className="math"> {"\\(u_n\\)"} </span>
-                بدلالة
-                <span className="math"> {"\\(n\\)"} </span>.
-                <br />
-                4. إذا وضعنا:
-                <span className="math"> {"\\(S_n=u_0+u_1+...+u_n\\)"} </span>
-                احسب
-                <span className="math"> {"\\(S_n\\)"} </span>.
+                <div style={{ borderTop: '1px dashed #ccc', paddingTop: '10px' }}>
+                    <h4 style={{ margin: '0 0 8px 0', color: '#e67e22' }}>الجزء الرابع (IV) — مسألة إضافية</h4>
+                    لتكن في المجال
+                    <span className="math"> {"\\(]0, +\\infty[\\)"} </span>
+                    المعادلة ذات المجهول الحقيقي
+                    <span className="math"> {"\\(x\\)"} </span> التالية:
+                    <div className="math-block">{"\\[3 + 2\\ln x - mx = 0\\]"}</div>
+                    حيث
+                    <span className="math"> {"\\(m\\)"} </span> وسيط حقيقي.
+                    <br />
+                    ناقش بيانياً، حسب قيم الوسيط الحقيقي
+                    <span className="math"> {"\\(m\\)"} </span>،
+                    عدد حلول هذه المعادلة.
+                </div>
             </div>
 
             {/* ============================================================
@@ -2097,6 +2111,228 @@ const Exercice4 = () => {
                     إذن المجموع النهائي بدلالة
                     <span className="math">{"\\(n\\)"}</span> هو:
                     <span className="math">{"\\(S_n = (n+1)(n+4)\\)"}</span>.
+                </div>
+            </div>
+
+            {/* ============================================================
+                PART IV — ADDITIONAL PROBLEM
+            ============================================================ */}
+            <div className="section-divider">الجزء الرابع — المناقشة البيانية الوسيطية</div>
+
+            <div className="step-row-two">
+                <div className="col-header left-h">التفكير الذهني الداخلي</div>
+                <div className="col-header right-h">الحل التفصيلي المعياري</div>
+            </div>
+
+            {/* Q4 — TRANSLATE */}
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
+                    المعادلة المعطاة هي:
+                    <span className="math">{"\\(3 + 2\\ln(x) - mx = 0\\)"}</span>.
+                    أولاً، بما أن المجال هو
+                    <span className="math">{"\\(]0, +\\infty[\\)"}</span>، فإن
+                    <span className="math">{"\\(x \\ne 0\\)"}</span>.
+                    يمكنني قسمة الطرفين على
+                    <span className="math">{"\\(x\\)"}</span> لعزل الوسيط
+                    <span className="math">{"\\(m\\)"}</span>:
+                    <div className="math-block">{"\\[\\frac{3 + 2\\ln(x)}{x} - m = 0 \\iff \\frac{3 + 2\\ln(x)}{x} = m\\]"}</div>
+                    سأقوم الآن بالربط مع عبارة الدالة
+                    <span className="math">{"\\(f(x)\\)"}</span>:
+                    <br />
+                    نعلم أن
+                    <span className="math">{"\\(f(x) = -x + \\frac{3+2\\ln x}{x}\\)"}</span>.
+                    إذن:
+                    <span className="math">{"\\(f(x) + x = \\frac{3+2\\ln x}{x}\\)"}</span>.
+                    <br />
+                    بالتالي، المعادلة تكافئ تماماً:
+                    <div className="math-block">{"\\[f(x) + x = m \\iff f(x) = -x + m\\]"}</div>
+                    هذه مناقشة بيانية مائلة! الحلول هي فواصل نقاط تقاطع المنحنى
+                    <span className="math">{"\\((C_f)\\)"}</span>
+                    مع المستقيمات
+                    <span className="math">{"\\((D_m)\\)"}</span> ذوات المعادلة
+                    <span className="math">{"\\(y = -x + m\\)"}</span>.
+                    
+                    <div className="why-box" style={{ margin: '8px 0', borderRight: '4px solid #3498db', padding: '6px 12px', background: '#ebf5fb', borderRadius: '4px' }}>
+                        <strong>لماذا قمنا بالقسمة والربط؟</strong><br />
+                        لأن الوسيط
+                        <span className="math">{"\\(m\\)"}</span>
+                        مضروب في
+                        <span className="math">{"\\(x\\)"}</span>.
+                        قسمة المعادلة على
+                        <span className="math">{"\\(x\\)"}</span> (الموجب تماماً) تعزل الوسيط في طرف وتكشف لنا العبارة المألوفة
+                        <span className="math">{"\\(f(x) + x\\)"}</span>
+                        التي درسناها سابقاً في الفرع والمقاربات.
+                    </div>
+                    <div className="danger-box" style={{ margin: '8px 0', borderRight: '4px solid #e74c3c', padding: '6px 12px', background: '#fdedec', borderRadius: '4px' }}>
+                        <strong>تنبيه (Danger):</strong><br />
+                        لا تحاول مناقشة المعادلة مباشرة بصورتها الأصلية
+                        <span className="math">{"\\(3+2\\ln x - mx = 0\\)"}</span>
+                        دون ربطها بالمنحنى
+                        <span className="math">{"\\((C_f)\\)"}</span>،
+                        لأن هذا سيقودك إلى دوال معقدة تتغير بتغير الوسيط. الربط بالمنحنى الثابت
+                        <span className="math">{"\\((C_f)\\)"}</span>
+                        يجعل المناقشة مجرد حركة مستقيمات موازية للمقارب.
+                    </div>
+                </div>
+                <div className="right-col">
+                    بما أن
+                    <span className="math">{"\\(x > 0\\)"}</span>:
+                    <div className="math-block">{"\\[3 + 2\\ln(x) - mx = 0 \\iff \\frac{3 + 2\\ln(x)}{x} = m\\]"}</div>
+                    وبتذكّر عبارة الدالة
+                    <span className="math">{"\\(f(x)\\)"}</span>، نجد أن:
+                    <span className="math">{"\\(f(x) + x = \\frac{3+2\\ln(x)}{x}\\)"}</span>.
+                    إذن المعادلة تكافئ:
+                    <div className="math-block">{"\\[f(x) = -x + m\\]"}</div>
+                    وهي معادلة فواصل نقاط تقاطع المنحنى
+                    <span className="math">{"\\((C_f)\\)"}</span>
+                    مع عائلة المستقيمات المائلة
+                    <span className="math">{"\\((D_m)\\)"}</span> ذات المعادلة
+                    <span className="math">{"\\(y = -x + m\\)"}</span>.
+                </div>
+            </div>
+
+            {/* Q4 — AIM */}
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    أريد تحديد عدد حلول المعادلة
+                    <span className="math">{"\\(f(x) = -x + m\\)"}</span>
+                    تبعاً لقيم الوسيط الحقيقي
+                    <span className="math">{"\\(m\\)"}</span>.
+                    هذا يتطلب دراسة عدد التقاطعات مع عائلة المستقيمات ذات الميل
+                    <span className="math">{"\\(-1\\)"}</span>.
+                </div>
+                <div className="right-col">
+                    <strong>الهدف:</strong> مناقشة عدد حلول المعادلة بيانياً حسب قيم الوسيط
+                    <span className="math">{"\\(m\\)"}</span>،
+                    وهو ما يوافق عدد نقاط تقاطع المنحنى
+                    <span className="math">{"\\((C_f)\\)"}</span>
+                    مع المستقيمات المائلة ذات الميل
+                    <span className="math">{"\\(-1\\)"}</span>.
+                </div>
+            </div>
+
+            {/* Q4 — RELATE */}
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label link">R. الربط (Relate)</span><br />
+                    المستقيمات
+                    <span className="math">{"\\((D_m): y = -x + m\\)"}</span>
+                    توازي المستقيم المقارب المائل
+                    <span className="math">{"\\((\\Delta): y = -x\\)"}</span> (الذي يوافق
+                    <span className="math">{"\\(m = 0\\)"}</span>) والمماس
+                    <span className="math">{"\\((T)\\)"}</span> الذي يوازيه.
+                    <br />
+                    نعلم من الجزء الثاني (السؤال 3.ج) أن المنحنى يقبل مماساً
+                    <span className="math">{"\\((T)\\)"}</span> يوازي
+                    <span className="math">{"\\((\\Delta)\\)"}</span> عند نقطة فاصلتها
+                    <span className="math">{"\\(x_0 = e^{-1/2} = \\frac{1}{\\sqrt{e}}\\)"}</span>.
+                    <br />
+                    معادلة المماس هي:
+                    <span className="math">{"\\(y = -x + m_T\\)"}</span>
+                    حيث
+                    <span className="math">{"\\(m_T = f(x_0) + x_0 = \\frac{3+2\\ln(x_0)}{x_0} = \\frac{3+2(-1/2)}{e^{-1/2}} = 2\\sqrt{e}\\)"}</span>.
+                    إذن معادلة المماس هي:
+                    <span className="math">{"\\(y = -x + 2\\sqrt{e}\\)"}</span>.
+                    هذا يعني أن القيمة الحدية للوسيط عند التماس هي
+                    <span className="math">{"\\(m = 2\\sqrt{e}\\)"}</span>.
+                </div>
+                <div className="right-col">
+                    نربط المعادلة بالمستقيمات المعلمية المميزة في التمرين:
+                    <br />
+                    • المستقيم المقارب المائل
+                    <span className="math">{"\\((\\Delta): y = -x\\)"}</span> (حيث
+                    <span className="math">{"\\(m = 0\\)"}</span>).
+                    <br />
+                    • المماس الموازي له
+                    <span className="math">{"\\((T): y = -x + 2\\sqrt{e}\\)"}</span> (حيث
+                    <span className="math">{"\\(m = 2\\sqrt{e}\\)"}</span>).
+                </div>
+            </div>
+
+            {/* Q4 — EXECUTION */}
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label execution">E. التنفيذ الجبري (Execution)</span><br />
+                    سأقوم بدراسة الدالة الممثلة للفرق أو المسافة العمودية:
+                    <span className="math">{"\\(h(x) = f(x) + x = \\frac{3+2\\ln x}{x}\\)"}</span>.
+                    تغيرات هذه الدالة تعطينا تماماً السلوك التقاطعي:
+                    <br />• المشتقة:
+                    <span className="math">{"\\(h'(x) = \\frac{-1-2\\ln x}{x^2}\\)"}</span>.
+                    تنعدم عند
+                    <span className="math">{"\\(x = e^{-1/2}\\)"}</span> حيث تبلغ قيمتها العظمى المطلقة
+                    <span className="math">{"\\(2\\sqrt{e} \\approx 3.29\\)"}</span>.
+                    <br />• جدول التغيرات للدالة
+                    <span className="math">{"\\(h\\)"}</span>:
+                    تتزايد من
+                    <span className="math">{"\\(-\\infty\\)"}</span> (عند
+                    <span className="math">{"\\(0^+\\)"}</span>) إلى القيمة العظمى
+                    <span className="math">{"\\(2\\sqrt{e}\\)"}</span>، ثم تتناقص نحو
+                    <span className="math">{"\\(0^+\\)"}</span> (عند
+                    <span className="math">{"\\(+\\infty\\)"}</span>).
+                    <br />
+                    الآن نناقش حسب قيم
+                    <span className="math">{"\\(m\\)"}</span>:
+                    <br />1. إذا كان
+                    <span className="math">{"\\(m > 2\\sqrt{e}\\)"}</span>:
+                    المستقيم
+                    <span className="math">{"\\((D_m)\\)"}</span> يقع تماماً فوق القيمة العظمى للمنحنى، وبالتالي <strong>لا توجد حلول</strong>.
+                    <br />2. إذا كان
+                    <span className="math">{"\\(m = 2\\sqrt{e}\\)"}</span>:
+                    المستقيم يمس المنحنى عند النقطة ذات الفاصلة
+                    <span className="math">{"\\(\\frac{1}{\\sqrt{e}}\\)"}</span>، وبالتالي يوجد <strong>حل وحيد مضاعف</strong>.
+                    <br />3. إذا كان
+                    <span className="math">{"\\(0 < m < 2\\sqrt{e}\\)"}</span>:
+                    المستقيم يقطع المنحنى في نقطتين، إحداهما قبل القيمة العظمى والأخرى بعدها، إذن يوجد <strong>حلان متمايزان</strong>.
+                    <br />4. إذا كان
+                    <span className="math">{"\\(m \\le 0\\)"}</span>:
+                    بما أن نهاية الدالة عند
+                    <span className="math">{"\\(+\\infty\\)"}</span> هي
+                    <span className="math">{"\\(0^+\\)"}</span> (المنحنى فوق المقارب)، فإن الجزء المتناقص لا يقطع المستقيمات لكونها تحت المحور تماماً، بينما الجزء المتزايد يقطعها مرة واحدة لكونه يمتد إلى
+                    <span className="math">{"\\(-\\infty\\)"}</span>. إذن يوجد <strong>حل وحيد</strong>.
+                </div>
+                <div className="right-col">
+                    نلخص المناقشة البيانية المائلة كالآتي:
+                    <br />
+                    • إذا كان
+                    <span className="math">{"\\(m > 2\\sqrt{e}\\)"}</span>: المعادلة <strong>لا تقبل حلولاً</strong>.
+                    <br />
+                    • إذا كان
+                    <span className="math">{"\\(m = 2\\sqrt{e}\\)"}</span>: المعادلة تقبل <strong>حلاً وحيداً مضاعفاً</strong> هو
+                    <span className="math">{"\\(x = \\frac{1}{\\sqrt{e}}\\)"}</span>.
+                    <br />
+                    • إذا كان
+                    <span className="math">{"\\(0 < m < 2\\sqrt{e}\\)"}</span>: المعادلة تقبل <strong>حلين متمايزين موجبيين تماماً</strong>.
+                    <br />
+                    • إذا كان
+                    <span className="math">{"\\(m \\le 0\\)"}</span>: المعادلة تقبل <strong>حلاً وحيداً</strong> في المجال
+                    <span className="math">{"\\(]0, \\frac{1}{\\sqrt{e}}[\\)"}</span>.
+                </div>
+            </div>
+
+            {/* Q4 — TEST */}
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label verify">T. التحقق (Test)</span><br />
+                    أقوم بالتحقق من الحالات الخاصة:
+                    <br />• عند
+                    <span className="math">{"\\(m = 0\\)"}</span>:
+                    المعادلة هي
+                    <span className="math">{"\\(3 + 2\\ln(x) = 0 \\iff \\ln(x) = -1.5 \\iff x = e^{-1.5} \\approx 0.223\\)"}</span>.
+                    وهذا يقع في المجال
+                    <span className="math">{"\\(]0, \\frac{1}{\\sqrt{e}}[\\)"}</span> لأن
+                    <span className="math">{"\\(e^{-1.5} < e^{-0.5}\\)"}</span>. وهو بالفعل حل وحيد.
+                    <br />• عند
+                    <span className="math">{"\\(m = 2\\sqrt{e}\\)"}</span>:
+                    المعادلة هي
+                    <span className="math">{"\\(3 + 2\\ln(x) - 2\\sqrt{e}x = 0\\)"}</span>.
+                    بالتعويض بـ
+                    <span className="math">{"\\(x = e^{-0.5}\\)"}</span>:
+                    <span className="math">{"\\(3 + 2(-0.5) - 2e^{0.5}e^{-0.5} = 3 - 1 - 2 = 0\\)"}</span>. ✓ التحقق صحيح تماماً!
+                </div>
+                <div className="right-col">
+                    التحقق الحسابي يؤكد دقة الحدود الفاصلة للمناقشة وتوافقها التام مع النتائج النظرية المدروسة.
                 </div>
             </div>
 
