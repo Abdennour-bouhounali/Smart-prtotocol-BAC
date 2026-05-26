@@ -5,8 +5,8 @@
 }
 
 @page {
-    size: 176mm 250mm;
-    margin: 1.5cm 1.5cm 2.5cm 1.5cm
+    size: 170mm 240mm;
+    margin: 0;
 }
 
 body {
@@ -21,7 +21,8 @@ body {
     margin: 0;
 }
 
-#editor {
+#editor,
+.book-editor {
     outline: none;
     display: flex;
     flex-direction: column;
@@ -30,20 +31,27 @@ body {
 }
 
 .page {
-    width: 176mm;
-    height: 250mm;
+    width: 170mm;
+    height: 240mm;
     margin: 0 auto;
     background: #fff;
-    padding: 1.5cm 1.5cm 2.5cm 1.5cm;
+    padding: 0.5cm 1cm 0.5cm 0.5cm;
     box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
     position: relative;
     box-sizing: border-box;
     background-color: white;
 }
 
+.print-only .page {
+    width: 170mm;
+    height: 240mm;
+}
+
 .page-content {
     height: 100%;
-    overflow: visible; overflow-wrap: break-word; word-break: break-word;
+    overflow: visible;
+    overflow-wrap: break-word;
+    word-break: break-word;
     outline: none;
 }
 
@@ -183,7 +191,9 @@ body {
     font-size: 11pt;
     color: #1a5276;
     min-width: 0;
-    overflow: visible; overflow-wrap: break-word; word-break: break-word;
+    overflow: visible;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .right-col {
@@ -469,7 +479,9 @@ mjx-container[display="true"] {
 .app-container {
     display: flex;
     height: 100vh;
-    overflow: visible; overflow-wrap: break-word; word-break: break-word;
+    overflow: visible;
+    overflow-wrap: break-word;
+    word-break: break-word;
     background: #e0e0e0;
 }
 
@@ -569,7 +581,9 @@ mjx-container[display="true"] {
     /* border: 1.5px solid #2c3e50; */
     border-radius: 12px;
     margin: 24px 0;
-    overflow: visible; overflow-wrap: break-word; word-break: break-word;
+    overflow: visible;
+    overflow-wrap: break-word;
+    word-break: break-word;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
@@ -738,7 +752,7 @@ mjx-container[display="true"] {
     position: absolute;
     left: -20000px;
     top: 0;
-    width: 210mm;
+    width: 170mm;
     z-index: -9999;
     visibility: hidden;
 }
@@ -754,13 +768,16 @@ mjx-container[display="true"] {
         margin: 0;
     }
 
-    #editor {
+    #editor,
+    .book-editor {
         gap: 0 !important;
     }
 
     .page {
+        width: 170mm !important;
+        height: 240mm !important;
+        margin: 0 auto !important;
         box-shadow: none !important;
-        margin: 0 !important;
         page-break-after: always;
     }
 
@@ -912,7 +929,9 @@ mjx-container[display="true"] {
     margin: 15px 0;
     border-radius: 10px;
     border: 1.5px solid #bae6fd;
-    overflow: visible; overflow-wrap: break-word; word-break: break-word;
+    overflow: visible;
+    overflow-wrap: break-word;
+    word-break: break-word;
     break-inside: avoid;
     page-break-inside: avoid;
 }
@@ -995,7 +1014,9 @@ mjx-container[display="true"] {
     border-radius: 12px;
     padding: 15px;
     position: relative;
-    overflow: visible; overflow-wrap: break-word; word-break: break-word;
+    overflow: visible;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .roadmap-card::after {
