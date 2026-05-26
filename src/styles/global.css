@@ -1,12 +1,19 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
+/* REAL PDF PAGE SIZE */
 @page {
     size: 170mm 240mm;
     margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -15,59 +22,82 @@ body {
     direction: rtl;
     color: #111;
     background: #e0e0e0;
+
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    padding: 20px 0;
+
     margin: 0;
+    padding: 0;
 }
 
-#editor,
-.book-editor {
-    outline: none;
+/* SCREEN VIEW */
+#editor {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+
+    padding: 20px 0;
 }
 
+/* PAGE */
 .page {
     width: 170mm;
-    height: 240mm;
-    margin: 0 auto;
-    background: #fff;
-    padding: 0.5cm 1cm 0.5cm 0.5cm;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
-    position: relative;
-    box-sizing: border-box;
-    background-color: white;
-}
+    min-width: 170mm;
+    max-width: 170mm;
 
-.print-only .page {
-    width: 170mm;
     height: 240mm;
+    min-height: 240mm;
+    max-height: 240mm;
+
+    background: white;
+
+    margin: 0 auto;
+
+    padding: 0.5cm 1cm 0.5cm 0.5cm;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    page-break-after: always;
+    break-after: page;
 }
 
 .page-content {
-    height: 100%;
-    overflow: visible;
+    width: 100%;
+    height: calc(100% - 20px);
+
+    overflow: hidden;
+
     overflow-wrap: break-word;
     word-break: break-word;
+
     outline: none;
 }
 
 .page-footer {
     position: absolute;
-    bottom: 15px;
+
+    bottom: 8px;
     left: 1.5cm;
     right: 1.5cm;
-    padding-top: 8px;
+
+    padding-top: 4px;
+
     border-top: 1px solid #7f8c8d;
+
     font-size: 11pt;
     color: #555;
+
     user-select: none;
     pointer-events: none;
+
     display: grid;
     grid-template-columns: 1fr auto 1fr;
+
     align-items: center;
 }
 
@@ -79,12 +109,70 @@ body {
 .footer-book-name {
     grid-column: 3;
     text-align: left;
+
     font-style: italic;
     font-weight: bold;
 }
 
 .manual-break {
     display: none;
+}
+
+/* IMPORTANT PRINT FIX */
+@media print {
+
+    html,
+    body {
+        width: 170mm;
+        height: auto;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background: white !important;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    .print-only,
+    .print-only * {
+        visibility: visible;
+    }
+
+    .print-only {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 170mm;
+
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    #editor {
+        padding: 0;
+        gap: 0;
+    }
+
+    .page {
+        margin: 0 auto !important;
+
+        box-shadow: none !important;
+
+        page-break-after: always;
+        break-after: page;
+
+        overflow: hidden;
+    }
+
+    .screen-only,
+    .controls-bar,
+    .sidebar {
+        display: none !important;
+    }
 }
 
 /* ── COVER ── */
@@ -99,7 +187,7 @@ body {
     font-size: 20pt;
     font-weight: 700;
     color: #2c3e50;
-    margin-bottom: 6px
+    margin-bottom: 4px
 }
 
 .cover-sub {
@@ -115,11 +203,11 @@ body {
     break-after: avoid;
     background: #2c3e50;
     color: #fff;
-    padding: 8px 14px;
+    padding: 6px 12px;
     font-size: 13pt;
     font-weight: 700;
-    margin-top: 8px;
-    margin-bottom: 6px;
+    margin-top: 6px;
+    margin-bottom: 4px;
     border-radius: 4px;
 }
 
@@ -135,7 +223,7 @@ body {
     font-weight: 700;
     font-size: 12pt;
     color: #1a5276;
-    margin: 8px 0 4px;
+    margin: 6px 0 4px;
     border-right: 4px solid #1a5276;
     padding-right: 8px;
 }
@@ -265,7 +353,7 @@ body {
     break-inside: avoid;
     page-break-inside: avoid;
     border-radius: 6px;
-    padding: 5px 14px;
+    padding: 5px 5px;
     margin: 2px 0;
 }
 
@@ -278,7 +366,7 @@ body {
 
 .exercise-statement_2 {
     border-radius: 6px;
-    padding: 8px 12px;
+    padding: 6px 10px;
     margin: 8px 0;
     border: 1.5px solid #2c3e50;
     background-color: #f0f3f4;
@@ -311,7 +399,7 @@ body {
 .pedagogical-list {
     list-style: none;
     padding-right: 25px;
-    margin: 10px 0;
+    margin: 8px 0;
 }
 
 .pedagogical-list li {
@@ -752,7 +840,7 @@ mjx-container[display="true"] {
     position: absolute;
     left: -20000px;
     top: 0;
-    width: 170mm;
+    width: 210mm;
     z-index: -9999;
     visibility: hidden;
 }
@@ -768,31 +856,21 @@ mjx-container[display="true"] {
         margin: 0;
     }
 
-    #editor,
-    .book-editor {
+    /* The print aggregator uses id="editor" — reset gap for tight PDF pages */
+    #editor {
         gap: 0 !important;
     }
 
     .page {
-        width: 170mm !important;
-        height: 240mm !important;
-        margin: 0 auto !important;
         box-shadow: none !important;
+        margin: 0 !important;
         page-break-after: always;
     }
 
+    /* Hide sidebar and controls */
     .sidebar,
-    .controls-bar,
-    .screen-only {
+    .controls-bar {
         display: none !important;
-    }
-
-    .print-only {
-        display: block !important;
-        position: static !important;
-        left: 0 !important;
-        visibility: visible !important;
-        width: auto !important;
     }
 
     .main-view {
@@ -1161,4 +1239,52 @@ mjx-container[display="true"] {
     font-size: 0.95rem;
     color: #334155;
     line-height: 1.5;
+}
+
+/* ── SECTION VIEWER (per-section isolated editor) ── */
+
+/* Per-section editor containers use id="editor-{sectionId}" format.
+   They share all the same layout rules as the print #editor. */
+[id^="editor-"] {
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* The wrapper that holds a single SectionViewer's main-view.
+   The parent container (the flex sibling of sidebar) is position:relative,
+   so absolute inactive viewers are correctly positioned relative to it. */
+.section-viewer-wrapper {
+    overflow: hidden;
+}
+
+.section-viewer-wrapper .main-view {
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* ── UPDATED PRINT RULES for section-based architecture ── */
+@media print {
+
+    /* Hide all screen-side section viewers */
+    .section-viewer-wrapper {
+        display: none !important;
+    }
+
+    /* Hide the screen-only wrapper that contains sidebar + section viewers */
+    .screen-only {
+        display: none !important;
+    }
+
+    /* The PrintAggregator (.print-only) takes over completely */
+    .print-only {
+        display: block !important;
+        position: static !important;
+        left: 0 !important;
+        visibility: visible !important;
+        width: auto !important;
+        z-index: auto !important;
+    }
 }

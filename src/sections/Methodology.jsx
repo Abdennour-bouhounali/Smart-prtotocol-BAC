@@ -13,7 +13,8 @@ const ExerciseCard = ({ number, phase, title, children }) => {
             border: '2px solid #1e3a5f',
             borderRadius: '12px',
             padding: '20px 22px',
-            margin: '18px 0',
+            paddingBottom: '6px',
+            margin: '10px 0',
             background: 'linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%)',
             position: 'relative',
             direction: 'rtl',
@@ -251,16 +252,69 @@ const Methodology = () => {
 
             {/* مثال تطبيقي المرحلة الصفرية */}
             <div className="radar-box" style={{ background: '#fff', border: '1.5px solid #cbd5e1', borderRadius: '10px', padding: '18px 20px', margin: '15px 0' }}>
-                <div className="radar-box-title" style={{ color: '#1e3a5f', borderBottom: '2px solid #e2e8f0', paddingBottom: '8px', marginBottom: '12px' }}>مثال: دوال</div>
+                <div className="radar-box-title" style={{ color: '#1e3a5f', borderBottom: '2px solid #e2e8f0', paddingBottom: '8px', marginBottom: '12px' }}>مثال :</div>
                 <p style={{ marginBottom: '10px', lineHeight: '1.8' }}>
-                    <strong>الوضعية:</strong> يُعطى تمرين من ثلاثة أسئلة:
+                    <strong>الوضعية:</strong> لتكن الدالة:
                 </p>
-                <ul style={{ paddingRight: '20px', lineHeight: '2' }}>
-                    <li><strong>السؤال 1:</strong> احسب مشتقة الدالة <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = x e^x - e^x\\)"}</span> واستنتج إشارتها.</li>
-                    <li><strong>السؤال 2:</strong> أنشئ جدول تغيرات الدالة f.</li>
-                    <li><strong>السؤال 3:</strong> <em>استنتج</em> أن المنحنى يقع فوق محور الفواصل على <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\([0, +\\infty[\\)"}</span>.</li>
+                <div style={{ textAlign: 'center', margin: '12px 0 16px' }}>
+                    <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr', fontSize: '1.1em' }}>
+                        {"\\(f(x) = \\dfrac{x^2 + 1}{x + 1}\\)"}
+                    </span>
+                </div>
+                <ul style={{ paddingRight: '20px', lineHeight: '2.2' }}>
+                    <li><strong>السؤال 1:</strong> احسب مشتقة الدالة <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f'(x)\\)"}</span> ثم ادرس إشارتها.</li>
+                    <li><strong>السؤال 2:</strong> أنشئ جدول تغيرات الدالة <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f\\)"}</span> .</li>
+                    <li><strong>السؤال 3:</strong> بيّن أن المستقيم <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(y = x - 1\\)"}</span> مقارب للمنحنى.</li>
+                    <li><strong>السؤال 4:</strong> استنتج وضعية المنحنى بالنسبة إلى المستقيم المقارب.</li>
                 </ul>
-                <strong>الفائدة من "التحليل الشامل":</strong> قراءة السؤال 3 أولاً تُخبرك أن <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) \\geq 0\\)"}</span> على <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\([0,+\\infty[\\)"}</span>؛ وهذا يؤكد أن الحد الأدنى للدالة يجب أن يكون 0 أو أكبر. حين تحسب المشتقة وتجد أن الدالة تصل أدناها عند <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(x=1\\)"}</span>، تتحقق أن <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(1) = 0\\)"}</span> — وهي النتيجة المتوقعة.
+            </div>
+
+            {/* شرح أهمية التحليل الشامل */}
+            <div className="radar-box" style={{ background: '#fff', border: '1.5px solid #cbd5e1', borderRadius: '10px', padding: '18px 20px', margin: '15px 0' }}>
+                <div style={{ fontWeight: 'bold', fontSize: '1.05rem', color: '#1e3a5f', marginBottom: '12px' }}>
+                    أين تظهر أهمية "التحليل الشامل"؟
+                </div>
+                <p style={{ lineHeight: '1.9', marginBottom: '14px' }}>
+                    التلميذ الذي يقرأ السؤال 1 فقط سيبدأ مباشرةً بحساب مشتقة طويلة وقد يضيع في الحسابات. أما التلميذ الذي يقرأ التمرين كاملاً فسيلاحظ شيئاً مهماً جداً:
+                </p>
+                <p style={{ lineHeight: '1.9', marginBottom: '10px' }}>
+                    بما أن السؤال 3 يتحدث عن مقارب مائل من الشكل{' '}
+                    <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(y = x - 1\\)"}</span>
+                    {' '}، فهذا يعني غالباً أن الدالة يمكن كتابتها على الشكل:
+                </p>
+                <div style={{ textAlign: 'center', margin: '10px 0 14px', padding: '10px', background: '#f8fafc', borderRadius: '8px' }}>
+                    <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr', fontSize: '1.05em' }}>
+                        {"\\(f(x) = x - 1 + \\dfrac{k}{x + 1}\\)"}
+                    </span>
+                </div>
+                <p style={{ lineHeight: '1.9', marginBottom: '10px' }}>
+                    وهنا يصبح الحل أذكى بكثير، لأنك تقوم مباشرة بالقسمة:
+                </p>
+                <div style={{ textAlign: 'center', margin: '10px 0 14px', padding: '10px', background: '#f8fafc', borderRadius: '8px' }}>
+                    <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr', fontSize: '1.05em' }}>
+                        {"\\(f(x) = x - 1 + \\dfrac{2}{x + 1}\\)"}
+                    </span>
+                </div>
+                <p style={{ lineHeight: '1.9', marginBottom: '8px' }}>الآن لاحظ ماذا حدث:</p>
+                <ul style={{ paddingRight: '22px', lineHeight: '2.1' }}>
+                    <li>أصبح المقارب المائل واضحاً مباشرةً دون تفكير طويل.</li>
+                    <li>
+                        السؤال 4 أصبح سهلاً جداً لأن:{' '}
+                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>
+                            {"\\(f(x) - (x - 1) = \\dfrac{2}{x + 1}\\)"}
+                        </span>
+                    </li>
+                    <li>
+                        وبالتالي وضعية المنحنى تعتمد فقط على إشارة{' '}
+                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(x + 1\\)"}</span> .
+                    </li>
+                    <li>وحتى دراسة المشتقة أصبحت أبسط لأن كتابة الدالة الجديدة أسهل للاشتقاق.</li>
+                </ul>
+            </div>
+
+            <div className="strategy-box">
+                <div className="strategy-box-title">الفكرة المنهجية</div>
+                السؤال المتأخر ليس مجرد "نتيجة نهائية"، بل هو أحياناً دليل خفي يخبرك بالطريقة الذكية التي يجب أن تكتب بها الدالة أو تفكر بها منذ البداية.
             </div>
 
             {/* ---- فاصل صفحة A4 ---- */}
@@ -271,36 +325,53 @@ const Methodology = () => {
             <ExerciseCard number="1" phase="المرحلة الأولى" title="التحليل الشامل للتمرين">
 
                 <div className="exercise-statement">
-                    <strong>الوضعية:</strong> فيما يلي تمرين من ثلاثة أسئلة في مادة الدوال، اقرأه كاملاً ثم أجب:
+                    <strong>الوضعية:</strong> فيما يلي تمرين من ثلاثة أسئلة حول الدوال، اقرأه كاملاً قبل البدء:
                 </div>
 
                 <div className="radar-box" style={{ background: '#fff', border: '1px solid #e2e8f0', padding: '16px', margin: '10px 0' }}>
                     <ul style={{ paddingRight: '18px', lineHeight: '2.2' }}>
-                        <li><strong>السؤال 1:</strong> احسب مشتقة الدالة{' '}
-                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(f(x) = x^2 e^{-x}\\)'}</span>{' '}
-                            واستنتج إشارتها على <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(\\mathbb{R}\\)'}</span>.
+                        <li><strong>السؤال 1:</strong> ادرس إشارة الدالة{' '}
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(g(x) = x - 2\\)'}</span> .
                         </li>
-                        <li><strong>السؤال 2:</strong> أنشئ جدول تغيرات الدالة <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(f\\)'}</span>.</li>
-                        <li><strong>السؤال 3:</strong> <em>استنتج</em> أن <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(f(x) \\geq 0\\)'}</span> لكل <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(x \\in \\mathbb{R}\\)'}</span>.</li>
+                        <li><strong>السؤال 2:</strong> لتكن الدالة{' '}
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(f\\)'}</span>{' '}
+                            معرفة بـ:{' '}
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f'(x) = \\dfrac{g(x)}{x^2 + 1}\\)"}</span>{' '}
+                            . استنتج اتجاه تغير الدالة{' '}
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(f\\)'}</span> .
+                        </li>
+                        <li><strong>السؤال 3:</strong> بيّن أن الدالة{' '}
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(f\\)'}</span>{' '}
+                            متناقصة على{' '}
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(]{-}\\infty, 2]\\)'}</span>{' '}
+                            ومتزايدة على{' '}
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\([2, +\\infty[\\)'}</span> .
+                        </li>
                     </ul>
                 </div>
 
                 <div className="step-row-two" style={{ margin: '10px 0' }}>
                     <div className="left-col">المطلوب أ</div>
                     <div className="right-col">
-                        ما المعلومة التي يمنحك إياها السؤال 3 قبل الشروع في الحل؟ وكيف تؤثر في تحليل السؤال 1؟
+                        قبل حل السؤال 1، ماذا تتوقع حول إشارة{' '}
+                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(g(x)\\)'}</span>{' '}
+                        انطلاقاً من السؤال 3؟
                     </div>
                 </div>
                 <div className="step-row-two" style={{ margin: '10px 0' }}>
                     <div className="left-col">المطلوب ب</div>
                     <div className="right-col">
-                        ما المعطى الذي يُخبرك أن القيمة الدنيا للدالة يجب أن تكون موجبة أو تساوي الصفر؟ وأين يجب أن تتحقق هذه القيمة؟
+                        لماذا يسمح لك السؤال 3 بالتنبؤ بإشارة{' '}
+                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f'(x)\\)"}</span>{' '}
+                        حتى قبل الحساب؟
                     </div>
                 </div>
                 <div className="step-row-two" style={{ margin: '10px 0' }}>
                     <div className="left-col">المطلوب ج</div>
                     <div className="right-col">
-                        احسب <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(f\'(x)\\)'}</span> وأثبت أن <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(f\'(0) = 0\\)'}</span>، ثم استنتج إشارة <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(f\'\\)'}</span> منسجمةً مع ما أخبرك به السؤال 3.
+                        بعد دراسة إشارة{' '}
+                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(g(x)\\)'}</span>
+                        ، تحقق هل النتيجة منسجمة مع ما أخبرك به السؤال 3.
                     </div>
                 </div>
 
@@ -355,7 +426,7 @@ const Methodology = () => {
             </div>
 
             {/* مثال تطبيقي المرحلة الأولى */}
-            <div className="radar-box" style={{ background: '#fff', border: '1.5px solid #cbd5e1', borderRadius: '10px', padding: '18px 20px', margin: '1px 0' }}>
+            {/* <div className="radar-box" style={{ background: '#fff', border: '1.5px solid #cbd5e1', borderRadius: '10px', padding: '18px 20px', margin: '1px 0' }}>
                 <div className="radar-box-title" style={{ color: '#1e3a5f', borderBottom: '2px solid #e2e8f0', paddingBottom: '8px', marginBottom: '12px' }}>مثال: متتاليات</div>
                 <div style={{ marginBottom: '12px' }}>
                     <strong>نص السؤال:</strong> "أثبت أن المتتالية <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((U_n)\\)"}</span> متناقصة ومحدودة من الأسفل."
@@ -374,10 +445,8 @@ const Methodology = () => {
                     </div>
                 </div>
                 <strong>النتيجة:</strong> مجرد ترجمة السؤال أعطاك خارطة طريق واضحة بهدفين منفصلين تسعى لإثباتهما.
-            </div>
-            <br />
-            <br />
-            <br />
+            </div> */}
+
             {/* ---- فاصل صفحة A4 ---- */}
 
             {/* ══════════════════════════════════════════════
@@ -389,7 +458,7 @@ const Methodology = () => {
                     ترجم كل عبارة من العبارات التالية إلى علاقة رياضية دقيقة، كما في النموذج.
                 </div>
 
-                <div className="radar-box" style={{ background: '#fff', border: '1px solid #e2e8f0', padding: '16px', margin: '10px 0' }}>
+                <div className="radar-box" style={{ background: '#fff', border: '1px solid #e2e8f0', padding: '6px', margin: '4px 0' }}>
                     <div className="col-header-row-two">
                         <div className="col-header left-h">العبارة اللفظية</div>
                         <div className="col-header right-h">الترجمة الرياضية المطلوبة</div>
@@ -403,7 +472,7 @@ const Methodology = () => {
                         <div className="step-row-two" key={i}>
                             <div className="left-col" style={{ fontSize: '11pt', color: '#334155' }}>{expr}</div>
                             <div className="right-col" style={{ minHeight: '30px', borderBottom: '1px dashed #e2e8f0', padding: '4px 0' }}>
-                                <span style={{ textAlign: 'right', width: '100%', marginRight: '20px', fontSize: '11pt', color: '#1e3a5f' }}>..................................................</span>
+                                <span style={{ textAlign: 'right', width: '100%', marginRight: '20px', fontSize: '11pt', color: '#1e3a5f' }}>................................................</span>
                             </div>
                         </div>
                     ))}
@@ -419,7 +488,7 @@ const Methodology = () => {
 
 
             {/* ---- فاصل صفحة A4 ---- */}
-
+            <br />
             {/* ===================== المرحلة الثالثة ===================== */}
             <div id="toc-step3" className="question-header">المرحلة الثالثة: تحديد الهدف الحقيقي رياضيا (Aim)</div>
             <div className="step-row-two">
@@ -427,17 +496,17 @@ const Methodology = () => {
                 <div className="right-col">لا تبدأ بالحل قبل أن تعرف ما الذي تبحث عنه رياضياً.</div>
             </div>
             <div className="exercise-statement">
-                <strong>الإجراء:</strong> عليك ألا تضيع في التفاصيل؛ ركز على المطلوب من السؤال، وقم بـ "ترجمته" فوراً إلى علاقة رياضية واضحة في مسودتك.
+                <strong>الإجراء:</strong> عليك ألا تضيع في التفاصيل؛ ركز على المطلوب من السؤال، وقم بـ "ترجمته" إلى علاقة رياضية واضحة في مسودتك.
             </div>
             <div className="sub-question">أمثلة تطبيقية:</div>
 
-            <div className="step-row-two">
+            {/* <div className="step-row-two">
                 <div className="left-col">مثال هندسي</div>
                 <div className="right-col">
                     لاثبات أن المنحنى يقبل مركز تناظر ω(a, b)، هدفك المكتوب هو الوصول إلى:
                     <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(2a - x) + f(x) = 2b\\)"}</span>
                 </div>
-            </div>
+            </div> */}
 
             <div className="step-row-two">
                 <div className="left-col">مثال متتاليات</div>
@@ -449,14 +518,14 @@ const Methodology = () => {
 
             <div className="strategy-box">
                 <div className="strategy-box-title">تنبيه منهجي</div>
-                إذا كان الهدف معقداً، قم بتجزئته إلى أهداف فرعية في مسودتك (مثل: توحيد مقامات، استخراج عامل مشترك محدد) لتجعل خطواتك موجهة نحو غاية واضحة، فإن طلب منك مثلا تحليل عبارة رياضية إلى جداء 3 عوامل، يكفي أن تحدد كهدف أولي استخراج العامل الاول.
+                إذا كان الهدف معقداً، قم بتجزئته إلى أهداف فرعية في مسودتك (مثل: توحيد مقامات، استخراج عامل مشترك محدد)
             </div>
 
             {/* مثال تطبيقي المرحلة الثانية (البديل: المقارب المائل) */}
             <div className="radar-box" style={{ background: '#fff', border: '1.5px solid #cbd5e1', borderRadius: '10px', padding: '18px 20px', margin: '15px 0' }}>
                 <div className="radar-box-title" style={{ color: '#1e3a5f', borderBottom: '2px solid #e2e8f0', paddingBottom: '8px', marginBottom: '12px' }}>مثال: إثبات المقارب المائل (الترجمة من الهندسة إلى النهايات)</div>
                 <div style={{ marginBottom: '10px' }}>
-                    <strong>نص السؤال:</strong> "أثبت أن المستقيم <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((\\Delta)\\)"}</span> ذي المعادلة <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(y = x - 2\\)"}</span> هو مقارب مائل للمنحنى <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((C_f)\\)"}</span> جوار <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(+\\infty\\)"}</span>."
+                    <strong>نص السؤال:</strong> أثبت أن المستقيم <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((\\Delta)\\)"}</span> ذي المعادلة <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(y = x - 2\\)"}</span> مقارب مائل للمنحنى <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((C_f)\\)"}</span> جوار <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(+\\infty\\)"}</span>.
                 </div>
                 <div style={{ borderRight: '2px solid #e2e8f0', paddingRight: '14px', lineHeight: '2' }}>
                     <div><strong>الخطوة 1 — تحديد الهدف الدقيق رياضياً (الترجمة):</strong></div>
@@ -567,6 +636,8 @@ const Methodology = () => {
                     { title: "استخراج المعطيات", description: "حصر المعلومات التي لها علاقة بالبنية الرياضية للهدف." }
                 ]}
             />
+            <br />
+            <br />
 
             <div className="section-subtitle">تصنيف المعطيات :</div>
             <DataClassification
@@ -594,7 +665,6 @@ const Methodology = () => {
             </div>
 
             <div className="strategy-box">
-                <div className="strategy-box-title">البحث عن الكلمات المفتاحية المخفية</div>
                 المعطيات قد لا تظهر بشكل مباشر في نص السؤال؛ علبك باستخراجها وتحويلها إلى علاقات رياضية.
             </div>
 
@@ -948,7 +1018,7 @@ const Methodology = () => {
 
 
 
-            <div className="question-header" style={{ marginTop: '0px', marginBottom: '15px' }}>
+            <div className="question-header" style={{ marginTop: '0px' }}>
                 تقنيات تحليلية:
             </div>
             {/* مقدمة */}
@@ -957,63 +1027,89 @@ const Methodology = () => {
 
                 <strong>كيف نربط بين ما نملكه (المعطيات) وما نريده (الهدف)؟</strong>
 
-                <br /><br />
+                <br />
 
-                في بعض التمارين، يكون هذا الربط مباشراً، لكن في أغلب الحالات:
-                <strong>لا يوجد طريق واضح يربط بينهما.</strong>
+                في بعض التمارين، يكون هذا الربط مباشراً، لكن في التمارين المعقدة :
+                <strong>لا يوجد طريق واضح يربط بينهما</strong>
 
-                <br /><br />
+                <br />
 
-                هنا يقع المشكل:
-                الطالب يحاول التقدم خطوة بخطوة، لكنه لا يعرف <strong>من أين يبدأ أو ماذا يغيّر</strong>.
+                سأعرض في هذا الجزء بعضا من الطرق التحليلة لمساعدتك
 
-                <br /><br />
-
-                لذلك نحتاج إلى ما يسمى بـ <strong>"التقنيات التحليلية"</strong>:
-                وهي ليست قواعد ثابتة، بل <strong>طرق تفكير مرنة</strong> تساعدك على إعادة تشكيل المسألة حتى يصبح الحل ممكناً.
-
-                <br /><br />
+                <br />
 
                 هذه التقنيات تقوم بأدوار مختلفة، مثل:
-                <ul>
+                <ul style={{ listStyleType: 'disc', paddingRight: '20px' }}>
                     <li>إعادة كتابة الهدف بشكل يسهل الوصول إليه</li>
                     <li>إدخال عنصر وسيط لتسهيل المقارنة أو التحليل</li>
                     <li>تغيير زاوية النظر إلى المسألة (بتغيير المتغير أو التمثيل)</li>
                     <li>خلق تعبير جديد يسمح بالتبسيط أو الاختزال</li>
+                    <li>الحصر بين حدّين</li>
                 </ul>
-
-                <br />
 
                 المهم أن تفهم:
                 <strong>لا توجد تقنية واحدة صالحة لكل التمارين</strong>،
                 وما ستراه هنا هو فقط <strong>نماذج من أدوات كثيرة</strong> ستتعلم اختيارها تدريجياً مع الممارسة.
 
-                <br /><br />
+                <br />
 
                 الهدف ليس حفظ هذه التقنيات، بل:
-                <strong>تطوير القدرة على اكتشاف "التحويل المناسب" لكل تمرين.</strong>
+                <strong>تطوير القدرة على اكتشاف الحيلة المتاسبة لكل تمرين.</strong>
             </div>
             {/* <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', margin: '10px 0' }}> */}
 
             {/* 1. التحليل العكسي */}
             <div style={{ borderRight: '3px solid #1e3a5f', paddingRight: '16px', pageBreakInside: 'avoid', breakInside: 'avoid', marginTop: '16px' }}>
-                <div style={{ fontWeight: 'bold', color: '#1e3a5f', marginBottom: '6px' }}>
+                <div style={{ fontWeight: 'bold', color: '#1e3a5f', marginBottom: '5px' }}>
                     1. التحليل العكسي
                 </div>
-                <div style={{ color: '#334155', marginBottom: '10px', lineHeight: '1.8' }}>
-                    بدل أن تبدأ من المعطيات وتسير نحو الهدف، ابدأ من <strong>الهدف نفسه</strong> في المسودة واسأل: "ما الشرط الذي يجعله صحيحاً؟"
+                <div style={{ color: '#334155', marginBottom: '5px', lineHeight: '1.8' }}>
+                    في بعض الأحيان يطلب منك إثبات متباينات مثل:    <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>
+                        {"\\(\\dfrac{x+y}{2} \\geq \\sqrt{xy}, \\quad x,y \\geq 0\\)"}
+                    </span>
                 </div>
-                <div className="exercise-statement" style={{ padding: '12px 16px', lineHeight: '2' }}>
-                    <strong>الوضعية:</strong> لتكن المتتالية <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((U_n)\\)"}</span> معرّفة بـ <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(U_{n+1} = \\dfrac{U_n}{2} + 1\\)"}</span> مع <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(U_0 = 4\\)"}</span>.<br />
-                    <strong>المطلوب:</strong> أثبت أن <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((U_n)\\)"}</span> متناقصة، أي: <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(U_{n+1} - U_n < 0\\)"}</span> لكل <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(n\\)"}</span>.<br />
-                    <br />
-                    <strong>في المسودة — انطلق من الهدف:</strong><br />
-                    نريد: <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(U_{n+1} - U_n < 0\\)"}</span><br />
-                    نعوّض العلاقة التراجعية: <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(\\dfrac{U_n}{2} + 1 - U_n < 0\\)"}</span><br />
-                    نبسّط: <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(-\\dfrac{U_n}{2} + 1 < 0\\)"}</span><br />
-                    أي: <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(U_n > 2\\)"}</span> ← <strong>هذا هو الشرط المكشوف!</strong><br />
-                    <br />
-                    <strong>الخلاصة:</strong> التحليل العكسي كشف أننا نحتاج فقط إلى شرط <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(U_n > 2\\)"}</span>، وهو بالضبط ما يمكن إثباته من الجزء السابق أو بالاستقراء.
+
+                <div style={{ color: '#334155', margin: '5px 0', lineHeight: '1.8' }}>
+                    إذا لم تعرف من أين تبدأ، اشتغل بطريقة "التحليل العكسي" في المسودة:
+                </div>
+                <div style={{ paddingRight: '8px', lineHeight: '2.4' }}>
+                    <div style={{ marginBottom: '4px' }}>1. نبدأ من الهدف:{' '}<span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(\\dfrac{x+y}{2} \\geq \\sqrt{xy}\\)"}</span></div>
+                    <div style={{ marginBottom: '4px' }}>2. نضرب في 2:{' '}<span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(x + y \\geq 2\\sqrt{xy}\\)"}</span></div>
+                    <div style={{ marginBottom: '4px' }}>3. نربع الطرفين:{' '}<span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((x + y)^2 \\geq 4xy\\)"}</span></div>
+                    <div style={{ marginBottom: '4px' }}>4. نشر:{' '}<span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(x^2 + 2xy + y^2 \\geq 4xy\\)"}</span></div>
+                    <div style={{ marginBottom: '4px' }}>5. إعادة ترتيب:{' '}<span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(x^2 - 2xy + y^2 \\geq 0\\)"}</span></div>
+                    <div style={{ marginBottom: '4px' }}>6. التحليل:{' '}<span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((x - y)^2 \\geq 0\\)"}</span></div>
+                </div>
+                <div style={{ color: '#334155', lineHeight: '1.8', marginTop: '6px' }}>
+                    <strong>الفكرة الأساسية:</strong> ننتهي دائماً إلى حقيقة معروفة: أي مربع عدد حقيقي غير سالب.
+                </div>
+                <div style={{ color: '#334155', lineHeight: '1.8', marginTop: '6px' }}>
+                    <strong>المنطق العكسي:</strong> في الامتحان، لا تبدأ من الهدف النهائي، بل تبدأ من{' '}
+                    <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((x - y)^2 \\geq 0\\)"}</span>
+                    {' '}وتعيد بناء الخطوات للوصول إلى النتيجة المطلوبة.
+                </div>
+
+                {/* أخطاء شائعة */}
+                <div style={{ background: '#f8fafc', border: '1.5px solid #cbd5e1', borderRadius: '8px', padding: '14px 16px', marginTop: '14px', lineHeight: '1.9' }}>
+                    <div style={{ fontWeight: 'bold', color: '#1e3a5f', marginBottom: '10px' }}>أخطاء شائعة يجب تجنبها</div>
+                    <ol style={{ paddingRight: '20px', margin: 0 }}>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>خطوات غير قابلة للعكس:</strong> انتبه للعمليات التي لا يمكن عكسها بسهولة. مثلاً التربيع ليس قابلاً للعكس دائماً لأن{' '}
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(4 = (-2)^2 = 2^2\\)"}</span>
+                            {' '}، لذلك قد تحتاج دراسة حالات{' '}
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((+/-)\\)"}</span>.
+                        </li>
+                        <li style={{ marginBottom: '8px' }}>
+                            <strong>نسيان كتابة البرهان في الاتجاه الأمامي:</strong> في الامتحان، العمل العكسي هو فقط مسودة. الحل النهائي يجب أن يكون تسلسلاً منطقياً يبدأ من المعطيات نحو النتيجة.
+                        </li>
+                        <li>
+                            <strong>اتجاه المنطق:</strong> كون{' '}
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(B \\Rightarrow A\\)"}</span>
+                            {' '}لا يعني دائماً أن{' '}
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(A \\Rightarrow B\\)"}</span>
+                            . لذلك يجب التأكد من صحة كل خطوة، خاصة في التكافؤات.
+                        </li>
+                    </ol>
                 </div>
             </div>
 
@@ -1075,49 +1171,97 @@ const Methodology = () => {
                     نقسم على <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(x\\)"}</span>: <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(\\frac{1}{\\sqrt{1 + \\frac{1}{x}} + 1} \\xrightarrow[x \\to +\\infty]{} \\frac{1}{2}\\)"}</span>
                 </div>
             </div>
+            {/* 5. التأطير (الحصر أو مبدأ العصر / Sandwich) */}
+            <div style={{ borderRight: '3px solid #1e3a5f', paddingRight: '14px', marginTop: '5px' }}>
 
+                <div style={{ fontWeight: 'bold', color: '#1e3a5f', marginBottom: '4px' }}>
+                    5. الحصر بين حدّين
+                </div>
+
+                <div style={{ color: '#334155', marginBottom: '6px', lineHeight: '1.7' }}>
+                    أحياناً لا نستطيع حساب قيمة مباشرة أو دراسة سلوك دالة بشكل صريح،
+                    لكن يمكننا حصرها بين حدّين. إذا تقارب الحدّان لنفس القيمة، فإن الدالة تقترب منها.
+                </div>
+
+                <div className="exercise-statement" style={{ padding: '8px 12px', lineHeight: '1.7' }}>
+
+                    <strong>الفكرة الأساسية:</strong>
+
+                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '8px', gap: '10px' }}>
+                        <div>إذا كان:</div>
+                        <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>
+                                {'\\( a(x) \\leq f(x) \\leq b(x) \\)'}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '6px', gap: '10px' }}>
+                        <div>و</div>
+                        <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>
+                                {'\\( \\lim a(x) = \\lim b(x) = L \\)'}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '6px', gap: '10px' }}>
+                        <div>إذن:</div>
+                        <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>
+                                {'\\( \\lim f(x) = L \\)'}
+                            </span>
+                        </div>
+                    </div>
+
+                    <br />
+
+                    <strong>مثال:</strong>
+
+                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '6px', gap: '10px' }}>
+                        <div>نحسب:</div>
+                        <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>
+                                {'\\( \\lim_{x \\to 0} \\frac{\\sin x}{x} \\)'}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div style={{ marginTop: '6px' }}>
+                        قرب 0:
+                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4px' }}>
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>
+                                {'\\( \\cos x \\leq \\frac{\\sin x}{x} \\leq 1 \\)'}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '6px', gap: '10px' }}>
+                        <div>وبما أن:</div>
+                        <div style={{ flex: 1, display: 'flex', justifyContent: 'center', gap: '10px' }}>
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>
+                                {'\\( \\lim_{x \\to 0} \\cos x = 1 \\)'}
+                            </span>
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>
+                                {'\\( \\lim_{x \\to 0} 1 = 1 \\)'}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '6px', gap: '10px' }}>
+                        <div>إذن:</div>
+                        <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                            <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>
+                                {'\\( \\lim_{x \\to 0} \\frac{\\sin x}{x} = 1 \\)'}
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
             {/* ---- فاصل صفحة A4 ---- */}
 
-            {/* ══════════════════════════════════════════════
-                تمرين 6 — التقنيات التحليلية
-               ══════════════════════════════════════════════ */}
-            <ExerciseCard number="6" phase="المرحلة الرابعة — التقنيات" title="اختيار التقنية المناسبة">
-
-                <div className="exercise-statement">
-                    لكل حالة من الحالات التالية، حدّد التقنية التحليلية الأنسب من بين: التحليل العكسي، الدالة المساعدة، تغيير المتغير، الإضافة والاختزال.
-                </div>
-
-                <div className="radar-box" style={{ background: '#fff', border: '1px solid #e2e8f0', padding: '16px', margin: '10px 0' }}>
-                    {[
-                        {
-                            label: 'الحالة أ',
-                            text: <>إثبات أن <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(\\ln(x) \\leq x - 1\\)'}</span> لكل <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(x > 0\\)'}</span>.</>
-                        },
-                        {
-                            label: 'الحالة ب',
-                            text: <>حساب <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(\\displaystyle\\lim_{x\\to+\\infty}(\\sqrt{x+1}-\\sqrt{x})\\)'}</span>.</>
-                        },
-                        {
-                            label: 'الحالة ج',
-                            text: <>أثبت أن: <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(1 + 2 + 3 + ... + n = \\frac{n(n+1)}{2}\\)'}</span>.</>
-                        },
-                        {
-                            label: 'الحالة د',
-                            text: <>لتكن <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(U_n = 3^n + 1\\)'}</span>، احسب <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(S =  U_0^2 + U_1^2 + ... + U_n^2\\)'}</span>.</>
-                        },
-                    ].map((c, i) => (
-                        <div className="step-row-two" key={i}>
-                            <div className="left-col" style={{ fontWeight: 'bold' }}>{c.label}</div>
-                            <div className="right-col">
-                                {c.text}
-                                <div style={{ minHeight: '22px', borderBottom: '1px dashed #e2e8f0', marginTop: '6px' }} />
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-            </ExerciseCard>
 
             {/* ---- فاصل صفحة A4 ---- */}
 

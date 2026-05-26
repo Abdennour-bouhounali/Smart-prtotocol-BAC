@@ -1,147 +1,112 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { loadExercices } from './utils/exerciseLoader';
+import React, { useState, useEffect, useCallback } from 'react';
 import SectionViewer from './components/SectionViewer';
-import PrintBookViewer from './components/PrintBookViewer';
+import SectionNav from './components/SectionNav';
+import PrintAggregator from './components/PrintAggregator';
+import { loadExercices } from './utils/exerciseLoader';
 import './styles/global.css';
 
-const App = () => {
-    const [exercices, setExercices] = useState([]);
-    const [activeSectionId, setActiveSectionId] = useState('');
-    const [sectionResets, setSectionResets] = useState({});
-    const [bookName, setBookName] = useState('بروتوكول SMART لحل المسائل الرياضية');
-    const [loading, setLoading] = useState(true);
+/** Read the section id stored in the URL hash, e.g. "#section-Introduction" → "section-Introduction" */
+const getHashSectionId = () => window.location.hash.replace(/^#/, '') || null;
 
-    const triggerPaginationRef = useRef(null);
+const App = () => {
+    const [sections, setSections] = useState([]);
+    const [bookName, setBookName] = useState('بروتوكول SMART لحل المسائل الرياضية');
+    const [activeSectionId, setActiveSectionId] = useState(getHashSectionId);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchContent = async () => {
             const { sections: s, exercices: e } = await loadExercices();
-            const combined = [...s, ...e];
-            setExercices(combined);
-            if (combined.length > 0) {
-                setActiveSectionId(combined[0].id);
+            const allSections = [...s, ...e];
+            setSections(allSections);
+
+            // On load, honour the URL hash if it matches a known section;
+            // otherwise fall back to the first section.
+            const hashId = getHashSectionId();
+            const match = allSections.find((sec) => sec.id === hashId);
+            const initial = match ? match.id : allSections[0]?.id ?? null;
+
+            setActiveSectionId(initial);
+            // Make sure the URL reflects the resolved section
+            if (initial && initial !== hashId) {
+                window.location.replace(`#${initial}`);
             }
+
             setLoading(false);
         };
         fetchContent();
     }, []);
 
-    const handlePrint = async () => {
-        if (triggerPaginationRef.current) {
-            // Aggregate and paginate the print view
-            triggerPaginationRef.current();
+    // Keep URL hash in sync when the user navigates between sections
+    const handleSectionSelect = useCallback((sectionId) => {
+        setActiveSectionId(sectionId);
+        // pushState-style navigation via hash so the Back button works
+        window.location.hash = sectionId;
+    }, []);
 
-            // Wait for MathJax typesetting if available
-            if (window.MathJax && window.MathJax.typesetPromise) {
-                try {
-                    await window.MathJax.typesetPromise([document.getElementById('print-editor')]);
-                } catch (err) {
-                    console.error("MathJax typesetting error:", err);
-                }
-            }
+    // Support browser Back / Forward buttons
+    useEffect(() => {
+        const onHashChange = () => {
+            const id = getHashSectionId();
+            if (id) setActiveSectionId(id);
+        };
+        window.addEventListener('hashchange', onHashChange);
+        return () => window.removeEventListener('hashchange', onHashChange);
+    }, []);
 
-            // Let layout settle
+    const handlePrint = () => {
+        setIsPrinting(true);
+
+        requestAnimationFrame(() => {
             setTimeout(() => {
                 window.print();
-            }, 500);
-        }
+
+                setTimeout(() => {
+                    setIsPrinting(false);
+                }, 1000);
+
+            }, 1000);
+        });
     };
 
-    const handleRefreshActiveSection = () => {
-        if (activeSectionId) {
-            setSectionResets(prev => ({
-                ...prev,
-                [activeSectionId]: (prev[activeSectionId] || 0) + 1
-            }));
-        }
-    };
-
-    if (loading) return <div style={{ direction: 'rtl', padding: '20px' }}>جاري التحميل...</div>;
+    if (loading) {
+        return (
+            <div style={{ direction: 'rtl', padding: '20px', fontFamily: 'Amiri, serif' }}>
+                جاري التحميل...
+            </div>
+        );
+    }
 
     return (
         <div className="app-container" dir="rtl">
-            {/* SCREEN VIEW - What you see in browser */}
+            {/* ── SCREEN VIEW ── */}
             <div className="screen-only" style={{ display: 'flex', width: '100%', height: '100%' }}>
-                {/* Sidebar Navigation */}
-                <div className="sidebar">
-                    <div className="sidebar-title" style={{ fontSize: '1.2rem', lineHeight: '1.4' }}>
-                        {bookName}
-                    </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', overflowY: 'auto', flex: 1 }}>
-                        {exercices.map(sec => (
-                            <div 
-                                key={sec.id}
-                                className={`exercise-item ${activeSectionId === sec.id ? 'active' : ''}`}
-                                onClick={() => setActiveSectionId(sec.id)}
-                            >
-                                <span>{sec.name}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                {/* Sidebar navigation */}
+                <SectionNav
+                    sections={sections}
+                    activeSectionId={activeSectionId}
+                    onSectionSelect={handleSectionSelect}
+                    bookName={bookName}
+                    onBookNameChange={setBookName}
+                    onPrint={handlePrint}
+                />
 
-                {/* Main View rendering only the active section content */}
-                <div className="main-view">
-                    {exercices.map(sec => (
-                        <div 
-                            key={sec.id} 
-                            style={{ display: activeSectionId === sec.id ? 'block' : 'none' }}
-                        >
-                            <SectionViewer 
-                                section={sec} 
-                                bookName={bookName} 
-                                resetCounter={sectionResets[sec.id] || 0}
-                            />
-                        </div>
+                {/* Section viewers — all mounted, only active one is visible.
+                    This preserves per-section state (edits, pagination) across navigation. */}
+                <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
+                    {sections.map((section) => (
+                        <SectionViewer
+                            key={section.id}
+                            section={section}
+                            bookName={bookName}
+                            isVisible={section.id === activeSectionId}
+                        />
                     ))}
                 </div>
             </div>
 
-            {/* PRINT VIEW - What gets printed to PDF */}
-            <div className="print-only">
-                <PrintBookViewer 
-                    sections={exercices} 
-                    bookName={bookName} 
-                    triggerPaginationRef={triggerPaginationRef} 
-                />
-            </div>
-
-            {/* Controls Bar */}
-            <div className="controls-bar" style={{
-                position: 'fixed',
-                top: '20px',
-                left: '20px',
-                zIndex: 1000,
-                background: 'white',
-                padding: '10px',
-                borderRadius: '8px',
-                boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px'
-            }}>
-                <label style={{ fontWeight: 'bold' }}>اسم الكتاب:</label>
-                <input
-                    type="text"
-                    value={bookName}
-                    onChange={(e) => setBookName(e.target.value)}
-                    style={{ padding: '5px', borderRadius: '4px', border: '1px solid #ccc' }}
-                />
-                <button
-                    className="export-btn"
-                    onClick={handlePrint}
-                    style={{ position: 'relative', top: '0', right: '0', background: '#e67e22' }}
-                >
-                    🖨️ تصدير PDF (B5)
-                </button>
-                <button
-                    className="btn-book-view"
-                    onClick={handleRefreshActiveSection}
-                    style={{ background: '#c0392b', display: 'flex', alignItems: 'center', gap: '5px' }}
-                >
-                    🔄 تحديث القسم الحالي
-                </button>
-            </div>
+            {/* ── PRINT VIEW ── All sections aggregated into one document for PDF export */}
+            <PrintAggregator sections={sections} bookName={bookName} />
         </div>
     );
 };
