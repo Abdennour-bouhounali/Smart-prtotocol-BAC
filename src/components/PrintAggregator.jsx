@@ -41,4 +41,4 @@ const PrintAggregator = ({ sections, bookName }) => {
     );
 };
 
-export default PrintAggregator;
+export default React.memo(PrintAggregator);

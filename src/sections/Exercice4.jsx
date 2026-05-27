@@ -102,7 +102,7 @@ const Exercice4 = () => {
                 <div style={{ marginBottom: '5x' }}>
                     <strong>I)</strong> <span className="math">{"\\(g\\)"}</span> الدالة العددية المعرفة على المجال <span className="math">{"\\(]0; +\\infty[\\)"}</span> بـ: <span className="math">{"\\(g(x) = 1 + x^2 + 2\\ln x\\)"}</span>.
                     <div style={{ paddingRight: '20px', marginTop: '5px' }}>
-                        1) ادرس اتجاه تغير الدالة <span className="math">{"\\(g\\)"}</span>.
+                        1)  ادرس اتجاه تغير الدالة <span className="math">{"\\(g\\)"}</span>.
                         <br />
                         2) بيّن أنّ المعادلة <span className="math">{"\\(g(x) = 0\\)"}</span> تقبل في المجال <span className="math">{"\\(]0,52 ; 0,53[\\)"}</span> حلاً وحيداً <span className="math">{"\\(\\alpha\\)"}</span>.
                         <br />
@@ -288,10 +288,6 @@ const Exercice4 = () => {
                 عندما تطلب منك البكالوريا دراسة "اتجاه تغير دالة" مساعدة، فإن الهدف الأساسي هو إيجاد إشارة المشتقة وتوظيف رتابتها لإثبات وجود جذر وحيد لاحقاً. لا تتوقف عند حساب المشتقة بل بسطها حتى تصبح الإشارة واضحة تماماً.
             </div>
 
-            <div className="danger-box">
-                <div className="danger-box-title">⚠️ فخ شائع (Danger Zone)</div>
-                إياك أن تترك المشتقة بشكل مجموع كسرين دون توحيد المقامات! التسرع هنا قد يجعلك تخطئ في إيجاد إشارة العبارة إذا كانت الحدود تحتوي على إشارات سالبة. توحيد المقامات هو الضمانة القانونية لصحة الإشارة.
-            </div>
 
             {/* ============================================================
                 PART I — Q2
@@ -448,10 +444,21 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    «احسب النهايات» = <span className="math">{"\\(\\lim_{x\\to0^+} f(x)\\)"}</span> و <span className="math">{"\\(\\lim_{x\\to+\\infty} f(x)\\)"}</span>.
+
+                    <p>
+                        المطلوب هو حساب نهايتين:
+                        <span className="math">{"\\(x \\to 0^+\\)"}</span>
+                        و
+                        <span className="math">{"\\(x \\to +\\infty\\)"}</span>.
+                    </p>
+
+                    <p>
+                        سنحدد سلوك كل حد من حدود الدالة.
+                    </p>
                 </div>
+
                 <div className="right-col">
-                    نعوض في عبارة الدالة مباشرة لدراسة السلوك بجوار الحدود.
+                    نعوض في عبارة الدالة لدراسة السلوك قرب حدود المجال.
                 </div>
             </div>
 
@@ -459,13 +466,21 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    <span className="math">{"\\(\\lim_{x\\to0^+} f(x) = {?}\\)"}</span> و <span className="math">{"\\(\\lim_{x\\to+\\infty} f(x) = {?}\\)"}</span>
+
+                    <p>
+                        نريد إيجاد:
+                        <span className="math">
+                            {"\\(\\lim_{x\\to0^+} f(x)\\)"}
+                        </span>
+                        و
+                        <span className="math">
+                            {"\\(\\lim_{x\\to+\\infty} f(x)\\)"}
+                        </span>.
+                    </p>
                 </div>
+
                 <div className="right-col">
-                    <strong>الهدف:</strong> إيجاد
-                    <span className="math">{"\\(\\lim_{x \\to 0^+} f(x)\\)"}</span>
-                    و
-                    <span className="math">{"\\(\\lim_{x \\to +\\infty} f(x)\\)"}</span>.
+                    <strong>الهدف:</strong> حساب نهايتي الدالة عند الصفر واللانهاية.
                 </div>
             </div>
 
@@ -473,69 +488,126 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    <strong>المعطيات المرجعية:</strong>
-                    <br />• <span className="math">{"\\(\\lim_{x\\to0^+}\\ln x = -\\infty\\)"}</span>
-                    <br />• <span className="math">{"\\(\\lim_{x\\to+\\infty}\\dfrac{\\ln x}{x} = 0\\)"}</span><br />
-                    كيف نوظف <strong>التزايد المقارن</strong> و<strong>سلوك اللوغاريتم عند الصفر</strong> لحساب نهايتَي <span className="math">{"\\(f\\)"}</span>؟
+
+                    <p>
+                        عند الصفر:
+                        <span className="math">{"\\(\\ln x\\)"}</span>
+                        يؤول إلى
+                        <span className="math">{"\\(-\\infty\\)"}</span>.
+                    </p>
+
+                    <p>
+                        عند اللانهاية:
+                        <span className="math">{"\\(\\frac{\\ln x}{x}\\)"}</span>
+                        يؤول إلى الصفر.
+                    </p>
+
+                    <p>
+                        إذن نركز على الحد المسيطر في كل حالة.
+                    </p>
                 </div>
+
                 <div className="right-col">
-                    لدينا النهايات المرجعية التالية:
-                    <br />•
-                    <span className="math">{"\\(\\lim_{x \\to 0^+} \\ln x = -\\infty\\)"}</span>
-                    <br />•
-                    <span className="math">{"\\(\\lim_{x \\to +\\infty} \\dfrac{\\ln x}{x} = 0\\)"}</span>
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to0^+}\\ln x = -\\infty\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to+\\infty}\\frac{\\ln x}{x} = 0\\]"}
+                    </div>
                 </div>
             </div>
 
-            {/* II.Q1 — EXECUTION */}
+            {/* II.Q1 — EXECUTION 1 */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ الجبري</span><br />
-                    <strong>1. عند الصفر:</strong>
-                    الحد الأول:
-                    <span className="math">{"\\(-x \\to 0\\)"}</span>.
-                    الكسر:
-                    <span className="math">{"\\(\\frac{3 + 2\\ln x}{x} = (3 + 2\\ln x) \\cdot \\frac{1}{x}\\)"}</span>.
-                    بما أن القوس يؤول إلى
-                    <span className="math">{"\\(-\\infty\\)"}</span>
-                    و
-                    <span className="math">{"\\(1/x\\)"}</span> يؤول إلى
-                    <span className="math">{"\\(+\\infty\\)"}</span>،
-                    فإن جداءهما يؤول إلى
-                    <span className="math">{"\\(-\\infty\\)"}</span>.
-                    إذن النهاية الكلية هي
-                    <span className="math">{"\\(-\\infty\\)"}</span>.
-                    <br />
-                    <strong>2. عند اللانهاية:</strong>
-                    أفكك الكسر:
-                    <span className="math">{"\\(\\frac{3+2\\ln x}{x} = \\frac{3}{x} + 2 \\cdot \\frac{\\ln x}{x}\\)"}</span>.
-                    النهاية عند اللانهاية تصبح:
-                    <span className="math">{"\\(\\lim_{x\\to+\\infty} \\frac{3}{x} = 0\\)"}</span>
-                    و
-                    <span className="math">{"\\(\\lim_{x\\to+\\infty} \\frac{\\ln x}{x} = 0\\)"}</span>.
-                    إذن الكسر بأكمله يؤول للصفر.
-                    يتبقى لدينا الحد
-                    <span className="math">{"\\(-x\\)"}</span>
-                    الذي يؤول إلى
-                    <span className="math">{"\\(-\\infty\\)"}</span>.
+
+                    <p>
+                        أدرس كل حد لوحده.
+                    </p>
+
+                    <p>
+                        الحد
+                        <span className="math">{"\\(-x\\)"}</span>
+                        يقترب من الصفر.
+                    </p>
+
+                    <p>
+                        أما الكسر فيحتوي على
+                        <span className="math">{"\\(\\ln x\\)"}</span>
+                        الذي يؤول إلى
+                        <span className="math">{"\\(-\\infty\\)"}</span>.
+                    </p>
+
+                    <p>
+                        إذن هذا الحد هو الذي يحدد النهاية.
+                    </p>
                 </div>
+
                 <div className="right-col">
-                    <strong>الحساب التفصيلي للنهايات:</strong>
-                    <br /><br />
-                    1. عند الصفر بقيم كبرى:
-                    <div className="math-block">{"\\[\\lim_{x \\to 0^+} f(x) = \\lim_{x \\to 0^+} \\left[ -x + (3+2\\ln x)\\frac{1}{x} \\right]\\]"}</div>
-                    بما أن:
-                    <span className="math">{"\\(\\lim_{x \\to 0^+} (-x) = 0\\)"}</span> و
-                    <span className="math">{"\\(\\lim_{x \\to 0^+} (3+2\\ln x) = -\\infty\\)"}</span> و
-                    <span className="math">{"\\(\\lim_{x \\to 0^+} \\frac{1}{x} = +\\infty\\)"}</span>:
-                    <div className="math-block">{"\\[\\lim_{x \\to 0^+} f(x) = 0 + (-\\infty)(+\\infty) = -\\infty\\]"}</div>
-                    2. عند اللانهاية:
-                    <div className="math-block">{"\\[\\lim_{x \\to +\\infty} f(x) = \\lim_{x \\to +\\infty} \\left[ -x + \\frac{3}{x} + 2\\frac{\\ln x}{x} \\right]\\]"}</div>
-                    بما أن:
-                    <span className="math">{"\\(\\lim_{x \\to +\\infty} \\frac{3}{x} = 0\\)"}</span> و
-                    <span className="math">{"\\(\\lim_{x \\to +\\infty} \\frac{\\ln x}{x} = 0\\)"}</span> و
-                    <span className="math">{"\\(\\lim_{x \\to +\\infty} (-x) = -\\infty\\)"}</span>:
-                    <div className="math-block">{"\\[\\lim_{x \\to +\\infty} f(x) = -\\infty + 0 + 0 = -\\infty\\]"}</div>
+                    <div className="math-block">
+                        {"\\[\\lim_{x \\to 0^+} f(x)=\\lim_{x \\to 0^+}\\left[-x+(3+2\\ln x)\\frac1x\\right]\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x \\to 0^+}(-x)=0\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x \\to 0^+}(3+2\\ln x)=-\\infty\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x \\to 0^+}\\frac1x=+\\infty\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x \\to 0^+}f(x)=-\\infty\\]"}
+                    </div>
+                </div>
+            </div>
+
+            {/* II.Q1 — EXECUTION 2 */}
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label start">التنفيذ الجبري</span><br />
+
+                    <p>
+                        أفكك الكسر إلى حدود بسيطة.
+                    </p>
+
+                    <p>
+                        الحدود الكسرية تؤول إلى الصفر.
+                    </p>
+
+                    <p>
+                        يبقى الحد
+                        <span className="math">{"\\(-x\\)"}</span>
+                        وهو الذي يسيطر عند اللانهاية.
+                    </p>
+                </div>
+
+                <div className="right-col">
+                    <div className="math-block">
+                        {"\\[\\frac{3+2\\ln x}{x}=\\frac3x+2\\frac{\\ln x}{x}\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to+\\infty}\\frac3x=0\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to+\\infty}\\frac{\\ln x}{x}=0\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to+\\infty}(-x)=-\\infty\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to+\\infty}f(x)=-\\infty\\]"}
+                    </div>
                 </div>
             </div>
 
@@ -543,80 +615,25 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <span className="math">{"\\(f(1) = -1 + 3 = 2\\)"}</span> موجب ← المنحنى يقع فوق محور الفواصل عند <span className="math">{"\\(x=1\\)"}</span> ✓. النهاية <span className="math">{"\\(-\\infty\\)"}</span> عند الصفر تؤكد المقارب العمودي <span className="math">{"\\(x=0\\)"}</span>.
+
+                    <p>
+                        النهاية عند الصفر هي
+                        <span className="math">{"\\(-\\infty\\)"}</span>.
+                    </p>
+
+                    <p>
+                        إذن المستقيم
+                        <span className="math">{"\\(x=0\\)"}</span>
+                        مقارب عمودي.
+                    </p>
                 </div>
+
                 <div className="right-col">
-                    التفسير الهندسي:
-                    المستقيم ذو المعادلة
-                    <span className="math">{"\\(x = 0\\)"}</span>
-                    هو <strong>مستقيم مقارب عمودي</strong> للمنحنى
-                    <span className="math">{"\\((C_f)\\)"}</span>.
+                    المستقيم
+                    <span className="math">{"\\(x=0\\)"}</span>
+                    هو مقارب عمودي للمنحنى.
                 </div>
             </div>
-
-            {/* II.Q1 — EXECUTION */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ الجبري</span><br />
-                    <strong>1. عند الصفر:</strong>
-                    الحد الأول:
-                    <span className="math">{"\\(-x \\to 0\\)"}</span>.
-                    الكسر:
-                    <span className="math">{"\\(\\frac{3 + 2\\ln x}{x} = (3 + 2\\ln x) \\cdot \\frac{1}{x}\\)"}</span>.
-                    بما أن القوس يؤول إلى
-                    <span className="math">{"\\(-\\infty\\)"}</span>
-                    و
-                    <span className="math">{"\\(1/x\\)"}</span> يؤول إلى
-                    <span className="math">{"\\(+\\infty\\)"}</span>،
-                    فإن جداءهما يؤول إلى
-                    <span className="math">{"\\(-\\infty\\)"}</span>.
-                    إذن النهاية الكلية هي
-                    <span className="math">{"\\(-\\infty\\)"}</span>.
-                    <br />
-                    <strong>2. عند اللانهاية:</strong>
-                    أفكك الكسر:
-                    <span className="math">{"\\(\\frac{3+2\\ln x}{x} = \\frac{3}{x} + 2 \\cdot \\frac{\\ln x}{x}\\)"}</span>.
-                    النهاية عند اللانهاية تصبح:
-                    <span className="math">{"\\(\\lim_{x\\to+\\infty} \\frac{3}{x} = 0\\)"}</span>
-                    و
-                    <span className="math">{"\\(\\lim_{x\\to+\\infty} \\frac{\\ln x}{x} = 0\\)"}</span>.
-                    إذن الكسر بأكمله يؤول للصفر.
-                    يتبقى لدينا الحد
-                    <span className="math">{"\\(-x\\)"}</span>
-                    الذي يؤول إلى
-                    <span className="math">{"\\(-\\infty\\)"}</span>.
-                </div>
-                <div className="right-col">
-                    <strong>الحساب التفصيلي للنهايات:</strong>
-                    <br /><br />
-                    1. عند الصفر بقيم كبرى:
-                    <div className="math-block">{"\\[\\lim_{x \\to 0^+} f(x) = \\lim_{x \\to 0^+} \\left[ -x + (3+2\\ln x)\\frac{1}{x} \\right]\\]"}</div>
-                    بما أن:
-                    <span className="math">{"\\(\\lim_{x \\to 0^+} (-x) = 0\\)"}</span> و
-                    <span className="math">{"\\(\\lim_{x \\to 0^+} (3+2\\ln x) = -\\infty\\)"}</span> و
-                    <span className="math">{"\\(\\lim_{x \\to 0^+} \\frac{1}{x} = +\\infty\\)"}</span>:
-                    <div className="math-block">{"\\[\\lim_{x \\to 0^+} f(x) = 0 + (-\\infty)(+\\infty) = -\\infty\\]"}</div>
-                    2. عند اللانهاية:
-                    <div className="math-block">{"\\[\\lim_{x \\to +\\infty} f(x) = \\lim_{x \\to +\\infty} \\left[ -x + \\frac{3}{x} + 2\\frac{\\ln x}{x} \\right]\\]"}</div>
-                    بما أن:
-                    <span className="math">{"\\(\\lim_{x \\to +\\infty} \\frac{3}{x} = 0\\)"}</span> و
-                    <span className="math">{"\\(\\lim_{x \\to +\\infty} \\frac{\\ln x}{x} = 0\\)"}</span> و
-                    <span className="math">{"\\(\\lim_{x \\to +\\infty} (-x) = -\\infty\\)"}</span>:
-                    <div className="math-block">{"\\[\\lim_{x \\to +\\infty} f(x) = -\\infty + 0 + 0 = -\\infty\\]"}</div>
-                </div>
-            </div>
-
-            {/* II.Q1 — TEST */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <span className="math">{"\\(f(1) = -1+3 = 2 > 0\\)"}</span> ← المنحنى فوق المحور عند <span className="math">{"\\(x=1\\)"}</span> ✓
-                </div>
-                <div className="right-col">
-                    النهاية <span className="math">{"\\(-\\infty\\)"}</span> عند <span className="math">{"\\(0^+\\)"}</span> ← مقارب عمودي <span className="math">{"\\(x=0\\)"}</span>.
-                </div>
-            </div>
-
             <div className="danger-box">
                 <div className="danger-box-title">⚠️ احذر من الخلط في شكل المالانهاية على الصفر!</div>
                 يقع بعض الطلاب في حفرة التفكير أن النهاية من شكل
@@ -660,39 +677,86 @@ const Exercice4 = () => {
 
             {/* II.Q2.A — RELATE */}
             <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    دعنا نعوض في قانون الكسر ونجمع الحدود:
-                    <div className="math-block">{"\\[\\left(\\frac{3+2\\ln x}{x}\\right)' = \\frac{(\\frac{2}{x})(x) - (3+2\\ln x)(1)}{x^2}\\]"}</div>
-                    أبسط البسط:
-                    <div className="math-block">{"\\[\\frac{2 - 3 - 2\\ln x}{x^2} = \\frac{-1 - 2\\ln x}{x^2}\\]"}</div>
-                    الآن أربط هذا بالحد الأول للمشتقة
-                    <span className="math">{"\\(-1\\)"}</span>.
+                {/* LEFT = طريقة التفكير */}
+                <div className="left-col thinking-col">
+                    <span className="phase-label data">R. التفكير والربط</span>
+
+                    <p>
+                        لدينا كسر، إذن نستعمل قاعدة مشتقة الكسر.
+                    </p>
+
+                    <p>
+                        بعد الاشتقاق سأبسط النتيجة حتى أرى هل تظهر عبارة
+                        <span className="math">{"\\(g(x)\\)"}</span>.
+                    </p>
+
+                    <p>
+                        الهدف هو ربط المشتقة بالدالة المساعدة.
+                    </p>
                 </div>
-                <div className="right-col">
-                    حساب مركبات المشتقة بالتفصيل:
-                    <div className="math-block">{"\\[f'(x) = -1 + \\frac{(\\frac{2}{x})(x) - (3+2\\ln x)(1)}{x^2}\\]"}</div>
+
+                {/* RIGHT = الحساب */}
+                <div className="right-col calc-col">
+                    <span className="phase-label exec">الحساب</span>
+
+                    <div className="math-block">
+                        {"\\[\\left(\\frac{3+2\\ln x}{x}\\right)' = \\frac{(\\frac{2}{x})(x) - (3+2\\ln x)(1)}{x^2}\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[= \\frac{2 - 3 - 2\\ln x}{x^2}\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[= \\frac{-1 - 2\\ln x}{x^2}\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[f'(x) = -1 + \\frac{-1 - 2\\ln x}{x^2}\\]"}
+                    </div>
                 </div>
             </div>
 
             {/* II.Q2.A — EXECUTION */}
             <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ الجبري</span><br />
-                    أجمع الحدود بتوحيد المقامات على
-                    <span className="math">{"\\(x^2\\)"}</span>:
-                    <div className="math-block">{"\\[f'(x) = -1 + \\frac{-1-2\\ln x}{x^2} = \\frac{-x^2 - 1 - 2\\ln x}{x^2}\\]"}</div>
-                    أستخرج الإشارة السالبة كعامل مشترك في البسط:
-                    <div className="math-block">{"\\[f'(x) = \\frac{-(x^2 + 1 + 2\\ln x)}{x^2}\\]"}</div>
-                    الآن ألاحظ بوضوح تام أن ما بين القوسين هو بالضبط عبارة الدالة المساعدة
-                    <span className="math">{"\\(g(x)\\)"}</span>!
-                    الربط تم بنجاح مبهر.
+                {/* LEFT = طريقة التفكير */}
+                <div className="left-col thinking-col">
+                    <span className="phase-label start">الفكرة</span>
+
+                    <p>
+                        الآن نوحد المقامات للحصول على كسر واحد.
+                    </p>
+
+                    <p>
+                        ثم نستخرج العامل المشترك حتى تظهر عبارة
+                        <span className="math">{"\\(g(x)\\)"}</span>.
+                    </p>
+
+                    <p>
+                        بهذا نستطيع كتابة المشتقة بدلالة
+                        <span className="math">{"\\(g(x)\\)"}</span>.
+                    </p>
                 </div>
-                <div className="right-col">
-                    نوحد المقامات:
-                    <div className="math-block">{"\\[f'(x) = \\frac{-x^2}{x^2} + \\frac{-1-2\\ln x}{x^2} = \\frac{-x^2 - 1 - 2\\ln x}{x^2}\\]"}</div>
-                    nستخرج العامل المشترك:
-                    <div className="math-block">{"\\[f'(x) = \\frac{-(1 + x^2 + 2\\ln x)}{x^2} = \\frac{-g(x)}{x^2}\\]"}</div>
+
+                {/* RIGHT = الحساب */}
+                <div className="right-col calc-col">
+                    <span className="phase-label exec">الحساب</span>
+
+                    <div className="math-block">
+                        {"\\[f'(x) = \\frac{-x^2}{x^2} + \\frac{-1-2\\ln x}{x^2}\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[= \\frac{-x^2 - 1 - 2\\ln x}{x^2}\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[= \\frac{-(x^2 + 1 + 2\\ln x)}{x^2}\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[= \\frac{-g(x)}{x^2}\\]"}
+                    </div>
                 </div>
             </div>
 
@@ -789,9 +853,7 @@ const Exercice4 = () => {
                     «تحقّق» = أثبت أن <span className="math">{"\\(f(\\alpha) = 2\\left(\\dfrac{1}{\\alpha}-\\alpha\\right)\\)"}</span>.
                 </div>
                 <div className="right-col">
-                    نوظف حقيقة أن
-                    <span className="math">{"\\(\\alpha\\)"}</span> هو جذر الدالة المساعدة
-                    <span className="math">{"\\(g\\)"}</span>.
+
                 </div>
             </div>
 
@@ -808,7 +870,7 @@ const Exercice4 = () => {
                 </div>
                 <div className="right-col">
                     <strong>الهدف:</strong> إيجاد عبارة مبسطة لـ
-                    <span className="math">{"\\(f(\\alpha)\\)"}</span> وحصرها بدقة.
+                    <span className="math">{"\\(f(\\alpha)\\)"}</span> بدون وجود <span className="math">{"\\(\\ln(\\alpha)\\)"}</span> وحصرها بدقة.
                 </div>
             </div>
 
@@ -816,23 +878,60 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    من المعادلة:
-                    <span className="math">{"\\(1+\\alpha^2+2\\ln\\alpha = 0\\)"}</span>،
-                    نستنتج أن:
-                    <span className="math">{"\\(2\\ln\\alpha = -\\alpha^2 - 1\\)"}</span>.
-                    الآن نعوض هذا في البسط الخاص بـ
-                    <span className="math">{"\\(f(\\alpha)\\)"}</span>:
-                    البسط هو
-                    <span className="math">{"\\(3 + 2\\ln\\alpha\\)"}</span>.
-                    بتعويض قيمة اللوغاريتم، يصبح البسط:
-                    <span className="math">{"\\(3 + (-\\alpha^2 - 1) = 2 - \\alpha^2\\)"}</span>.
-                    تخلصنا تماماً من اللوغاريتم!
+
+                    <p>
+                        في العبارة المراد إثباتها لا يوجد
+                        <span className="math">{"\\(\\ln(\\alpha)\\)"}</span>.
+                    </p>
+
+                    <p>
+                        إذن يجب التخلص من اللوغاريتم.
+                    </p>
+
+                    <p>
+                        أبحث في المعطيات عن كل علاقة تحتوي على
+                        <span className="math">{"\\(\\alpha\\)"}</span>.
+                    </p>
+
+                    <p>
+                        نجد أن:
+                        <span className="math">{"\\(g(\\alpha)=0\\)"}</span>.
+                    </p>
+
+                    <p>
+                        أي:
+                        <span className="math">{"\\(1+\\alpha^2+2\\ln(\\alpha)=0\\)"}</span>.
+                    </p>
+
+                    <p>
+                        هذه العلاقة ممتازة لأنها تحتوي على
+                        <span className="math">{"\\(\\ln(\\alpha)\\)"}</span>.
+                    </p>
+
+                    <p>
+                        إذن أستخرج منها:
+                        <span className="math">{"\\(2\\ln(\\alpha)=-1-\\alpha^2\\)"}</span>.
+                    </p>
+
+                    <p>
+                        ثم أعوض هذه القيمة داخل
+                        <span className="math">{"\\(f(\\alpha)\\)"}</span>
+                        حتى يختفي اللوغاريتم.
+                    </p>
                 </div>
+
                 <div className="right-col">
-                    لدينا:
-                    <div className="math-block">{"\\[1 + \\alpha^2 + 2\\ln\\alpha = 0 \\implies 2\\ln\\alpha = -1 - \\alpha^2\\]"}</div>
-                    نعوض في عبارة الدالة:
-                    <div className="math-block">{"\\[f(\\alpha) = -\\alpha + \\frac{3+2\\ln\\alpha}{\\alpha}\\]"}</div>
+                    <div className="math-block">
+                        {"\\[1+\\alpha^2+2\\ln(\\alpha)=0\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[2\\ln(\\alpha)=-1-\\alpha^2\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[f(\\alpha)=-\\alpha+\\frac{3+2\\ln(\\alpha)}{\\alpha}\\]"}
+                    </div>
                 </div>
             </div>
 
@@ -870,7 +969,8 @@ const Exercice4 = () => {
                 </div>
                 <div className="right-col">
                     نعوض ونوحد المقامات للحدود الكسرية:
-                    <div className="math-block">{"\\[f(\\alpha) = -\\alpha + \\frac{2 - \\alpha^2}{\\alpha} = -\\alpha + \\frac{2}{\\alpha} - \\frac{\\alpha^2}{\\alpha} = \\frac{2}{\\alpha} - 2\\alpha = 2\\left( \\frac{1}{\\alpha} - \\alpha \\right)\\]"}</div>
+                    <div className="math-block">{"\\[f(\\alpha) = -\\alpha + \\frac{2 - \\alpha^2}{\\alpha} = -\\alpha + \\frac{2}{\\alpha} - \\frac{\\alpha^2}{\\alpha}\\]"}</div>
+                    <div className="math-block">{"\\[= \\frac{2}{\\alpha} - 2\\alpha = 2\\left( \\frac{1}{\\alpha} - \\alpha \\right)\\]"}</div>
                     <strong>حصر القيمة العظمى:</strong>
                     من أجل
                     <span className="math">{"\\(0.52 < \\alpha < 0.53\\)"}</span>:
@@ -915,29 +1015,29 @@ const Exercice4 = () => {
             </div>
 
             {/* II.Q3.A — TRANSLATE */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    العبارة هي:
-                    <span className="math">{"\\(f(x) + x\\)"}</span>.
-                    بتعويض عبارة الدالة:
-                    <span className="math">{"\\(f(x) + x = -x + \\frac{3+2\\ln x}{x} + x = \\frac{3+2\\ln x}{x}\\)"}</span>.
-                    <span className="math">{"\\(\\lim_{x\\to+\\infty}[f(x)+x] = \\lim_{x\\to+\\infty}\\dfrac{3+2\\ln x}{x} = {?}\\)"}</span>
-                </div>
-                <div className="right-col">
-                    نعوض عبارة الدالة ونبسط الفرق مباشرة للتخلص من المتغير الخارجي.
-                </div>
-            </div>
+
 
             {/* II.Q3.A — AIM */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    <strong>الهدف:</strong> <span className="math">{"\\(\\lim_{x\\to+\\infty}[f(x)+x]=0\\)"}</span> ثم تفسير هندسي.
+
+                    <p>
+                        نريد حساب نهاية الفرق بين الدالة والمستقيم
+                        <span className="math">{"\\(y=-x\\)"}</span>.
+                    </p>
+
+                    <p>
+                        ثم نفسر النتيجة هندسياً.
+                    </p>
                 </div>
+
                 <div className="right-col">
-                    <strong>الهدف:</strong> حساب نهاية الفرق
-                    <span className="math">{"\\(f(x)-(-x)\\)"}</span> هندسياً.
+                    <strong>الهدف:</strong>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to+\\infty}[f(x)+x]\\]"}
+                    </div>
                 </div>
             </div>
 
@@ -945,14 +1045,34 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    أربط هذا بالنهاية الشهيرة للتزايد المقارن التي استخدمناها سابقاً:
-                    <span className="math">{"\\(\\lim_{x\\to+\\infty} \\frac{\\ln x}{x} = 0\\)"}</span>.
-                    تفكيك الكسر سيجعل الحل مباشراً ومبرراً قانونياً.
+
+                    <p>
+                        بعد التبسيط حصلنا على كسر يحتوي على
+                        <span className="math">{"\\(\\ln x\\)"}</span>.
+                    </p>
+
+                    <p>
+                        مباشرة أفكر في النهاية الشهيرة:
+                        <span className="math">{"\\(\\dfrac{\\ln x}{x}\\to0\\)"}</span>.
+                    </p>
+
+                    <p>
+                        لذلك أفكك الكسر إلى حدود بسيطة حتى أستعمل النهايات المعروفة.
+                    </p>
                 </div>
+
                 <div className="right-col">
-                    لدينا من التزايد المقارن:
-                    <span className="math">{"\\(\\lim_{x \\to +\\infty} \\dfrac{\\ln x}{x} = 0\\)"}</span> و
-                    <span className="math">{"\\(\\lim_{x \\to +\\infty} \\dfrac{3}{x} = 0\\)"}</span>.
+                    <div className="math-block">
+                        {"\\[\\frac{3+2\\ln x}{x}=\\frac3x+2\\frac{\\ln x}{x}\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to+\\infty}\\frac3x=0\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to+\\infty}\\frac{\\ln x}{x}=0\\]"}
+                    </div>
                 </div>
             </div>
 
@@ -960,18 +1080,46 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label start">التنفيذ الجبري</span><br />
-                    أقوم بالحساب والتبسيط:
-                    <div className="math-block">{"\\[\\lim_{x\\to+\\infty} [f(x)+x] = \\lim_{x\\to+\\infty} \\left( \\frac{3}{x} + 2\\frac{\\ln x}{x} \\right) = 0 + 2(0) = 0\\]"}</div>
-                    النتيجة هي الصفر تماماً.
-                    وبما أن نهاية الفرق بين الدالة ومستقيم مائل تؤول للصفر عند اللانهاية، فهذا يعني هندسياً أن هذا المستقيم هو مقارب مائل للمنحنى.
+
+                    <p>
+                        أعوض بالنهايات المعروفة.
+                    </p>
+
+                    <p>
+                        كل حدود الكسر تؤول إلى الصفر.
+                    </p>
+
+                    <p>
+                        إذن الفرق بين المنحنى والمستقيم
+                        <span className="math">{"\\(y=-x\\)"}</span>
+                        يقترب من الصفر.
+                    </p>
+
+                    <p>
+                        هذا يعني أن المنحنى يقترب من هذا المستقيم عند
+                        <span className="math">{"\\(+\\infty\\)"}</span>.
+                    </p>
                 </div>
+
                 <div className="right-col">
-                    الحساب والنتيجة:
-                    <div className="math-block">{"\\[\\lim_{x \\to +\\infty} [f(x)+x] = \\lim_{x \\to +\\infty} \\left( \\frac{3}{x} + 2\\frac{\\ln x}{x} \\right) = 0\\]"}</div>
-                    بما أن النهاية تساوي 0، فإن المستقيم
-                    <span className="math">{"\\((\\Delta)\\)"}</span> ذو المعادلة
-                    <span className="math">{"\\(y = -x\\)"}</span> هو <strong>مستقيم مقارب مائل</strong> للمنحنى بجوار
-                    <span className="math">{"\\(+\\infty\\)"}</span>.
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to+\\infty}[f(x)+x]=\\lim_{x\\to+\\infty}\\left(\\frac3x+2\\frac{\\ln x}{x}\\right)\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[=0+2(0)\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[=0\\]"}
+                    </div>
+
+                    بما أن:
+                    <span className="math">{"\\(\\lim_{x\\to+\\infty}[f(x)-(-x)]=0\\)"}</span>
+
+                    فإن المستقيم
+                    <span className="math">{"\\(y=-x\\)"}</span>
+                    مقارب مائل للمنحنى.
                 </div>
             </div>
 
@@ -979,15 +1127,21 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <span className="math">{"\\(f(1)+1 = f(1)-(- 1) = -1+3+0 = 2 > 0\\)"}</span> → منحنى فوق المقارب عند <span className="math">{"\\(x=1\\)"}</span> ✓
+
+                    <p>
+                        النهاية تساوي الصفر.
+                    </p>
+
+                    <p>
+                        إذن الفرق بين المنحنى والمقارب يصبح صغيراً جداً عند اللانهاية.
+                    </p>
                 </div>
+
                 <div className="right-col">
-                    التفسير الهندسي للمنحنى محقق بشكل كامل:
-                    المقارب هو
-                    <span className="math">{"\\((\\Delta): y = -x\\)"}</span>.
+                    المقارب المائل هو:
+                    <span className="math">{"\\((\\Delta):y=-x\\)"}</span>.
                 </div>
             </div>
-
             <div className="trigger-box">
                 <div className="trigger-box-title">⚡ دليل المحفزات البصرية (Trigger)</div>
                 كلما رأيت في البكالوريا عبارة "احسب نهاية الفرق وتأكد أو فسر" أو كانت الدالة من الشكل

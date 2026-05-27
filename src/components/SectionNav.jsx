@@ -69,4 +69,4 @@ const SectionNav = ({ sections, activeSectionId, onSectionSelect, bookName, onBo
     );
 };
 
-export default SectionNav;
+export default React.memo(SectionNav);

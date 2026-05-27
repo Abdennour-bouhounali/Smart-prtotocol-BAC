@@ -13,6 +13,8 @@ const App = () => {
     const [bookName, setBookName] = useState('بروتوكول SMART لحل المسائل الرياضية');
     const [activeSectionId, setActiveSectionId] = useState(getHashSectionId);
     const [loading, setLoading] = useState(true);
+    const [sidebarOpen, setSidebarOpen] = useState(true);
+    const [isPrinting, setIsPrinting] = useState(false);
 
     useEffect(() => {
         const fetchContent = async () => {
@@ -54,7 +56,43 @@ const App = () => {
         return () => window.removeEventListener('hashchange', onHashChange);
     }, []);
 
-    const handlePrint = () => {
+    // Scroll Persistence per section
+    useEffect(() => {
+        if (!activeSectionId) return;
+        
+        const scrollKey = `scrollPos_${activeSectionId}`;
+
+        const restoreScroll = () => {
+            const savedPos = sessionStorage.getItem(scrollKey);
+            if (savedPos) {
+                requestAnimationFrame(() => {
+                    const mainView = document.querySelector('.main-view');
+                    if (mainView) mainView.scrollTop = parseInt(savedPos, 10);
+                    window.scrollTo(0, parseInt(savedPos, 10));
+                });
+            }
+        };
+
+        // Restore on mount/reload
+        restoreScroll();
+
+        // Save scroll position using capture phase to catch inner scrolls (like .main-view)
+        const handleScroll = (e) => {
+            const pos = e.target.scrollTop ?? window.scrollY;
+            // Prevent saving 0 if the container is temporarily empty due to pagination
+            if (pos > 0) {
+                sessionStorage.setItem(scrollKey, pos.toString());
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { capture: true, passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll, { capture: true });
+        };
+    }, [activeSectionId]);
+
+    const handlePrint = useCallback(() => {
         setIsPrinting(true);
 
         requestAnimationFrame(() => {
@@ -67,7 +105,11 @@ const App = () => {
 
             }, 1000);
         });
-    };
+    }, []);
+
+    const activeSection = React.useMemo(() => (
+        sections.find(s => s.id === activeSectionId)
+    ), [sections, activeSectionId]);
 
     if (loading) {
         return (
@@ -77,31 +119,44 @@ const App = () => {
         );
     }
 
+
+
     return (
         <div className="app-container" dir="rtl">
             {/* ── SCREEN VIEW ── */}
-            <div className="screen-only" style={{ display: 'flex', width: '100%', height: '100%' }}>
-                {/* Sidebar navigation */}
-                <SectionNav
-                    sections={sections}
-                    activeSectionId={activeSectionId}
-                    onSectionSelect={handleSectionSelect}
-                    bookName={bookName}
-                    onBookNameChange={setBookName}
-                    onPrint={handlePrint}
-                />
+            <div className="screen-only" style={{ display: 'flex', width: '100%', height: '100%', position: 'relative' }}>
+                
+                {/* Sidebar Toggle Button */}
+                <button 
+                    className={`sidebar-toggle ${sidebarOpen ? 'open' : 'closed'}`}
+                    onClick={() => setSidebarOpen(!sidebarOpen)}
+                    aria-label="Toggle Sidebar"
+                >
+                    {sidebarOpen ? '✕' : '☰'}
+                </button>
 
-                {/* Section viewers — all mounted, only active one is visible.
-                    This preserves per-section state (edits, pagination) across navigation. */}
-                <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
-                    {sections.map((section) => (
+                {/* Sidebar navigation */}
+                <div className={`sidebar-wrapper ${sidebarOpen ? 'open' : 'closed'}`}>
+                    <SectionNav
+                        sections={sections}
+                        activeSectionId={activeSectionId}
+                        onSectionSelect={handleSectionSelect}
+                        bookName={bookName}
+                        onBookNameChange={setBookName}
+                        onPrint={handlePrint}
+                    />
+                </div>
+
+                {/* Render ONLY the active section to improve performance and hot reload behavior */}
+                <div className="content-wrapper">
+                    {activeSection && (
                         <SectionViewer
-                            key={section.id}
-                            section={section}
+                            key={activeSection.id}
+                            section={activeSection}
                             bookName={bookName}
-                            isVisible={section.id === activeSectionId}
+                            isVisible={true}
                         />
-                    ))}
+                    )}
                 </div>
             </div>
 
