@@ -1,4 +1,6 @@
 import React from 'react';
+import signeOfGImg from '../images/signe_of_g.png';
+import variationTableOfFImg from '../images/variation_table_of_f.png';
 
 const Exercice4 = () => {
     return (
@@ -474,29 +476,13 @@ const Exercice4 = () => {
                 <div className="right-col">
                     جدول إشارة الدالة
                     <span className="math">{"\\(g(x)\\)"}</span>:
-                    <br />
-                    <table style={{ border: '1px solid #ccc', width: '100%', textAlign: 'center', borderCollapse: 'collapse', marginTop: '10px' }}>
-                        <thead>
-                            <tr style={{ backgroundColor: '#f2f2f2' }}>
-                                <th style={{ border: '1px solid #ccc', padding: '8px' }}>x</th>
-                                <th style={{ border: '1px solid #ccc', padding: '8px' }}>0</th>
-                                <th style={{ border: '1px solid #ccc', padding: '8px' }}></th>
-                                <th style={{ border: '1px solid #ccc', padding: '8px' }}>\alpha</th>
-                                <th style={{ border: '1px solid #ccc', padding: '8px' }}></th>
-                                <th style={{ border: '1px solid #ccc', padding: '8px' }}>+\infty</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style={{ border: '1px solid #ccc', padding: '8px', fontWeight: 'bold' }}>إشارة g(x)</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px', borderRight: 'double 3px red' }}>||</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px' }}>-</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px' }}>0</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px' }}>+</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px' }}></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div style={{ marginBottom: '12px', textAlign: 'center', marginTop: '10px' }}>
+                        <img
+                            src={signeOfGImg}
+                            alt="جدول إشارة g(x)"
+                            style={{ maxWidth: '100%', width: '480px', height: 'auto', display: 'block', margin: '0 auto' }}
+                        />
+                    </div>
                 </div>
             </div>
 
@@ -887,39 +873,14 @@ const Exercice4 = () => {
                     <span className="math">{"\\(-\\infty\\)"}</span>.
                 </div>
                 <div className="right-col">
-                    جدول تغيرات الدالة
-                    <span className="math">{"\\(f(x)\\)"}</span>:
-                    <br />
-                    <table style={{ border: '1px solid #ccc', width: '100%', textAlign: 'center', borderCollapse: 'collapse', marginTop: '10px' }}>
-                        <thead>
-                            <tr style={{ backgroundColor: '#f2f2f2' }}>
-                                <th style={{ border: '1px solid #ccc', padding: '8px' }}>x</th>
-                                <th style={{ border: '1px solid #ccc', padding: '8px' }}>0</th>
-                                <th style={{ border: '1px solid #ccc', padding: '8px' }}></th>
-                                <th style={{ border: '1px solid #ccc', padding: '8px' }}>\alpha</th>
-                                <th style={{ border: '1px solid #ccc', padding: '8px' }}></th>
-                                <th style={{ border: '1px solid #ccc', padding: '8px' }}>+\infty</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style={{ border: '1px solid #ccc', padding: '8px', fontWeight: 'bold' }}>إشارة f'(x)</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px', borderRight: 'double 3px red' }}>||</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px' }}>+</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px' }}>0</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px' }}>-</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px' }}></td>
-                            </tr>
-                            <tr style={{ height: '70px' }}>
-                                <td style={{ border: '1px solid #ccc', padding: '8px', fontWeight: 'bold' }}>تغيرات f(x)</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px', borderRight: 'double 3px red', verticalAlign: 'bottom' }}>-\infty</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px', verticalAlign: 'middle' }}>↗</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px', verticalAlign: 'top' }}>f(\alpha)</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px', verticalAlign: 'middle' }}>↘</td>
-                                <td style={{ border: '1px solid #ccc', padding: '8px', verticalAlign: 'bottom' }}>-\infty</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    جدول تغيرات الدالة <span className="math">{"\\(f(x)\\)"}</span>:
+                    <div style={{ marginBottom: '12px', textAlign: 'center', marginTop: '10px' }}>
+                        <img
+                            src={variationTableOfFImg}
+                            alt="جدول تغيرات الدالة f(x)"
+                            style={{ maxWidth: '100%', width: '480px', height: 'auto', display: 'block', margin: '0 auto' }}
+                        />
+                    </div>
                 </div>
             </div>
 
