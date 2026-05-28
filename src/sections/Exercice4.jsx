@@ -3,6 +3,7 @@ import signeOfGImg from '../images/signe_of_g.png';
 import variationTableOfFImg from '../images/variation_table_of_f.png';
 import graphesFTDImg from '../images/graphes_f_T_D.png';
 import signeOfFPlusXImg from '../images/signe_of_f_plus_x.svg';
+import disscustionMImg from '../images/disscustion_m.png';
 
 const Exercice4 = () => {
     return (
@@ -336,7 +337,7 @@ const Exercice4 = () => {
                     <span className="phase-label start">التنفيذ العددي</span><br />
                     <div className="math-block">{"\\[g(0.52) \\approx 1 + 0.2704 - 1.3078 = -0.037 < 0\\]"}</div>
                     <div className="math-block">{"\\[g(0.53) \\approx 1 + 0.2809 - 1.2698 = 0.011 > 0\\]"}</div>
-                    <span className="math">{"\\(g(0.52) \\cdot g(0.53) < 0\\)"}</span> → تغيّر الإشارة محقق.
+                    <span className="math">{"\\(g(0.52) \\cdot g(0.53) < 0\\)"}</span> ← تغيّر الإشارة محقق.
                 </div>
                 <div className="right-col">
                     <div className="math-block">{"\\[g(0.52) \\approx -0.037 < 0\\]"}</div>
@@ -349,7 +350,7 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <span className="math">{"\\(g(0.52)<0\\)"}</span> و <span className="math">{"\\(g(0.53)>0\\)"}</span> → شروط م.ق.م محققة ✓
+                    <span className="math">{"\\(g(0.52)<0\\)"}</span> و <span className="math">{"\\(g(0.53)>0\\)"}</span> ← شروط م.ق.م محققة ✓
                 </div>
                 <div className="right-col">
                     المعادلة <span className="math">{"\\(g(x)=0\\)"}</span> تقبل حلاً وحيداً <span className="math">{"\\(\\alpha \\in ]0.52,0.53[\\)"}</span>.
@@ -1686,7 +1687,7 @@ const Exercice4 = () => {
                     </p>
 
                     <p>
-                        نلاحظ تغير الإشارة بين الطرفين ⇒ يوجد جذر
+                        نلاحظ تغير الإشارة بين الطرفين ⇐ يوجد جذر
                         <span className="math">{"\\(x_0\\)"}</span>.
                     </p>
 
@@ -1698,7 +1699,7 @@ const Exercice4 = () => {
                     </p>
 
                     <p>
-                        أيضا تغير الإشارة ⇒ يوجد جذر
+                        أيضا تغير الإشارة ⇐ يوجد جذر
                         <span className="math">{"\\(x_1\\)"}</span>.
                     </p>
                 </div>
@@ -1707,7 +1708,7 @@ const Exercice4 = () => {
                     <p>
                         نستعمل شرط:
                         <span className="math">{"\\(f(a)f(b)<0\\)"}</span>
-                        ⇒ يوجد جذر بين
+                        ⇐ يوجد جذر بين
                         <span className="math">{"\\(a\\)"}</span> و
                         <span className="math">{"\\(b\\)"}</span>.
                     </p>
@@ -1739,7 +1740,7 @@ const Exercice4 = () => {
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
 
                     <p>
-                        تغير الإشارة في كل مجال ⇒ يوجد جذر في كل مجال ✓
+                        تغير الإشارة في كل مجال ⇐ يوجد جذر في كل مجال ✓
                     </p>
                 </div>
 
@@ -1898,11 +1899,20 @@ const Exercice4 = () => {
                     <br /><br />
 
                     • إذا كان <span className="math">{"\\(m > 2\\sqrt{e}\\)"}</span> : لا يوجد تقاطع، إذن <strong>لا توجد حلول</strong>.
+
+                    <div className="graph-container" style={{ marginTop: '16px', border: 'none', background: 'transparent' }}>
+                        <img
+                            src={disscustionMImg}
+                            alt="المناقشة البيانية"
+                            className="graph-image"
+                            style={{ maxWidth: '100%', height: 'auto' }}
+                        />
+                    </div>
                 </div>
             </div>
             {/* ============================================================
-                PART III — Q1
-            ============================================================ */}
+    PART III — Q1
+============================================================ */}
             <div className="question-header">
                 الجزء III — المتتالية التكاملية <span className="math" style={{ color: '#fff' }}>{"\\((u_n)\\)"}</span>
             </div>
@@ -1916,27 +1926,16 @@ const Exercice4 = () => {
                 <div className="col-header right-h">الحل التفصيلي المعياري</div>
             </div>
 
-            {/* III.Q1 — TRANSLATE */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    <span className="math">{"\\(u_n = \\int_{e^n}^{e^{n+1}} \\dfrac{3+2\\ln x}{x}\\,dx > 0\\)"}</span>
-                </div>
-                <div className="right-col">
-                    ندرس إشارة الدالة
-                    <span className="math">{"\\(h(x) = f(x)+x = \\frac{3+2\\ln x}{x}\\)"}</span> على مجال التكامل.
-                </div>
-            </div>
 
             {/* III.Q1 — AIM */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    <strong>الهدف:</strong> إثبات <span className="math">{"\\(u_n > 0\\)"}</span> لكل <span className="math">{"\\(n \\in \\mathbb{N}\\)"}</span>.
+                    الهدف هو إثبات أن:
+                    <span className="math">{"\\(u_n > 0\\)"}</span> لكل <span className="math">{"\\(n \\in \\mathbb{N}\\)"}</span>.
                 </div>
                 <div className="right-col">
-                    <strong>الهدف:</strong> إثبات أن قيمة التكامل موجبة تماماً من أجل كل
-                    <span className="math">{"\\(n \\ge 0\\)"}</span>.
+                    الهدف: إثبات أن التكامل موجب لأن الدالة موجبة على مجال التكامل.
                 </div>
             </div>
 
@@ -1944,67 +1943,39 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    مجال التكامل هو
-                    <span className="math">{"\\([e^n, e^{n+1}]\\)"}</span>.
-                    بما أن
-                    <span className="math">{"\\(n\\)"}</span> عدد طبيعي
-                    <span className="math">{"\\((n \\ge 0)\\)"}</span>:
-                    <br />• الحد الأدنى للمجال هو
-                    <span className="math">{"\\(e^n \\ge e^0 = 1\\)"}</span>.
-                    إذن المتغير
-                    <span className="math">{"\\(x\\)"}</span> يقع في المجال الموجب تماماً.
-                    <br />• بما أن
-                    <span className="math">{"\\(x \\ge 1\\)"}</span>، فإن اللوغاريتم يكون موجباً أو معدوماً:
-                    <span className="math">{"\\(\\ln x \\ge 0\\)"}</span>.
-                    وبالتالي البسط
-                    <span className="math">{"\\(3 + 2\\ln x \\ge 3 > 0\\)"}</span>.
-                    المقام
-                    <span className="math">{"\\(x \\ge 1 > 0\\)"}</span>.
-                    إذن الدالة موجبة تماماً على كامل مجال التكامل.
-                </div>
-                <div className="right-col">
-                    من أجل كل
-                    <span className="math">{"\\(n \\in \\mathbb{N}\\)"}</span>، لدينا مجال التكامل
-                    <span className="math">{"\\(x \\in [e^n, e^{n+1}]\\)"}</span>.
-                    بما أن
-                    <span className="math">{"\\(e^n \\ge 1\\)"}</span>:
-                    <div className="math-block">{"\\[x \\ge 1 \\implies \\ln x \\ge 0 \\implies 3+2\\ln x \\ge 3 > 0\\]"}</div>
-                </div>
-            </div>
 
-            {/* III.Q1 — EXECUTION */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ الجبري</span><br />
-                    أربط الشروط ببعضها البعض:
-                    <br />1. الدالة موجبة تماماً على المجال.
-                    <br />2. حدود التكامل مرتبة بشكل صحيح لأن الأساس
-                    <span className="math">{"\\(e > 1\\)"}</span> يضمن أن
-                    <span className="math">{"\\(e^n < e^{n+1}\\)"}</span>.
-                    إذن، حسب قواعد مقارنة التكاملات:
-                    <div className="math-block">{"\\[u_n = \\int_{e^n}^{e^{n+1}} [f(x)+x] dx > 0\\]"}</div>
+                    أفكر في مجال التكامل:
+                    <span className="math">{"\\([e^n, e^{n+1}]\\)"}</span>.<br />
+
+                    بما أن <span className="math">{"\\(n \\ge 0\\)"}</span> فإن
+                    <span className="math">{"\\(e^n \\ge 1\\)"}</span> ⇐ إذن
+                    <span className="math">{"\\(x \\ge 1\\)"}</span> على كامل المجال.<br />
+
+                    الفكرة: لا ندرس الدالة بالكامل، فقط نستخدم إشارة كل جزء على مجال موجب.<br />
+
+                    على <span className="math">{"\\(x \\ge 1\\)"}</span>:
+                    • <span className="math">{"\\(\\ln x \\ge 0\\)"}</span><br />
+                    • <span className="math">{"\\(3+2\\ln x > 0\\)"}</span><br />
+                    • <span className="math">{"\\(x > 0\\)"}</span><br />
+
+                    إذن التكامل موجب تماماً.
                 </div>
+
                 <div className="right-col">
-                    بما أن البسط والمقام موجبان تماماً، فإن:
-                    <div className="math-block">{"\\[\\forall x \\in [e^n, e^{n+1}], \\quad \\frac{3+2\\ln x}{x} > 0\\]"}</div>
-                    وحيث أن حدود التكامل مرتبة تصاعدياً
-                    <span className="math">{"\\(e^n < e^{n+1}\\)"}</span>، فإن:
+                    من <span className="math">{"\\(e^n \\ge 1\\)"}</span>:
+                    <div className="math-block">{"\\[x \\in [e^n, e^{n+1}] \\Rightarrow x \\ge 1\\]"}</div>
+
+                    <div className="math-block">{"\\[\\ln x \\ge 0 \\Rightarrow 3+2\\ln x > 0\\]"}</div>
+
+                    <div className="math-block">{"\\[\\frac{3+2\\ln x}{x} > 0\\]"}</div>
+
+                    <div className="math-block">{"\\[e^n < e^{n+1} \\Rightarrow \\int_{e^n}^{e^{n+1}} \\frac{3+2\\ln x}{x}\\,dx > 0\\]"}</div>
+                    إذن مباشرة:
                     <div className="math-block">{"\\[u_n > 0\\]"}</div>
                 </div>
             </div>
 
-            {/* III.Q1 — TEST */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <span className="math">{"\\(x\\in[e^n,e^{n+1}]\\Rightarrow\\ln x\\ge 0\\Rightarrow 3+2\\ln x\\ge3>0\\)"}</span> → الدالة موجبة على مجال التكامل → <span className="math">{"\\(u_n>0\\)"}</span> ✓
-                </div>
-                <div className="right-col">
-                    إذن، من أجل كل عدد طبيعي
-                    <span className="math">{"\\(n\\)"}</span>:
-                    <span className="math">{"\\(u_n > 0\\)"}</span>.
-                </div>
-            </div>
+
 
             {/* ============================================================
                 PART III — Q2 (NEW ADDITION)
@@ -2022,10 +1993,9 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    <span className="math">{"\\(u_0 = \\int_1^e [f(x)+x]\\,dx = \\int_1^e \\dfrac{3+2\\ln x}{x}\\,dx\\)"}</span>: مساحة السطح بين <span className="math">{"\\((C_f)\\)"}</span> و <span className="math">{"\\((\\Delta)\\)"}</span> على <span className="math">{"\\([1,e]\\)"}</span>.
+                    <span className="math">{"\\(u_0 = \\int_1^e [f(x)+x]\\,dx = \\int_1^e \\dfrac{3+2\\ln x}{x}\\,dx\\)"}</span>.
                 </div>
                 <div className="right-col">
-                    التكامل يمثل مساحة المنطقة المحصورة بين منحنى الدالة والمستقيم المقارب.
                 </div>
             </div>
 
@@ -2033,11 +2003,10 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    <strong>الهدف:</strong> تفسير <span className="math">{"\\(u_0\\)"}</span> هندسياً كمساحة سطح.
+                    <strong>الهدف:</strong> تفسير <span className="math">{"\\(u_0\\)"}</span> هندسياً.
                 </div>
                 <div className="right-col">
-                    <strong>الهدف:</strong> تفسير المقدار
-                    <span className="math">{"\\(u_0 = \\int_{1}^{e} [f(x)-(-x)] dx\\)"}</span> هندسياً كمساحة.
+                    <strong>الهدف:</strong> تفسير المقدار <span className="math">{"\\(u_0\\)"}</span>
                 </div>
             </div>
 
@@ -2045,6 +2014,8 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    علي أن أفهم أولا ما تمثله <span className="math">{"\\(u_n\\)"}</span>  ,                     <span className="math">{"\\(u_0 = \\int_{1}^{e} [f(x)-(-x)] dx\\)"}</span> .
+                    أي هو تكامل دالة الفرق بين منحنيين
                     سأقوم بربط التكامل بحدود هندسية واضحة:
                     <br />• من الأعلى: المنحنى البياني
                     <span className="math">{"\\((C_f)\\)"}</span>.
@@ -2055,23 +2026,15 @@ const Exercice4 = () => {
                     <span className="math">{"\\(x = 1\\)"}</span>
                     و
                     <span className="math">{"\\(x = e\\)"}</span>.
+                    أصيغ التفسير الهندسي النهائي بلغة المساحات ووحدات قياس المساحة (u.a.).
+                    المنطقة مغلقة تماماً ومحددة بالحدود الأربعة المذكورة.
                 </div>
                 <div className="right-col">
                     على المجال
                     <span className="math">{"\\([1, e]\\)"}</span>، لدينا المنحنى
                     <span className="math">{"\\((C_f)\\)"}</span> يقع تماماً فوق المستقيم المقارب
                     <span className="math">{"\\((\\Delta)\\)"}</span>.
-                </div>
-            </div>
-
-            {/* III.Q2 — EXECUTION */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ الجبري</span><br />
-                    أصيغ التفسير الهندسي النهائي بلغة المساحات ووحدات قياس المساحة (u.a.).
-                    المنطقة مغلقة تماماً ومحددة بالحدود الأربعة المذكورة.
-                </div>
-                <div className="right-col">
+                    <br />
                     <strong>التفسير الهندسي:</strong>
                     <br />
                     المقدار
@@ -2084,11 +2047,13 @@ const Exercice4 = () => {
                 </div>
             </div>
 
+
+
             {/* III.Q2 — TEST */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <span className="math">{"\\(u_0 > 0\\)"}</span> (III.Q1) و <span className="math">{"\\((C_f)\\)"}</span> فوق <span className="math">{"\\((\\Delta)\\)"}</span> على <span className="math">{"\\([1,e]\\)"}</span> → مساحة موجبة ✓
+                    <span className="math">{"\\(u_0 > 0\\)"}</span> (III.Q1) و <span className="math">{"\\((C_f)\\)"}</span> فوق <span className="math">{"\\((\\Delta)\\)"}</span> على <span className="math">{"\\([1,e]\\)"}</span> ← مساحة موجبة ✓
                 </div>
                 <div className="right-col">
                     التفسير الهندسي للمساحة محقق تماماً.
@@ -2103,8 +2068,8 @@ const Exercice4 = () => {
             </div>
 
             {/* ============================================================
-                PART III — Q3
-            ============================================================ */}
+    PART III — Q3
+============================================================ */}
             <div className="sub-question">
                 3) حساب قيمة <span className="math">{"\\(u_n\\)"}</span> بدلالة <span className="math">{"\\(n\\)"}</span>
             </div>
@@ -2114,74 +2079,60 @@ const Exercice4 = () => {
                 <div className="col-header right-h">الحل التفصيلي المعياري</div>
             </div>
 
-            {/* III.Q3 — TRANSLATE */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    الدالة الأصلية لـ <span className="math">{"\\(\\dfrac{3}{x}\\)"}</span> = <span className="math">{"\\(3\\ln x\\)"}</span>. لـ <span className="math">{"\\(\\dfrac{2\\ln x}{x} = 2u'u\\)"}</span> (<span className="math">{"\\(u=\\ln x\\)"}</span>) = <span className="math">{"\\((\\ln x)^2\\)"}</span>.
-                </div>
-                <div className="right-col">
-                    نحدد الدوال الأصلية للمركبات الكسرية على المجال
-                    <span className="math">{"\\([e^n, e^{n+1}]\\)"}</span>.
-                </div>
-            </div>
 
             {/* III.Q3 — AIM */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    <strong>الهدف:</strong> <span className="math">{"\\(u_n = \\left[3\\ln x + (\\ln x)^2\\right]_{e^n}^{e^{n+1}}\\)"}</span>.
+                    الهدف هو تحويل
+                    <span className="math">{"\\(u_n\\)"}</span>
+                    إلى فرق قيم دالة أصلية بين
+                    <span className="math">{"\\(e^n\\)"}</span> و
+                    <span className="math">{"\\(e^{n+1}\\)"}</span>.
                 </div>
                 <div className="right-col">
-                    <strong>الهدف:</strong> حساب قيمة التكامل بدلالة
-                    <span className="math">{"\\(n\\)"}</span> بإيجاد الدالة الأصلية المناسبة.
+                    الهدف:
+                    <span className="math">{"\\(u_n = U(e^{n+1}) - U(e^n)\\)"}</span>
+                    حيث
+                    <span className="math">{"\\(U\\)"}</span> دالة أصلية لـ
+                    <span className="math">{"\\(\\frac{3+2\\ln x}{x}\\)"}</span>.
                 </div>
             </div>
 
-            {/* III.Q3 — RELATE */}
+            {/* III.Q3 — RELATE (WITH EXECUTION MERGED) */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    أربط النتائج ببعضها للحصول على الدالة الأصلية الكلية
-                    <span className="math">{"\\(U(x)\\)"}</span>:
-                    <div className="math-block">{"\\[U(x) = 3\\ln x + (\\ln x)^2\\]"}</div>
-                    سأستخدم نظرية التكامل لحساب الفرق بين قيم الدالة الأصلية عند حدي التكامل:
-                    <div className="math-block">{"\\[u_n = U(e^{n+1}) - U(e^n)\\]"}</div>
-                </div>
-                <div className="right-col">
-                    الدالة الأصلية للدالة
-                    <span className="math">{"\\(x \\mapsto \\frac{3+2\\ln x}{x}\\)"}</span> هي:
-                    <div className="math-block">{"\\[U(x) = 3\\ln x + (\\ln x)^2\\]"}</div>
-                </div>
-            </div>
 
-            {/* III.Q3 — EXECUTION */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ الجبري التفصيلي</span><br />
-                    سأقوم بحساب كل حد بدقة متناهية ودون اختصار لضمان عدم حدوث خطأ في الإشارات:
-                    <br /><br />
-                    <strong>1. حساب صورة الحد الأعلى:</strong>
-                    <div className="math-block">{"\\[U(e^{n+1}) = 3\\ln(e^{n+1}) + (\\ln(e^{n+1}))^2\\]"}</div>
-                    نعلم أن
-                    <span className="math">{"\\( \\ln(e^{a}) = a \\)"}</span>. إذن:
-                    <div className="math-block">{"\\[U(e^{n+1}) = 3(n+1) + (n+1)^2 = 3n + 3 + n^2 + 2n + 1 = n^2 + 5n + 4\\]"}</div>
-                    <strong>2. حساب صورة الحد الأدنى:</strong>
-                    <div className="math-block">{"\\[U(e^n) = 3\\ln(e^n) + (\\ln(e^n))^2 = 3n + n^2\\]"}</div>
-                    <strong>3. حساب الفرق:</strong>
-                    <div className="math-block">{"\\[u_n = (n^2 + 5n + 4) - (n^2 + 3n)\\]"}</div>
-                    بتبسيط الحدود المتشابهة:
-                    <div className="math-block">{"\\[u_n = 2n + 4\\]"}</div>
-                    المتتالية حسابية أساسها 2 وحدها الأول 4.
+                    أربط شكل التكامل مع قواعد الاشتقاق العكسي (log + chain rule).<br />
+                    ألاحظ أن:
+                    <span className="math">{"\\(\\frac{3}{x}\\)"}</span> ↔ دالة أصلية لوغاريتمية، و
+                    <span className="math">{"\\(\\frac{2\\ln x}{x}\\)"}</span> مرتبطة بمشتقة مربع اللوغاريتم.<br />
+
+                    إذن أستنتج أن الحل يتم عبر دالة أصلية من الشكل
+                    <span className="math">{"\\(U(x)=3\\ln x+(\\ln x)^2\\)"}</span>
+                    ثم أطبق فرق القيم على حدود التكامل.
                 </div>
+
                 <div className="right-col">
-                    نطبق قانون التكامل بالتعويض والتبسيط:
-                    <div className="math-block">{"\\[u_n = \\left[ 3\\ln x + (\\ln x)^2 \\right]_{e^n}^{e^{n+1}}\\]"}</div>
-                    <div className="math-block">{"\\[u_n = \\left( 3\\ln(e^{n+1}) + [\\ln(e^{n+1})]^2 \\right) - \\left( 3\\ln(e^n) + [\\ln(e^n)]^2 \\right)\\]"}</div>
-                    نعوض باستخدام خواص الدالة اللوغاريتمية والأسية:
-                    <div className="math-block">{"\\[u_n = \\left( 3(n+1) + (n+1)^2 \\right) - (3n + n^2)\\]"}</div>
-                    <div className="math-block">{"\\[u_n = (3n + 3 + n^2 + 2n + 1) - (3n + n^2)\\]"}</div>
-                    <div className="math-block">{"\\[u_n = n^2 + 5n + 4 - 3n - n^2 = 2n + 4\\]"}</div>
+                    إيجاد الدالة الأصلية:
+                    <div className="math-block">
+                        {"\\[U(x)=3\\ln x+(\\ln x)^2\\]"}
+                    </div>
+
+                    حساب الحدود:
+                    <div className="math-block">
+                        {"\\[U(e^{n+1})=3(n+1)+(n+1)^2=n^2+5n+4\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[U(e^n)=3n+n^2\\]"}
+                    </div>
+
+                    تطبيق فرق القيم:
+                    <div className="math-block">
+                        {"\\[u_n=(n^2+5n+4)-(n^2+3n)=2n+4\\]"}
+                    </div>
                 </div>
             </div>
 
@@ -2189,13 +2140,30 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <span className="math">{"\\(n=0\\)"}</span>: <span className="math">{"\\(u_0=2(0)+4=4\\)"}</span> و <span className="math">{"\\([3\\ln x+(\\ln x)^2]_1^e = (3+1)-0=4\\)"}</span> ✓
+                    أتحقق بسرعة عند
+                    <span className="math">{"\\(n=0\\)"}</span> للحصول على نفس القيمة.<br />
+
+                    كما أتحقق من صحة الدالة الأصلية عبر الاشتقاق:
+                    <span className="math">{"\\(U'(x)=\\frac{3+2\\ln x}{x}\\)"}</span>
+                    مما يؤكد أن \(U\) صحيحة.
                 </div>
+
                 <div className="right-col">
-                    العبارة النهائية لـ
-                    <span className="math">{"\\(u_n\\)"}</span> بدلالة
-                    <span className="math">{"\\(n\\)"}</span> هي:
-                    <span className="math">{"\\(u_n = 2n + 4\\)"}</span>.
+                    اختبار عددياً:
+                    <div className="math-block">
+                        {"\\[u_0 = 2(0)+4 = 4\\]"}
+                    </div>
+
+                    تحقق تحليلي (اشتقاق):
+                    <div className="math-block">
+                        {"\\[U(x)=3\\ln x+(\\ln x)^2\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[U'(x)=\\frac{3}{x}+\\frac{2\\ln x}{x}=\\frac{3+2\\ln x}{x}\\]"}
+                    </div>
+
+                    إذن الدالة الأصلية صحيحة ⇐ النتيجة صحيحة.
                 </div>
             </div>
 
@@ -2209,8 +2177,8 @@ const Exercice4 = () => {
             </div>
 
             {/* ============================================================
-                PART III — Q4
-            ============================================================ */}
+    PART III — Q4
+============================================================ */}
             <div className="sub-question">
                 4) حساب المجموع <span className="math">{"\\(S_n = u_0 + u_1 + ... + u_n\\)"}</span>
             </div>
@@ -2224,13 +2192,16 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    <span className="math">{"\\(u_n = 2n+4\\)"}</span> ⇒ متتالية حسابية (<span className="math">{"\\(r=2,\\,u_0=4\\)"}</span>) ⇒ <span className="math">{"\\(S_n = (n+1)\\cdot\\dfrac{u_0+u_n}{2}\\)"}</span>.
+                    المتتالية خطية من الشكل:
+                    <span className="math">{"\\(u_n = 2n + 4\\)"}</span> ⇐ متتالية حسابية.
                 </div>
                 <div className="right-col">
-                    المتتالية
-                    <span className="math">{"\\((u_n)\\)"}</span> هي متتالية حسابية أساسها
-                    <span className="math">{"\\(r = 2\\)"}</span> وحدها الأول
-                    <span className="math">{"\\(u_0 = 4\\)"}</span>.
+                    نلاحظ أن
+                    <span className="math">{"\\((u_n)\\)"}</span>
+                    متتالية حسابية أساسها
+                    <span className="math">{"\\(r=2\\)"}</span>
+                    وحدها الأول
+                    <span className="math">{"\\(u_0=4\\)"}</span>.
                 </div>
             </div>
 
@@ -2238,50 +2209,51 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    <strong>الهدف:</strong> <span className="math">{"\\(S_n = u_0+u_1+\\cdots+u_n\\)"}</span> بدلالة <span className="math">{"\\(n\\)"}</span>.
+                    الهدف هو إيجاد عبارة مغلقة لـ
+                    <span className="math">{"\\(S_n\\)"}</span>
+                    بدلالة
+                    <span className="math">{"\\(n\\)"}</span>.
                 </div>
                 <div className="right-col">
-                    <strong>الهدف:</strong> حساب عبارة المجموع
-                    <span className="math">{"\\(S_n\\)"}</span> بدلالة
-                    <span className="math">{"\\(n\\)"}</span>.
+                    حساب:
+                    <span className="math">{"\\(S_n = u_0 + u_1 + ... + u_n\\)"}</span>
+                    باستعمال خواص المتتالية الحسابية.
                 </div>
             </div>
 
-            {/* III.Q4 — RELATE */}
+            {/* III.Q4 — RELATE (WITH EXECUTION MERGED) */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    أحدد مركبات المجموع بدقة:
-                    <br />• عدد الحدود من
-                    <span className="math">{"\\(0\\)"}</span> إلى
-                    <span className="math">{"\\(n\\)"}</span> هو
-                    <span className="math">{"\\(n - 0 + 1 = n + 1\\)"}</span>.
-                    <br />• الحد الأول هو
-                    <span className="math">{"\\(u_0 = 4\\)"}</span>.
-                    <br />• الحد الأخير هو
-                    <span className="math">{"\\(u_n = 2n + 4\\)"}</span>.
-                </div>
-                <div className="right-col">
-                    قانون مجموع متتالية حسابية هو:
-                    <div className="math-block">{"\\[S_n = (n+1) \\cdot \\frac{u_0 + u_n}{2}\\]"}</div>
-                </div>
-            </div>
 
-            {/* III.Q4 — EXECUTION */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ الجبري التفصيلي</span><br />
-                    أعوض الحدود في صيغتها وأبسط الكسر:
-                    <div className="math-block">{"\\[S_n = (n+1) \\cdot \\frac{4 + (2n + 4)}{2} = (n+1) \\cdot \\frac{2n + 8}{2}\\]"}</div>
-                    أستخرج 2 كعامل مشترك في البسط لتسهيل الاختزال:
-                    <div className="math-block">{"\\[\\frac{2(n + 4)}{2} = n + 4\\]"}</div>
-                    إذن المجموع المتبسط هو:
-                    <div className="math-block">{"\\[S_n = (n+1)(n+4) = n^2 + 5n + 4\\]"}</div>
+                    أتعامل مع المجموع كمتتالية حسابية، لذا يكفي تحديد:
+                    البداية، النهاية، وعدد الحدود.<br />
+
+                    • البداية:
+                    <span className="math">{"\\(u_0=4\\)"}</span><br />
+                    • النهاية:
+                    <span className="math">{"\\(u_n=2n+4\\)"}</span><br />
+                    • عدد الحدود:
+                    <span className="math">{"\\(n+1\\)"}</span><br />
+
+                    إذن أستعمل صيغة مجموع متتالية حسابية مباشرة.
                 </div>
+
                 <div className="right-col">
-                    نعوض القيم ونبسط جبرياً:
-                    <div className="math-block">{"\\[S_n = (n+1) \\cdot \\frac{4 + 2n + 4}{2} = (n+1) \\cdot \\frac{2n + 8}{2}\\]"}</div>
-                    <div className="math-block">{"\\[S_n = (n+1)(n+4) = n^2 + 5n + 4\\]"}</div>
+                    بما أن المتتالية حسابية:
+                    <div className="math-block">
+                        {"\\[S_n = (n+1)\\cdot\\frac{u_0+u_n}{2}\\]"}
+                    </div>
+
+                    بالتعويض:
+                    <div className="math-block">
+                        {"\\[S_n = (n+1)\\cdot\\frac{4+(2n+4)}{2}\\]"}
+                    </div>
+
+                    التبسيط:
+                    <div className="math-block">
+                        {"\\[S_n = (n+1)(n+4)\\]"}
+                    </div>
                 </div>
             </div>
 
@@ -2289,16 +2261,16 @@ const Exercice4 = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <span className="math">{"\\(n=0: S_0=4, \\;(0+1)(0+4)=4\\)"}</span> ✓<br />
-                    <span className="math">{"\\(n=1: S_1=4+6=10, \\;(1+1)(1+4)=10\\)"}</span> ✓
+                    اختبار سريع:
+                    <span className="math">{"\\(n=0 \\Rightarrow S_0=4\\)"}</span> ✓،
+                    <span className="math">{"\\(n=1 \\Rightarrow S_1=10\\)"}</span> ✓
                 </div>
+
                 <div className="right-col">
-                    إذن المجموع النهائي بدلالة
-                    <span className="math">{"\\(n\\)"}</span> هو:
-                    <span className="math">{"\\(S_n = (n+1)(n+4)\\)"}</span>.
+                    النتيجة النهائية:
+                    <span className="math">{"\\(S_n=(n+1)(n+4)\\)"}</span>.
                 </div>
             </div>
-
 
             {/* ============================================================
                 FINAL STRATEGY
@@ -2307,7 +2279,7 @@ const Exercice4 = () => {
                 <div className="strategy-box-title">الخلاصة الاستراتيجية الكبرى للتمرين</div>
                 <strong>أهم ما نتعلمه من هذا التمرين الشامل:</strong>
                 <br /><br />
-                1. <strong>سلاح الدالة المساعدة:</strong> دراسة إشارة الدالة المساعدة في البداية هي أساس تفكيك تغيّرات الدالة الكبرى. لا يمكن حل البكالوريا بنجاح دون ربطهما بشكل صحيح.
+                1. <strong>الدالة المساعدة:</strong> دراسة إشارة الدالة المساعدة في البداية هي أساس تفكيك تغيّرات الدالة الكبرى. لا يمكن حل البكالوريا بنجاح دون ربطهما بشكل صحيح.
                 <br /><br />
                 2. <strong>تجريد الجذر للتسهيل:</strong> عندما يطلب منك إثبات علاقة لصورة الجذر مثل
                 <span className="math">{"\\(f(\\alpha)\\)"}</span>،
