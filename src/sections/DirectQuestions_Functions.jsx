@@ -192,13 +192,7 @@ const DirectQuestions_Functions = () => {
                         <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(x > 0\\)"}</span>
                         <span>{")"}</span>
                     </div>
-                    <div style={{ marginBottom: '4px' }}>
-                        <span>{"3) "}</span>
-                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = e^x + x\\)"}</span>
-                        <span>{". احسب العدد المشتق للدالة العكسية "}</span>
-                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((f^{-1})'(1)\\)"}</span>
-                        <span>{"."}</span>
-                    </div>
+
                 </div>
             </div>
 
