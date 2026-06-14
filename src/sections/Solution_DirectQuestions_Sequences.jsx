@@ -42,15 +42,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     وبما أن <span className="math">{"\\(f(0) = 0\\)"}</span> و <span className="math">{"\\(f(1) = 1\\)"}</span> و <span className="math">{"\\(f(u_n) = u_{n+1}\\)"}</span>، نجد: <span className="math">{"\\(0 < u_{n+1} < 1\\)"}</span>.
                 </div>
             </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    أتحقق من أن الانتقال بالدالة المتزايدة حافظ على الحصر المطلوب وحقق هدف التراجع.
-                </div>
-                <div className="right-col">
-                    الخاصية صحيحة من أجل كل عدد طبيعي <span className="math">{"\\(n\\)"}</span> بالوراثة والتعدي.
-                </div>
-            </div>
+
 
             {/* Q1.2 */}
             <div className="sub-question">2) برهان <span className="math">{"\\(u_n < 2\\)"}</span> والمتتالية متزايدة، حيث <span className="math">{"\\(u_{n+1} = \\sqrt{u_n+2}\\)"}</span></div>
@@ -84,15 +76,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     وبما أن <span className="math">{"\\(u_{n+1} = \\sqrt{u_n+2}\\)"}</span> و <span className="math">{"\\(u_{n+2} = \\sqrt{u_{n+1}+2}\\)"}</span>، فإن: <span className="math">{"\\(u_{n+1} < u_{n+2} < 2\\)"}</span>.
                 </div>
             </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    أتحقق من توافق النتائج مع رتابة المتتالية المتزايدة والمحدودة من الأعلى.
-                </div>
-                <div className="right-col">
-                    المتتالية متزايدة تماماً ومحدودة من الأعلى بالعدد 2 من أجل كل عدد طبيعي <span className="math">{"\\(n\\)"}</span>.
-                </div>
-            </div>
+
 
             {/* Q1.3 */}
             <div className="sub-question">3) المتراجحة الأسية: <span className="math">{"\\(u_{n+1} \\le \\frac{3}{4} u_n\\)"}</span> ثم <span className="math">{"\\(0 < u_n \\le (\\frac{3}{4})^n\\)"}</span></div>
@@ -103,8 +87,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    استعمال العلاقة التراجعية لإثبات حصر كلي للحد العام بدلالة قوة هندسية.
-                </div>
+                    الهدف واضح وهو إثبات صحة المتراجحة بالتراجع.                </div>
                 <div className="right-col">
                     الهدف: إثبات صحة المتباينة <span className="math">{"\\(0 < u_n \\le \\left(\\frac{3}{4}\\right)^n\\)"}</span> بالتراجع.
                 </div>
@@ -112,10 +95,9 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    أربط الفرضية بالمعطى التراجعي المتاح. أتحقق من رتبة البداية، ثم أفرض صحة الحصر عند الحد الحالي وأضربه في الأساس الهندسي لتشكيل متباينة وسيطة تسمح بالانتقال للحد الموالي بالتعدي.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> استخدام العلاقة المساعدة للربط بين الحدود وتوظيف خاصية التعدي للوصول للحد ذي الرتبة الموالية.
-                    </div>
+                    ذكر بالتراجع يعني باستعمال الحد أو الحدود الاولى , وأيضا العلاقة نفسها كمعطى مهم جدا لبرهان صحتها من أجل كل الحدود.<br />
+                    في الخطوة الثالثة : يجب أن أركز جيدا ان هدفي الواضح هو إثبات العلاقة من أجل n+1 و أكتب العلاقة المراد إثباتها بوضوح : <span className="math">{"\\(0 < u_{n+1} \\le (\\frac{3}{4})^{n+1}\\)"}</span>.
+
                 </div>
                 <div className="right-col">
                     نعلم من المعطيات المبرهنة سابقاً أن <span className="math">{"\\(u_{n+1} \\le \\frac{3}{4} u_n\\)"}</span>.<br />
@@ -126,15 +108,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     بالتعدي نجد: <span className="math">{"\\(u_{n+1} \\le (\\frac{3}{4})^{n+1}\\)"}</span>.
                 </div>
             </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    أتحقق من الحفاظ على موجبية الحدود بالتوازي مع إثبات الحد الأعلى.
-                </div>
-                <div className="right-col">
-                    بما أن حدود المتتالية موجبة تماماً بالفرض، فإن الحصر محقق بالكامل لكل <span className="math">{"\\(n\\)"}</span>.
-                </div>
-            </div>
+
 
             {/* ============================================================
                 EXERCISE 2: Variations and Limits
@@ -150,7 +124,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    تحديد اتجاه تغير ورتابة المتتالية بدراسة إشارة الفرق بين حدين متتاليين.
+                    "اتجاه التغير" يعني دراسة اشارة الفرق
                 </div>
                 <div className="right-col">
                     الهدف: دراسة إشارة الفرق <span className="math">{"\\(u_{n+1} - u_n\\)"}</span> لتحديد رتابة المتتالية.
@@ -162,7 +136,10 @@ const Solution_DirectQuestions_Sequences = () => {
                     أربط حصر حدود المتتالية بإشارة بسط ومقام كسر الفرق. أحلل إشارة المقام أولاً، ثم أحلل إشارة البسط ككثيرة حدود من الدرجة الثانية بإيجاد جذورها وتحديد إشارتها داخل وخارج مجال الجذور.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> دراسة البسط والمقام بشكل مستقل لتركيب إشارة كسر الفرق النهائي.
+
                     </div>
+                    أستنتج رتابة المتتالية بناءً على الإشارة الموجبة تماماً للفرق.
+
                 </div>
                 <div className="right-col">
                     لدينا عبارة الفرق: <span className="math">{"\\(u_{n+1} - u_n = \\frac{-u_n^2 + u_n + 2}{u_n + 3}\\)"}</span>.<br />
@@ -170,17 +147,12 @@ const Solution_DirectQuestions_Sequences = () => {
                     ندرس إشارة كثيرة الحدود في البسط <span className="math">{"\\(P(x) = -x^2 + x + 2\\)"}</span>. الجذور هي <span className="math">{"\\(x_1 = -1\\)"}</span> و <span className="math">{"\\(x_2 = 2\\)"}</span>.<br />
                     إشارة كثيرة الحدود تكون موجبة داخل مجال الجذرين، أي على المجال <span className="math">{"\\(]-1, 2[\\)"}</span>.<br />
                     بما أن <span className="math">{"\\(u_n \\in ]0, 2[ \\subset ]-1, 2[\\)"}</span>، فإن البسط <span className="math">{"\\(-u_n^2 + u_n + 2 > 0\\)"}</span>.
-                </div>
+                    بما أن البسط والمقام موجبان تماماً، فإن الفرق موجباً تماماً، وعليه                  <span style={{ color: "#1e40af", fontSize: '11pt' }}>المتتالية متزايدة تماماً.
+
+                    </span>                 </div>
+
             </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    أستنتج رتابة المتتالية بناءً على الإشارة الموجبة تماماً للفرق.
-                </div>
-                <div className="right-col">
-                    بما أن البسط والمقام موجبان تماماً، فإن الفرق موجباً تماماً، وعليه **المتتالية متزايدة تماماً**.
-                </div>
-            </div>
+
 
             {/* Q2.2 */}
             <div className="sub-question">2) استنتاج نهاية <span className="math">{"\\(u_n\\)"}</span> علماً أن <span className="math">{"\\(0 < u_n \\le \\left(\\frac{3}{4}\\right)^n\\)"}</span></div>
@@ -191,36 +163,30 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    حساب نهاية المتتالية عند اللانهائية.
+                    حساب نهاية المتتالية عند اللانهائية. و بما أنه قيل لي "علما أن" فإنني أستعمل مبرهنة الحصر.
                 </div>
                 <div className="right-col">
-                    الهدف: حساب نهاية المتتالية <span className="math">{"\\(\\lim_{n\\to+\\infty} u_n\\)"}</span>.
+                    الهدف: حساب نهاية المتتالية <span className="math">{"\\(\\lim_{n\\to+\\infty} u_n\\)"}</span> باستعمال مبرهنة الحصر.
                 </div>
             </div>
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    أربط حصر المتتالية بمبرهنة الحصر (الدركيين). أحسب نهاية الأطراف المحيطة بالمتتالية (الحد الثابت والمتتالية الهندسية التي يقترب أساسها من الصفر) لاستنتاج نهاية الحد الأوسط.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> التأكد من تقارب المتتالية المحيطة باليمين إلى الصفر لفرض نفس التقارب على المتتالية المطلوبة.
-                    </div>
+                    أربط حصر المتتالية بمبرهنة الحصر. أحسب نهاية الأطراف المحيطة بالمتتالية (الحد الثابت والمتتالية الهندسية التي يقترب أساسها من الصفر) لاستنتاج نهاية الحد الأوسط.
+                    أطبق مبرهنة الحصر لصياغة النتيجة النهائية للنهاية.
+
                 </div>
                 <div className="right-col">
                     لدينا الحصر المبرهن سابقاً: <span className="math">{"\\(0 < u_n \\le \\left(\\frac{3}{4}\\right)^n\\)"}</span>.<br />
                     نحسب نهاية الطرف الأيسر: <span className="math">{"\\(\\lim_{n\\to+\\infty} 0 = 0\\)"}</span>.<br />
                     نحسب نهاية الطرف الأيمن: بما أن الأساس هندسي يحقق <span className="math">{"\\(-1 < \\frac{3}{4} < 1\\)"}</span>، فإن <span className="math">{"\\(\\lim_{n\\to+\\infty} \\left(\\frac{3}{4}\\right)^n = 0\\)"}</span>.
+
+                    حسب مبرهنة الحصر، فإن:
+                    <span className="math">{"\\[ \\lim_{n \\to +\\infty} u_n = 0 \\]"}</span>
+
                 </div>
             </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    أطبق مبرهنة الحصر لصياغة النتيجة النهائية للنهاية.
-                </div>
-                <div className="right-col">
-                    حسب مبرهنة الحصر، فإن نهاية المتتالية تساوي الصفر:
-                    <div className="math-block">{"\\[ \\lim_{n \\to +\\infty} u_n = 0 \\]"}</div>
-                </div>
-            </div>
+
 
             {/* ============================================================
                 EXERCISE 3: Helper Sequences
@@ -235,6 +201,13 @@ const Solution_DirectQuestions_Sequences = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
+                    <span className="phase-label  translate">M. الترجمة (Translate)</span><br />
+                    متتالية هندسية تعني : <span className="math">{"\\(v_{n+1} = q \\cdot v_n\\)"}</span>                   </div>
+                <div className="right-col">
+                </div>
+            </div>
+            <div className="step-row-two">
+                <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
                     إيجاد قيمة الثابت الهندسي لتكون المتتالية المساعدة هندسية.
                 </div>
@@ -245,7 +218,14 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    أقوم بحساب عبارة الحد الموالي للمتتالية المساعدة بالتعويض وتوحيد المقامات والتخلص من الكسور المركبة. أربط العبارة الناتجة بطريقتين: الأولى بمطابقة معاملات البسط والمقام، والثانية بالبحث عن النقطة الصامدة للدالة المرفقة.
+                    <strong>المعطيات الأساسية المتاحة:</strong>
+                    <ul style={{ margin: "5px 0", paddingRight: "20px" }}>
+                        <li>العلاقة التراجعية للمتتالية <span className="math">{"\\(u_n\\)"}</span>.</li>
+                        <li>عبارة المتتالية المساعدة: <span className="math">{"\\(v_n = \\frac{u_n - \\alpha}{u_n + 3}\\)"}</span>.</li>
+                        <li>التعريف الرياضي للمتتالية الهندسية: <span className="math">{"\\(v_{n+1} = q \\cdot v_n\\)"}</span>.</li>
+                    </ul>
+                    <strong>سؤال التفكير المنهجي:</strong> كيف يمكنني الربط بين هذه المعطيات الثلاثة للانتقال من الحد <span className="math">{"\\(v_n\\)"}</span> إلى <span className="math">{"\\(v_{n+1}\\)"}</span> وتحديد الثوابت المطلوبة؟
+
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> مقارنة النتائج لاستبعاد القيمة التي تلغي مقام المتتالية المساعدة وتحديد الأساس q المقابل للقيمة المقبولة.
                     </div>
@@ -255,14 +235,14 @@ const Solution_DirectQuestions_Sequences = () => {
                     <div className="math-block">{"\\[ v_{n+1} = \\frac{u_{n+1} - \\alpha}{u_{n+1} + 3} = \\frac{\\dfrac{2u_n+3}{u_n+4} - \\alpha}{\\dfrac{2u_n+3}{u_n+4} + 3} \\]"}</div>
                     نضرب البسط والمقام في المقدار <span className="math">{"\\((u_n+4)\\)"}</span> للتبسيط:<br />
                     <span className="math">{"\\(v_{n+1} = \\frac{(2u_n+3) - \\alpha(u_n+4)}{(2u_n+3) + 3(u_n+4)} = \\frac{(2-\\alpha)u_n + (3-4\\alpha)}{5(u_n+3)}\\)"}</span>.<br /><br />
-                    
+
                     <strong>الطريقة 1: المطابقة (Pattern Matching)</strong><br />
                     نريد مطابقة النتيجة مع <span className="math">{"\\(q \\cdot v_n = q \\frac{u_n - \\alpha}{u_n+3}\\)"}</span>، أي:<br />
                     <span className="math">{"\\(\\frac{(2-\\alpha)u_n + (3-4\\alpha)}{5(u_n+3)} = \\frac{5q(u_n - \\alpha)}{5(u_n+3)}\\)"}</span>.<br />
                     بمطابقة معاملات البسط نتحصل على الجملة:<br />
                     <span className="math">{"\\(\\begin{cases} 2 - \\alpha = 5q \\\\ 3 - 4\\alpha = -5q\\alpha \\end{cases}\\)"}</span>.<br />
                     بالتعويض نجد المعادلة: <span className="math">{"\\(\\alpha^2 + 2\\alpha - 3 = 0\\)"}</span>، والتي حلولها هي <span className="math">{"\\(\\alpha = 1\\)"}</span> أو <span className="math">{"\\(\\alpha = -3\\)"}</span>.<br /><br />
-                    
+
                     <strong>الطريقة 2: النقطة الصامدة (Fixed Point)</strong><br />
                     نحل المعادلة المميزة للنقطة الصامدة <span className="math">{"\\(\\alpha = f(\\alpha)\\)"}</span> للدالة المرفقة <span className="math">{"\\(f(x) = \\frac{2x+3}{x+4}\\)"}</span>:<br />
                     <span className="math">{"\\(\\alpha = \\frac{2\\alpha+3}{\\alpha+4} \\implies \\alpha^2 + 2\\alpha - 3 = 0\\)"}</span>.<br />
