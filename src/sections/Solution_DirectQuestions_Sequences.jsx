@@ -30,22 +30,13 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    الانتقال من <span className="math">{"\\(u_n\\)"}</span> إلى <span className="math">{"\\(u_{n+1}\\)"}</span> يمكن أن يتم بالحصر المباشر، لكن الدالة المرفقة <span className="math">{"\\(f(x)=\\frac{2x}{x+1}\\)"}</span> أضمن وتمنع تباعد الحصر.
-                </div>
-                <div className="right-col">
-                    نعتبر الدالة المرفقة <span className="math">{"\\(f(x) = \\frac{2x}{x+1}\\)"}</span> المعرفة على <span className="math">{"\\([0, 1]\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    نربط الانتقال من حد إلى آخر باستخدام الدالة المرفقة ورتابتها للحفاظ على اتجاه الحصر.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أتحقق من الأساس، ثم أفرض صحة <span className="math">{"\\(P(n)\\)"}</span> وأبرهن <span className="math">{"\\(P(n+1)\\)"}</span> بدراسة اتجاه تغير الدالة المرفقة.
+                        <strong>🔔 تذكير بالهدف:</strong> أتحقق من صحة الحد الابتدائي (الأساس)، ثم أفرض صحة المتباينة للحد العام وأبرهنها للحد الموالي بتوظيف تزايد الدالة المرفقة.
                     </div>
-                    أولاً: <span className="math">{"\\(n=0\\)"}</span>، <span className="math">{"\\(u_0=1/2\\)"}</span> محققة.<br />
-                    ثانياً: أدرس <span className="math">{"\\(f'\\)"}</span> لتأكيد تزايدها للحفاظ على اتجاه المتباينة. <span className="math">{"\\(f'(x)=\\frac{2}{(x+1)^2} > 0\\)"}</span>.
                 </div>
                 <div className="right-col">
+                    نعتبر الدالة المرفقة <span className="math">{"\\(f(x) = \\frac{2x}{x+1}\\)"}</span> المعرفة على <span className="math">{"\\([0, 1]\\)"}</span>.<br />
                     <strong>1. الأساس:</strong> من أجل <span className="math">{"\\(n=0\\)"}</span>، <span className="math">{"\\(u_0 = 1/2\\)"}</span> و <span className="math">{"\\(0 < 1/2 < 1\\)"}</span> إذن <span className="math">{"\\(P(0)\\)"}</span> محققة.<br />
                     <strong>2. الفرضية والبرهان:</strong> نفرض أن <span className="math">{"\\(0 < u_n < 1\\)"}</span> ونبرهن أن <span className="math">{"\\(0 < u_{n+1} < 1\\)"}</span>.<br />
                     بما أن <span className="math">{"\\(f'(x) = \\frac{2}{(x+1)^2} > 0\\)"}</span>، فالدالة متزايدة تماماً.
@@ -82,12 +73,11 @@ const Solution_DirectQuestions_Sequences = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أربط دراسة الرتابة والحد الأعلى معاً بالتراجع المزدوج باستخدام تزايد دالة الجذر لبناء متباينة الجيل التالي.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> بدلاً من برهان كل خاصية على حدة، سأقوم بجمع الخاصيتين في متباينة واحدة " <span className="math">{"\\(u_n < u_{n+1} < 2\\)"}</span> ".
+                        <strong>🔔 تذكير بالهدف:</strong> بدلاً من برهان كل خاصية على حدة، سأقوم بجمع الخاصيتين في متباينة واحدة مركبة.
                     </div>
-                    الأساس: <span className="math">{"\\(u_0=1\\)"}</span> و <span className="math">{"\\(u_1=\\sqrt{3}\\)"}</span>.<br />
-                    أضيف 2 وأجذر الفرضية لأن دالة الجذر متزايدة تماماً ولا تغير الاتجاه.
                 </div>
                 <div className="right-col">
                     <strong>الأساس:</strong> <span className="math">{"\\(u_0=1\\)"}</span> و <span className="math">{"\\(u_1=\\sqrt{3}\\)"}</span>. إذن <span className="math">{"\\(u_0 < u_1 < 2\\)"}</span> (محققة).<br />
@@ -125,11 +115,11 @@ const Solution_DirectQuestions_Sequences = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أربط فرضية التراجع بالمتراجحة المعطاة للانتقال خطوة بخطوة إلى الرتبة الموالية عبر الضرب والتعدي.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أفرض صحة الحصر للحد <span className="math">{"\\(n\\)"}</span>، وأستعمل المعطى <span className="math">{"\\(u_{n+1} \\le \\frac{3}{4} u_n\\)"}</span> كجسر عبور لبرهنتها للحد <span className="math">{"\\(n+1\\)"}</span>.
+                        <strong>🔔 تذكير بالهدف:</strong> أفرض صحة الحصر للحد الحالي، وأستعمل المتراجحة المعطاة كجسر عبور للوصول إلى الحد الموالي.
                     </div>
-                    أضرب الفرضية في <span className="math">{"\\(3/4\\)"}</span> للحصول على <span className="math">{"\\(\\frac{3}{4} u_n \\le (\\frac{3}{4})^{n+1}\\)"}</span>.
                 </div>
                 <div className="right-col">
                     الأساس: <span className="math">{"\\(n=0\\)"}</span>، <span className="math">{"\\(u_0 = 1 \\le 1\\)"}</span> محققة.<br />
@@ -171,23 +161,15 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    لدينا <span className="math">{"\\(u_n \\in ]0, 2[\\)"}</span>. هذا المعطى يحسم إشارة المقام مباشرة.
-                </div>
-                <div className="right-col">
-                    بما أن <span className="math">{"\\(0 < u_n < 2\\)"}</span>، فإن المقام <span className="math">{"\\(u_n + 3 > 0\\)"}</span>. إشارة الفرق تتبع إشارة البسط.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    أربط حصر المتتالية بإشارة البسط والمقام لتحديد إشارة الفرق الإجمالية ودراسة رتابة المتتالية.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أدرس إشارة كثيرة الحدود في البسط وأتقاطع مع مجال <span className="math">{"\\(u_n\\)"}</span> لاستنتاج الإشارة.
+                        <strong>🔔 تذكير بالهدف:</strong> أدرس إشارة كثيرة الحدود في البسط والمقام وأتقاطع مع مجال المتتالية لاستنتاج الإشارة.
                     </div>
-                    جذرا <span className="math">{"\\(-x^2+x+2\\)"}</span> هما <span className="math">{"\\(-1\\)"}</span> و <span className="math">{"\\(2\\)"}</span>.
                 </div>
                 <div className="right-col">
-                    ندرس إشارة <span className="math">{"\\(-x^2+x+2\\)"}</span>. الجذور هي <span className="math">{"\\(-1\\)"}</span> و <span className="math">{"\\(2\\)"}</span>. الإشارة موجبة داخل الجذرين.<br />
-                    بما أن <span className="math">{"\\(u_n \\in ]0, 2[ \\subset ]-1, 2[\\)"}</span>، فإن <span className="math">{"\\(-u_n^2+u_n+2 > 0\\)"}</span>.
+                    بما أن <span className="math">{"\\(0 < u_n < 2\\)"}</span>، فإن المقام <span className="math">{"\\(u_n + 3 > 0\\)"}</span>. إشارة الفرق تتبع إشارة البسط.<br />
+                    ندرس إشارة البسط <span className="math">{"\\(-x^2+x+2\\)"}</span>: الجذور هي <span className="math">{"\\(-1\\)"}</span> و <span className="math">{"\\(2\\)"}</span>.<br />
+                    بما أن <span className="math">{"\\(u_n \\in ]0, 2[ \\subset ]-1, 2[\\)"}</span>، فإن البسط <span className="math">{"\\(-u_n^2+u_n+2 > 0\\)"}</span>.
                 </div>
             </div>
             <div className="step-row-two">
@@ -226,11 +208,11 @@ const Solution_DirectQuestions_Sequences = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
-                    نهاية الصفر صفر. نهاية الأسية الهندسية صفر لأن أساسها بين -1 و 1.
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أربط حصر المتتالية بحساب نهايات الأطراف وتطبيق مبرهنة الدركيين.
                 </div>
                 <div className="right-col">
-                    لدينا <span className="math">{"\\(\\lim 0 = 0\\)"}</span> و <span className="math">{"\\(\\lim \\left(\\frac{3}{4}\\right)^n = 0\\)"}</span> (لأن <span className="math">{"\\(-1 < \\frac{3}{4} < 1\\)"}</span>).
+                    لدينا <span className="math">{"\\(\\lim 0 = 0\\)"}</span> و <span className="math">{"\\(\\lim \\left(\\frac{3}{4}\\right)^n = 0\\)"}</span> (لأن أساس المتتالية الهندسية يقع بين <span className="math">{"\\(-1\\)"}</span> و <span className="math">{"\\(1\\)"}</span>).
                 </div>
             </div>
             <div className="step-row-two">
@@ -266,11 +248,11 @@ const Solution_DirectQuestions_Sequences = () => {
             {/* Step: Compute v_{n+1} */}
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أعوض عبارة المتتالية التراجعية في المتتالية الجديدة وأبسط الكسر المركب لتجهيزها للمطابقة.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أبدأ بحساب <span className="math">{"\\(v_{n+1}\\)"}</span> بتعويض <span className="math">{"\\(u_{n+1} = \\frac{2u_n+3}{u_n+4}\\)"}</span>، أوحد المقامات، ثم أبحث عن الشرط الذي يجعل النسبة ثابتة.
+                        <strong>🔔 تذكير بالهدف:</strong> أبدأ بحساب العبارة عند الرتبة الموالية، وأوحد المقامات، تمهيداً للبحث عن الشرط الذي يجعل النسبة ثابتة.
                     </div>
-                    أعوض <span className="math">{"\\(u_{n+1}\\)"}</span> في تعريف <span className="math">{"\\(v_n\\)"}</span> وأضرب البسط والمقام في <span className="math">{"\\((u_n+4)\\)"}</span> لإزالة الكسور.
                 </div>
                 <div className="right-col">
                     نحسب <span className="math">{"\\(v_{n+1}\\)"}</span>:
@@ -352,10 +334,11 @@ const Solution_DirectQuestions_Sequences = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
-                    الحد الأول هو <span className="math">{"\\(v_0=3\\)"}</span>، الأساس <span className="math">{"\\(1/2\\)"}</span>، عدد الحدود <span className="math">{"\\(n+1\\)"}</span>.
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أحدد عناصر المتتالية الهندسية من حد أول وأساس وعدد الحدود لتطبيق قانون المجموع مباشرة.
                 </div>
                 <div className="right-col">
+                    الحد الأول هو <span className="math">{"\\(v_0=3\\)"}</span>، الأساس <span className="math">{"\\(1/2\\)"}</span>، عدد الحدود <span className="math">{"\\(n+1\\)"}</span>.<br />
                     <div className="math-block">{"\\[ S_n = v_0 \\frac{1 - q^{n+1}}{1 - q} = 3 \\frac{1 - (1/2)^{n+1}}{1 - 1/2} \\]"}</div>
                     <div className="math-block">{"\\[ S_n = 6 \\left( 1 - \\left(\\frac{1}{2}\\right)^{n+1} \\right) \\]"}</div>
                 </div>
@@ -378,9 +361,10 @@ const Solution_DirectQuestions_Sequences = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أحسب مجموع حدود المتتالية الحسابية المتواجدة في الأس ثم أرفع الناتج كأساس للعدد المحدد.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أحسب المجموع الجديد في الأس الذي يمثل مجموع متتالية حسابية، ثم أرفعه كأس للعدد 2.
+                        <strong>🔔 تذكير بالهدف:</strong> أحسب المجموع في الأس الذي يمثل مجموع متتالية حسابية، ثم أرفعه كأساس للعدد المطلق.
                     </div>
                 </div>
                 <div className="right-col">
@@ -416,11 +400,11 @@ const Solution_DirectQuestions_Sequences = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
-                    بما أن <span className="math">{"\\(v_n\\)"}</span> هندسية، <span className="math">{"\\(\\ln(v_n)\\)"}</span> هي متتالية حسابية.
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أربط لوغاريتم الحدود الهندسية بخصائص المتتالية الحسابية لتطبيق قانون مجموع حدود متتالية حسابية مباشرة.
                 </div>
                 <div className="right-col">
-                    نضع <span className="math">{"\\(w_n = \\ln(v_n)\\)"}</span>. المتتالية حسابية أساسها <span className="math">{"\\(\\ln(q)\\)"}</span>.
+                    نضع <span className="math">{"\\(w_n = \\ln(v_n)\\)"}</span>. بما أن <span className="math">{"\\(v_n\\)"}</span> هندسية، فإن <span className="math">{"\\(w_n\\)"}</span> هي متتالية حسابية أساسها <span className="math">{"\\(\\ln(q)\\)"}</span>.<br />
                     <div className="math-block">{"\\[ \\begin{aligned} T_n &= \\frac{n+1}{2}(\\ln(v_0) + \\ln(v_n)) \\\\[4pt] &= \\frac{n+1}{2} \\ln(v_0 \\cdot v_n) \\end{aligned} \\]"}</div>
                 </div>
             </div>
@@ -446,43 +430,45 @@ const Solution_DirectQuestions_Sequences = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أربط تبسيط ما داخل اللوغاريتم بتفكيكه إلى فرق بين حدود متتابعة لتشكيل مجموع تلسكوبي.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أكتب الحد العام بدلالة طرح حدين متعاقبين من متتالية جديدة، لكي تتساقط الحدود عند جمعها.
+                        <strong>🔔 تذكير بالهدف:</strong> أكتب الحد العام بدلالة طرح حدين متعاقبين من متتالية جديدة، لكي تتساقط الحدود بالتناوب عند جمعها.
                     </div>
                 </div>
                 <div className="right-col">
+                    نوحد المقامات داخل اللوغاريتم ونفككه:<br />
                     <div className="math-block">
                         {`
-\\[
-\\begin{alignedat}{2}
-\\hphantom{=\\ }&
-\\ln\\left(\\frac{(k+1)^2-1}{(k+1)^2}\\right)
-= \\ln\\left(\\frac{k(k+2)}{(k+1)^2}\\right)
-\\end{alignedat}
-\\]
-`}
+ \\[
+ \\begin{alignedat}{2}
+ \\hphantom{=\\ }&
+ \\ln\\left(\\frac{(k+1)^2-1}{(k+1)^2}\\right)
+ = \\ln\\left(\\frac{k(k+2)}{(k+1)^2}\\right)
+ \\end{alignedat}
+ \\]
+ `}
                     </div>
 
                     <div className="math-block">
                         {`
-\\[
-\\begin{alignedat}{2}
-&= \\ln(k)-2\\ln(k+1)+\\ln(k+2)
-\\end{alignedat}
-\\]
-`}
+ \\[
+ \\begin{alignedat}{2}
+ &= \\ln(k)-2\\ln(k+1)+\\ln(k+2)
+ \\end{alignedat}
+ \\]
+ `}
                     </div>
 
                     <div className="math-block">
                         {`
-\\[
-\\begin{alignedat}{2}
-&= [\\ln(k)-\\ln(k+1)]
--[\\ln(k+1)-\\ln(k+2)]
-\\end{alignedat}
-\\]
-`}
+ \\[
+ \\begin{alignedat}{2}
+ &= [\\ln(k)-\\ln(k+1)]
+ -[\\ln(k+1)-\\ln(k+2)]
+ \\end{alignedat}
+ \\]
+ `}
                     </div>
                 </div>
             </div>
@@ -526,11 +512,11 @@ const Solution_DirectQuestions_Sequences = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أطبق طريقة المكاملة بالتجزئة باختيار الحدود المناسبة للاشتقاق والمكاملة لتوليد العلاقة التراجعية المطلوبة.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أختار <span className="math">{"\\(u\\)"}</span> لتقليل درجتها بالاشتقاق وتوليد الحد المألوف <span className="math">{"\\(x^n\\)"}</span>.
+                        <strong>🔔 تذكير بالهدف:</strong> أختار الحدود بشكل يقلل من درجة القوة بالاشتقاق، مما يولد الحد التراجعي السابق.
                     </div>
-                    أشتق <span className="math">{"\\(x^{n+1}\\)"}</span> لأحصل على <span className="math">{"\\(n+1\\)"}</span> كعامل لـ <span className="math">{"\\(I_n\\)"}</span>.
                 </div>
                 <div className="right-col">
                     نضع <span className="math">{"\\(u = x^{n+1} \\implies u' = (n+1)x^n\\)"}</span><br />
@@ -559,19 +545,11 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    المتغير <span className="math">{"\\(x\\)"}</span> محصور في التكامل. أستغل ذلك لحصر الدالة الأسية المزعجة وبناء الدالة.
+                    أربط حصر المتغير المعطى بحصر الدالة التكاملية، ثم أدخل التكامل على الأطراف لحساب النهاية بمبرهنة الحصر.
                 </div>
                 <div className="right-col">
                     لدينا <span className="math">{"\\(0 \\le x \\le 1 \\implies 0 < e^x \\le e\\)"}</span>.<br />
-                    بالضرب في <span className="math">{"\\(x^n \\ge 0\\)"}</span> نجد: <span className="math">{"\\(0 \\le x^n e^x \\le e x^n\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
-                    أدخل التكامل على الأطراف وأحسب الطرف الأيمن البسيط.
-                </div>
-                <div className="right-col">
+                    بالضرب في <span className="math">{"\\(x^n \\ge 0\\)"}</span> نجد: <span className="math">{"\\(0 \\le x^n e^x \\le e x^n\\)"}</span>.<br />
                     نكامل الأطراف من 0 إلى 1:
                     <div className="math-block">{"\\[ 0 \\le I_n \\le e \\left[ \\frac{x^{n+1}}{n+1} \\right]_0^1 = \\frac{e}{n+1} \\]"}</div>
                     بمبرهنة الحصر: <span className="math">{"\\(\\lim_{n\\to+\\infty} I_n = 0\\)"}</span>.
@@ -595,7 +573,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    التجاور يتطلب 3 شروط مجتمعة: إحداهما متزايدة، والأخرى متناقصة، ونهاية الفرق بينهما تؤول للصفر.
+                    التجاور يتطلب إثبات رتابتين متعاكستين بالإضافة إلى تقارب الفرق بينهما نحو الصفر.
                 </div>
                 <div className="right-col">
                     نثبت الرتابة المتعاكسة ونحسب نهاية الفرق.
@@ -603,9 +581,10 @@ const Solution_DirectQuestions_Sequences = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أربط عبارة الفرق بخصائص المتتالية الفرقية الهندسية لإيجاد نهايتها وإثبات تجاور المتتاليتين.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أدرس المتتالية الفرقية <span className="math">{"\\(w_n = v_n - u_n\\)"}</span> وأثبت أنها هندسية متقاربة إلى الصفر لتأكيد التجاور.
+                        <strong>🔔 تذكير بالهدف:</strong> أدرس المتتالية الفرقية وأثبت أنها هندسية متقاربة إلى الصفر لتأكيد شرط التجاور الأساسي.
                     </div>
                 </div>
                 <div className="right-col">
@@ -633,7 +612,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    أعوض قانوني التراجع في تعريف <span className="math">{"\\(w_{n+1}\\)"}</span> ثم أقارن مع <span className="math">{"\\(w_n\\)"}</span> بمطابقة معاملات <span className="math">{"\\(u_n\\)"}</span> و<span className="math">{"\\(v_n\\)"}</span>.
+                    أترجم شرط ثبات المتتالية بمساواة حدين متتاليين ومطابقة معاملات الحدود المتشابهة.
                 </div>
                 <div className="right-col">
                     نحسب <span className="math">{"\\(w_{n+1} = a\\,u_{n+1} + b\\,v_{n+1}\\)"}</span>:
@@ -643,11 +622,11 @@ const Solution_DirectQuestions_Sequences = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أربط معاملات العبارة الناتجة بالعبارة الأصلية لتشكيل جملة معادلات وتحديد قيم الثوابت الممكنة.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 شرط الثبوت:</strong> <span className="math">{"\\(w_{n+1} = w_n\\)"}</span> يعني معامل <span className="math">{"\\(u_n\\)"}</span> يساوي <span className="math">{"\\(a\\)"}</span> ومعامل <span className="math">{"\\(v_n\\)"}</span> يساوي <span className="math">{"\\(b\\)"}</span>.
+                        <strong>🔔 شرط الثبوت:</strong> مطابقة المعاملات تعطينا جملة معادلات تحدد النسبة الثابتة بين الثوابت المطلوبة.
                     </div>
-                    نحصل على جملة معادلتين في <span className="math">{"\\(a\\)"}</span> و<span className="math">{"\\(b\\)"}</span>، وسنرى أنهما متكافئتان.
                 </div>
                 <div className="right-col">
                     بمطابقة معاملات <span className="math">{"\\(u_n\\)"}</span> و<span className="math">{"\\(v_n\\)"}</span> مع <span className="math">{"\\(w_n = a u_n + b v_n\\)"}</span>:
