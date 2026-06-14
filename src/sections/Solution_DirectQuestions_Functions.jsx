@@ -661,38 +661,26 @@ const Solution_DirectQuestions_Functions = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    استنتاج اتجاه تغير الدالة المركبة <span className="math">{"\\(h\\)"}</span> انطلاقاً من الدالة <span className="math">{"\\(f\\)"}</span> والدالة المربع.
+                    <strong>لماذا نفضل خواص التركيب على الاشتقاق؟</strong> بما أن المطلوب هو استنتاج اتجاه التغير، فإن الاعتماد على اتجاه تغير الدالة الداخلية والخارجية يوصلنا للحل مباشرة دون الحاجة لحساب مشتقة من الدرجة الثالثة ودراسة إشارتها، مما يمنع الوقوع في الأخطاء الحسابية الحتمية.
                 </div>
                 <div className="right-col">
-                    الهدف: دراسة تغيرات <span className="math">{"\\(h(x) = f(x^2)\\)"}</span>.
+                    الهدف: دراسة اتجاه تغير الدالة المركبة <span className="math">{"\\(h(x) = f(x^2)\\)"}</span> مباشرة باستغلال اتجاه تغير الدالة الداخلية والخارجية.
                 </div>
             </div>
 
-            {/* </div> */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    مشتقة الدالة المركبة تعتمد على مشتقة الدالة الداخلية <span className="math">{"\\(x^2\\)"}</span> ومشتقة الدالة الخارجية <span className="math">{"\\(f\\)"}</span>.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أقوم بضرب مشتقة ما بداخل القوس في المشتقة الخارجية <strong>لأن</strong> هذه هي الطريقة الوحيدة لتحديد إشارة الدالة المركبة بدقة.
-                    </div>
+                    نطبق قاعدة تركيب الدوال لتحديد اتجاه تغير الدالة المركبة:<br />
+                    - إذا كانت الدالة الأولى (الداخلية) متزايدة، فإن الدالة المركبة تسلك نفس اتجاه تغير الدالة الثانية (الخارجية).<br />
+                    - إذا كانت الدالة الأولى (الداخلية) متناقصة، فإن الدالة المركبة تسلك عكس اتجاه تغير الدالة الثانية (الخارجية).
                 </div>
                 <div className="right-col">
-                    تطبيق قانون: <span className="math">{"\\(h'(x) = 2x \\cdot f'(x^2)\\)"}</span>.<br />
-                    معطى أن <span className="math">{"\\(f'(x) = x(x-2)\\)"}</span>. إذن <span className="math">{"\\(f'(x^2) = x^2(x^2-2)\\)"}</span>.<br />
-                    ومنه <span className="math">{"\\(h'(x) = 2x \\cdot x^2 (x^2-2) = 2x^3 (x-\\sqrt{2})(x+\\sqrt{2})\\)"}</span>.<br />
-                    بما أن <span className="math">{"\\(f'(X) = X(X-2)\\)"}</span> نعوض <span className="math">{"\\(X = x^2\\)"}</span>:<br />
-                    <div className="math-block">{"\\[ h'(x) = 2x \\left( x^2(x^2-2) \\right) = 2x^3(x^2-2) \\]"}
-                    </div>
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    الآن أدرس إشارة هذه العبارة ببساطة لتحديد فترات التزايد والتناقص لـ <span className="math">{"\\(h\\)"}</span>. الجذور واضحة ومنطقية.
-                </div>
-                <div className="right-col">
-                    تحديد الإشارة يتم عبر دراسة جذور المعادلة: <span className="math">{"\\(x=0, x=\\sqrt{2}, x=-\\sqrt{2}\\)"}</span> لجدول الإشارات.
+                    الدالة الخارجية <span className="math">{"\\(f\\)"}</span> متناقصة على <span className="math">{"\\([0, 2]\\)"}</span> ومتزايدة على <span className="math">{"\\([2, +\\infty[\\)"}</span>.<br />
+                    الدالة الداخلية <span className="math">{"\\(u(x) = x^2\\)"}</span> متناقصة على <span className="math">{"\\(]-\\infty, 0]\\)"}</span> ومتزايدة على <span className="math">{"\\([0, +\\infty[\\)"}</span>.<br />
+                    نقارن قيم الدالة الداخلية <span className="math">{"\\(x^2\\)"}</span> مع القيمة 2 (نقطة تغير رتابة الدالة الخارجية):<br />
+                    - <span className="math">{"\\(x^2 \\le 2 \\iff x \\in [-\\sqrt{2}, \\sqrt{2}]\\)"}</span>.<br />
+                    - <span className="math">{"\\(x^2 \\ge 2 \\iff x \\in ]-\\infty, -\\sqrt{2}] \\cup [\\sqrt{2}, +\\infty[\\)"}</span>.
                 </div>
             </div>
 
@@ -754,67 +742,47 @@ const Solution_DirectQuestions_Functions = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    إيجاد معادلات المماسات التي تمر بنقطة خارجية لا تنتمي بالضرورة للمنحنى.
-                </div>
+                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
+                    المماس يعني المعادلة : <span className="math">{"\\(y = f'(x_0)(x - x_0) + f(x_0)\\)"}</span>.
+                    تشمل النقطة A(0, -1) يعني:  (-1, 0) تنتمي للمماس                </div>
                 <div className="right-col">
-                    الهدف: إيجاد المماسات المارّة بالنقطة <span className="math">{"\\(A(0,-1)\\)"}</span>.
                 </div>
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    الخطأ الشائع هنا هو اعتبار 0 فاصلة نقطة التماس. لا، النقطة <span className="math">{"\\(A(0,-1)\\)"}</span> تنتمي للمماس ولا تنتمي بالضرورة للمنحنى (يمكن التحقق: <span className="math">{"\\(f(0)=3 \\ne -1\\)"}</span>).<br />
-                    أفرض نقطة التماس هي <span className="math">{"\\(x_0\\)"}</span>.
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    إيجاد معادلات المماسات التي تمر بالنقطة A(0, -1)  .
                 </div>
                 <div className="right-col">
-                    نكتب معادلة المماس عند النقطة ذات الفاصلة <span className="math">{"\\(x_0\\)"}</span>:
-                    <div className="math-block">{"\\[ y = f'(x_0)(x - x_0) + f(x_0) \\]"}</div>
-                    بما أن المماس يمر بالنقطة <span className="math">{"\\(A(0, -1)\\)"}</span>، فإن إحداثياتها تحقق المعادلة:
-                    <div className="math-block">{"\\[\\begin{aligned} -1 &= f'(x_0)(0 - x_0) + f(x_0) \\\\\\\\ &\\implies -x_0 f'(x_0) + f(x_0) = -1 \\end{aligned}\\]"}</div>
+                    الهدف : إيجاد حلول المعادلة : <span className="math">{"\\( f'(x_0) )(0 - x_0) + f(x_0) = -1\\)"}</span>
+                    <br />
+                    أي: حل المعادلة <span className="math">{"\\(-x_0 f'(x_0) + f(x_0) = -1\\)"}</span> .
                 </div>
             </div>
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    معادلة المماس تعتمد كلياً على فاصلة نقطة التماس المجهولة <span className="math">{"\\(x_0\\)"}</span>. سأعوض إحداثيات <span className="math">{"\\(A\\)"}</span> لتشكيل معادلة مجهولها <span className="math">{"\\(x_0\\)"}</span>.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أعوض إحداثيات النقطة <span className="math">{"\\(A\\)"}</span> في معادلة المماس العامة <strong>لأحصل</strong> على معادلة مجهولها الوحيد هو <span className="math">{"\\(x_0\\)"}</span> (فاصلة نقطة التماس المجهولة).
-                    </div>
+                    أقوم بربط المشتقة والدالة بالمعادلة المستنتجة لتشكيل معادلة ذات مجهول واحد هو فاصلة نقطة التماس.
                 </div>
                 <div className="right-col">
-                    تعويض <span className="math">{"\\(x=0\\)"}</span> و <span className="math">{"\\(y=-1\\)"}</span> في معادلة المماس العامة لإيجاد <span className="math">{"\\(x_0\\)"}</span>.<br />
-                    أحسب <span className="math">{"\\(f'(x)\\)"}</span>: <span className="math">{"\\(\\frac{2x(x+1)-(x^2+3)}{(x+1)^2} = \\frac{x^2+2x-3}{(x+1)^2}\\)"}</span>.<br />
-                    أعوض في المعادلة السابقة.
-                    مشتقة الدالة: <span className="math">{"\\(f'(x) = \\frac{x^2+2x-3}{(x+1)^2}\\)"}</span>.<br />
-                    نعوض في المعادلة:
-                    <div className="math-block">{"\\[ \\frac{x_0^2+3}{x_0+1} - x_0 \\frac{x_0^2+2x_0-3}{(x_0+1)^2} = -1 \\]"}
-                    </div>
+                    لدينا الدالة <span className="math">{"\\(f(x) = \\frac{x^2+3}{x+1}\\)"}</span> ومشتقتها هي <span className="math">{"\\(f'(x) = \\frac{x^2+2x-3}{(x+1)^2}\\)"}</span>.<br />
+                    بالتعويض في العلاقة المستنتجة:<br />
+                    <span className="math">{"\\(\\frac{x_0^2+3}{x_0+1} - x_0 \\frac{x_0^2+2x_0-3}{(x_0+1)^2} = -1\\)"}</span>.
+                    بتوحيد المقامات والتبسيط نجد:<br />
+                    <span className="math">{"\\(\\ -x_0^2+6x_0+3 = -x_0^2-2x_0-1\\)"}</span>.<br />
+                    وبالتالي: <span className="math">{"\\(8x_0 = -4 \\implies x_0 = -\\frac{1}{2}\\)"}</span>.<br />
+                    نحسب معامل التوجيه: <span className="math">{"\\(f'(-\\frac{1}{2}) = -15\\)"}</span>.<br />
+                    معادلة المماس الوحيد هي: <span className="math">{"\\(y = -15x - 1\\)"}</span>.
+
                 </div>
             </div>
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>✅ تحقيق الهدف:</strong> بعد حل المعادلة وإيجاد <span className="math">{"\\(x_0 = -0.5\\)"}</span>، أصبحت قادراً على كتابة معادلة المماس النهائية بكل بساطة.
-                    </div>
-                    بتوحيد المقامات:
-                    <div className="math-block">{"\\[\\frac{(x_0^2+3)(x_0+1) - x_0(x_0^2+2x_0-3)}{(x_0+1)^2} = -1\\]"}</div>
-                    البسط:
-                    <div className="math-block">{"\\[\\begin{aligned} &x_0^3+x_0^2+3x_0+3 - x_0^3 - 2x_0^2 + 3x_0 \\\\\\\\ &= -x_0^2+6x_0+3 \\end{aligned}\\]"}</div>
-                    وبالتعويض:
-                    <div className="math-block">{"\\[-x_0^2+6x_0+3 = -x_0^2-2x_0-1\\]"}</div>
-                    أختزل <span className="math">{"\\(-x_0^2\\)"}</span> من الطرفين:
-                    <div className="math-block">{"\\[\\begin{aligned} 6x_0 + 3 &= -2x_0 - 1 \\\\\\\\ \\implies 8x_0 &= -4 \\\\\\\\ \\implies x_0 &= -\\frac{1}{2} \\end{aligned}\\]"}</div>
-                    يوجد مماس وحيد فاصلة نقطة تماسه <span className="math">{"\\(-0.5\\)"}</span>.<br />
-                    معادلته: أعوض <span className="math">{"\\(-0.5\\)"}</span> في <span className="math">{"\\(f'\\)"}</span> تعطي <span className="math">{"\\(-15\\)"}</span>. <span className="math">{"\\(y = -15(x - 0) - 1 = -15x - 1\\)"}</span>.
-                </div>
+                    لنتحقق أن المماس يمر بالنقطة A(0, -1)                 </div>
                 <div className="right-col">
-                    بتوحيد المقامات ونشر البسط نجد:
-                    <div className="math-block">{"\\[\\begin{aligned} \\frac{-x_0^2+6x_0+3}{(x_0+1)^2} &= -1 \\\\\\\\ -x_0^2+6x_0+3 &= -x_0^2-2x_0-1 \\end{aligned}\\]"}</div>
-                    <div className="math-block">{"\\[ 8x_0 = -4 \\implies x_0 = -\\frac{1}{2} \\]"}</div>
-                    نحسب <span className="math">{"\\(f'(-\\frac{1}{2}) = -15\\)"}</span>. <br />
-                    معادلة المماس هي: <span className="math">{"\\(y = -15x - 1\\)"}</span>.
+                    نعوض <span className='math'>{"\\(x=0\\)"}</span>  و <span className='math'>{"\\(y=-1\\)"}</span> في معادلة المماس:
+                    <span className="math">{"\\(-15(0) - 1 = -1\\)"}</span>.<br /> محققة.
                 </div>
             </div>
 
@@ -826,91 +794,89 @@ const Solution_DirectQuestions_Functions = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    إثبات العلاقة <span className="math">{"\\(f(2a-x) + f(x) = 2b\\)"}</span> أي <span className="math">{"\\(f(2-x) + f(x) = 0\\)"}</span>.
+                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
+                    أترجم هندسة مركز التناظر إلى علاقة جبرية دستورية تربط إحداثيات النقطة بالدالة.
                 </div>
                 <div className="right-col">
-                    المطلوب إثبات أن <span className="math">{"\\(f(2-x) + f(x) = 0\\)"}</span>.
+                    تطبيق قانون مركز التناظر للنقطة <span className="math">{"\\(\\Omega(a, b)\\)"}</span>:<br />
+                    <span className="math">{"\\(f(2a - x) + f(x) = 2b\\)"}</span>.
                 </div>
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    إثبات أن نقطة هي مركز تناظر يترجم جبرياً إلى إثبات صحة العلاقة <span className="math">{"\\(f(2a-x) + f(x) = 2b\\)"}</span>.
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    إثبات صحة العلاقة الجبرية لمركز التناظر عند النقطة المعطاة.
                 </div>
                 <div className="right-col">
-                    تطبيق قانون مركز التناظر: <span className="math">{"\\(f(2 - x) + f(x) = 0\\)"}</span>.
+                    الهدف: إثبات أن <span className="math">{"\\(f(2-x) + f(x) = 0\\)"}</span> من أجل النقطة <span className="math">{"\\(\\Omega(1, 0)\\)"}</span>.
                 </div>
             </div>
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    لدينا الإحداثيات <span className="math">{"\\(a=1\\)"}</span> و <span className="math">{"\\(b=0\\)"}</span>. سأعوض في الدالة وأقوم بتوحيد المقامات والتبسيط للتأكد من المجموع.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أحسب <span className="math">{"\\(f(2-x)\\)"}</span> <strong>لأصل</strong> إلى إثبات العلاقة <span className="math">{"\\(f(2-x) + f(x) = 0\\)"}</span>، وهذا يكفي لإثبات أن <span className="math">{"\\(\\Omega\\)"}</span> مركز تناظر.
-                    </div>
+                    أقوم بحساب قيمة الدالة عند المتغير الجديد وتبسيطه لربطه بالدالة الأصلية.
                 </div>
                 <div className="right-col">
-                    نعوض <span className="math">{"\\(a=1, b=0\\)"}</span> ونحسب المجموع الجبري.<br />
-                    أحسب <span className="math">{"\\(f(2-x) = \\frac{2(2-x)^2 - 4(2-x) + 5}{(2-x)-1} = \\frac{2x^2 - 4x + 5}{1-x}\\)"}</span> بعد التبسيط.<br />
-                    ألاحظ أن <span className="math">{"\\(f(2-x) = -f(x)\\)"}</span> لتغير إشارة المقام فقط. إذن المجموع يؤول للصفر حتماً.
-                    <div className="math-block">{"\\[\\begin{aligned} f(2-x) &= \\frac{2(2-x)^2-4(2-x)+5}{1-x} \\\\\\\\ &= \\frac{2x^2-4x+5}{-(x-1)} = -f(x) \\end{aligned}\\]"}</div>
-                    إذن <span className="math">{"\\(f(2-x) + f(x) = 0\\)"}</span>، و <span className="math">{"\\(\\Omega\\)"}</span> مركز تناظر.
+                    نعوض في عبارة الدالة <span className="math">{"\\(f(x) = \\frac{2x^2-4x+5}{x-1}\\)"}</span>:<br />
+                    <span className="math">{"\\(f(2-x) = \\frac{2(2-x)^2-4(2-x)+5}{(2-x)-1} = \\frac{2x^2-4x+5}{-(x-1)} = -f(x)\\)"}</span>.
                 </div>
             </div>
-
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    المجموع معدوم تماماً، مما يثبت أن المنحنى متناظر فعلاً بالنسبة للنقطة المعطاة.
+                    أجمع الطرفين للتحقق من أن المجموع يساوي القيمة المطلوبة لإثبات التناظر.
                 </div>
                 <div className="right-col">
-                    النتيجة <span className="math">{"\\(0\\)"}</span> تؤكد أن <span className="math">{"\\(\\Omega(1,0)\\)"}</span> مركز تناظر.
+                    المجموع: <span className="math">{"\\(f(2-x) + f(x) = -f(x) + f(x) = 0\\)"}</span>.<br />
+                    المساواة محققة، إذن النقطة هي مركز تناظر للمنحنى.
                 </div>
             </div>
 
             {/* Q10 */}
-            <div className="sub-question">التمرين 10: إثبات أن <span className="math">{"\\(x e^{1-x} \\le x\\)"}</span> على <span className="math">{"\\([0, 1]\\)"}</span></div>
+            <div className="sub-question">التمرين 10: إثبات أن <span className="math">{"\\(x e^{1-x} \\ge x\\)"}</span> على <span className="math">{"\\([0, 1]\\)"}</span></div>
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
             </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    إثبات متراجحة أسية على مجال معين.
-                </div>
-                <div className="right-col">
-                    الهدف: إثبات <span className="math">{"\\(x e^{1-x} \\le x\\)"}</span> على <span className="math">{"\\([0,1]\\)"}</span>.
-                </div>
-            </div>
 
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    المعطى الأساسي هو أن <span className="math">{"\\(x \\in [0,1]\\)"}</span>. سأبني العبارة انطلاقاً من هذا الحصر للوصول للمطلوب.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أحاول دراسة إشارة <span className="math">{"\\(e^{1-x}\\)"}</span> بالمقارنة مع 1 <strong>لأستنتج</strong> المتراجحة النهائية المطلوبة بعد الضرب في <span className="math">{"\\(x\\)"}</span>.
-                    </div>
+                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
+                    أترجم المقارنة بين عبارة الدالة والمتغير إلى دراسة إشارة الفرق أو بناء متراجحة انطلاقاً من مجال تعريف محدد.
                 </div>
                 <div className="right-col">
-                    نبدأ من <span className="math">{"\\(0 \\le x \\le 1\\)"}</span> ونبني الأسية المضروبة فيه.<br />
-                    بما أن <span className="math">{"\\(x \\in [0, 1]\\)"}</span>، يمكنني قسمة الطرفين على <span className="math">{"\\(x\\)"}</span> الموجب دون تغيير المتراجحة (مع العلم بأنها محققة عند الصفر 0=0).<br />
-                    يتبقى إثبات <span className="math">{"\\(e^{1-x} \\le 1\\)"}</span>.
-                    من أجل <span className="math">{"\\(x \\in [0, 1]\\)"}</span>:<br />
-                    لدينا <span className="math">{"\\(x \\le 1 \\implies -x \\ge -1 \\implies 1-x \\ge 0\\)"}</span>... مهلاً.
+                    المطلوب إثبات أن <span className="math">{"\\(x e^{1-x} \\ge x\\)"}</span> على المجال المعطى.
+                </div>
+            </div>
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    إثبات صحة متراجحة تتضمن عبارة أسية على مجال محدد.
+                </div>
+                <div className="right-col">
+                    الهدف: إثبات صحة المتراجحة <span className="math">{"\\(x e^{1-x} \\ge x\\)"}</span> من أجل <span className="math">{"\\(x \\in [0, 1]\\)"}</span>.
+                </div>
+            </div>
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أربط حصر المتغير ببناء الأطراف الأسية باستخدام تزايد الدالة الأسية.
+                </div>
+                <div className="right-col">
+                    لدينا <span className="math">{"\\(x \\in [0, 1]\\)"}</span>.<br />
+                    عند الصفر المتراجحة محققة مساواة <span className="math">{"\\(0=0\\)"}</span>.<br />
+                    من أجل <span className="math">{"\\(x > 0\\)"}</span>، بقسمة الطرفين على <span className="math">{"\\(x\\)"}</span> يؤول المطلوب إلى إثبات: <span className="math">{"\\(e^{1-x} \\ge 1\\)"}</span>.
                 </div>
             </div>
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    لحظة! إذا كان <span className="math">{"\\(x \\in [0, 1]\\)"}</span> فإن <span className="math">{"\\(1-x \\ge 0\\)"}</span>. وإذا كان الأس موجباً فإن <span className="math">{"\\(e^{1-x} \\ge 1\\)"}</span>.<br />
-                    إذن <span className="math">{"\\(x e^{1-x} \\ge x\\)"}</span> وليس <span className="math">{"\\(\\le\\)"}</span>! يبدو أن هناك خطأ مطبعي في نص التمرين الأصلي (يجب أن يكون المجال أكبر من 1 لتكون المتراجحة صحيحة، أو المتراجحة بالعكس). أكتب التحليل بصدق.
+                    أتحقق من صحة المتراجحة ببناء الأسية انطلاقاً من حصر الأس.
                 </div>
                 <div className="right-col">
-                    <strong>تصحيح منطقي:</strong> إذا كان <span className="math">{"\\(x \\in [0, 1]\\)"}</span> فإن <span className="math">{"\\(1-x \\ge 0\\)"}</span> وبالتالي <span className="math">{"\\(e^{1-x} \\ge e^0 = 1\\)"}</span>.<br />
-                    بالضرب في <span className="math">{"\\(x\\)"}</span> الموجب نجد أن: <strong><span className="math">{"\\(x e^{1-x} \\ge x\\)"}</span></strong>.<br />
-                    المتراجحة المطلوبة في السؤال تتناقض مع المنطق الرياضي الصحيح.
+                    بما أن <span className="math">{"\\(x \\le 1 \\implies 1-x \\ge 0\\)"}</span>.<br />
+                    وبما أن الدالة الأسية متزايدة تماماً: <span className="math">{"\\(e^{1-x} \\ge e^0 = 1\\)"}</span>.<br />
+                    بالضرب في <span className="math">{"\\(x\\)"}</span> الموجب نجد: <span className="math">{"\\(x e^{1-x} \\ge x\\)"}</span> وهي محققة تماماً.
                 </div>
             </div>
 
@@ -922,51 +888,40 @@ const Solution_DirectQuestions_Functions = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    رسم منحنى دالة تحتوي على قيم مطلقة مركبة انطلاقاً من منحنى دالة معلومة.
+                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
+                    القيمة المطلقة جبريا تترجم إلى تناظر في الرسم
+                    <br />
+                    "انطلاقا من" يعني استعماله في بناء رسم المنحنى الجديد
+
                 </div>
                 <div className="right-col">
-                    الهدف: استنتاج رسم <span className="math">{"\\(C_k\\)"}</span> انطلاقاً من <span className="math">{"\\(C_f\\)"}</span>.
                 </div>
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    القيمة المطلقة للدالة ككل تترجم إلى تناظر بالنسبة لمحور الفواصل، بينما القيمة المطلقة للمتغير تترجم إلى زوجية الدالة وتناظرها بالنسبة لمحور التراتيب.
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    استنتاج رسم منحنى دالة تحتوي على قيم مطلقة مركبة انطلاقاً من منحنى معلوم.
                 </div>
                 <div className="right-col">
-                    تفكيك التحويلات الهندسية الناتجة عن القيمة المطلقة.
+                    الهدف: إنشاء المنحنى الجديد <span className="math">{"\\(C_k\\)"}</span> انطلاقاً من المنحنى الأصلي <span className="math">{"\\(C_f\\)"}</span>.
                 </div>
             </div>
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    الدالة <span className="math">{"\\(f(x) = \\ln|x|\\)"}</span> هي أصلاً دالة زوجية، لأن <span className="math">{"\\(f(-x) = \\ln|-x| = \\ln|x| = f(x)\\)"}</span>.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> أستغل زوجية الدالة للتخلص من القيمة المطلقة الداخلية، <strong>ليتبقى</strong> لي فقط التعامل مع القيمة المطلقة الخارجية لرسم المنحنى.
-                    </div>
+                    أربط زوجية الدالة الأصلية بتبسيط العبارة للتخلص من القيمة المطلقة للمتغير.
                 </div>
                 <div className="right-col">
-                    بما أن <span className="math">{"\\(f(x) = \\ln|x|\\)"}</span> هي دالة زوجية، فإن <span className="math">{"\\(f(|x|) = f(x)\\)"}</span>.<br />
-                    إذن العبارة <span className="math">{"\\(f(|x|)\\)"}</span> لا تضيف شيئاً للمنحنى لأن المنحنى متناظر أساساً بالنسبة لمحور التراتيب. <br />
-                    يتبقى دراسة القيمة المطلقة الخارجية <span className="math">{"\\(|f(x)|\\)"}</span>.
-                    وعليه تصبح الدالة: <span className="math">{"\\(k(x) = |f(x)|\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>✅ تحقيق الهدف:</strong> بعد التبسيط إلى <span className="math">{"\\(|f(x)|\\)"}</span>، أصبح الرسم مباشراً بمجرد مناظرة الأجزاء السالبة لتصبح موجبة!
-                    </div>
-                    كيف أرسم <span className="math">{"\\(|f(x)|\\)"}</span>؟ أحتفظ بالأجزاء الموجبة من منحنى <span className="math">{"\\(f\\)"}</span> (فوق محور الفواصل)، وأناظر الأجزاء السالبة (تحت المحور) بالنسبة لمحور الفواصل.
-                </div>
-                <div className="right-col">
+                    بما أن الدالة <span className="math">{"\\(f(x) = \\ln|x|\\)"}</span> زوجية، فإن <span className="math">{"\\(f(|x|) = f(x)\\)"}</span>.<br />
+                    وعليه يؤول الرسم إلى منحنى الدالة المبسطة: <span className="math">{"\\(k(x) = |f(x)|\\)"}</span>.
+                    <br />
                     <strong>الإنشاء الهندسي:</strong><br />
-                    - الأجزاء من <span className="math">{"\\((C_f)\\)"}</span> الواقعة فوق محور الفواصل أو عليه، نبقيها كما هي.<br />
-                    - الأجزاء الواقعة تحت محور الفواصل، نعين نظيرتها بالنسبة لمحور الفواصل.
+                    - المنحنى <span className="math">{"\\(C_k\\)"}</span> هو نفسه المنحنى <span className="math">{"\\(C_f\\)"}</span> عندما يكون <span className="math">{"\\(C_f\\)"}</span> فوق محور الفواصل.<br />
+                    - المنحنى <span className="math">{"\\(C_k\\)"}</span> هو نظير المنحنى <span className="math">{"\\(C_f\\)"}</span> بالنسبة لمحور الفواصل عندما يكون <span className="math">{"\\(C_f\\)"}</span> تحت محور الفواصل.<br />
+
                 </div>
             </div>
+
         </>
     );
 };

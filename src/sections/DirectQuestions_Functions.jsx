@@ -297,7 +297,7 @@ const DirectQuestions_Functions = () => {
                         5
                     </span>
                     <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
-                        
+
                         <span>{" ناقش بيانياً عدد وإشارة حلول المعادلات التالية:"}</span>
                     </div>
                 </div>
@@ -637,7 +637,7 @@ const DirectQuestions_Functions = () => {
                         <span>{"برهن أنه من أجل كل "}</span>
                         <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(x \\in [0, 1]\\)"}</span>
                         <span>{"، لدينا "}</span>
-                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(x e^{1-x} \\le x\\)"}</span>
+                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(x e^{1-x} \\ge x\\)"}</span>
                         <span>{"."}</span>
                     </div>
                 </div>
