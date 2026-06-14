@@ -585,7 +585,7 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    أدرس إشارة الفرق u_{n+1}-u_n و v_{n+1}-v_n لتأكيد الرتابة المتعاكسة وبالتالي التجاور.
+                    أدرس إشارة الفرق <span className="math">{"\\(u_{n+1}-u_n\\)"}</span> و <span className="math">{"\\(v_{n+1}-v_n\\)"}</span> لتأكيد الرتابة المتعاكسة وبالتالي التجاور.
                 </div>
                 <div className="right-col">
                     لدينا <span className="math">{"\\(u_{n+1} - u_n = \\frac{v_n - u_n}{2} > 0\\)"}</span> فالمتتالية الأولى متزايدة.<br />
