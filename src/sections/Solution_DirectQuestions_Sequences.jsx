@@ -293,8 +293,17 @@ const Solution_DirectQuestions_Sequences = () => {
                     لدينا المتتالية الهندسية حدها الأول <span className="math">{"\\(v_0 = 3\\)"}</span> وأساسها <span className="math">{"\\(q = 1/2\\)"}</span>.<br />
                     عدد الحدود في المجموع هو <span className="math">{"\\(n+1\\)"}</span>.<br />
                     نعوض في قانون مجموع متتالية هندسية:<br />
-                    <span className="math">{"\\(S_n = v_0 \\frac{1 - q^{n+1}}{1 - q} = 3 \\frac{1 - (1/2)^{n+1}}{1 - 1/2} = 6 \\left( 1 - \\left(\\frac{1}{2}\\right)^{n+1} \\right)\\)"}</span>.
-                </div>
+                    <span className="math">
+                        {`
+\\[
+\\begin{aligned}
+S_n &= v_0 \\frac{1 - q^{n+1}}{1 - q} \\\\
+    &= 3 \\frac{1 - (1/2)^{n+1}}{1 - 1/2} \\\\
+    &= 6 \\left( 1 - \\left(\\frac{1}{2}\\right)^{n+1} \\right)
+\\end{aligned}
+\\]
+`}
+                    </span>                </div>
             </div>
             <div className="step-row-two">
                 <div className="left-col">
@@ -307,7 +316,7 @@ const Solution_DirectQuestions_Sequences = () => {
             </div>
 
             {/* Q4.2 */}
-            <div className="sub-question">2) جداء قوى: <span className="math">{"\\(P_n = 2^{v_0} \\times 2^{v_1} \\times \\dots \\times 2^{v_n}\\)"}</span></div>
+            <div className="sub-question">2) جداء قوى: <span className="math">{"\\(P_n = 2^{u_0} \\times 2^{u_1} \\times \\dots \\times 2^{u_n}\\)"}</span></div>
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
@@ -318,7 +327,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     حساب جداء قوى أسية بدلالة مجموع حدود متتالية.
                 </div>
                 <div className="right-col">
-                    الهدف: حساب الجداء <span className="math">{"\\(P_n = 2^{v_0} \\times 2^{v_1} \\times \\dots \\times 2^{v_n}\\)"}</span> بدلالة <span className="math">{"\\(n\\)"}</span>.
+                    الهدف: حساب الجداء <span className="math">{"\\(P_n = 2^{u_0} \\times 2^{u_1} \\times \\dots \\times 2^{u_n}\\)"}</span> بدلالة <span className="math">{"\\(n\\)"}</span>.
                 </div>
             </div>
             <div className="step-row-two">
@@ -331,10 +340,22 @@ const Solution_DirectQuestions_Sequences = () => {
                 </div>
                 <div className="right-col">
                     باستعمال خواص القوى، نجمع الأسس:<br />
-                    <span className="math">{"\\(P_n = 2^{v_0 + v_1 + \\dots + v_n}\\)"}</span>.<br />
-                    الأس هو مجموع حدود متتالية حسابية <span className="math">{"\\(S'_n = v_0 + \\dots + v_n\\)"}</span> حيث <span className="math">{"\\(v_n = 1 + 2n\\)"}</span> حدها الأول <span className="math">{"\\(v_0 = 1\\)"}</span> وعدد الحدود هو <span className="math">{"\\(n+1\\)"}</span>.<br />
+                    <span className="math">{"\\(P_n = 2^{u_0 + u_1 + \\dots + u_n}\\)"}</span>.<br />
+                    الأس هو مجموع حدود متتالية حسابية <span className="math">{"\\(S'_n = u_0 + \\dots + u_n\\)"}</span> حيث <span className="math">{"\\(u_n = 1 + 2n\\)"}</span> حدها الأول <span className="math">{"\\(u_0 = 1\\)"}</span> وعدد الحدود هو <span className="math">{"\\(n+1\\)"}</span>.<br />
                     نعوض في قانون مجموع متتالية حسابية:<br />
-                    <span className="math">{"\\(S'_n = \\frac{n+1}{2}(v_0 + v_n) = \\frac{n+1}{2}(1 + 1 + 2n) = (n+1)^2\\)"}</span>.
+                    <span className="math">
+                        {`
+\\[
+\\begin{aligned}
+S'_n &= \\frac{n+1}{2}(u_0 + u_n)
+     = \\frac{n+1}{2}(1 + 1 + 2n) \\\\
+     &= (n+1)^2
+\\end{aligned}
+\\]
+`}
+                    </span>
+                    نكتب العبارة النهائية للجداء: <span className="math">{"\\(P_n = 2^{(n+1)^2}\\)"}</span>.<br />
+
                 </div>
             </div>
             <div className="step-row-two">
@@ -343,8 +364,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     أتحقق من صحة الجداء النهائي بحساب القيمة عند رتبة البدء.
                 </div>
                 <div className="right-col">
-                    نكتب العبارة النهائية للجداء: <span className="math">{"\\(P_n = 2^{(n+1)^2}\\)"}</span>.<br />
-                    عند <span className="math">{"\\(n=0\\)"}</span> نجد <span className="math">{"\\(P_0 = 2^1 = 2\\)"}</span> وهو مطابق لـ <span className="math">{"\\(2^{v_0} = 2^1 = 2\\)"}</span>.
+                    عند <span className="math">{"\\(n=0\\)"}</span> نجد <span className="math">{"\\(P_0 = 2^1 = 2\\)"}</span> وهو مطابق لـ <span className="math">{"\\(2^{u_0} = 2^1 = 2\\)"}</span>.
                 </div>
             </div>
 
@@ -366,9 +386,24 @@ const Solution_DirectQuestions_Sequences = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    أستغل خواص اللوغاريتم لتحويل مجموع اللوغاريتمات إلى لوغاريتم جداء الحدود، أو بتعريف متتالية حسابية مساعدة ناتجة عن إدخال اللوغاريتم على متتالية هندسية ثم تطبيق قانون مجموعها.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> ربط المجموع الحسابي الناتج بقانون مجموع المتتالية الحسابية للحصول على عبارة مغلقة ومبسطة.
+
+                    أرى مجموع لوغاريتمات، فأفكر فوراً في:
+
+                    <span className="math">{"\\(\\ln(a)+\\ln(b)=\\ln(ab)\\)"}</span>
+
+                    ثم ألاحظ أن
+
+                    <span className="math">{"\\(v_n\\)"}</span>
+
+                    هندسية، مما يوحي بتعريف
+
+                    <span className="math">{"\\(w_n=\\ln(v_n)\\)"}</span>
+
+                    لتحويل المسألة إلى مجموع متتالية حسابية واستعمال قانونها مباشرة.
+
+                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                        <strong>🔔 الإشارة الذهنية:</strong>
+                        لوغاريتمات + جمع ⇐ ابحث عن متتالية حسابية.
                     </div>
                 </div>
                 <div className="right-col">
@@ -378,15 +413,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     <span className="math">{"\\(T_n = \\frac{n+1}{2}(\\ln(v_0) + \\ln(v_n)) = \\frac{n+1}{2} \\ln(v_0 \\cdot v_n)\\)"}</span>.
                 </div>
             </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    أتحقق من مطابقة المجموع عند رتبة الصفر.
-                </div>
-                <div className="right-col">
-                    عند <span className="math">{"\\(n=0\\)"}</span> نجد <span className="math">{"\\(T_0 = \\frac{1}{2} \\ln(v_0^2) = \\ln(v_0)\\)"}</span>، وهي محققة تماماً.
-                </div>
-            </div>
+
 
             {/* Q4.4 */}
             <div className="sub-question">4) حساب المجموع <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(S_n = \\ln\\!\\left(1-\\tfrac{1}{(1+1)^2}\\right) + \\ln\\!\\left(1-\\tfrac{1}{(2+1)^2}\\right) + \\dots + \\ln\\!\\left(1-\\tfrac{1}{(n+1)^2}\\right)\\)"}</span></div>
@@ -422,200 +449,993 @@ const Solution_DirectQuestions_Sequences = () => {
                     <span className="math">{"\\(\\ln\\left(\\frac{k(k+2)}{(k+1)^2}\\right) = \\ln(k) - 2\\ln(k+1) + \\ln(k+2)\\)"}</span>.<br />
                     نعيد ترتيب الحدود لتظهر كفرق بين متتاليتين متتاليتين:<br />
                     <span className="math">{"\\([\\ln(k) - \\ln(k+1)] - [\\ln(k+1) - \\ln(k+2)]\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    أعوض الحدود وأختزل المجموع التلسكوبي لاستنتاج النتيجة النهائية والتحقق من صحتها.
-                </div>
-                <div className="right-col">
+
                     عند تعويض قيم <span className="math">{"\\(k\\)"}</span> من 1 إلى <span className="math">{"\\(n\\)"}</span> في المجموع، تختزل كافة الحدود المتعاقبة ويتبقى فقط الحد الأول والأخير:<br />
-                    <span className="math">{"\\(S_n = \\ln\\left(\\frac{1}{2}\\right) - \\ln\\left(\\frac{n+1}{n+2}\\right)\\)"}</span>.
+
                 </div>
             </div>
 
             {/* ============================================================
-                EXERCISE 5: Integral Sequences
-            ============================================================ */}
+    EXERCISE 5: Integral Sequences
+============================================================ */}
             <div className="question-header no-break">التمرين 5 — المتتاليات التكاملية</div>
 
-            <div className="sub-question">برهان العلاقة التراجعية والتناقص لـ <span className="math">{"\\(I_n = \\int_0^1 x^n e^x dx\\)"}</span></div>
+            {/* ============================================================
+    QUESTION 1
+============================================================ */}
+            <div className="sub-question">
+                1) برهان العلاقة التراجعية
+                <span className="math">{"\\(I_{n+1}=e-(n+1)I_n\\)"}</span>
+            </div>
+
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
             </div>
+
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    إيجاد علاقة تراجعية لمتتالية تكاملية ودراسة رتابتها.
+
+                    المطلوب ليس حساب التكامل، بل إيجاد علاقة تربط
+                    <span className="math">{"\\(I_{n+1}\\)"}</span>
+                    بـ
+                    <span className="math">{"\\(I_n\\)"}</span>.
+
+                    إذن يجب أن أبحث عن طريقة تجعل تعريف
+                    <span className="math">{"\\(I_n\\)"}</span>
+                    يظهر من جديد داخل الحساب.
                 </div>
+
                 <div className="right-col">
-                    الهدف: إيجاد علاقة تربط <span className="math">{"\\(I_{n+1}\\)"}</span> بـ <span className="math">{"\\(I_n\\)"}</span> ودراسة رتابة المتتالية التكاملية.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    أستعمل المكاملة بالتجزئة للتخلص من الأسس المتغيرة لـ x. أختار الدالة كثيرة الحدود للاشتقاق لتقليل درجتها والدالة الأسية للتكامل، ثم أعوض الحدود لاستخلاص العلاقة التراجعية المطلوبة.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> اشتقاق الدالة كثيرة الحدود ذات الدرجة n+1 يولد الحد x^n الذي يمثل تعريفه المتتالية I_n.
-                    </div>
-                </div>
-                <div className="right-col">
-                    نطبق المكاملة بالتجزئة على <span className="math">{"\\(I_{n+1} = \\int_0^1 x^{n+1} e^x dx\\)"}</span>.<br />
-                    نضع: <span className="math">{"\\(u = x^{n+1} \\implies u' = (n+1)x^n\\)"}</span> و <span className="math">{"\\(v' = e^x \\implies v = e^x\\)"}</span>.<br />
-                    بالتعويض في قانون المكاملة بالتجزئة:<br />
-                    <span className="math">{"\\(I_{n+1} = \\left[ x^{n+1}e^x \\right]_0^1 - (n+1) \\int_0^1 x^n e^x dx\\)"}</span>.<br />
-                    بالتبسيط نجد العلاقة التراجعية:<br />
-                    <span className="math">{"\\(I_{n+1} = e - (n+1)I_n\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    أدرس إشارة فرق التكاملين لاستنتاج رتابة المتتالية التكاملية.
-                </div>
-                <div className="right-col">
-                    نحسب الفرق: <span className="math">{"\\(I_{n+1} - I_n = \\int_0^1 x^n(x-1)e^x dx\\)"}</span>.<br />
-                    بما أن <span className="math">{"\\(x \\in [0, 1]\\)"}</span>، فإن <span className="math">{"\\(x-1 \\le 0\\)"}</span>، وعليه دالة التكامل سالبة مما يجعل قيمة التكامل سالبة تماماً. إذن **المتتالية متناقصة تماماً**.
+                    الهدف هو إيجاد صيغة تراجعية تربط
+                    <span className="math">{"\\(I_{n+1}\\)"}</span>
+                    و
+                    <span className="math">{"\\(I_n\\)"}</span>.
                 </div>
             </div>
 
-            {/* Q5.3 */}
-            <div className="sub-question">3) حصر النهاية: <span className="math">{"\\(0 \\le I_n \\le \\frac{e}{n+1}\\)"}</span></div>
-            <div className="col-header-row-two">
-                <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
-                <div className="col-header right-h">الحل التفصيلي</div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    إيجاد حصر للمتتالية التكاملية وحساب نهايتها عند اللانهائية.
-                </div>
-                <div className="right-col">
-                    الهدف: إثبات الحصر <span className="math">{"\\(0 \\le I_n \\le \\frac{e}{n+1}\\)"}</span> وحساب <span className="math">{"\\(\\lim_{n\\to+\\infty} I_n\\)"}</span>.
-                </div>
-            </div>
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    أبدأ بحصر الدالة الأسية على مجال التكامل. أضرب أطراف المتراجحة في القوة الموجبة x^n، ثم أدخل التكامل على الأطراف وأحسب التكامل للطرف الأيمن البسيط للوصول إلى الحصر المطلوب.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> دمج حصر المتغير مع خصائص رتابة التكامل لتوليد كسر الحصر النهائي الذي يؤول للصفر.
+
+                    أجرد المعطيات:
+
+                    <ul style={{ margin: '4px 0', paddingRight: '18px' }}>
+                        <li>المتتالية معرفة بتكامل.</li>
+                        <li>داخل التكامل يوجد جداء:
+                            <span className="math">{"\\(x^{n+1}e^x\\)"}</span>.
+                        </li>
+                        <li>المطلوب علاقة تراجعية.</li>
+                    </ul>
+
+                    عندما أرى جداء دالتين داخل تكامل أتذكر مباشرة:
+                    <strong>المكاملة بالتجزئة</strong>.
+
+                    لكنني لا أختار العناصر عشوائياً.
+
+                    أسأل نفسي:
+
+                    ما الذي أريد ظهوره بعد الاشتقاق؟
+
+                    أريد ظهور
+                    <span className="math">{"\\(x^n e^x\\)"}</span>
+
+                    لأنه يمثل تعريف
+                    <span className="math">{"\\(I_n\\)"}</span>.
+
+                    لذلك أجعل:
+
+                    <span className="math">{"\\(u=x^{n+1}\\)"}</span>
+
+                    لأن اشتقاقه يخفض الأس من
+                    <span className="math">{"\\(n+1\\)"}</span>
+                    إلى
+                    <span className="math">{"\\(n\\)"}</span>.
+
+                    <div style={{
+                        backgroundColor: "#eef2ff",
+                        border: "1px dashed #3b82f6",
+                        padding: "5px",
+                        borderRadius: "5px",
+                        marginTop: "5px",
+                        color: "#1e40af",
+                        fontSize: '11pt'
+                    }}>
+                        <strong>🔔 ما الذي أبحث عنه؟</strong><br />
+                        لست أبحث عن قيمة التكامل، بل عن إعادة ظهور
+                        <span className="math">{"\\(I_n\\)"}</span>
+                        داخل الحساب.
                     </div>
                 </div>
+
                 <div className="right-col">
-                    بما أن <span className="math">{"\\(0 \\le x \\le 1\\)"}</span>، فإن الدالة الأسية محصورة بين: <span className="math">{"\\(1 \\le e^x \\le e\\)"}</span>.<br />
-                    نضرب في المقدار الموجب <span className="math">{"\\(x^n\\)"}</span>: <span className="math">{"\\(0 \\le x^n e^x \\le e x^n\\)"}</span>.<br />
-                    ندخل التكامل من 0 إلى 1 على الأطراف:<br />
-                    <span className="math">{"\\(0 \\le \\int_0^1 x^n e^x dx \\le e \\int_0^1 x^n dx\\)"}</span>.<br />
-                    نحسب تكامل الطرف الأيمن: <span className="math">{"\\(e \\left[ \\frac{x^{n+1}}{n+1} \\right]_0^1 = \\frac{e}{n+1}\\)"}</span>. وعليه نصل للحصر: <span className="math">{"\\(0 \\le I_n \\le \\frac{e}{n+1}\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    أستنتج نهاية المتتالية التكاملية بتطبيق مبرهنة النهاية بالحصر.
-                </div>
-                <div className="right-col">
-                    بما أن <span className="math">{"\\(\\lim_{n\\to+\\infty} 0 = 0\\)"}</span> و <span className="math">{"\\(\\lim_{n\\to+\\infty} \\frac{e}{n+1} = 0\\)"}</span>، فإن نهاية المتتالية التكاملية هي:
-                    <div className="math-block">{"\\[ \\lim_{n \\to +\\infty} I_n = 0 \\]"}</div>
+                    نطبق المكاملة بالتجزئة على:
+
+                    <span className="math">
+                        {"\\(I_{n+1}=\\int_0^1 x^{n+1}e^x dx\\)"}
+                    </span>.
+
+                    نختار:
+
+                    <span className="math">
+                        {"\\(u=x^{n+1}\\Rightarrow u'=(n+1)x^n\\)"}
+                    </span>
+
+                    و
+
+                    <span className="math">
+                        {"\\(v'=e^x\\Rightarrow v=e^x\\)"}
+                    </span>.
+
+                    إذن:
+
+                    <span className="math">
+                        {"\\(I_{n+1}=\\left[x^{n+1}e^x\\right]_0^1-(n+1)\\int_0^1x^ne^xdx\\)"}
+                    </span>.
+
+                    وبحساب الحدود نجد :
+
+                    <span className="math">
+                        {"\\(I_{n+1}=e-(n+1)I_n\\)"}
+                    </span>.
                 </div>
             </div>
 
             {/* ============================================================
-                EXERCISE 6: Adjacent Sequences
-            ============================================================ */}
+    QUESTION 2
+============================================================ */}
+
+            <div className="sub-question">
+                2) دراسة رتابة وتقارب المتتالية
+            </div>
+
+            <div className="col-header-row-two">
+                <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
+                <div className="col-header right-h">الحل التفصيلي</div>
+            </div>
+
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+
+                    المطلوب الآن ليس إيجاد صيغة جديدة، بل معرفة سلوك المتتالية:
+                    هل هي متزايدة أم متناقصة؟ وهل تتقارب؟
+                </div>
+
+                <div className="right-col">
+                    الهدف هو إثبات أن المتتالية
+                    <span className="math">{"\\((I_n)\\)"}</span>
+                    متناقصة ومتقاربة.
+                </div>
+            </div>
+
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+
+                    عندما أسمع كلمة:
+
+                    <strong style={{ color: '#1e3a5f' }}> رتابة متتالية </strong>
+
+                    أفكر مباشرة في الفرق:
+
+                    <span className="math">{"\\(I_{n+1}-I_n\\)"}</span>.
+
+                    فإذا استطعت تحديد إشارته أعرف اتجاه تغير المتتالية.
+
+                    سأجمع الحدين داخل تكامل واحد ثم أدرس إشارة الدالة تحت التكامل.
+
+
+                    الآن أدرس إشارة كل عامل:
+
+                    <ul style={{ margin: '4px 0', paddingRight: '18px' }}>
+                        <li>
+                            <span className="math">{"\\(x^n\\)"}</span>
+                            موجب أو منعدم.
+                        </li>
+                        <li>
+                            <span className="math">{"\\(e^x\\)"}</span>
+                            موجب دائماً.
+                        </li>
+                        <li>
+                            <span className="math">{"\\(x-1\\le0\\)"}</span>
+                            على المجال
+                            <span className="math">{"\\([0,1]\\)"}</span>.
+                        </li>
+                    </ul>
+
+                    إذن الدالة تحت التكامل سالبة أو منعدمة.
+
+                    وبالتالي الفرق سالب.
+
+                    <div style={{
+                        backgroundColor: "#eef2ff",
+                        border: "1px dashed #3b82f6",
+                        padding: "5px",
+                        borderRadius: "5px",
+                        marginTop: "5px",
+                        color: "#1e40af",
+                        fontSize: '11pt'
+                    }}>
+                        <strong>🔔 الفكرة الذهنية:</strong><br />
+                        الرتابة تتحول غالباً إلى دراسة إشارة
+                        <span className="math">{"\\(u_{n+1}-u_n\\)"}</span>.
+                    </div>
+                </div>
+
+                <div className="right-col">
+                    نحسب:
+
+                    <span className="math">
+                        {"\\(I_{n+1}-I_n=\\int_0^1x^{n+1}e^xdx-\\int_0^1x^ne^xdx\\)"}
+                    </span>
+
+                    ومنه:
+
+                    <span className="math">
+                        {"\\(I_{n+1}-I_n=\\int_0^1x^n(x-1)e^xdx\\)"}
+                    </span>.
+                    بما أن:
+
+                    <span className="math">{"\\(x^n\\ge0\\)"}</span>
+
+                    و
+
+                    <span className="math">{"\\(e^x>0\\)"}</span>
+
+                    و
+
+                    <span className="math">{"\\(x-1\\le0\\)"}</span>
+
+                    على
+
+                    <span className="math">{"\\([0,1]\\)"}</span>،
+
+                    فإن:
+
+                    <span className="math">
+                        {"\\(I_{n+1}-I_n\\le0\\)"}
+                    </span>.
+
+                    إذن المتتالية
+                    <span className="math">{"\\((I_n)\\)"}</span>
+                    متناقصة.
+                </div>
+            </div>
+
+
+
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label verify">T. التحقق (Test)</span><br />
+
+                    بعد إثبات التناقص أسأل نفسي:
+
+                    هل هذا يكفي لإثبات التقارب؟
+
+                    لا.
+
+                    أحتاج أيضاً إلى حد سفلي.
+
+                    أعود إلى تعريف المتتالية:
+
+                    <span className="math">
+                        {"\\(I_n=\\int_0^1x^ne^xdx\\)"}
+                    </span>
+
+                    وألاحظ أن الدالة تحت التكامل موجبة.
+
+                    إذن جميع الحدود موجبة.
+
+                    أصبحت أملك:
+
+                    <br />• متناقصة.
+                    <br />• محدودة من الأسفل.
+
+                    وهذا يكفي لتطبيق مبرهنة المتتاليات الرتيبة.
+                </div>
+
+                <div className="right-col">
+                    بما أن:
+
+                    <span className="math">{"\\(x^n\\ge0\\)"}</span>
+
+                    و
+
+                    <span className="math">{"\\(e^x>0\\)"}</span>
+
+                    فإن:
+
+                    <span className="math">
+                        {"\\(I_n=\\int_0^1x^ne^xdx\\ge0\\)"}
+                    </span>.
+
+                    إذن المتتالية محدودة من الأسفل بالعدد 0.
+
+                    وبما أنها متناقصة ومحدودة فإنها متقاربة حسب مبرهنة المتتاليات الرتيبة.
+                </div>
+            </div>
+
+            {/* ============================================================
+    QUESTION 3
+============================================================ */}
+
+            <div className="sub-question">
+                3) إثبات الحصر وحساب النهاية
+            </div>
+
+            <div className="col-header-row-two">
+                <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
+                <div className="col-header right-h">الحل التفصيلي</div>
+            </div>
+
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+
+                    إثبات:
+
+                    <span className="math">
+                        {"\\(0\\le I_n\\le\\frac{e}{n+1}\\)"}
+                    </span>
+
+                    ثم حساب النهاية.
+                </div>
+
+                <div className="right-col">
+                    الهدف هو إيجاد حصر بسيط للمتتالية ثم استعماله لاستخراج النهاية.
+                </div>
+            </div>
+
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+
+                    قبل أن أبدأ الحساب، أنظر إلى الهدف المطلوب:
+
+                    <span className="math">
+                        {"\\(0\\le I_n\\le\\frac{e}{n+1}\\)"}
+                    </span>
+
+                    وأطرح على نفسي السؤال:
+                    <br />
+
+                    <strong>من أين يمكن أن يظهر الحد</strong>
+
+                    <span className="math">
+                        {"\\(\\frac1{n+1}\\)"}
+                    </span>
+
+                    <strong>؟</strong>
+                    <br />
+
+                    أستعرض التكاملات المشهورة التي أعرفها.
+
+                    بسرعة أتعرف على:
+
+                    <span className="math">
+                        {"\\(\\int_0^1x^ndx=\\frac1{n+1}\\)"}
+                    </span>
+
+                    إذن أصبح لدي خيط مهم:
+
+                    إذا استطعت التخلص من
+                    <span className="math">{"\\(e^x\\)"}</span>
+
+                    والإبقاء فقط على
+                    <span className="math">{"\\(x^n\\)"}</span>
+
+                    فسأحصل تلقائياً على الكسر المطلوب.
+
+                    الآن أسأل:
+
+                    كيف أستبدل
+                    <span className="math">{"\\(e^x\\)"}</span>
+                    بشيء أبسط؟
+
+                    بما أن:
+
+                    <span className="math">{"\\(0\\le x\\le1\\)"}</span>
+
+                    فإن:
+
+                    <span className="math">{"\\(1\\le e^x\\le e\\)"}</span>
+
+                    أي أن
+                    <span className="math">{"\\(e\\)"}</span>
+
+                    يمثل حاجزاً علوياً ثابتاً.
+
+                    إذا عوضت
+                    <span className="math">{"\\(e^x\\)"}</span>
+                    بـ
+                    <span className="math">{"\\(e\\)"}</span>
+
+                    فسيتبقى لي التكامل الذي أعرف أنه يولد
+
+                    <span className="math">
+                        {"\\(\\frac1{n+1}\\)"}
+                    </span>.
+
+                    <br />
+                    <br />
+                    <br />
+                    بعد الحصول على الحصر ألاحظ أن الطرف الأيمن:
+
+                    <span className="math">
+                        {"\\(\\frac{e}{n+1}\\)"}
+                    </span>
+
+                    يتجه إلى الصفر.
+
+                    إذن المتتالية أصبحت محصورة بين مقدارين لهما نفس النهاية.
+                </div>
+
+                <div className="right-col">
+                    بما أن:
+
+                    <span className="math">
+                        {"\\(1\\le e^x\\le e\\)"}
+                    </span>
+
+                    على المجال
+                    <span className="math">{"\\([0,1]\\)"}</span>،
+
+                    فإن:
+
+                    <span className="math">
+                        {"\\(0\\le x^ne^x\\le ex^n\\)"}
+                    </span>.
+                    <br /><br />
+
+                    بالتكامل:
+
+                    <span className="math">
+                        {"\\(0\\le\\int_0^1x^ne^xdx\\le e\\int_0^1x^ndx\\)"}
+                    </span>.
+                    <br /><br />
+
+                    أي:
+
+                    <span className="math">
+                        {"\\(0\\le I_n\\le e\\left[\\frac{x^{n+1}}{n+1}\\right]_0^1\\)"}
+                    </span>.
+                    <br /><br />
+
+                    ومنه:
+
+                    <span className="math">
+                        {"\\(0\\le I_n\\le\\frac{e}{n+1}\\)"}
+                    </span>.
+                    <div style={{
+                        backgroundColor: "#eef2ff",
+                        border: "1px dashed #3b82f6",
+                        padding: "5px",
+                        borderRadius: "5px",
+                        marginTop: "5px",
+                        color: "#1e40af",
+                        fontSize: '11pt'
+                    }}>
+                        <strong>🔔 الفكرة الخبيرة:</strong><br />
+                        لم أبدأ من المعطيات ثم وصلت إلى الحصر،
+                        بل بدأت من الحصر المطلوب،
+                        وسألت نفسي:
+                        <br />
+                        "أي تكامل يعطي
+                        <span className="math">{"\\(\\frac1{n+1}\\)"}</span>
+                        ؟"
+                        <br />
+                        ثم حاولت تعديل التكامل الأصلي ليحتوي ذلك التكامل المعروف.
+                    </div>
+                    <br />
+                    لدينا:
+
+                    <span className="math">
+                        {"\\(0\\le I_n\\le\\frac{e}{n+1}\\)"}
+                    </span>.
+
+                    وبما أن:
+
+                    <span className="math">
+                        {"\\(\\lim_{n\\to+\\infty}0=0\\)"}
+                    </span>
+
+                    و
+
+                    <span className="math">
+                        {"\\(\\lim_{n\\to+\\infty}\\frac{e}{n+1}=0\\)"}
+                    </span>،
+
+                    فإن مبرهنة الحصر تعطي:
+
+                    <div className="math-block">
+                        {"\\[\\lim_{n\\to+\\infty}I_n=0\\]"}
+                    </div>
+                </div>
+            </div>
+
+            {/* ============================================================
+    EXERCISE 6: Adjacent Sequences
+============================================================ */}
             <div className="question-header no-break">التمرين 6 — المتتاليات المتجاورة</div>
 
-            {/* Q6.1 */}
-            <div className="sub-question">1)  إثبات التجاور للمتتاليتين المتقاطعتين
-                <span>{" حيث : "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(u_{n+1} = \\frac{u_n + v_n}{2}, v_{n+1} = \\frac{u_n + 2v_n}{3}\\)"}</span><span>{" مع "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(u_0 = 1, v_0 = 2\\)"}</span><span>{"."}</span>
+            {/* ============================================================
+    Q6.1
+============================================================ */}
+            <div className="sub-question">
+                1) إثبات تجاور المتتاليتين
+                <span>{" حيث: "}</span>
+                <span className="math">{"\\(u_{n+1}=\\frac{u_n+v_n}{2},\\quad v_{n+1}=\\frac{u_n+2v_n}{3}\\)"}</span>
             </div>
+
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
             </div>
+
+            {/* AIM */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    إثبات تجاور متتاليتين متداخلتين.
+
+                    المطلوب إثبات أن المتتاليتين متجاورتان.
+
+                    قبل أي حساب أتذكر تعريف التجاور:
+
+                    <ul style={{ margin: '4px 0', paddingRight: '18px' }}>
+                        <li>إحداهما متزايدة.</li>
+                        <li>الأخرى متناقصة.</li>
+                        <li>الفرق بينهما يؤول إلى الصفر.</li>
+                    </ul>
+
+                    إذن هذه هي الشروط الثلاثة التي سأحاول إثباتها.
                 </div>
+
                 <div className="right-col">
-                    الهدف: إثبات تجاور المتتاليتين <span className="math">{"\\(u_n\\)"}</span> و <span className="math">{"\\(v_n\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    أتحقق من شروط التجاور الثلاثة. أدرس رتابة كل متتالية بشكل متعاكس، وأعرف متتالية فرقية مساعدة لإثبات أنها هندسية متقاربة يؤول حدها العام للصفر عند اللانهائية.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> إيجاد أساس المتتالية الفرقية المساعد q وتأكيد انتمائه للمجال المفتوح للتقارب نحو الصفر.
-                    </div>
-                </div>
-                <div className="right-col">
-                    نعرف المتتالية الفرقية المساعدة <span className="math">{"\\(w_n = v_n - u_n\\)"}</span>.<br />
-                    نحسب الحد الموالي للفرق:<br />
-                    <span className="math">{"\\(v_{n+1} - u_{n+1} = \\frac{u_n + 2v_n}{3} - \\frac{u_n + v_n}{2} = \\frac{2u_n+4v_n - 3u_n - 3v_n}{6} = \\frac{v_n - u_n}{6}\\)"}</span>.<br />
-                    إذن المتتالية الفرقية هندسية أساسها <span className="math">{"\\(q = 1/6\\)"}</span>. بما أن <span className="math">{"\\(-1 < 1/6 < 1\\)"}</span>، فإن نهاية الفرق تؤول للصفر:<br />
-                    <span className="math">{"\\(\\lim_{n\\to+\\infty} (v_n - u_n) = 0\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    أدرس إشارة الفرق <span className="math">{"\\(u_{n+1}-u_n\\)"}</span> و <span className="math">{"\\(v_{n+1}-v_n\\)"}</span> لتأكيد الرتابة المتعاكسة وبالتالي التجاور.
-                </div>
-                <div className="right-col">
-                    لدينا <span className="math">{"\\(u_{n+1} - u_n = \\frac{v_n - u_n}{2} > 0\\)"}</span> فالمتتالية الأولى متزايدة.<br />
-                    ولدينا <span className="math">{"\\(v_{n+1} - v_n = \\frac{u_n - v_n}{3} < 0\\)"}</span> فالمتتالية الثانية متناقصة.<br />
-                    بما أن إحداهما متزايدة والأخرى متناقصة ونهاية الفرق بينهما صفر، فالمتتاليتان متجاورتان.
+                    الهدف هو إثبات أن المتتاليتين
+                    <span className="math">{"\\((u_n)\\)"}</span>
+                    و
+                    <span className="math">{"\\((v_n)\\)"}</span>
+                    متجاورتان.
                 </div>
             </div>
 
-            {/* Q6.2 */}
-            <div className="sub-question">2) تعيين <span className="math">{"\\(a, b\\)"}</span> لتكون <span className="math">{"\\(w_n = a u_n + b v_n\\)"}</span> ثابتة</div>
+            {/* RELATE */}
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+
+                    أنظر إلى شروط التجاور وأسأل نفسي:
+
+                    ما الشرط الأصعب؟
+
+                    الشرط الثالث:
+
+                    <span className="math">{"\\(v_n-u_n\\to0\\)"}</span>
+
+                    لأن الرتابة يمكن دراستها لاحقاً بسهولة بواسطة
+                    <span className="math">{"\\(u_{n+1}-u_n\\)"}</span>
+                    و
+                    <span className="math">{"\\(v_{n+1}-v_n\\)"}</span>.
+                    <br />
+                    لذلك أبدأ مباشرة بقياس المسافة بين المتتاليتين.
+                    <br />
+                    ما أبسط كمية تقيس هذه المسافة؟
+
+                    <span className="math">{"\\(v_n-u_n\\)"}</span>.
+                    <br />
+                    لهذا السبب أعرّف:
+
+                    <span className="math">{"\\(w_n=v_n-u_n\\)"}</span>.
+                    <br />
+                    الآن أصبح هدفي الجديد هو دراسة
+                    <span className="math">{"\\(w_n\\)"}</span>.
+                    <br />
+                    بعد التعويض بعلاقات التراجع أجد أن:
+
+                    <span className="math">{"\\(w_{n+1}=\\frac16w_n\\)"}</span>.
+                    <br />
+                    هنا أتعرف فوراً على متتالية هندسية.
+
+                    والمتتاليات الهندسية سهلة جداً لأن نهايتها تعتمد فقط على الأساس.
+                    <br />
+                    بما أن:
+
+                    <span className="math">{"\\(|q|=\\frac16<1\\)"}</span>
+
+                    فإن الفرق بين المتتاليتين يتقلص في كل مرحلة،
+                    وبالتالي يجب أن يقترب من الصفر.
+
+
+                </div>
+
+                <div className="right-col">
+                    نعرّف:
+
+                    <span className="math">
+                        {"\\(w_n=v_n-u_n\\)"}
+                    </span>.
+
+                    نحسب:
+
+                    <span className="math">
+                        {"\\(w_{n+1}=v_{n+1}-u_{n+1}\\)"}
+                    </span>
+
+                    <br />
+
+                    <span className="math">
+                        {"\\(=\\frac{u_n+2v_n}{3}-\\frac{u_n+v_n}{2}\\)"}
+                    </span>
+
+                    <br />
+
+                    <span className="math">
+                        {"\\(=\\frac{2u_n+4v_n-3u_n-3v_n}{6}\\)"}
+                    </span>
+
+                    <br />
+
+                    <span className="math">
+                        {"\\(=\\frac{v_n-u_n}{6}\\)"}
+                    </span>
+
+                    <br />
+
+                    <span className="math">
+                        {"\\(=\\frac16w_n\\)"}
+                    </span>.
+
+                    إذن
+                    <span className="math">{"\\((w_n)\\)"}</span>
+                    متتالية هندسية أساسها:
+
+                    <span className="math">{"\\(q=\\frac16\\)"}</span>.
+
+                    وبما أن:
+
+                    <span className="math">{"\\(|q|<1\\)"}</span>
+
+                    فإن:
+
+                    <span className="math">
+                        {"\\(\\lim_{n\\to+\\infty}w_n=0\\)"}
+                    </span>.
+
+                    أي:
+
+                    <span className="math">
+                        {"\\(\\lim_{n\\to+\\infty}(v_n-u_n)=0\\)"}
+                    </span>.
+                    <div style={{
+                        backgroundColor: "#eef2ff",
+                        border: "1px dashed #3b82f6",
+                        padding: "5px",
+                        borderRadius: "5px",
+                        marginTop: "5px",
+                        color: "#1e40af",
+                        fontSize: '11pt'
+                    }}>
+                        <strong>🔔 الفكرة:</strong><br />
+                        عندما يكون الهدف هو إثبات أن متتاليتين تقتربان من بعضهما،
+                        أول شيء أبحث عنه هو الفرق بينهما،
+                        لأنه يقيس هذه المسافة مباشرة.
+                    </div>
+                </div>
+            </div>
+
+            {/* TEST */}
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+
+                    بعد إثبات أن الفرق يقترب من الصفر،
+                    أعود إلى الشرطين المتبقيين:
+
+                    <ul style={{ margin: '4px 0', paddingRight: '18px' }}>
+                        <li>رتابة <span className="math">{"\\((u_n)\\)"}</span>.</li>
+                        <li>رتابة <span className="math">{"\\((v_n)\\)"}</span>.</li>
+                    </ul>
+
+                    عندما أبحث عن الرتابة أفكر مباشرة في:
+
+                    <span className="math">{"\\(u_{n+1}-u_n\\)"}</span>
+
+                    و
+
+                    <span className="math">{"\\(v_{n+1}-v_n\\)"}</span>.
+
+                    بعد التبسيط ألاحظ أن كلا التعبيرين يحتويان على
+
+                    <span className="math">{"\\(v_n-u_n\\)"}</span>
+
+                    الذي درست إشارته سابقاً.
+
+                    إذن أستفيد من النتيجة السابقة بدل إعادة العمل من البداية.
+
+                    <div style={{
+                        backgroundColor: "#eef2ff",
+                        border: "1px dashed #3b82f6",
+                        padding: "5px",
+                        borderRadius: "5px",
+                        marginTop: "5px",
+                        color: "#1e40af",
+                        fontSize: '11pt'
+                    }}>
+                        <strong>🔔 الفكرة الخبيرة:</strong><br />
+                        كل نتيجة قوية أثبتها أحاول إعادة استعمالها لاحقاً.
+                        الرياضيات ليست سلسلة من الحسابات المنفصلة،
+                        بل بناء متدرج للنتائج.
+                    </div>
+                </div>
+
+                <div className="right-col">
+                    نحسب:
+
+                    <span className="math">
+                        {"\\(u_{n+1}-u_n=\\frac{u_n+v_n}{2}-u_n\\)"}
+                    </span>
+
+                    <br />
+
+                    <span className="math">
+                        {"\\(=\\frac{v_n-u_n}{2}\\)"}
+                    </span>.
+
+                    وبما أن:
+
+                    <span className="math">{"\\(v_0-u_0=1>0\\)"}</span>
+
+                    والمتتالية الفرقية هندسية أساسها موجب،
+                    فإن:
+
+                    <span className="math">{"\\(v_n-u_n>0\\)"}</span>.
+
+                    وبالتالي:
+
+                    <span className="math">
+                        {"\\(u_{n+1}-u_n>0\\)"}
+                    </span>.
+
+                    إذن
+                    <span className="math">{"\\((u_n)\\)"}</span>
+                    متزايدة.
+
+                    <br /><br />
+
+                    كما أن:
+
+                    <span className="math">
+                        {"\\(v_{n+1}-v_n=\\frac{u_n+2v_n}{3}-v_n\\)"}
+                    </span>
+
+                    <br />
+
+                    <span className="math">
+                        {"\\(=\\frac{u_n-v_n}{3}\\)"}
+                    </span>
+
+                    <br />
+
+                    <span className="math">
+                        {"\\(<0\\)"}
+                    </span>.
+
+                    إذن
+                    <span className="math">{"\\((v_n)\\)"}</span>
+                    متناقصة.
+
+                    <br /><br />
+
+                    بما أن:
+
+                    <ul style={{ margin: '4px 0', paddingRight: '18px' }}>
+                        <li><span className="math">{"\\((u_n)\\)"}</span> متزايدة.</li>
+                        <li><span className="math">{"\\((v_n)\\)"}</span> متناقصة.</li>
+                        <li><span className="math">{"\\(v_n-u_n\\to0\\)"}</span>.</li>
+                    </ul>
+
+                    فإن المتتاليتين متجاورتان.
+                </div>
+            </div>
+
+            {/* ============================================================
+    Q6.2
+============================================================ */}
+
+            <div className="sub-question">
+                2) تعيين
+                <span className="math">{"\\(a,b\\)"}</span>
+                بحيث تكون
+                <span className="math">{"\\(w_n=a u_n+b v_n\\)"}</span>
+                متتالية ثابتة
+            </div>
+
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
             </div>
+
+            {/* AIM */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    تعيين قيم المعاملات التي تجعل تركيباً خطياً لمتتاليتين متتاليةً ثابتة.
+
+
                 </div>
+
                 <div className="right-col">
-                    الهدف: إيجاد قيم <span className="math">{"\\(a\\)"}</span> و <span className="math">{"\\(b\\)"}</span> التي تجعل المتتالية <span className="math">{"\\(w_n = a u_n + b v_n\\)"}</span> ثابتة.
+                    الهدف هو إيجاد قيم
+                    <span className="math">{"\\(a\\)"}</span>
+                    و
+                    <span className="math">{"\\(b\\)"}</span>
+
+                    بحيث تكون المتتالية
+
+                    <span className="math">
+                        {"\\(w_n=a u_n+b v_n\\)"}
+                    </span>
+
+                    ثابتة.
                 </div>
             </div>
+
+            {/* RELATE */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    أعوض قوانين التراجع للمتتاليتين في عبارة الحد الموالي للمزيج الخطي. أرتب وأجمع المعاملات المطلوبة للمطابقة مع المزيج الأصلي لتشكيل جملة معادلات تحدد قيم الثوابت المرجوة.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> المطابقة تهدف لإيجاد شرط التكافؤ بين معاملات الحدين لضمان بقاء قيمة المتتالية دون تغيير.
-                    </div>
+
+                    عندما أقرأ عبارة:
+
+                    "اجعل المتتالية ثابتة"
+
+                    أترجمها مباشرة إلى:
+
+                    <span className="math">{"\\(w_{n+1}=w_n\\)"}</span>.
+
+                    هذه أول فكرة تخطر ببالي.
+
+                    الآن أعرف ما يجب فعله:
+
+                    <ol style={{ margin: '4px 0', paddingRight: '18px' }}>
+                        <li>أحسب <span className="math">{"\\(w_{n+1}\\)"}</span>.</li>
+                        <li>أعوض علاقات التراجع.</li>
+                        <li>أفرض المساواة مع <span className="math">{"\\(w_n\\)"}</span>.</li>
+                        <li>أطابق المعاملات.</li>
+                    </ol>
+
+                    لماذا المطابقة؟
+
+                    لأن التعبيرين يجب أن يكونا متساويين مهما كانت قيم
+                    <span className="math">{"\\(u_n\\)"}</span>
+                    و
+                    <span className="math">{"\\(v_n\\)"}</span>.
+
+                    والطريقة الوحيدة لضمان ذلك هي تساوي المعاملات.
                 </div>
+
                 <div className="right-col">
-                    نحسب الحد الموالي للمزيج الخطي: <span className="math">{"\\(w_{n+1} = a u_{n+1} + b v_{n+1}\\)"}</span>.<br />
-                    نعوض العبارات التراجعية للمتتاليتين:<br />
-                    <span className="math">{"\\(w_{n+1} = a \\left( \\frac{u_n + v_n}{2} \\right) + b \\left( \\frac{u_n + 2v_n}{3} \\right) = \\left( \\frac{a}{2} + \\frac{b}{3} \\right) u_n + \\left( \\frac{a}{2} + \\frac{2b}{3} \\right) v_n\\)"}</span>.<br />
-                    نريد أن يكون <span className="math">{"\\(w_{n+1} = w_n\\)"}</span>، أي بمطابقة معاملات <span className="math">{"\\(u_n\\)"}</span> و <span className="math">{"\\(v_n\\)"}</span> مع <span className="math">{"\\(a u_n + b v_n\\)"}</span>:<br />
-                    <span className="math">{"\\(\\begin{cases} \\frac{a}{2} + \\frac{b}{3} = a \\\\ \\frac{a}{2} + \\frac{2b}{3} = b \\end{cases} \\implies \\frac{b}{3} = \\frac{a}{2} \\implies 2b = 3a\\)"}</span>.<br />
-                    نختار أبسط الحلول الصحيحة: <span className="math">{"\\(a = 2\\)"}</span> و <span className="math">{"\\(b = 3\\)"}</span>. وعليه تصبح المتتالية الثابتة: <span className="math">{"\\(w_n = 2 u_n + 3 v_n\\)"}</span>.
+                    نحسب:
+
+                    <span className="math">
+                        {"\\(w_{n+1}=a u_{n+1}+b v_{n+1}\\)"}
+                    </span>.
+
+                    بالتعويض:
+
+                    <span className="math">
+                        {"\\(w_{n+1}=a\\left(\\frac{u_n+v_n}{2}\\right)+b\\left(\\frac{u_n+2v_n}{3}\\right)\\)"}
+                    </span>
+
+                    <br />
+
+                    <span className="math">
+                        {"\\(=\\left(\\frac a2+\\frac b3\\right)u_n+\\left(\\frac a2+\\frac{2b}3\\right)v_n\\)"}
+                    </span>.
+                    <br /><br />
+
+                    لكي تكون المتتالية ثابتة يجب أن يكون:
+
+                    <span className="math">
+                        {"\\(w_{n+1}=w_n=a u_n+b v_n\\)"}
+                    </span>.
+
+                    إذن:
+
+                    <span className="math">
+                        {"\\(\\begin{cases}\\frac a2+\\frac b3=a\\\\\\frac a2+\\frac{2b}3=b\\end{cases}\\)"}
+                    </span>
+                    <br />
+
+                    ومنهما:
+
+                    <span className="math">
+                        {"\\(\\frac b3=\\frac a2\\)"}
+                    </span>
+
+                    أي:
+
+                    <span className="math">
+                        {"\\(2b=3a\\)"}
+                    </span>.
+                    <br /><br />
+
+                    نختار أبسط حل صحيح:
+
+                    <span className="math">
+                        {"\\(a=2\\)"}
+                    </span>
+
+                    و
+
+                    <span className="math">
+                        {"\\(b=3\\)"}
+                    </span>.
                 </div>
             </div>
+
+            {/* TEST */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    أتحقق من ثبوت المتتالية بحساب حدها الأول وقيمة ثبوتها الكلية.
+
+                    بعد إيجاد المعاملات لا أتوقف مباشرة.
+
+                    أعود إلى الهدف الأصلي:
+
+                    هل أصبحت المتتالية ثابتة فعلاً؟
+
+                    أفضل طريقة للتحقق هي التعويض المباشر.
+
+                    وإذا نجحت المطابقة،
+                    أحسب قيمة الثابت باستعمال الحد الأول.
                 </div>
+
                 <div className="right-col">
-                    <strong>التحقق:</strong> مع <span className="math">{"\\(a=2, b=3\\)"}</span>:
-                    <div className="math-block">{"\\[ w_{n+1} = 2\\cdot\\frac{u_n+v_n}{2} + 3\\cdot\\frac{u_n+2v_n}{3} = 2u_n+3v_n = w_n \\checkmark \\]"}</div>
-                    <strong>قيمة الثابت:</strong> <span className="math">{"\\(w_0 = 2u_0 + 3v_0 = 2(1) + 3(2) = 8\\)"}</span>.<br />
-                    إذن المتتالية ثابتة وقيمتها 8 لجميع قيم <span className="math">{"\\(n\\)"}</span>.
+                    مع:
+
+                    <span className="math">{"\\(a=2\\)"}</span>
+
+                    و
+
+                    <span className="math">{"\\(b=3\\)"}</span>
+
+                    نحصل على:
+
+                    <div className="math-block">
+                        {"\\[2\\cdot\\frac{u_n+v_n}{2}+3\\cdot\\frac{u_n+2v_n}{3}=2u_n+3v_n=w_n\\]"}
+                    </div>
+
+                    وبالتالي:
+
+                    <span className="math">
+                        {"\\(w_{n+1}=w_n\\)"}
+                    </span>
+
+                    والمتتالية ثابتة.
+
+                    <br /><br />
+
+                    نحسب قيمة هذا الثابت:
+
+                    <span className="math">
+                        {"\\(w_0=2u_0+3v_0\\)"}
+                    </span>
+
+                    <br />
+
+                    <span className="math">
+                        {"\\(=2(1)+3(2)=8\\)"}
+                    </span>.
+
+                    <br /><br />
+
+                    إذن:
+
+                    <div className="math-block">
+                        {"\\[w_n=8\\quad \\forall n\\in\\mathbb N\\]"}
+                    </div>
                 </div>
             </div>
         </>

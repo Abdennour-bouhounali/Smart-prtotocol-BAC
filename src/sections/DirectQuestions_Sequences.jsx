@@ -262,13 +262,13 @@ const DirectQuestions_Sequences = () => {
                     </div>
                     <div style={{ marginBottom: '4px' }}>
                         <span>{"2) "}</span>
-                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(P_n = 2^{v_0} \\times 2^{v_1} \\times \\dots \\times 2^{v_n}\\)"}</span>
+                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(P_n = 2^{u_0} \\times 2^{u_1} \\times \\dots \\times 2^{u_n}\\)"}</span>
                         <span>{" حيث "}</span>
-                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(v_n\\)"}</span>
+                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(u_n\\)"}</span>
                         <span>{" حسابية أساسها "}</span>
                         <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(r=2\\)"}</span>
                         <span>{" و "}</span>
-                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(v_0=1\\)"}</span>
+                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(u_0=1\\)"}</span>
                         <span>{"."}</span>
                     </div>
                     <div style={{ marginBottom: '4px' }}>
