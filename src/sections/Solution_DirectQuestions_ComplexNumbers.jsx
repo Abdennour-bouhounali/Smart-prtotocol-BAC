@@ -8,12 +8,19 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
                 EXERCISE 1: Algebraic and Exponential Forms
             ============================================================ */}
             <div className="question-header no-break">التمرين 1 — الأشكال الجبرية والأسية</div>
-
-            {/* Q1.1 */}
-            <div className="sub-question">1) كتابة <span className="math">{"\\(z_1 = (1+i)^2\\)"}</span> على الشكلين الجبري والأسي</div>
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
+            </div>
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label translate">M. الترجمة (Math Translate)</span><br />
+                    الشكل الأسي يعني من الشكل : <span className="math">{"\\(re^{i\\theta}\\)"}</span>
+                    <br />
+                    الشكل الجبري يعني من الشكل : <span className="math">{"\\(x+iy\\)"}</span>
+                </div>
+                <div className="right-col">
+                </div>
             </div>
             <div className="step-row-two">
                 <div className="left-col">
@@ -21,28 +28,41 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
                     تحويل عدد مركب من الشكل الأسي أو المربع إلى الشكلين الجبري والأسي للتبسيط.
                 </div>
                 <div className="right-col">
-                    الهدف: إيجاد الشكل الجبري والأسي لـ <span className="math">{"\\(z_1\\)"}</span>.
+                    الهدف: إيجاد الأعداد <span className="math">{"\\(x_1,y_1,x_2,y_2,x_3,y_3\\)"}</span> و <span className="math">{"\\(r_1,r_2,r_3,θ_1,θ_2,θ_3\\)"}</span>  لـ <span className="math">{"\\(z_3 , z_2 , z_1\\)"}</span>.
+                    حيث
+                    <span className="math">{"\\(z_1=x_1+iy_1\\)"}</span>
+                    <span className="math">{"\\( , \\)"}</span>
+                    <span className="math">{"\\(z_2=x_2+iy_2\\)"}</span>
+                    <span className="math">{"\\( , \\)"}</span>
+                    <span className="math">{"\\(z_3=x_3+iy_3\\)"}</span>
+
+                    و
+
+                    <span className="math">{"\\(z_1=r_1e^{i\\theta_1}\\)"}</span>
+                    <span className="math">{"\\( , \\)"}</span>
+                    <span className="math">{"\\(z_2=r_2e^{i\\theta_2}\\)"}</span>
+                    <span className="math">{"\\( , \\)"}</span>
+                    <span className="math">{"\\(z_3=r_3e^{i\\theta_3}\\)"}</span>
+
                 </div>
             </div>
+            {/* Q1.1 */}
+            <div className="sub-question">1) كتابة <span className="math">{"\\(z_1 = (1+i)^2\\)"}</span> على الشكلين الجبري والأسي</div>
+
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     الشكل الجبري يتطلب النشر والتخلص من الأقواس. الشكل الأسي يتطلب استخراج الطويلة والعمدة.
-                </div>
-                <div className="right-col">
-                    ننشر العبارة الجبرية ثم نحدد المعالم الهندسية للعدد.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    <br />
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أنشر المتطابقة الشهيرة واستبدل <span className="math">{"\\(i^2\\)"}</span> بـ <span className="math">{"\\(-1\\)"}</span> لأصل إلى الجزء الحقيقي والتخيلي.
                     </div>
                     أحسب: <span className="math">{"\\(1 + 2i + i^2 = 1 + 2i - 1 = 2i\\)"}</span>.<br />
-                    بما أنه تخيلي صرف موجب، طويلته هي المعامل وعمدته <span className="math">{"\\(\\pi/2\\)"}</span>.
+                    بما أنه تخيجي صرف موجب، طويلته هي المعامل وعمدته <span className="math">{"\\(\\pi/2\\)"}</span>.
                 </div>
                 <div className="right-col">
+                    ننشر العبارة الجبرية ثم نحدد المعالم الهندسية للعدد.
+                    <br />
                     <strong>الشكل الجبري:</strong> ننشر المتطابقة الشهيرة:
                     <div className="math-block">{"\\[ z_1 = 1^2 + 2(1)(i) + i^2 = 1 + 2i - 1 = 2i \\]"}</div>
                     <strong>الشكل الأسي:</strong> العدد <span className="math">{"\\(2i\\)"}</span> هو عدد تخيلي صرف موجب.<br />
@@ -59,39 +79,27 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    وجود كسر لعددين مركبين يترجم فوراً إلى ضرورة الضرب في <strong>مرافق المقام</strong> للتخلص من العدد التخيلي في الأسفل.
-                </div>
-                <div className="right-col">
-                    لتحويل الكسر إلى شكل جبري، نضرب البسط والمقام في مرافق المقام.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
                         <strong>🔔 تذكير بالهدف:</strong> أضرب في <span className="math">{"\\((1-i)\\)"}</span> لتبسيط المقام إلى عدد حقيقي حقيقي (مجموع المربعات).
                     </div>
+                    العدد <span className="math">{"\\(-i\\)"}</span> هو تخيلي صرف سالب، إذن يقع في الجزء السفلي من محور التراتيب. الزاوية حتماً <span className="math">{"\\(-\\pi/2\\)"}</span>.
+
                 </div>
                 <div className="right-col">
                     <strong>الشكل الجبري:</strong>
                     <div className="math-block">{"\\[ z_2 = \\frac{(1-i)(1-i)}{(1+i)(1-i)} = \\frac{(1-i)^2}{1^2 + 1^2} \\]"}</div>
                     <div className="math-block">{"\\[ z_2 = \\frac{1 - 2i - 1}{2} = \\frac{-2i}{2} = -i \\]"}</div>
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    العدد <span className="math">{"\\(-i\\)"}</span> هو تخيلي صرف سالب، إذن يقع في الجزء السفلي من محور التراتيب. الزاوية حتماً <span className="math">{"\\(-\\pi/2\\)"}</span>.
-                </div>
-                <div className="right-col">
+
                     <strong>الشكل الأسي:</strong> العدد <span className="math">{"\\(-i\\)"}</span> تخيلي صرف سالب. طويلته <span className="math">{"\\(1\\)"}</span> وعمدته <span className="math">{"\\(-\\frac{\\pi}{2}\\)"}</span>.
                     <div className="math-block">{"\\[ z_2 = e^{-i\\frac{\\pi}{2}} \\]"}</div>
+
                 </div>
             </div>
 
+
             {/* Q1.3 */}
-            <div className="sub-question">3) كتابة <span className="math">{"\\(z_3 = e^{i\\pi/3} \\cdot e^{i\\pi/6}\\)"}</span></div>
+            <div className="sub-question">3) كتابة <span className="math">{"\\(z_3 = e^{i\\pi/3} \\cdot e^{i\\pi/6}\\)"}</span> على الشكلين الجبري والأسي</div>
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
@@ -100,18 +108,13 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     هنا لدي جداء لعددين بالشكل الأسي. الخواص الأسية تخبرني أن الجداء يؤول إلى جمع الأسس المرفقة بالزوايا.
-                </div>
-                <div className="right-col">
-                    نستعمل خاصية جمع الأسس لإيجاد الشكل الأسي المباشر، ثم نستنتج الشكل الجبري.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    <br />
                     أجمع: <span className="math">{"\\(\\pi/3 + \\pi/6 = 3\\pi/6 = \\pi/2\\)"}</span>.<br />
                     إذن <span className="math">{"\\(z_3 = e^{i\\pi/2}\\)"}</span>. وهذا العدد معروف، هو <span className="math">{"\\(i\\)"}</span>.
                 </div>
                 <div className="right-col">
+                    نستعمل خاصية جمع الأسس لإيجاد الشكل الأسي المباشر، ثم نستنتج الشكل الجبري.
+                    <br />
                     <strong>الشكل الأسي:</strong>
                     <div className="math-block">{"\\[ z_3 = e^{i\\left(\\frac{\\pi}{3} + \\frac{\\pi}{6}\\right)} = e^{i\\frac{3\\pi}{6}} = e^{i\\frac{\\pi}{2}} \\]"}</div>
                     <strong>الشكل الجبري:</strong> <span className="math">{"\\(z_3 = \\cos(\\pi/2) + i\\sin(\\pi/2) = i\\)"}</span>.
@@ -122,12 +125,12 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
                 EXERCISE 2: Equations in C
             ============================================================ */}
             <div className="question-header no-break">التمرين 2 — حل المعادلات في مجموعة الأعداد المركبة</div>
-
-            {/* Q2.1 */}
-            <div className="sub-question">1) حل <span className="math">{"\\(z^2 - 2z + 2 = 0\\)"}</span></div>
-            <div className="col-header-row-two">
-                <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
-                <div className="col-header right-h">الحل التفصيلي</div>
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
+                    حل تعني إيجاد القيم التي تحقق المعادلة .                </div>
+                <div className="right-col">
+                </div>
             </div>
             <div className="step-row-two">
                 <div className="left-col">
@@ -138,23 +141,20 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
                     حل المعادلة باستعمال المميز <span className="math">{"\\(\\Delta\\)"}</span>.
                 </div>
             </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    إذا كان المميز سالباً في <span className="math">{"\\(\\mathbb{C}\\)"}</span>، فإنه يترجم إلى جذرين تخيليين مترافقين عبر إدخال العدد <span className="math">{"\\(i^2\\)"}</span> بدلاً من إشارة الناقص.
-                </div>
-                <div className="right-col">
-                    نحسب المميز، وبما أنه سالب، نستنتج الحلين المترافقين.
-                </div>
+            {/* Q2.1 */}
+            <div className="sub-question">1) حل <span className="math">{"\\(z^2 - 2z + 2 = 0\\)"}</span></div>
+            <div className="col-header-row-two">
+                <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
+                <div className="col-header right-h">الحل التفصيلي</div>
             </div>
+
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
-                    المميز: <span className="math">{"\\(4 - 8 = -4\\)"}</span>. جذراه هما <span className="math">{"\\(2i\\)"}</span> و <span className="math">{"\\(-2i\\)"}</span>.<br />
-                    الحلول: <span className="math">{"\\(\\frac{2 - 2i}{2} = 1 - i\\)"}</span> و <span className="math">{"\\(1 + i\\)"}</span>.
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    إيجاد حلول معادلة من الدرجة الثانية يستلزم حساب المميز أولا .
                 </div>
                 <div className="right-col">
-                    المميز: <span className="math">{"\\(\\Delta = (-2)^2 - 4(1)(2) = 4 - 8 = -4 = (2i)^2\\)"}</span>.<br />
+                    المميز: <span className="math">{"\\(\\Delta = (-2)^2 - 4(1)(2) = 4 - 8 = -4 = (2i)^2\\)"}</span><br />
                     <div className="math-block">{"\\[ z_1 = \\frac{2 - 2i}{2} = 1 - i \\quad ; \\quad z_2 = \\frac{2 + 2i}{2} = 1 + i \\]"}</div>
                 </div>
             </div>
@@ -165,18 +165,10 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
             </div>
+
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    هذه معادلة منعدمة المعامل <span className="math">{"\\(b\\)"}</span>. أترجمها مباشرة بنقل الثابت وأخذ الجذر التخيلي، دون تعقيد المميز.
-                </div>
-                <div className="right-col">
-                    ننقل الثابت للطرف الآخر ونستخرج الحلول المباشرة.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     <span className="math">{"\\(z^2 = -4\\)"}</span>. وبما أن <span className="math">{"\\(-4 = (2i)^2\\)"}</span>، إذن الحلول هي <span className="math">{"\\(\\pm 2i\\)"}</span>.
                 </div>
                 <div className="right-col">
@@ -208,20 +200,16 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أطابق المعادلة مع الشكل العام <span className="math">{"\\(z'=az+b\\)"}</span>. هنا ألاحظ بوضوح أن <span className="math">{"\\(a=1\\)"}</span> و <span className="math">{"\\(b = 1-i\\)"}</span>.
+                    <br />
+                    حسب القاعدة المنهجية، <span className="math">{"\\(a=1\\)"}</span> يعني أن التحويل يحافظ على المتجهات كما هي ويضيف لها شعاعاً ثابتاً، وهو تعريف الانسحاب.
+
                 </div>
                 <div className="right-col">
                     بالمطابقة، <span className="math">{"\\(a = 1\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    حسب القاعدة المنهجية، <span className="math">{"\\(a=1\\)"}</span> يعني أن التحويل يحافظ على المتجهات كما هي ويضيف لها شعاعاً ثابتاً، وهو تعريف الانسحاب.
-                </div>
-                <div className="right-col">
                     التحويل هو <strong>انسحاب</strong> شعاعه <span className="math">{"\\(\\vec{u}\\)"}</span> ذو اللاحقة <span className="math">{"\\(b = 1 - i\\)"}</span>.
                 </div>
             </div>
+
 
             {/* Q3.2 */}
             <div className="sub-question">2) طبيعة وعناصر التحويل: <span className="math">{"\\(z' = 2z + i\\)"}</span></div>
@@ -232,18 +220,13 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    أطابق المعادلة لأجد <span className="math">{"\\(a=2\\)"}</span>. وهو عدد حقيقي غير معدوم ولا يساوي 1، مما يعني تمدداً للمسافات مع المحافظة على الاتجاه: تحاكي.
-                </div>
-                <div className="right-col">
-                    بالمطابقة، <span className="math">{"\\(a = 2 \\in \\mathbb{R}^* - \\{1\\}\\)"}</span>. إذن التحويل <strong>تحاكي</strong> نسبته <span className="math">{"\\(2\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
+                    أطابق المعادلة لأجد <span className="math">{"\\(a=2\\)"}</span>. وهو عدد حقيقي غير معدوم ولا يساوي 1، مما يعني تمدداً مضاعفاً للمسافات مع المحافظة على الاتجاه: تحاكي.
+                    <br />
                     أبحث عن نقطة الصمود (المركز) بإيجاد حل المعادلة <span className="math">{"\\(\\omega = 2\\omega + i\\)"}</span> أو تطبيق القانون.
                 </div>
                 <div className="right-col">
+                    بالمطابقة، <span className="math">{"\\(a = 2 \\in \\mathbb{R}^* - \\{1\\}\\)"}</span>. إذن التحويل <strong>تحاكي</strong> نسبته <span className="math">{"\\(2\\)"}</span>.
+                    <br />
                     مركزه <span className="math">{"\\(\\Omega\\)"}</span> ذو اللاحقة: <span className="math">{"\\(\\omega = \\frac{b}{1-a} = \\frac{i}{1-2} = -i\\)"}</span>.
                 </div>
             </div>
@@ -258,18 +241,13 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     بالمطابقة <span className="math">{"\\(a=i\\)"}</span>. الطويلة هي 1، مما يعني أن المسافات محفوظة ولكن هناك دوران زاويته هي عمدة <span className="math">{"\\(i\\)"}</span>.
+                    <br />
+                    أحسب المركز: <span className="math">{"\\(\\omega = \\frac{1}{1-i}\\)"}</span>. أضرب في المرافق.
                 </div>
                 <div className="right-col">
                     بالمطابقة، <span className="math">{"\\(a = i\\)"}</span>. بما أن <span className="math">{"\\(|a| = 1\\)"}</span>، التحويل <strong>دوران</strong>.<br />
                     زاويته <span className="math">{"\\(\\theta = \\arg(i) = \\frac{\\pi}{2}\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
-                    أحسب المركز: <span className="math">{"\\(\\omega = \\frac{1}{1-i}\\)"}</span>. أضرب في المرافق.
-                </div>
-                <div className="right-col">
+                    <br />
                     المركز <span className="math">{"\\(\\Omega\\)"}</span> لاحقته: <span className="math">{"\\(\\omega = \\frac{1}{1-i} = \\frac{1(1+i)}{1^2+1^2} = \\frac{1}{2} + \\frac{1}{2}i\\)"}</span>.
                 </div>
             </div>
@@ -285,23 +263,46 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
             </div>
+            {/* Q4.1 */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    الترجمة الهندسية للطويلة <span className="math">{"\\(|z - z_A|\\)"}</span> هي المسافة <span className="math">{"\\(AM\\)"}</span>. أستخرج إشارة الناقص كعامل مشترك لإظهار <span className="math">{"\\(z_A\\)"}</span>.
+                    أتعرف على الشكل القياسي
+                    <span className="math">{"\\(|z-z_A|\\)"}</span>.
+                    الطويلة تمثل مسافة بين نقطة متحركة ونقطة ثابتة.
+                    لذلك أول خطوة هي تحديد النقطة الثابتة.
                 </div>
                 <div className="right-col">
-                    نستخرج الناقص عاملاً مشتركاً: <span className="math">{"\\(|z - (1 - i)| = 2\\)"}</span>.
+                    <span className="math">{"\\(|z-(1-i)|=2\\)"}</span>
                 </div>
             </div>
+
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    هندسة المسافة تخبرنا أن النقاط التي تبعد مسافة ثابتة عن نقطة معلومة تشكل دائرة.
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    المطلوب هو التعرف على الشكل الهندسي الذي تمثله جميع النقط التي تحقق هذه المسافة.
                 </div>
                 <div className="right-col">
-                    نضع <span className="math">{"\\(A\\)"}</span> النقطة ذات اللاحقة <span className="math">{"\\(1-i\\)"}</span>. المعادلة تكافئ <span className="math">{"\\(AM = 2\\)"}</span>.<br />
-                    <strong>مجموعة النقط:</strong> دائرة مركزها <span className="math">{"\\(A(1,-1)\\)"}</span> ونصف قطرها 2.
+                    نريد تحديد مجموعة النقط المعرفة بهذه العلاقة.
+                </div>
+            </div>
+
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    بعد تحديد النقطة الثابتة، ألاحظ أن المسافة ثابتة وتساوي 2.
+                    وأتذكر أن جميع النقط التي تبعد مسافة ثابتة عن نقطة معلومة تشكل دائرة.
+                </div>
+                <div className="right-col">
+                    نضع
+                    <span className="math">{"\\(A(1,-1)\\)"}</span>.
+                    <br />
+                    <span className="math">{"\\(|z-z_A|=2\\iff AM=2\\)"}</span>.
+                    <br />
+                    مجموعة النقط دائرة مركزها
+                    <span className="math">{"\\(A\\)"}</span>
+                    ونصف قطرها
+                    <span className="math">{"\\(2\\)"}</span>.
                 </div>
             </div>
 
@@ -314,21 +315,52 @@ const Solution_DirectQuestions_ComplexNumbers = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
-                    تساوي طويلتين يعني تساوي مسافتين، مما يعني أن النقطة <span className="math">{"\\(M\\)"}</span> تتحرك بحيث تبقى متساوية المسافة عن نقطتين ثابتتين <span className="math">{"\\(A\\)"}</span> و <span className="math">{"\\(B\\)"}</span>.
+                    أتعرف على الشكل
+                    <span className="math">{"\\(|z-z_A|=|z-z_B|\\)"}</span>.
+                    تساوي الطويلتين يعني أن النقطة المتحركة تبقى على نفس البعد من نقطتين ثابتتين.
                 </div>
                 <div className="right-col">
-                    نكتب: <span className="math">{"\\(|z - (i)| = |z - (-1)|\\)"}</span>.
+                    <span className="math">{"\\(|z-i|=|z-(-1)|\\)"}</span>
                 </div>
             </div>
+
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    أريد تحديد الشكل الهندسي الذي تمثله جميع النقط المتساوية البعد عن هاتين النقطتين.
+                </div>
+                <div className="right-col">
+                    نبحث عن مجموعة النقط التي تحقق
+                    <span className="math">{"\\(AM=BM\\)"}</span>.
+                </div>
+            </div>
+
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
+                    أتذكر خاصية هندسية أساسية: جميع النقط المتساوية البعد عن نقطتين ثابتتين تنتمي إلى محور القطعة الواصلة بينهما.
+                </div>
+                <div className="right-col">
+                    نضع
+                    <span className="math">{"\\(A(z_A=i)\\)"}</span>
+                    و
+                    <span className="math">{"\\(B(z_B=-1)\\)"}</span>.
+                    <br />
+                    <span className="math">{"\\(|z-i|=|z+1|\\iff AM=BM\\)"}</span>.
+                    <br />
+                    إذن مجموعة النقط هي محور القطعة
+                    <span className="math">{"\\([AB]\\)"}</span>.
+                </div>
+            </div>
+
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    في الهندسة المستوية، هذا هو التعريف الحرفي لمحور القطعة المستقيمة.
+                    النتيجة منسجمة مع الخاصية لأن كل نقطة من محور القطعة تكون متساوية البعد عن طرفيها.
                 </div>
                 <div className="right-col">
-                    نضع <span className="math">{"\\(A(z_A = i)\\)"}</span> و <span className="math">{"\\(B(z_B = -1)\\)"}</span>.<br />
-                    المعادلة تؤول إلى <span className="math">{"\\(AM = BM\\)"}</span>.<br />
-                    <strong>مجموعة النقط:</strong> محور القطعة المستقيمة <span className="math">{"\\([AB]\\)"}</span>.
+                    ✓ مجموعة النقط هي محور القطعة
+                    <span className="math">{"\\([AB]\\)"}</span>.
                 </div>
             </div>
 

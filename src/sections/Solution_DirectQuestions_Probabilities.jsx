@@ -18,21 +18,21 @@ const Solution_DirectQuestions_Probabilities = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    حساب احتمال حادثة تعتمد على سحب عشوائي بتطبيق قاعدة (الحالات الملائمة / الحالات الممكنة).
-                </div>
-                <div className="right-col">
-                    الهدف: حساب احتمال الحادثة <span className="math">{"\\(A\\)"}</span>: "سحب كرتين من نفس اللون".
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
                     العبارة "في آن واحد" تترجم رياضياً إلى استخدام التوفيقات <span className="math">{"\\(C_n^p\\)"}</span>. العبارة "نفس اللون" تترجم إلى جمع حالات سحب لونين متطابقين (حمراوين أو خضراوين).
                 </div>
                 <div className="right-col">
                     السحب يتم في آن واحد، إذن نستخدم التوفيقات.<br />
                     <span className="math">{"\\(A = \\text{\\{حمراوين\\}} \\cup \\text{\\{خضراوين\\}}\\)"}</span>.
+                </div>
+            </div>
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    حساب احتمال حادثة تعتمد على سحب عشوائي بتطبيق قاعدة (الحالات الملائمة / الحالات الممكنة).
+                </div>
+                <div className="right-col">
+                    الهدف: حساب احتمال الحادثة <span className="math">{"\\(A\\)"}</span>: "سحب كرتين من نفس اللون".
                 </div>
             </div>
             <div className="step-row-two">
@@ -87,20 +87,20 @@ const Solution_DirectQuestions_Probabilities = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    حساب المؤشرات الإحصائية لمتغير عشوائي معرف بقانون احتماله.
-                </div>
-                <div className="right-col">
-                    الهدف: حساب <span className="math">{"\\(E(X)\\)"}</span> و <span className="math">{"\\(V(X)\\)"}</span> انطلاقاً من قانون الاحتمال المعطى.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
                     حساب التباين يتميز بصيغتين، وأترجم هذه الحاجة المنهجية باختيار <strong>نظرية كونيغ</strong> لأنها تجنبنا الحسابات المعقدة للفروق المربعة.
                 </div>
                 <div className="right-col">
                     نستعمل القوانين المباشرة للمتوسط، ومبرهنة كونيغ للتباين.
+                </div>
+            </div>
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    حساب المؤشرات الإحصائية لمتغير عشوائي معرف بقانون احتماله.
+                </div>
+                <div className="right-col">
+                    الهدف: حساب <span className="math">{"\\(E(X)\\)"}</span> و <span className="math">{"\\(V(X)\\)"}</span> انطلاقاً من قانون الاحتمال المعطى.
                 </div>
             </div>
             <div className="step-row-two">

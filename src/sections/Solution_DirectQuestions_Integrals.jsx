@@ -19,21 +19,21 @@ const Solution_DirectQuestions_Integrals = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    إيجاد الدالة الأصلية لدالة من الشكل (كثير حدود <span className="math">{"\\(\\times\\)"}</span> أسية).
-                </div>
-                <div className="right-col">
-                    الهدف: إيجاد <span className="math">{"\\(F(x)\\)"}</span> بحيث <span className="math">{"\\(F'(x) = f(x)\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
                     الدالة الأصلية تحافظ على نفس البنية: <span className="math">{"\\(F(x) = (ax^2+bx+c)e^x\\)"}</span>. إيجادها يترجم إلى عملية مطابقة بعد الاشتقاق.
                 </div>
                 <div className="right-col">
                     نضع الدالة الأصلية من الشكل المألوف:
                     <div className="math-block">{"\\[ F(x) = (ax^2+bx+c)e^x \\]"}</div>
+                </div>
+            </div>
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    إيجاد الدالة الأصلية لدالة من الشكل (كثير حدود <span className="math">{"\\(\\times\\)"}</span> أسية).
+                </div>
+                <div className="right-col">
+                    الهدف: إيجاد <span className="math">{"\\(F(x)\\)"}</span> بحيث <span className="math">{"\\(F'(x) = f(x)\\)"}</span>.
                 </div>
             </div>
             <div className="step-row-two">
@@ -73,21 +73,21 @@ const Solution_DirectQuestions_Integrals = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    إيجاد الدالة الأصلية لدالة كسرية تتضمن لوغاريتم.
-                </div>
-                <div className="right-col">
-                    الهدف: إيجاد <span className="math">{"\\(F(x)\\)"}</span> بدلالة اللوغاريتم.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
                     تحويل الكسر إلى جداء لاكتشاف البنية المخفية: <span className="math">{"\\(u'(x) \\cdot u(x)^n\\)"}</span>.
                 </div>
                 <div className="right-col">
                     نعيد كتابة الدالة لتتضح القاعدة التراكبية:
                     <div className="math-block">{"\\[ f(x) = \\frac{1}{x} \\cdot \\ln x = u'(x) \\cdot u(x)^1 \\]"}</div>
+                </div>
+            </div>
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    إيجاد الدالة الأصلية لدالة كسرية تتضمن لوغاريتم.
+                </div>
+                <div className="right-col">
+                    الهدف: إيجاد <span className="math">{"\\(F(x)\\)"}</span> بدلالة اللوغاريتم.
                 </div>
             </div>
             <div className="step-row-two">
@@ -112,21 +112,21 @@ const Solution_DirectQuestions_Integrals = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    إيجاد دالة أصلية لدالة مثلثية مرفوعة لقوة.
-                </div>
-                <div className="right-col">
-                    الهدف: إيجاد الدالة الأصلية لـ <span className="math">{"\\(\\cos^2 x\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
                     مكاملة دالة مثلثية مربعة يترجم مباشرة إلى ضرورة استعمال <strong>دساتير التحويل</strong> (تخفيض الدرجة) للتخلص من التربيع وتوليد دوال بسيطة مألوفة.
                 </div>
                 <div className="right-col">
                     باستعمال دساتير التحويل (تخفيض الدرجة):
                     <div className="math-block">{"\\[ \\cos^2 x = \\frac{1 + \\cos(2x)}{2} = \\frac{1}{2} + \\frac{1}{2}\\cos(2x) \\]"}</div>
+                </div>
+            </div>
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    إيجاد دالة أصلية لدالة مثلثية مرفوعة لقوة.
+                </div>
+                <div className="right-col">
+                    الهدف: إيجاد الدالة الأصلية لـ <span className="math">{"\\(\\cos^2 x\\)"}</span>.
                 </div>
             </div>
             <div className="step-row-two">
@@ -188,20 +188,20 @@ const Solution_DirectQuestions_Integrals = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    حساب تكامل لجداء دالتين (كثير حدود ولوغاريتم) ليس لهما علاقة اشتقاقية مباشرة.
-                </div>
-                <div className="right-col">
-                    الهدف: حساب التكامل بتطبيق قانون المكاملة بالتجزئة.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
                     عدم وجود علاقة مباشرة يترجم إلى استخدام <strong>المكاملة بالتجزئة</strong>. اختيار الدوال يخضع لقاعدة ALPES (اللوغاريتم يُشتق، كثير الحدود يُكامل).
                 </div>
                 <div className="right-col">
                     نطبق قانون: <span className="math">{"\\(\\int u v' = [uv] - \\int u' v\\)"}</span>.
+                </div>
+            </div>
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    حساب تكامل لجداء دالتين (كثير حدود ولوغاريتم) ليس لهما علاقة اشتقاقية مباشرة.
+                </div>
+                <div className="right-col">
+                    الهدف: حساب التكامل بتطبيق قانون المكاملة بالتجزئة.
                 </div>
             </div>
             <div className="step-row-two">
@@ -241,20 +241,20 @@ const Solution_DirectQuestions_Integrals = () => {
             </div>
             <div className="step-row-two">
                 <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    حساب مساحة الحيز الهندسي بدلالة وحدات المساحة (u.a).
-                </div>
-                <div className="right-col">
-                    الهدف: حساب التكامل المعبر عن المساحة <span className="math">{"\\(A = \\int_0^{\\ln 2} |f(x)| dx\\)"}</span>.
-                </div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
                     <span className="phase-label translate">M. الترجمة (Translate)</span><br />
                     حساب المساحة يترجم إلى دراسة الإشارة أولاً لمعرفة وضعية المنحنى بالنسبة لمحور الفواصل للتخلص من القيمة المطلقة.
                 </div>
                 <div className="right-col">
                     ندرس إشارة الدالة على المجال المعطى.
+                </div>
+            </div>
+            <div className="step-row-two">
+                <div className="left-col">
+                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
+                    حساب مساحة الحيز الهندسي بدلالة وحدات المساحة (u.a).
+                </div>
+                <div className="right-col">
+                    الهدف: حساب التكامل المعبر عن المساحة <span className="math">{"\\(A = \\int_0^{\\ln 2} |f(x)| dx\\)"}</span>.
                 </div>
             </div>
             <div className="step-row-two">
