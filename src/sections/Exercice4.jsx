@@ -91,7 +91,7 @@ const Exercice4 = () => {
 
             {/* ── Exercise Title ── */}
             <div id="toc-exercice4" className="exercise-title">
-                التمرين 4 — دراسة دالة لوغاريتمية ومتتالية تكاملية
+                التمرين الرابع بكالوريا 2016 شعبة رياضيات — دراسة دالة لوغاريتمية ومتتالية تكاملية
             </div>
 
             {/* ============================================================
@@ -118,7 +118,7 @@ const Exercice4 = () => {
 
                     <span className="math">{"\\((C_f)\\)"}</span> تمثيلها البياني في المستوي المنسوب إلى المعلم المتعامد و المتجانس <span className="math">{"\\((O;\\vec{i},\\vec{j})\\)"}</span>.
                     <div style={{ paddingRight: '20px', marginTop: '5px' }}>
-                        1) احسب <span className="math">{"\\(\\lim_{x\\to0^+} f(x)\\)"}</span> و <span className="math">{"\\(\\lim_{x\\to+\\infty} f(x)\\)"}</span>.
+                        1) احسب <span className="math">{"\\[\\lim_{x\\to0^+} f(x)\\]"}</span> و <span className="math">{"\\[\\lim_{x\\to+\\infty} f(x)\\]"}</span>.
                         <br />
                         2) أ) بيّن أنّه من أجل كل عدد حقيقي <span className="math">{"\\(x\\)"}</span> من المجال <span className="math">{"\\(]0; +\\infty[\\)"}</span>: <span className="math">{"\\(f'(x) = \\dfrac{-g(x)}{x^2}\\)"}</span>.
                         <br />
@@ -126,7 +126,7 @@ const Exercice4 = () => {
                         <br />
                         جـ) تحقّق أنّ: <span className="math">{"\\(f(\\alpha) = 2\\left(\\dfrac{1}{\\alpha} - \\alpha\\right)\\)"}</span> ثم عيّن حصراً له.
                         <br />
-                        3) أ) احسب <span className="math">{"\\(\\lim_{x\\to+\\infty} [f(x) + x]\\)"}</span> ثمّ فسّر النتيجة هندسياً.
+                        3) أ) احسب <span className="math">{"\\[\\lim_{x\\to+\\infty} [f(x) + x]\\]"}</span> ثمّ فسّر النتيجة هندسياً.
                         <br />
                         ب) ادرس وضعية <span className="math">{"\\((C_f)\\)"}</span> بالنسبة إلى مستقيمه المقارب المائل <span className="math">{"\\((\\Delta)\\)"}</span>.
                         <br />
@@ -472,11 +472,11 @@ const Exercice4 = () => {
                     <p>
                         نريد إيجاد:
                         <span className="math">
-                            {"\\(\\lim_{x\\to0^+} f(x)\\)"}
+                            {"\\[\\lim_{x\\to0^+} f(x)\\]"}
                         </span>
                         و
                         <span className="math">
-                            {"\\(\\lim_{x\\to+\\infty} f(x)\\)"}
+                            {"\\[\\lim_{x\\to+\\infty} f(x)\\]"}
                         </span>.
                     </p>
                 </div>
@@ -1043,7 +1043,7 @@ const Exercice4 = () => {
                 PART II — Q3.A
             ============================================================ */}
             <div className="sub-question">
-                3) أ. حساب النهاية <span className="math">{"\\(\\lim_{x\\to+\\infty}[f(x)+x]\\)"}</span> وتفسير النتيجة هندسياً
+                3) أ. حساب النهاية <span className="math">{"\\[\\lim_{x\\to+\\infty}[f(x)+x]\\]"}</span> وتفسير النتيجة هندسياً
             </div>
 
             <div className="col-header-row-two">
@@ -1152,7 +1152,7 @@ const Exercice4 = () => {
                     </div>
 
                     بما أن:
-                    <span className="math">{"\\(\\lim_{x\\to+\\infty}[f(x)-(-x)]=0\\)"}</span>
+                    <span className="math">{"\\[\\lim_{x\\to+\\infty}[f(x)-(-x)]=0\\]"}</span>
 
                     فإن المستقيم
                     <span className="math">{"\\(y=-x\\)"}</span>

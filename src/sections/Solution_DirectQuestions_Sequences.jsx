@@ -166,7 +166,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     حساب نهاية المتتالية عند اللانهائية. و بما أنه قيل لي "علما أن" فإنني أستعمل مبرهنة الحصر.
                 </div>
                 <div className="right-col">
-                    الهدف: حساب نهاية المتتالية <span className="math">{"\\(\\lim_{n\\to+\\infty} u_n\\)"}</span> باستعمال مبرهنة الحصر.
+                    الهدف: حساب نهاية المتتالية <span className="math">{"\\[\\lim_{n\\to+\\infty} u_n\\]"}</span> باستعمال مبرهنة الحصر.
                 </div>
             </div>
             <div className="step-row-two">
@@ -178,8 +178,8 @@ const Solution_DirectQuestions_Sequences = () => {
                 </div>
                 <div className="right-col">
                     لدينا الحصر المبرهن سابقاً: <span className="math">{"\\(0 < u_n \\le \\left(\\frac{3}{4}\\right)^n\\)"}</span>.<br />
-                    نحسب نهاية الطرف الأيسر: <span className="math">{"\\(\\lim_{n\\to+\\infty} 0 = 0\\)"}</span>.<br />
-                    نحسب نهاية الطرف الأيمن: بما أن الأساس هندسي يحقق <span className="math">{"\\(-1 < \\frac{3}{4} < 1\\)"}</span>، فإن <span className="math">{"\\(\\lim_{n\\to+\\infty} \\left(\\frac{3}{4}\\right)^n = 0\\)"}</span>.
+                    نحسب نهاية الطرف الأيسر: <span className="math">{"\\[\\lim_{n\\to+\\infty} 0 = 0\\]"}</span>.<br />
+                    نحسب نهاية الطرف الأيمن: بما أن الأساس هندسي يحقق <span className="math">{"\\(-1 < \\frac{3}{4} < 1\\)"}</span>، فإن <span className="math">{"\\[\\lim_{n\\to+\\infty} \\left(\\frac{3}{4}\\right)^n = 0\\]"}</span>.
 
                     حسب مبرهنة الحصر، فإن:
                     <span className="math">{"\\[ \\lim_{n \\to +\\infty} u_n = 0 \\]"}</span>
@@ -938,13 +938,13 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                     وبما أن:
 
                     <span className="math">
-                        {"\\(\\lim_{n\\to+\\infty}0=0\\)"}
+                        {"\\[\\lim_{n\\to+\\infty}0=0\\]"}
                     </span>
 
                     و
 
                     <span className="math">
-                        {"\\(\\lim_{n\\to+\\infty}\\frac{e}{n+1}=0\\)"}
+                        {"\\[\\lim_{n\\to+\\infty}\\frac{e}{n+1}=0\\]"}
                     </span>،
 
                     فإن مبرهنة الحصر تعطي:
@@ -1100,13 +1100,13 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                     فإن:
 
                     <span className="math">
-                        {"\\(\\lim_{n\\to+\\infty}w_n=0\\)"}
+                        {"\\[\\lim_{n\\to+\\infty}w_n=0\\]"}
                     </span>.
 
                     أي:
 
                     <span className="math">
-                        {"\\(\\lim_{n\\to+\\infty}(v_n-u_n)=0\\)"}
+                        {"\\[\\lim_{n\\to+\\infty}(v_n-u_n)=0\\]"}
                     </span>.
                     <div style={{
                         backgroundColor: "#eef2ff",

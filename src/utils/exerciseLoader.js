@@ -24,8 +24,6 @@ export const loadExercices = async () => {
         else if (name === 'Solution_DirectQuestions_ComplexNumbers') displayName = 'حلول أسئلة مباشرة: الأعداد المركبة';
         else if (name === 'DirectQuestions_Integrals') displayName = 'أسئلة مباشرة: الدوال الأصلية';
         else if (name === 'Solution_DirectQuestions_Integrals') displayName = 'حلول أسئلة مباشرة: الدوال الأصلية';
-        else if (name === 'DirectQuestions_Probabilities') displayName = 'أسئلة مباشرة: الاحتمالات';
-        else if (name === 'Solution_DirectQuestions_Probabilities') displayName = 'حلول أسئلة مباشرة: الاحتمالات';
         else if (name === 'Exercice1') displayName = 'التمرين 1';
         else if (name === 'Exercice4') displayName = 'التمرين 4';
         else if (name === 'Conclusion') displayName = 'الخاتمة';
@@ -46,8 +44,6 @@ export const loadExercices = async () => {
             'Solution_DirectQuestions_ComplexNumbers': 56,
             'DirectQuestions_Integrals': 57,
             'Solution_DirectQuestions_Integrals': 58,
-            'DirectQuestions_Probabilities': 59,
-            'Solution_DirectQuestions_Probabilities': 60,
             'Exercice1': 70,
             'Exercice4': 71,
             'Conclusion': 90

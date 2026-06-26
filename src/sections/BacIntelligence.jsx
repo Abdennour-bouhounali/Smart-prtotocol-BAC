@@ -35,57 +35,57 @@ const BacIntelligence = () => {
                 <div className="col-header right-h">العمل الاستراتيجي</div>
             </div>
             <div className="step-row">
-                <div className="left-col"> بين أن المستقيم <M>{`\(\Delta\)`}</M> مقارب مائل لـ <M>{`\((C_f)\)`}</M></div>
-                <div className="mid-col"><M>{`\\(\\lim [f(x) - (ax+b)] = 0\\) عند \\(\\pm\\infty\\)`}</M></div>
-                <div className="right-col">هدفنا إظهار أن الفرق ينعدم عند المالانهاية. إذا كانت العبارة من الشكل <M>{`\\(f(x) = ax+b + g(x)\\)`}</M>، يكفي إثبات أن <M>{`\\(\\lim g(x) = 0\\)`}</M>.</div>
+                <div className="left-col">كيف نبرهن أن المستقيم <M>{`\\(\\Delta\\)`}</M> مقارب مائل للمنحنى <M>{`\\((C_f)\\)`}</M>؟</div>
+                <div className="mid-col"><M>{`\\[\\lim_{x \\to \\pm\\infty} [f(x) - (ax+b)] = 0\\]`}</M></div>
+                <div className="right-col">نعيد كتابة <M>{`\\(f(x)\\)`}</M> على الشكل <M>{`\\(ax+b+g(x)\\)`}</M> (بالتحليل أو القسمة)، ثم ندرس نهاية <M>{`\\(g(x)\\)`}</M> عند المالانهاية. إذا كانت تؤول للصفر، فالمقارب المائل محقق.</div>
             </div>
             <div className="step-row">
-                <div className="left-col"> ادرس الوضع النسبي لـ <M>{`\((C_f)\)`}</M> والمستقيم <M>{`\(\Delta\)`}</M></div>
-                <div className="mid-col">دراسة إشارة الفرق <M>{`\\(f(x) - y_\\Delta\\)`}</M></div>
-                <div className="right-col">إذا كان الفرق موجباً، <M>{`\((C_f)\)`}</M> فوق <M>{`\(\Delta\)`}</M>. إذا كان سالباً، <M>{`\((C_f)\)`}</M> تحت <M>{`\(\Delta\)`}</M>. نقاط التقاطع حيث الفرق ينعدم. تأكد أنك تدرس إشارة الفرق على  مجال تعريف الدالة.</div>
+                <div className="left-col">كيف ندرس الوضع النسبي للمنحنى <M>{`\\((C_f)\\)`}</M> بالنسبة للمستقيم <M>{`\\(\\Delta\\)`}</M>؟</div>
+                <div className="mid-col"><M>{`\\(f(x) - y_\\Delta \\gtrless 0\\)`}</M> (إشارة الفرق على المجال)</div>
+                <div className="right-col">نطرح معادلة المستقيم من الدالة ثم ندرس إشارة الفرق من جدول الإشارات. موجب: المنحنى فوق، سالب: تحت، منعدم: تقاطع.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">  بين أن <M>{`\((C_f)\)`}</M> يقبل مركز تناظر <M>{`\\(\\Omega\\)`}</M>(a; b)</div>
+                <div className="left-col">  بين أن <M>{`\\((C_f)\\)`}</M> يقبل مركز تناظر <M>{`\\(\\Omega\\)`}</M>(a; b)</div>
                 <div className="mid-col"><M>{`\\(f(2a-x) + f(x) = 2b\\)`}</M></div>
                 <div className="right-col">يجب التحقق أولاً أن <M>{`\\((2a-x)\\)`}</M> ينتمي لمجال التعريف، ثم الحساب بتبسيط الطرف الأيسر لتصل للثابت <M>{`\\(2b\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">  بين أن المعادلة <M>{`\(f(x)\)`}</M>=0 تقبل حلاً وحيداً <M>{`\\(\\alpha\\)`}</M> في <M>{`\([a, b]\)`}</M></div>
-                <div className="mid-col">مبرهنة القيم المتوسطة </div>
-                <div className="right-col">ثلاث شروط ذهبية: الاستمرارية على المجال <M>{`\([a, b]\)`}</M>، الرتابة التامة (متزايدة أو متناقصة تماماً)، واختلاف إشارة الصور <M>{`\\(f(a) \\times f(b) < 0\\)`}</M>.</div>
+                <div className="left-col">كيف نبرهن أن المعادلة <M>{`\\(f(x) = 0\\)`}</M> تقبل حلاً وحيداً <M>{`\\(\\alpha\\)`}</M> في <M>{`\\([a, b]\\)`}</M>؟</div>
+                <div className="mid-col"><M>{`\\(f(a) \\times f(b) < 0\\)`}</M> مع رتابة <M>{`\\(f\\)`}</M> على <M>{`\\([a, b]\\)`}</M></div>
+                <div className="right-col">ثلاث شروط ذهبية: نتحقق من استمرارية <M>{`\\(f\\)`}</M>، ثم رتابتها التامة (ندرس المشتقة)، ثم اختلاف إشارة الصورتين. مبرهنة القيم المتوسطة تضمن وجود الحل ووحدانيته.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن المنحنى <M>{`\((C_f)\)`}</M> يقبل مماساً <M>{`\((T)\)`}</M> يوازي المستقيم <M>{`\((D)\)`}</M></div>
+                <div className="left-col">بين أن المنحنى <M>{`\\((C_f)\\)`}</M> يقبل مماساً <M>{`\((T)\)`}</M> يوازي المستقيم <M>{`\\(D\\)`}</M></div>
                 <div className="mid-col"><M>{`\\(f'(x_0) = a\\)`}</M> (حيث a ميل D)</div>
                 <div className="right-col">البحث عن فاصلة نقطة التماس <M>{`\\(x_0\\)`}</M>. نحل المعادلة المشتقة تساوي الميل، ثم نكتب معادلة المماس عند تلك النقطة.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن <M>{`\((C_f)\)`}</M> يقبل مماسًا عموديًا (موازٍ لمحور التراتيب)</div>
-                <div className="mid-col"><M>{`\\(\\lim_{x\\to x_0^{}} \\dfrac{f(x)-f(x_0)}{x-x_0} = \\pm\\infty\\)`}</M></div>
-                <div className="right-col">الدالة غير قابلة للاشتقاق عند <M>{`\\(x_0\\)`}</M>، والمنحنى يقبل مماسًا ذا معادلة <M>{`\\(x = x_0\\)`}</M>.</div>
+                <div className="left-col">كيف نبرهن أن <M>{`\\((C_f)\\)`}</M> يقبل مماساً عمودياً عند <M>{`\\(x_0\\)`}</M>؟</div>
+                <div className="mid-col"><M>{`\\[\\lim_{x\\to x_0} \\dfrac{f(x)-f(x_0)}{x-x_0} = \\pm\\infty\\]`}</M></div>
+                <div className="right-col">نحسب نهاية نسبة التزايد عند <M>{`\\(x_0\\)`}</M>. إذا كانت النهاية <M>{`\\(\\pm\\infty\\)`}</M>، فالدالة غير قابلة للاشتقاق هناك والمماس عمودي معادلته <M>{`\\(x = x_0\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن المنحنى <M>{`\((C_f)\)`}</M> يقطع محور الفواصل في نقطتين فاصلتاهما <M>{`\\(\\alpha\\)`}</M> و <M>{`\\(\\beta\\)`}</M></div>
+                <div className="left-col">بين أن المنحنى <M>{`\\((C_f)\\)`}</M> يقطع محور الفواصل في نقطتين فاصلتاهما <M>{`\\(\\alpha\\)`}</M> و <M>{`\\(\\beta\\)`}</M></div>
                 <div className="mid-col">حلان للمعادلة <M>{`\\(f(x) = 0\\)`}</M></div>
                 <div className="right-col">استخدام نظرية القيم المتوسطة مرتين في مجالين مختلفين، أو تحليل العبارة إذا كانت كثيرة حدود.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن <M>{`\(f\)`}</M> دالة زوجية</div>
+                <div className="left-col">بين أن <M>{`\\(f\\)`}</M> دالة زوجية</div>
                 <div className="mid-col"><M>{`\\(f(-x) = f(x)\\)`}</M> والمجال متناظر بالنسبة لـ 0</div>
                 <div className="right-col">التناظر المحوري بالنسبة لمحور التراتيب. تستخدم لاختصار دراسة الدالة على نصف المجال.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن <M>{`\(f\)`}</M> دالة فردية</div>
+                <div className="left-col">بين أن <M>{`\\(f\\)`}</M> دالة فردية</div>
                 <div className="mid-col"><M>{`\\(f(-x) = -f(x)\\)`}</M> والمجال متناظر بالنسبة لـ 0</div>
                 <div className="right-col">التناظر المركزي بالنسبة لمبدأ المعلم O. المنحنى يمر من المبدأ غالباً.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">عين نقط تقاطع <M>{`\((C_f)\)`}</M> مع محور التراتيب</div>
+                <div className="left-col">عين نقط تقاطع <M>{`\\((C_f)\\)`}</M> مع محور التراتيب</div>
                 <div className="mid-col">حساب <M>{`\\(f(0)\\)`}</M></div>
                 <div className="right-col">النقطة هي دائماً <M>{`\\((0;\\ f(0))\\)`}</M> بشرط أن 0 ينتمي لمجال التعريف.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن <M>{`\((C_f)\)`}</M> يقبل نقطة انعطاف <M>{`\(A\)`}</M></div>
+                <div className="left-col">بين أن <M>{`\\((C_f)\\)`}</M> يقبل نقطة انعطاف <M>{`\\(A\\)`}</M></div>
                 <div className="mid-col">
 
                     <M>{`\\(f''(x_0) = 0\\)`}</M> أو تكون غير معرفة عند <M>{`\\(x_0\\)`}</M>  بشرط انتمائها لمجال تعريف الدالة مع <strong>تغيير الإشارة</strong>
@@ -96,69 +96,69 @@ const BacIntelligence = () => {
                 <div className="right-col">نشتق الدالة مرتين . النقطة التي تنعدم عندها المشتقة الثانية وتغير إشارتها هي نقطة انعطاف (تغير التقعر). حالة خاصة : <M>{`\\(f'(x_0) = 0\\)`}</M> و لا تغير الاشارة عند <M>{`\\(x_0\\)`}</M> تعطي نقطة انعطاف افقية</div>
             </div>
             <div className="step-row">
-                <div className="left-col">أثبت أن <M>{`\(f(x)\)`}</M> تكتب من الشكل <M>{`\\(ax + b + \\dfrac{c}{x-d}\\)`}</M></div>
-                <div className="mid-col">المطابقة أو القسمة الإقليدية</div>
-                <div className="right-col">توحيد المقامات للعبارة المعطاة ومطابقة المعاملات مع الدالة الأصلية.</div>
+                <div className="left-col">كيف نثبت أن <M>{`\\(f(x)\\)`}</M> تكتب بالشكل <M>{`\\(ax + b + \\dfrac{c}{x-d}\\)`}</M>؟</div>
+                <div className="mid-col"><M>{`\\(f(x) = ax + b + \\dfrac{c}{x-d}\\)`}</M> (مطابقة المعاملات)</div>
+                <div className="right-col">نجري القسمة الإقليدية على الكسر أو نوحد المقامات في الطرف الأيمن، ثم نطابق مع صورة <M>{`\\(f(x)\\)`}</M> الأصلية للحصول على قيم a, b, c.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن المنحنى <M>{`\((C_f)\)`}</M> يقبل مماسين ميلهما يساوي <M>{`\(k\)`}</M></div>
-                <div className="mid-col">حل المعادلة <M>{`\\(f'(x) = k\\)`}</M></div>
-                <div className="right-col">عدد الحلول هو عدد المماسات. نجد الفواصل ثم نطبق قانون معامل التوجيه.</div>
+                <div className="left-col">كيف نبين أن <M>{`\\((C_f)\\)`}</M> يقبل مماسين ميلهما يساوي <M>{`\\(k\\)`}</M>؟</div>
+                <div className="mid-col"><M>{`\\(f'(x) = k\\)`}</M> لها حلان مختلفان</div>
+                <div className="right-col">نحل المعادلة <M>{`\\(f'(x) = k\\)`}</M>؛ عدد حلولها يعطي عدد المماسات. إذا وجد حلان <M>{`\\(x_1, x_2\\)`}</M> نكتب معادلتي المماسين بالقانون <M>{`\\(y = k(x - x_i) + f(x_i)\\)`}</M>.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">ناقش بيانياً حسب قيم m عدد حلول المعادلة <M>{`\\(f(x) = m\\)`}</M></div>
-                <div className="mid-col">تقاطع <M>{`\((C_f)\)`}</M> مع المستقيم الأفقي <M>{`\\(y = m\\)`}</M></div>
+                <div className="mid-col">تقاطع <M>{`\\((C_f)\\)`}</M> مع المستقيم الأفقي <M>{`\\(y = m\\)`}</M></div>
                 <div className="right-col">المسح العمودي من الأسفل للأعلى. الحلول هي فواصل نقط التقاطع.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">ناقش بيانياً حلول المعادلة <M>{`\\(f(x) = x + m\\)`}</M></div>
-                <div className="mid-col">تقاطع <M>{`\((C_f)\)`}</M> مع مستقيم مائل ميله 1</div>
+                <div className="mid-col">تقاطع <M>{`\\((C_f)\\)`}</M> مع مستقيم مائل ميله 1</div>
                 <div className="right-col">الإزاحة الموازية للمستقيم <M>{`\\(y = x\\)`}</M>. نراقب نقاط التماس والمقاربات الموازية.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن المنحنى <M>{`\((C_f)\)`}</M> تحت المستقيم المقارب <M>{`\(\Delta\)`}</M></div>
+                <div className="left-col">بين أن المنحنى <M>{`\\((C_f)\\)`}</M> تحت المستقيم المقارب <M>{`\\(\\Delta\\)`}</M></div>
                 <div className="mid-col"><M>{`\\(f(x) - y_\\Delta < 0\\)`}</M></div>
                 <div className="right-col">دراسة الإشارة ضرورية. لا تكتفِ بالتعويض بقيم، يجب برهانها لمجال كامل.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">عين القيم الحدية للدالة <M>{`\(f\)`}</M></div>
+                <div className="left-col">عين القيم الحدية للدالة <M>{`\\(f\\)`}</M></div>
                 <div className="mid-col">نبحث عن انعدام المشتقة <M>{`\\(f'(x)=0\\)`}</M> وتغيير إشارتها</div>
                 <div className="right-col">القيمة الكبرى أو الصغرى المحلية. تظهر في جدول التغيرات كـ "قمة" أو "قاع".</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن الدالة متزايدة تماماً على المجال <M>{`\([a, b]\)`}</M></div>
+                <div className="left-col">بين أن الدالة متزايدة تماماً على المجال <M>{`\\([a, b]\\)`}</M></div>
                 <div className="mid-col"><M>{`\\(f'(x) > 0\\)`}</M> لكل <M>{`\\(x \\in [a, b]\\)`}</M></div>
-                <div className="right-col">دراسة إشارة المشتقة. إذا كانت المشتقة موجبة في كل نقطة، فالدالة متزايدة تماماً على المجال <M>{`\([a, b]\)`}</M>.</div>
+                <div className="right-col">دراسة إشارة المشتقة. إذا كانت المشتقة موجبة في كل نقطة، فالدالة متزايدة تماماً على المجال <M>{`\\([a, b]\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">استنتج رسم المنحنى <M>{`\((C_g)\)`}</M> انطلاقاً من <M>{`\((C_f)\)`}</M> بانسحاب</div>
+                <div className="left-col">استنتج رسم المنحنى <M>{`\\((C_g)\\)`}</M> انطلاقاً من <M>{`\\((C_f)\\)`}</M> بانسحاب</div>
                 <div className="mid-col"><M>{`\\(g(x) = f(x-a) + b\\)`}</M></div>
-                <div className="right-col"><M>{`\((C_g)\)`}</M> هو صورة <M>{`\((C_f)\)`}</M> بالانسحاب الذي شعاعه <M>{`\\(\\vec{v}(a;\\ b)\\)`}</M>.</div>
+                <div className="right-col"><M>{`\\((C_g)\\)`}</M> هو صورة <M>{`\\((C_f)\\)`}</M> بالانسحاب الذي شعاعه <M>{`\\(\\vec{v}(a;\\ b)\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن المنحنى <M>{`\((C_f)\)`}</M> يمر بالنقطة <M>{`\(A(x, y)\)`}</M></div>
+                <div className="left-col">بين أن المنحنى <M>{`\\((C_f)\\)`}</M> يمر بالنقطة <M>{`\(A(x, y)\)`}</M></div>
                 <div className="mid-col">التحقق من <M>{`\\(f(x) = y\\)`}</M></div>
                 <div className="right-col">تعويض فاصلة النقطة في دستور الدالة والتأكد من الحصول على ترتيبتها.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">عين معامل توجيه المماس عند <M>{`\(x\)`}</M>=0</div>
+                <div className="left-col">عين معامل توجيه المماس عند <M>{`\\(x = 0\\)`}</M></div>
                 <div className="mid-col">حساب <M>{`\\(f'(0)\\)`}</M></div>
                 <div className="right-col">التعويض المباشر في عبارة المشتقة لإيجاد ميل المماس عند تقاطع محور التراتيب.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن الدالة <M>{`\(f\)`}</M> أصلية للدالة <M>{`\(g\)`}</M></div>
+                <div className="left-col">بين أن الدالة <M>{`\\(f\\)`}</M> أصلية للدالة <M>{`\\(g\\)`}</M></div>
                 <div className="mid-col"><M>{`\\(f'(x) = g(x)\\)`}</M></div>
-                <div className="right-col">اشتقاق <M>{`\(f\)`}</M> والتحقق من تطابقها مع <M>{`\(g\)`}</M>.</div>
+                <div className="right-col">اشتقاق <M>{`\\(f\\)`}</M> والتحقق من تطابقها مع <M>{`\\(g\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">عين صور الأعداد 1، 2، 3 بالدالة <M>{`\(f\)`}</M></div>
+                <div className="left-col">عين صور الأعداد 1، 2، 3 بالدالة <M>{`\\(f\\)`}</M></div>
                 <div className="mid-col">حساب <M>{`\\(f(1),\\ f(2),\\ f(3)\\)`}</M></div>
                 <div className="right-col">تعويض القيم في عبارة الدالة. تساعد في رسم المنحنى بدقة.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن المنحنى يقبل مماساً موازياً لمحور الفواصل</div>
-                <div className="mid-col">حل <M>{`\\(f'(x) = 0\\)`}</M></div>
-                <div className="right-col">إيجاد النقط التي ينعدم عندها ميل المماس (الذروات).</div>
+                <div className="left-col">كيف نبين أن المنحنى يقبل مماساً موازياً لمحور الفواصل؟</div>
+                <div className="mid-col"><M>{`\\(f'(x_0) = 0\\)`}</M> لقيمة <M>{`\\(x_0\\)`}</M> في مجال التعريف</div>
+                <div className="right-col">نحل المعادلة <M>{`\\(f'(x) = 0\\)`}</M>. إذا وجد حل <M>{`\\(x_0\\)`}</M>، فالمماس عند النقطة <M>{`\\((x_0, f(x_0))\\)`}</M> أفقي معادلته <M>{`\\(y = f(x_0)\\)`}</M>.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">استنتج رسم المنحنى <M>{`\\((C_h)\\)`}</M> حيث <M>{`\\(h(x) = |f(x)|\\)`}</M></div>
@@ -216,24 +216,24 @@ const BacIntelligence = () => {
                 <div className="right-col">الميل الجديد هو <M>{`\\(a \\cdot f'(ax_0+b)\\)`}</M> ونقطة التماس تستنتج بتعويض <M>{`\\(x_0\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إثبات وجود نقطة تماس مشتركة بين <M>{`\\((C_f)\\)`}</M> و <M>{`\\((C_g)\\)`}</M></div>
+                <div className="left-col">أثبت وجود نقطة تماس مشتركة بين <M>{`\\((C_f)\\)`}</M> و <M>{`\\((C_g)\\)`}</M></div>
                 <div className="mid-col">حل الجملة: <M>{`\\(f(x)=g(x)\\)`}</M> و <M>{`\\(f'(x)=g'(x)\\)`}</M></div>
                 <div className="right-col">المنحنيان يتقاطعان في نقطة ولهما نفس الميل (نفس المماس) في تلك النقطة.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">حصر الحل <M>{`\\(\\alpha\\)`}</M> بدقة <M>{`\\(\\epsilon\\)`}</M> (طريقة التنصيف)</div>
+                <div className="left-col">احصر الحل <M>{`\\(\\alpha\\)`}</M> بدقة <M>{`\\(\\epsilon\\)`}</M> (طريقة التنصيف)</div>
                 <div className="mid-col">حساب مركز المجال واختبار إشارة الصورة</div>
                 <div className="right-col">نقسم المجال <M>{`\\([a,b]\\)`}</M> على 2، ونحسب صورة المنتصف لتقليص المجال الذي يحوي <M>{`\\(\\alpha\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إيجاد دالة مساعدة لتحديد وضع نسبي صعب</div>
-                <div className="mid-col">نفرض <M>{`\\(h(x) = f(x) - y_T\\)`}</M> وندرسها</div>
-                <div className="right-col">إذا كان الفرق معقداً، نشتقه كأنه دالة مستقلة لنعرف إشارته من جدول التغيرات.</div>
+                <div className="left-col">كيف ندرس الوضع النسبي بين منحنيين حين يصعب تحليل الفرق مباشرة؟</div>
+                <div className="mid-col"><M>{`\\(h(x) = f(x) - g(x) \\gtrless 0\\)`}</M> على المجال</div>
+                <div className="right-col">نعتبر <M>{`\\(h(x) = f(x) - g(x)\\)`}</M> دالة مستقلة ندرس تغيراتها (نشتقها ونملأ الجدول) لتحديد إشارتها على كل مجال فرعي.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">استغلال متراجحة سابقة <M>{`\\(f(x) \\ge 2x\\)`}</M></div>
-                <div className="mid-col">الاستنتاج المباشر دون حسابات</div>
-                <div className="right-col">تستخدم غالباً في الجزء الأخير لتعيين الوضع النسبي أو استنتاج نهاية متتالية.</div>
+                <div className="left-col">كيف نستغل متراجحة أثبتناها مسبقاً <M>{`\\(f(x) \\ge 2x\\)`}</M> لاستنتاج نتيجة جديدة؟</div>
+                <div className="mid-col"><M>{`\\(f(x) \\ge 2x\\)`}</M> (نتيجة جاهزة من جزء سابق)</div>
+                <div className="right-col">هذا النمط كلاسيكي في البكالوريا: الجزء الأخير يطلب استنتاج وضع نسبي أو نهاية متتالية باستخدام متراجحة تم إثباتها في جزء سابق مباشرة دون حسابات جديدة.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">استنتج رسم المنحنى للدالة العكسية <M>{`\\(f^{-1}\\)`}</M></div>
@@ -241,7 +241,7 @@ const BacIntelligence = () => {
                 <div className="right-col">النقطة <M>{`\\((x,y)\\)`}</M> تصبح <M>{`\\((y,x)\\)`}</M> والمماس الأفقي يصبح مماسًا عموديًا.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">برهان وجود مماسين متوازيين لدالة فردية</div>
+                <div className="left-col">برهن وجود مماسين متوازيين لدالة فردية</div>
                 <div className="mid-col">التحقق من <M>{`\\(f'(x) = f'(-x)\\)`}</M></div>
                 <div className="right-col">مشتقة الدالة الفردية هي دالة زوجية، وبالتالي النقطتان المتناظرتان لهما نفس الميل.</div>
             </div>
@@ -260,8 +260,8 @@ const BacIntelligence = () => {
                 <div className="col-header right-h">العمل الاستراتيجي</div>
             </div>
             <div className="step-row">
-                <div className="left-col">أحسب نهايات <M>{`\(f\)`}</M> عند أطراف مجموعة تعريفها</div>
-                <div className="mid-col"><M>{`\\(\\lim f(x)\\)`}</M> عند <M>{`\\(\\pm\\infty\\)`}</M> وعند القيم الممنوعة</div>
+                <div className="left-col">أحسب نهايات <M>{`\\(f\\)`}</M> عند أطراف مجموعة تعريفها</div>
+                <div className="mid-col"><M>{`\\[\\lim f(x)\\]`}</M> عند <M>{`\\(\\pm\\infty\\)`}</M> وعند القيم الممنوعة</div>
                 <div className="right-col">تحديد نوع المقاربات (أفقية أو عمودية) بناءً على النتائج.</div>
             </div>
             <div className="step-row">
@@ -270,49 +270,50 @@ const BacIntelligence = () => {
                 <div className="right-col">استراتيجيات: التحليل والمقارنة (أكبر أس)، المرافق (في الجذور)، أو التزايد المقارن (في الأسية واللوغاريتمية).</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن المستقيم ذو المعادلة <M>{`\(x\)`}</M>=a مقارب عمودي للتمثيل البياني</div>
-                <div className="mid-col"><M>{`\\(\\lim f(x) = \\pm\\infty\\)`}</M> لما <M>{`\\(x \\to a\\)`}</M></div>
+                <div className="left-col">بين أن المستقيم ذو المعادلة <M>{`\\(x\\)`}</M>=a مقارب عمودي للتمثيل البياني</div>
+                <div className="mid-col"><M>{`\\[\\lim_{x \\to a^{\\pm}} f(x) = \\pm\\infty\\]`}</M></div>
                 <div className="right-col">عادة ما يكون a قيمة تعدم المقام. ندرس النهاية بقيم كبرى وصغرى بجدول إشارة المقام.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن المستقيم <M>{`\(y\)`}</M>=b مقارب أفقي للمنحنى بجوار اللانهاية</div>
-                <div className="mid-col"><M>{`\\(\\lim f(x) = b\\)`}</M> لما <M>{`\\(x \\to \\pm\\infty\\)`}</M></div>
+                <div className="left-col">بين أن المستقيم <M>{`\\(y\\)`}</M>=b مقارب أفقي للمنحنى بجوار اللانهاية</div>
+                <div className="mid-col"><M>{`\\[\\lim_{x \\to \\pm\\infty} f(x) = b\\]`}</M></div>
                 <div className="right-col">دليل على أن الدالة تستقر عند قيمة ثابتة في اللانهاية.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">استعمل مبرهنة التزايد المقارن </div>
-                <div className="mid-col"><M>{`\\(\\lim \\dfrac{e^x}{x^n} = +\\infty\\)`}</M></div>
+                <div className="mid-col"><M>{`\\[\\lim_{x \\to \\infty} \\dfrac{e^x}{x^n} = +\\infty\\]`}</M></div>
                 <div className="right-col">المقارنة بين سرعة نمو الدالة الأسية والقوى. الأسية "تغلب" في اللانهاية.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">أحسب النهاية باستعمال تعريف العدد المشتق</div>
-                <div className="mid-col"><M>{`\\(\\lim_{x \\to a} \\dfrac{f(x)-f(a)}{x-a} = f'(a)\\)`}</M></div>
+                <div className="mid-col"><M>{`\\[\\lim_{x \\to a} \\dfrac{f(x)-f(a)}{x-a} = f'(a)\\]`}</M></div>
                 <div className="right-col">تستخدم غالباً لفصل 0/0 في الدوال الدائرية والأسية واللوغاريتمية عند نقطة محددة.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن <M>{`\(f(x)\)`}</M> ليس لها نهاية عند <M>{`\\(+\\infty\\)`}</M></div>
+                <div className="left-col">بين أن <M>{`\\(f(x)\\)`}</M> ليس لها نهاية عند <M>{`\\(+\\infty\\)`}</M></div>
                 <div className="mid-col">النهاية غير موجودة (تذبذب)</div>
                 <div className="right-col">استخدام مبرهنة الحصر أو مقارنتها بدوال جيبية تتغير قيمها باستمرار.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">أحسب نهاية الدالة المركبة <M>{`\\(f(g(x))\\)`}</M></div>
                 <div className="mid-col">مبرهنة نهاية مركب دالتين</div>
-                <div className="right-col">نضع <M>{`\\(u = g(x)\\)`}</M>، فإذا كان <M>{`\\(\\lim g(x) = L\\)`}</M>، نحسب <M>{`\\(\\lim f(u)\\)`}</M> لما <M>{`\\(u \\to L\\)`}</M>.</div>
+                <div className="right-col">نضع <M>{`\\(u = g(x)\\)`}</M>، فإذا كان <M>{`\\[\\lim g(x) = L\\]`}</M>، نحسب <M>{`\\[\\lim_{u \\to L} f(u)\\]`}</M></div>
             </div>
             <div className="step-row">
                 <div className="left-col">احسب النهاية بـ "مبرهنة الحصر" </div>
                 <div className="mid-col"><M>{`\\(g(x) \\leq f(x) \\leq h(x)\\)`}</M></div>
-                <div className="right-col">إذا كانت نهاية <M>{`\(g\)`}</M> و <M>{`\(h\)`}</M> متساويتين (<M>{`\(L\)`}</M>)، فإن نهاية <M>{`\(f\)`}</M> هي <M>{`\(L\)`}</M> بالضرورة.</div>
+                <div className="right-col">إذا كانت نهاية <M>{`\\(g\\)`}</M> و <M>{`\\(h\\)`}</M> متساويتين (<M>{`\\(L\\)`}</M>)، فإن نهاية <M>{`\\(f\\)`}</M> هي <M>{`\\(L\\)`}</M> بالضرورة.</div>
             </div>
 
             <div className="step-row">
-                <div className="left-col">أثبت أن <M>{`\\(\\lim_{x \\to -\\infty} x \\cdot e^x = 0\\)`}</M></div>
+                <div className="left-col">أثبت أن <M>{`\\[\\lim_{x \\to -\\infty} x \\cdot e^x = 0
+\\]`}</M></div>
                 <div className="mid-col">تزايد مقارن عند <M>{`\\(-\\infty\\)`}</M></div>
                 <div className="right-col">تغيير المتغير <M>{`\\(X = -x\\)`}</M> يقلب المسألة لتصبح تزايداً مقارناً شهيراً عند <M>{`\\(+\\infty\\)`}</M>.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">احسب نهاية <M>{`\\(\\dfrac{\\sqrt{x^2+1}}{x}\\)`}</M> عند <M>{`\\(+\\infty\\)`}</M></div>
-                <div className="mid-col">إخراج <M>{`\(x\)`}</M> كعامل مشترك</div>
+                <div className="mid-col">إخراج <M>{`\\(x\\)`}</M> كعامل مشترك</div>
                 <div className="right-col">نخرج <M>{`\\(|x|\\)`}</M> من تحت الجذر، وبما أننا بجوار <M>{`\\(+\\infty\\)`}</M> فإن <M>{`\\(|x|=x\\)`}</M> وتختزل.</div>
             </div>
             <div className="step-row">
@@ -327,66 +328,66 @@ const BacIntelligence = () => {
             </div>
             <div className="step-row">
                 <div className="left-col">ادرس الفروع اللانهائية للمنحنى <M>{`\\((C_f)\\)`}</M></div>
-                <div className="mid-col">حساب <M>{`\\(\\lim_{x \\to \\pm\\infty} \\dfrac{f(x)}{x}\\)`}</M></div>
-                <div className="right-col">إذا كانت النهاية 0 فهو فرع شلجمي باتجاه الفواصل، وإذا كانت <M>{`\\(\\pm\\infty\\)`}</M> باتجاه التراتيب، وإذا كانت <M>{`\\(a\\)`}</M> نحسب <M>{`\\(\\lim [f(x)-ax]\\)`}</M>.</div>
+                <div className="mid-col">حساب <M>{`\\[\\lim_{x \\to \\pm\\infty} \\dfrac{f(x)}{x}\\]`}</M></div>
+                <div className="right-col">
+                    إذا كانت النهاية 0 فهو فرع مكافئ لمحور الفواصل،
+                    وإذا كانت <M>{`\\(\\pm\\infty\\)`}</M> فهو فرع مكافئ لمحور التراتيب،
+                    وإذا كانت <M>{`\\(a\\)`}</M> نحسب <M>{`\\[\\lim [f(x)-ax]\\]`}</M>
+                </div>
             </div>
             <div className="step-row">
-                <div className="left-col">أحسب النهاية المعقدة <M>{`\\(\\lim_{x \\to +\\infty} x \\ln\\left(1 + \\dfrac{1}{x}\\right)\\)`}</M></div>
+                <div className="left-col">أحسب النهاية  <M>{`\\[\\lim_{x \\to +\\infty} x \\ln\\left(1 + \\dfrac{1}{x}\\right)\\]`}</M></div>
                 <div className="mid-col">تغيير المتغير والعودة لنهاية شهيرة</div>
-                <div className="right-col">نضع <M>{`\\(t = \\dfrac{1}{x}\\)`}</M>، فتؤول <M>{`\\(t\\)`}</M> إلى الصفر، وتصبح النهاية <M>{`\\(\\lim_{t \\to 0} \\dfrac{\\ln(1+t)}{t} = 1\\)`}</M>. (فخ بكالوريا متكرر).</div>
+                <div className="right-col">نضع <M>{`\\(t = \\dfrac{1}{x}\\)`}</M>، فتؤول <M>{`\\(t\\)`}</M> إلى الصفر، وتصبح النهاية <M>{`\\[\\lim_{t \\to 0} \\dfrac{\\ln(1+t)}{t} = 1\\]`}</M> (فخ بكالوريا متكرر).</div>
             </div>
-            <div className="step-row">
-                <div className="left-col">أحسب النهاية باستعمال المكاملة أو المجاميع</div>
-                <div className="mid-col">مجاميع ريمان (مستوى متقدم)</div>
-                <div className="right-col">نهاية مجموع مثل <M>{`\\(\\lim \\dfrac{1}{n} \\sum f\\left(\\dfrac{k}{n}\\right)\\)`}</M> هي بالضبط التكامل <M>{`\\(\\int_0^1 f(x) dx\\)`}</M>.</div>
-            </div>
+
             <div className="step-row">
                 <div className="left-col">أزل حالة عدم التعيين 0/0 لكثيرة حدود</div>
                 <div className="mid-col">التحليل باستخدام القسمة الإقليدية أو هورنر</div>
                 <div className="right-col">إذا انعدم بسط ومقام عند <M>{`\\(a\\)`}</M>، نقسم كلاهما على <M>{`\\((x-a)\\)`}</M> ثم نختزل.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">استخدام المرافق مرتين لإزالة حالة <M>{`\\(\\infty - \\infty\\)`}</M></div>
+                <div className="left-col">استخدم المرافق مرتين لإزالة حالة <M>{`\\(\\infty - \\infty\\)`}</M></div>
                 <div className="mid-col">ضرب وقسمة بالمرافق متتالياً</div>
                 <div className="right-col">تستخدم مع الجذور المربعة المعقدة حيث التحليل البسيط لا ينفع.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">نهاية تتضمن القيمة المطلقة عند الصفر</div>
+                <div className="left-col">احسب نهاية تتضمن القيمة المطلقة عند الصفر</div>
                 <div className="mid-col">دراسة النهاية يميناً ويساراً</div>
                 <div className="right-col">من اليمين نكتب <M>{`\\(x\\)`}</M> ومن اليسار نكتب <M>{`\\(-x\\)`}</M>، وإذا اختلفتا فالنهاية غير موجودة.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">نهاية تتضمن <M>{`\\(e^{-x}\\)`}</M> عند <M>{`\\(-\\infty\\)`}</M></div>
+                <div className="left-col">احسب نهاية تتضمن <M>{`\\(e^{-x}\\)`}</M> عند <M>{`\\(-\\infty\\)`}</M></div>
                 <div className="mid-col">استخراج العامل المشترك الأقوى</div>
                 <div className="right-col">الخطأ الشائع هو استخراج <M>{`\\(x\\)`}</M>. الأصح استخراج <M>{`\\(e^{-x}\\)`}</M> لأنه الأقوى عند <M>{`\\(-\\infty\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">نهاية <M>{`\\(\\dfrac{\\ln(x)}{x^n}\\)`}</M> عند <M>{`\\(+\\infty\\)`}</M></div>
+                <div className="left-col">احسب نهاية <M>{`\\(\\dfrac{\\ln(x)}{x^n}\\)`}</M> عند <M>{`\\(+\\infty\\)`}</M></div>
                 <div className="mid-col">نهاية شهيرة = 0</div>
                 <div className="right-col">القوة دائماً تغلب اللوغاريتم في المالانهاية، مهما كان الأس موجباً.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">كسر يحوي أسية وكثيرة حدود عند <M>{`\\(+\\infty\\)`}</M></div>
+                <div className="left-col">احسب نهاية كسر يحوي أسية وكثيرة حدود عند <M>{`\\(+\\infty\\)`}</M></div>
                 <div className="mid-col">استخراج الأسية كعامل مشترك بسطاً ومقاماً</div>
                 <div className="right-col">يساعد في ظهور نهايات شهيرة من الشكل <M>{`\\(\\dfrac{x}{e^x}\\)`}</M> التي تؤول للصفر.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">النهاية عند نقطة عدم التعريف (المقارب العمودي المزدوج)</div>
+                <div className="left-col">احسب النهاية عند نقطة عدم التعريف (المقارب العمودي المزدوج)</div>
                 <div className="mid-col">إذا كان المقام تربيعاً <M>{`\\((x-a)^2\\)`}</M></div>
                 <div className="right-col">النهاية يميناً ويساراً ستكونان متساويتين (نفس الإشارة + أو -) لأن التربيع موجب دوماً.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">نهاية <M>{`\\(\\dfrac{\\cos x}{x}\\)`}</M> أو <M>{`\\(\\dfrac{\\sin x}{x}\\)`}</M> عند المالانهاية</div>
+                <div className="left-col">احسب نهاية <M>{`\\(\\dfrac{\\cos x}{x}\\)`}</M> أو <M>{`\\(\\dfrac{\\sin x}{x}\\)`}</M> عند المالانهاية</div>
                 <div className="mid-col">مبرهنة الحصر المطلق</div>
                 <div className="right-col">بما أن <M>{`\\(-1 \\le \\cos x \\le 1\\)`}</M>، نقسم على <M>{`\\(x\\)`}</M> ونستنتج أن النهاية هي الصفر.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">نهاية الفرق <M>{`\\(f(x) - (ax+b)\\)`}</M> في الدالة اللوغاريتمية</div>
+                <div className="left-col">احسب نهاية الفرق <M>{`\\(f(x) - (ax+b)\\)`}</M> في الدالة اللوغاريتمية</div>
                 <div className="mid-col">التأكد من المقارب المائل</div>
                 <div className="right-col">غالباً ما يطلب استخراج <M>{`\\(x\\)`}</M> من اللوغاريتم وتطبيق خواص <M>{`\\(\\ln(ab)\\)`}</M> للوصول للصفر.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إثبات أن للمنحنى مقارباً مائلاً دون إعطاء معادلته</div>
+                <div className="left-col">أثبت أن للمنحنى مقارباً مائلاً دون إعطاء معادلته</div>
                 <div className="mid-col">كتابة الدالة على الشكل <M>{`\\(f(x) = ax+b + g(x)\\)`}</M></div>
                 <div className="right-col">أجرِ القسمة الإقليدية أو فكك الكسر لتستنتج <M>{`\\(y = ax+b\\)`}</M> بنفسك.</div>
             </div>
@@ -400,7 +401,7 @@ const BacIntelligence = () => {
                 <div className="col-header right-h">العمل الاستراتيجي</div>
             </div>
             <div className="step-row">
-                <div className="left-col">ادرس قابلية اشتقاق <M>{`\(f\)`}</M> عند <M>{`\\(x_0\\)`}</M></div>
+                <div className="left-col">ادرس قابلية اشتقاق <M>{`\\(f\\)`}</M> عند <M>{`\\(x_0\\)`}</M></div>
                 <div className="mid-col">
                     <M>{`\\[
   \\begin{aligned}
@@ -421,15 +422,15 @@ const BacIntelligence = () => {
                 <div className="right-col">أهم قانون في الدوال. يحتاج لحسابين: الميل <M>{`\\(f'(1)\\)`}</M> والصورة <M>{`\\(f(1)\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">أثبت أن <M>{`\(f\)`}</M> دالة أصلية لـ <M>{`\(g\)`}</M> على مجال I</div>
-                <div className="mid-col"><M>{`\\(f'(x) = g(x)\\)`}</M> لكل <M>{`\(x\)`}</M> من I</div>
+                <div className="left-col">أثبت أن <M>{`\\(f\\)`}</M> دالة أصلية لـ <M>{`\\(g\\)`}</M> على مجال I</div>
+                <div className="mid-col"><M>{`\\(f'(x) = g(x)\\)`}</M> لكل <M>{`\\(x\\)`}</M> من I</div>
                 <div className="right-col">لا تضيع الوقت في التكامل إذا كان السؤال يطلب التحقق فقط. اشتق العبارة المعطاة.</div>
             </div>
 
             <div className="step-row">
                 <div className="left-col">اشتق الدالة اللوغاريتمية <M>{`\\(\\ln(u(x))\\)`}</M></div>
                 <div className="mid-col"><M>{`\\(\\dfrac{u'(x)}{u(x)}\\)`}</M></div>
-                <div className="right-col">تأكد أن الدالة <M>{`\(u(x)\)`}</M> موجبة في المجال. إشارة المشتقة تتبع <M>{`\(u\)`}</M>' و <M>{`\(u\)`}</M>.</div>
+                <div className="right-col">تأكد أن الدالة <M>{`\(u(x)\)`}</M> موجبة في المجال. إشارة المشتقة تتبع <M>{`\\(u\\)`}</M>' و <M>{`\\(u\\)`}</M>.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">اشتق الدالة الأسية <M>{`\\(e^{u(x)}\\)`}</M></div>
@@ -438,14 +439,14 @@ const BacIntelligence = () => {
             </div>
 
             <div className="step-row">
-                <div className="left-col">عين معامل توجيه المماس عند نقطة تقاطع <M>{`\((C_f)\)`}</M> مع حامل محور التراتيب</div>
+                <div className="left-col">عين معامل توجيه المماس عند نقطة تقاطع <M>{`\\((C_f)\\)`}</M> مع حامل محور التراتيب</div>
                 <div className="mid-col">حساب <M>{`\\(f'(0)\\)`}</M></div>
                 <div className="right-col">النقطة هي دائماً <M>{`\\((0,\\ f(0))\\)`}</M> والميل هو <M>{`\\(f'(0)\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن <M>{`\(f\)`}</M> قابلة للاشتقاق على مجال التعريف</div>
+                <div className="left-col">بين أن <M>{`\\(f\\)`}</M> قابلة للاشتقاق على مجال التعريف</div>
                 <div className="mid-col">تبرير الاستمرارية والاشتقاق للعمليات</div>
-                <div className="right-col">نذكر أن <M>{`\(f\)`}</M> عبارة عن مجموع/جداء دوال مرجعية قابلة للاشتقاق (مثل كثيرة حدود، كسر، أسية).</div>
+                <div className="right-col">نذكر أن <M>{`\\(f\\)`}</M> عبارة عن مجموع/جداء دوال مرجعية قابلة للاشتقاق (مثل كثيرة حدود، كسر، أسية).</div>
             </div>
 
             <div className="step-row">
@@ -456,12 +457,12 @@ const BacIntelligence = () => {
             <div className="step-row">
                 <div className="left-col">اشتق دالة الجذر <M>{`\\(\\sqrt{u(x)}\\)`}</M></div>
                 <div className="mid-col"><M>{`\\(\\dfrac{u'(x)}{2\\sqrt{u(x)}}\\)`}</M></div>
-                <div className="right-col">الدالة <M>{`\(u\)`}</M> يجب أن تكون موجبة تماماً لضمان قابلية الاشتقاق.</div>
+                <div className="right-col">الدالة <M>{`\\(u\\)`}</M> يجب أن تكون موجبة تماماً لضمان قابلية الاشتقاق.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">استنتج إشارة المشتقة من جدول التغيرات للدالة <M>{`\(g\)`}</M></div>
-                <div className="mid-col">ملاحظة تزايد وتناقص <M>{`\(g\)`}</M></div>
-                <div className="right-col">إذا كانت <M>{`\(g\)`}</M> دالة مساعدة، فإن إشارتها(فوق أو تحت محور الفواصل) تحدد اتجاه تغير <M>{`\(f\)`}</M>.</div>
+                <div className="left-col">استنتج إشارة المشتقة من جدول التغيرات للدالة <M>{`\\(g\\)`}</M></div>
+                <div className="mid-col">ملاحظة تزايد وتناقص <M>{`\\(g\\)`}</M></div>
+                <div className="right-col">إذا كانت <M>{`\\(g\\)`}</M> دالة مساعدة، فإن إشارتها(فوق أو تحت محور الفواصل) تحدد اتجاه تغير <M>{`\\(f\\)`}</M>.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">أوجد القيمة الحدية الصغرى للدالة</div>
@@ -475,7 +476,7 @@ const BacIntelligence = () => {
             </div>
             <div className="step-row">
                 <div className="left-col">بين أن الدالة <M>{`\\(f\\)`}</M> تقبل تمديداً بالاستمرارية عند <M>{`\\(x_0\\)`}</M></div>
-                <div className="mid-col">حساب <M>{`\\(\\lim_{x \\to x_0} f(x) = l\\)`}</M> حيث <M>{`\\(l\\)`}</M> عدد حقيقي</div>
+                <div className="mid-col">حساب <M>{`\\[\\lim_{x \\to x_0} f(x) = l\\]`}</M> حيث <M>{`\\(l\\)`}</M> عدد حقيقي</div>
                 <div className="right-col">بما أن النهاية منتهية، التمديد هو الدالة <M>{`\\(g\\)`}</M> حيث <M>{`\\(g(x) = f(x)\\)`}</M> و <M>{`\\(g(x_0) = l\\)`}</M>.</div>
             </div>
             <div className="step-row">
@@ -494,47 +495,47 @@ const BacIntelligence = () => {
                 <div className="right-col">الاشتقاق يختلف حسب المجال. تدرس قابلية الاشتقاق عند نقطة الانعدام للتأكد من وجود نقطة زاوية.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إثبات أن المشتقة تنعدم دون تغيير الإشارة</div>
+                <div className="left-col">أثبت أن المشتقة تنعدم دون تغيير الإشارة</div>
                 <div className="mid-col">التعرف على نقطة الانعطاف الأفقية</div>
                 <div className="right-col">المماس في هذه النقطة يكون أفقياً ويخترق المنحنى (مثال <M>{`\\(y = x^3\\)`}</M> عند الصفر).</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إثبات علاقة تفاضلية بين الدالة ومشتقتها</div>
+                <div className="left-col">أثبت علاقة تفاضلية بين الدالة ومشتقتها</div>
                 <div className="mid-col">المعادلات التفاضلية الخفية <M>{`\\(f'(x) = af(x) + b\\)`}</M></div>
                 <div className="right-col">نعوض عبارة <M>{`\\(f\\)`}</M> في الطرف الثاني لنثبت أنها تساوي المشتقة، لتسهيل استنتاج دوال أصلية.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">دراسة إشارة المشتقة الثانية <M>{`\\(f''(x)\\)`}</M></div>
+                <div className="left-col">ادرس إشارة المشتقة الثانية <M>{`\\(f''(x)\\)`}</M></div>
                 <div className="mid-col">إثبات وجود نقطة انعطاف مخفية</div>
                 <div className="right-col">المشتقة الثانية تتحكم في تقعر المنحنى، وانعدامها مع تغيير الإشارة يعني نقطة انعطاف.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">استنتاج مشتقة الدالة العكسية <M>{`\\((f^{-1})'(y_0)\\)`}</M></div>
+                <div className="left-col">استنتج مشتقة الدالة العكسية <M>{`\\((f^{-1})'(y_0)\\)`}</M></div>
                 <div className="mid-col">استخدام العلاقة <M>{`\\(\\dfrac{1}{f'(x_0)}\\)`}</M></div>
                 <div className="right-col">حيث <M>{`\\(f(x_0) = y_0\\)`}</M>. المماس للدالة العكسية ميله هو مقلوب ميل الدالة الأصلية.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">مشتقة الدالة المركبة المعقدة <M>{`\\(h(x) = f(g(x))\\)`}</M></div>
+                <div className="left-col">احسب مشتقة الدالة المركبة المعقدة <M>{`\\(h(x) = f(g(x))\\)`}</M></div>
                 <div className="mid-col">تطبيق قانون التسلسل <M>{`\\(g'(x) \\cdot f'(g(x))\\)`}</M></div>
                 <div className="right-col">انتبه جيدا: تشتق ما بداخل القوس، وتضربه في مشتقة الدالة الخارجية المطبقة على نفس القوس.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إثبات أن المشتقة تحافظ على إشارة ثابتة</div>
+                <div className="left-col">أثبت أن المشتقة تحافظ على إشارة ثابتة</div>
                 <div className="mid-col">حساب المميز أو تجميع المربعات</div>
                 <div className="right-col">في كثيرة حدود من الدرجة 2، إذا كان المميز سالباً فالإشارة ثابتة وتتبع معامل <M>{`\\(x^2\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">استخدام مبرهنة رول لإثبات انعدام المشتقة</div>
+                <div className="left-col">استخدم مبرهنة رول لإثبات انعدام المشتقة</div>
                 <div className="mid-col">التحقق من أن <M>{`\\(f(a) = f(b)\\)`}</M></div>
                 <div className="right-col">إذا كانت الدالة مستمرة وقابلة للاشتقاق ولها نفس الصورة في نقطتين، فالمشتقة تنعدم حتماً بينهما.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">التفسير الهندسي لنهاية نسبة التزايد المتناظرة</div>
-                <div className="mid-col"><M>{`\\(\\lim \\dfrac{f(x_0+h)-f(x_0-h)}{2h}\\)`}</M></div>
+                <div className="left-col">ما هو التفسير الهندسي لنهاية نسبة التزايد المتناظرة</div>
+                <div className="mid-col"><M>{`\\[\\lim \\dfrac{f(x_0+h)-f(x_0-h)}{2h}\\]`}</M></div>
                 <div className="right-col">تمثل العدد المشتق <M>{`\\(f'(x_0)\\)`}</M> وهي تقريب للمماس باستخدام وتر متناظر.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">مشتقة دالة تحوي تكاملاً <M>{`\\(F(x) = \\int_a^x f(t) dt\\)`}</M></div>
+                <div className="left-col">احسب مشتقة دالة تحوي تكاملاً <M>{`\\(F(x) = \\int_a^x f(t) dt\\)`}</M></div>
                 <div className="mid-col">تطبيق المبرهنة الأساسية <M>{`\\(F'(x) = f(x)\\)`}</M></div>
                 <div className="right-col">الدالة المحددة بالتكامل مشتقتها هي ما بداخل التكامل (بشرط اتصال الدالة المكاملة).</div>
             </div>
@@ -547,53 +548,53 @@ const BacIntelligence = () => {
                 <div className="col-header right-h">العمل الاستراتيجي</div>
             </div>
             <div className="step-row">
-                <div className="left-col">شكل جدول تغيرات الدالة <M>{`\(f\)`}</M></div>
+                <div className="left-col">شكل جدول تغيرات الدالة <M>{`\\(f\\)`}</M></div>
                 <div className="mid-col">تجميع النهايات، المشتقة، والإشارات في جدول واحد</div>
                 <div className="right-col">الجدول هو "بطاقة تعريف" الدالة. تأكد من توافق النهايات مع الأسهم (مثلاً: سهم يرتفع من −∞ لـ 5 منطقي).</div>
             </div>
             <div className="step-row">
-                <div className="left-col">استنتج اتجاه تغير الدالة <M>{`\(g\)`}</M> حيث <M>{`\\(g(x) = f(x^2)\\)`}</M></div>
-                <div className="mid-col">بما أنه استنتاج يعني باستعمال تغيرات الدالة <M>{`\(f\)`}</M> , وباستعمال تغيرات الدالة <M>{`\\(x^2\\)`}</M> نستنتج تغيرات الدالة <M>{`\(g\)`}</M></div>
-                <div className="right-col"><M>{`\(g\)`}</M> لها نفس اتجاه <M>{`\(f\)`}</M> على <M>{`\\(]0, +\\infty[\\)`}</M> و اتجاه  معاكس ل  <M>{`\(f\)`}</M> على <M>{`\\(]-\\infty, 0[\\)`}</M></div>
+                <div className="left-col">استنتج اتجاه تغير الدالة <M>{`\\(g\\)`}</M> حيث <M>{`\\(g(x) = f(x^2)\\)`}</M></div>
+                <div className="mid-col">بما أنه استنتاج يعني باستعمال تغيرات الدالة <M>{`\\(f\\)`}</M> , وباستعمال تغيرات الدالة <M>{`\\(x^2\\)`}</M> نستنتج تغيرات الدالة <M>{`\\(g\\)`}</M></div>
+                <div className="right-col"><M>{`\\(g\\)`}</M> لها نفس اتجاه <M>{`\\(f\\)`}</M> على <M>{`\\(]0, +\\infty[\\)`}</M> و اتجاه  معاكس ل  <M>{`\\(f\\)`}</M> على <M>{`\\(]-\\infty, 0[\\)`}</M></div>
             </div>
             <div className="step-row">
-                <div className="left-col">عين القيم الحدية لـ <M>{`\(f\)`}</M> على <M>{`\([0, 2]\)`}</M></div>
+                <div className="left-col">عين القيم الحدية لـ <M>{`\\(f\\)`}</M> على <M>{`\([0, 2]\)`}</M></div>
                 <div className="mid-col">أكبر وأصغر قيمة في جدول التغيرات لهذا المجال</div>
                 <div className="right-col">تحقق من أطراف المجال والصور عند انعدام المشتقة.</div>
             </div>
 
             <div className="step-row">
-                <div className="left-col">استنتج إشارة <M>{`\(f(x)\)`}</M> من جدول التغيرات</div>
+                <div className="left-col">استنتج إشارة <M>{`\\(f(x)\\)`}</M> من جدول التغيرات</div>
                 <div className="mid-col">ملاحظة أماكن عبور الصفر في الصور</div>
                 <div className="right-col">إذا كان <M>{`\\(Cf\\)`}</M> تحت محور الفواصل فإن <M>{`\\(f(x) < 0\\)`}</M> و إذا كان Cf فوق محور الفواصل فإن <M>{`\\(f(x) > 0\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">عين حصراً لـ <M>{`\(f(x)\)`}</M> على المجال <M>{`\([1, 2]\)`}</M></div>
+                <div className="left-col">عين حصراً لـ <M>{`\\(f(x)\\)`}</M> على المجال <M>{`\([1, 2]\)`}</M></div>
                 <div className="mid-col">استخدام القيمتين الصغرى والكبرى للدالة في هذا الجزء من الجدول</div>
                 <div className="right-col">الحصر يكون من الشكل <M>{`\\(f(a) \\leq f(x) \\leq f(b)\\)`}</M> إذا كانت الدالة رتيبة.</div>
             </div>
             <div className="step-row">
-                <div className="left-col"> يدرس في الجزء الأول تغيرات و اشارة <M>{`\(g(x)\)`}</M> و يطلب دراسة اشارة و تغيرات <M>{`\(f(x)\)`}</M> في الجزء الثاني من التمرين</div>
-                <div className="mid-col">استخدام إشارة <M>{`\(g\)`}</M> في دراسة تغيرات <M>{`\(f\)`}</M></div>
-                <div className="right-col">نمط كلاسيكي: "ادرس تغيرات <M>{`\(g\)`}</M>" ثم "استنتج إشارة <M>{`\(g\)`}</M>" ثم "بين أن <M>{`\(f'(x)\)`}</M> من إشارة <M>{`\(g\)`}</M>".</div>
+                <div className="left-col"> يدرس في الجزء الأول تغيرات و اشارة <M>{`\(g(x)\)`}</M> و يطلب دراسة اشارة و تغيرات <M>{`\\(f(x)\\)`}</M> في الجزء الثاني من التمرين</div>
+                <div className="mid-col">استخدام إشارة <M>{`\\(g\\)`}</M> في دراسة تغيرات <M>{`\\(f\\)`}</M></div>
+                <div className="right-col">نمط كلاسيكي: "ادرس تغيرات <M>{`\\(g\\)`}</M>" ثم "استنتج إشارة <M>{`\\(g\\)`}</M>" ثم "بين أن <M>{`\(f'(x)\)`}</M> من إشارة <M>{`\\(g\\)`}</M>".</div>
             </div>
 
 
             <div className="step-row">
-                <div className="left-col">شكل جدول تغيرات الدالة <M>{`\(h\)`}</M> حيث <M>{`\\(h(x) = f(-x)\\)`}</M></div>
+                <div className="left-col">شكل جدول تغيرات الدالة <M>{`\\(h\\)`}</M> حيث <M>{`\\(h(x) = f(-x)\\)`}</M></div>
                 <div className="mid-col">استنتاج بالتناظر بالنسبة لمحور التراتيب</div>
-                <div className="right-col">نقلب اتجاهات الأسهم في جدول <M>{`\(f\)`}</M> ونغير إشارات قيم <M>{`\(x\)`}</M>.</div>
+                <div className="right-col">نقلب اتجاهات الأسهم في جدول <M>{`\\(f\\)`}</M> ونغير إشارات قيم <M>{`\\(x\\)`}</M>.</div>
             </div>
 
             <div className="step-row">
-                <div className="left-col">بين أن <M>{`\(f\)`}</M> مستمرة عند 2</div>
-                <div className="mid-col"><M>{`\\(\\lim_{x \\to 2} f(x) = f(2)\\)`}</M></div>
+                <div className="left-col">بين أن <M>{`\\(f\\)`}</M> مستمرة عند 2</div>
+                <div className="mid-col"><M>{`\\[\\lim_{x \\to 2} f(x) = f(2)\\]`}</M></div>
                 <div className="right-col">التحقق من أن النهاية عند النقطة تساوي صورتها الحقيقية.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">استنتج اتجاه تغير <M>{`\\(\\dfrac{1}{f(x)}\\)`}</M></div>
-                <div className="mid-col">عكس اتجاه تغير <M>{`\(f\)`}</M></div>
-                <div className="right-col">بشرط أن <M>{`\(f\)`}</M> لا تنعدم ولا تغير إشارتها في ذلك المجال.</div>
+                <div className="mid-col">عكس اتجاه تغير <M>{`\\(f\\)`}</M></div>
+                <div className="right-col">بشرط أن <M>{`\\(f\\)`}</M> لا تنعدم ولا تغير إشارتها في ذلك المجال.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">ادرس تغيرات الدالة <M>{`\\(x \\mapsto \\ln(\\cos x)\\)`}</M></div>
@@ -616,7 +617,7 @@ const BacIntelligence = () => {
                 <div className="right-col">بما أن الدالة המكاملة موجبة، فإن المساحة <M>{`\\(A(x)\\)`}</M> تزداد كلما زاد <M>{`\\(x\\)`}</M>، فالدالة متزايدة تماما.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إثبات الرتابة التامة رغم انعدام المشتقة</div>
+                <div className="left-col">أثبت الرتابة التامة رغم انعدام المشتقة</div>
                 <div className="mid-col"><M>{`\\(f'(x) = (x-1)^2 \\ge 0\\)`}</M></div>
                 <div className="right-col">إذا انعدمت المشتقة في نقطة معزولة ولم تغير إشارتها، تبقى الدالة رتيبة تماماً (لا توجد ذروة).</div>
             </div>
@@ -626,12 +627,12 @@ const BacIntelligence = () => {
                 <div className="right-col">يجب ضرب إشارة المشتقة <M>{`\\(f'\\)`}</M> في إشارة الدالة <M>{`\\(f\\)`}</M> نفسها.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">التغيرات واستنتاج أن المعادلة <M>{`\\(f(x) = 0\\)`}</M> مستحيلة</div>
+                <div className="left-col">ادرس التغيرات واستنتاج أن المعادلة <M>{`\\(f(x) = 0\\)`}</M> مستحيلة</div>
                 <div className="mid-col">الدالة متزايدة/متناقصة ولا تقطع الصفر</div>
                 <div className="right-col">إذا كانت الدالة متزايدة وقيمتها الحدية العظمى سالبة، فمن المستحيل أن تبلغ الصفر.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">جدول تغيرات يتضمن نقطة توقف</div>
+                <div className="left-col">شكل جدول تغيرات يتضمن نقطة توقف</div>
                 <div className="mid-col">نهاية مجال التعريف المغلق <M>{`\\([a, b]\\)`}</M></div>
                 <div className="right-col">الدالة لا تقبل نهاية عند التوقف بل صورة حقيقية، ويتم حساب المشتقة فقط من جهة واحدة.</div>
             </div>
@@ -641,22 +642,22 @@ const BacIntelligence = () => {
                 <div className="right-col">إذا كانت <M>{`\\(f'(x) = u(x)v(x)\\)`}</M>، ننشئ جدولاً يضم إشارة <M>{`\\(u\\)`}</M> وإشارة <M>{`\\(v\\)`}</M> لضرب الإشارات.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">مناقشة تغيرات دالة تتضمن وسيطا <M>{`\\(m\\)`}</M></div>
+                <div className="left-col">ناقش تغيرات دالة تتضمن وسيطا <M>{`\\(m\\)`}</M></div>
                 <div className="mid-col">المشتقة تنعدم بدلالة <M>{`\\(m\\)`}</M></div>
                 <div className="right-col">يجب فصل الحالات حسب إشارة المميز أو حسب موضع <M>{`\\(m\\)`}</M> لتحديد عدد الذروات ومواضعها.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">استغلال التغيرات لإثبات متباينة <M>{`\\(f(x) \\ge x\\)`}</M></div>
+                <div className="left-col">استغل التغيرات لإثبات متباينة <M>{`\\(f(x) \\ge x\\)`}</M></div>
                 <div className="mid-col">دراسة الدالة <M>{`\\(g(x) = f(x) - x\\)`}</M></div>
                 <div className="right-col">تثبت أن <M>{`\\(g\\)`}</M> قيمتها الدنيا هي الصفر، إذن هي موجبة دوما، مما يحقق المتباينة.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">دراسة تغيرات دالة دورية (مثل الجيب وجيب التمام)</div>
+                <div className="left-col">ادرس تغيرات دالة دورية (مثل الجيب وجيب التمام)</div>
                 <div className="mid-col">تقليص مجال الدراسة لدور واحد أو نصف دور</div>
                 <div className="right-col">ندرس التغيرات في <M>{`\\([0, \\pi]\\)`}</M> ثم نعممها بالتناظر والانسحاب الذي يوافق الدور.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">التناقض بين جدول التغيرات وحل معادلة</div>
+                <div className="left-col">فسر التناقض بين جدول التغيرات وحل معادلة</div>
                 <div className="mid-col">اكتشاف خطأ في حساب المشتقة</div>
                 <div className="right-col">إذا كان الجدول يقول أن القيم سالبة بينما تجد حلاً لـ <M>{`\\(f(x)=0\\)`}</M>، يجب مراجعة الاشتقاق فوراً.</div>
             </div>
@@ -697,9 +698,9 @@ const BacIntelligence = () => {
                 <div className="right-col">إذا كان الفرق موجباً فالمتتالية متزايدة. نصيحة: استعمل التحليل أو الحصر السابق.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">أحسب المجموع <M>{`\\(S_n = v_0 + v_1 + \\cdots + v_n\\)`}</M></div>
-                <div className="mid-col">قانون مجموع المتتالية الهندسية/الحسابية</div>
-                <div className="right-col">للهندسية: <M>{`\\(v_0 \\cdot \\dfrac{1 - q^{n+1}}{1 - q}\\)`}</M>. انتبه: عدد الحدود هو <M>{`\\(n+1\\)`}</M>.</div>
+                <div className="left-col">كيف نحسب المجموع <M>{`\\(S_n = v_0 + v_1 + \\cdots + v_n\\)`}</M>؟</div>
+                <div className="mid-col"><M>{`\\(S_n = v_0 \\cdot \\dfrac{1 - q^{n+1}}{1 - q}\\)`}</M> (هندسية) أو <M>{`\\(\\dfrac{(n+1)(v_0+v_n)}{2}\\)`}</M> (حسابية)</div>
+                <div className="right-col">انتبه: عدد الحدود هو <M>{`\\(n+1\\)`}</M> (=من 0 إلى n). للهندسية تحقق من <M>{`\\(q \\neq 1\\)`}</M>. للحسابية استخدم خاصية المتوسط الحسابي.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">استنتج أن (Un) متقاربة</div>
@@ -707,9 +708,9 @@ const BacIntelligence = () => {
                 <div className="right-col">هذا الاستنتاج نظري. لا تطلب منك حساب النهاية هنا بل فقط تبرير وجودها.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">عين نهاية <M>{`\\(u_n\\)`}</M> لما يؤول n لـ <M>{`\\(+\\infty\\)`}</M></div>
-                <div className="mid-col">حل المعادلة <M>{`\\(L = f(L)\\)`}</M></div>
-                <div className="right-col">إذا كانت المتتالية تراجعية ومتقاربة، نهايتها هي أحد جذور معادلة النقطة الصامدة.</div>
+                <div className="left-col">كيف نعين نهاية <M>{`\\(u_n\\)`}</M> لما يؤول n لـ <M>{`\\(+\\infty\\)`}</M>؟</div>
+                <div className="mid-col"><M>{`\\(L = f(L)\\)`}</M> (معادلة النقطة الصامدة)</div>
+                <div className="right-col">إذا كانت المتتالية تراجعية ومتقاربة، نهايتها <M>{`\\(L\\)`}</M> تحقق معادلة النقطة الصامدة. نحلها ونختار الجذر المناسب حسب نتائج الحصر السابق.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">بين أن المتتالية (Un) محدودة بالعددين 0 و 1</div>
@@ -722,9 +723,9 @@ const BacIntelligence = () => {
                 <div className="right-col">تؤول غالباً إلى مجموع في الأسس إذا كانت المتتالية هندسية.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">أكتب <M>{`\\(u_n\\)`}</M> بدلالة n (العبارة العامة)</div>
-                <div className="mid-col">قانون الحد العام</div>
-                <div className="right-col">للحسابية: <M>{`\\(u_n = u_p + (n-p)r\\)`}</M>. للهندسية: <M>{`\\(u_n = u_p \\cdot q^{n-p}\\)`}</M>.</div>
+                <div className="left-col">كيف نكتب <M>{`\\(u_n\\)`}</M> بدلالة n (العبارة العامة)؟</div>
+                <div className="mid-col"><M>{`\\(u_n = u_0 + nr\\)`}</M> (حسابية) أو <M>{`\\(u_n = u_0 \\cdot q^n\\)`}</M> (هندسية)</div>
+                <div className="right-col">نحدد أولاً نوع المتتالية، ثم نطبق القانون المناسب. بالعموم: <M>{`\\(u_n = u_p + (n-p)r\\)`}</M> أو <M>{`\\(u_n = u_p \\cdot q^{n-p}\\)`}</M>.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">عين قيمة n الطبيعية بحيث <M>{`\\(S_n > 100\\)`}</M></div>
@@ -799,53 +800,53 @@ const BacIntelligence = () => {
                 <div className="right-col">تستخدم في التمارين المتقدمة لربط المتتاليات بالدوال الأصلية.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">البرهان بالتراجع لخاصية مضاعف (مثال <M>{`\(u_n\)`}</M> مضاعف لـ 3)</div>
-                <div className="mid-col">كتابة <M>{`\(u_n = 3k\)`}</M> والبرهان على الخطوة التالية</div>
-                <div className="right-col">نفرض <M>{`\(u_n = 3k\)`}</M> ونعوضها في <M>{`\(u_{n+1}\)`}</M> ثم نستخرج 3 كعامل مشترك لتصبح <M>{`\(3k'\)`}</M>.</div>
+                <div className="left-col">برهن بالتراجع لخاصية مضاعف (مثال <M>{`\\(u_n)\\)`}</M> مضاعف لـ 3)</div>
+                <div className="mid-col">كتابة <M>{`\\(u_n = 3k\\)`}</M> والبرهان على الخطوة التالية</div>
+                <div className="right-col">نفرض <M>{`\\(u_n = 3k\\)`}</M> ونعوضها في <M>{`\\(u_{n+1}\\)`}</M> ثم نستخرج 3 كعامل مشترك لتصبح <M>{`\\(3k'\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">المتتالية التناظرية <M>{`\(u_{n+1} = \dfrac{au_n+b}{cu_n+d}\)`}</M></div>
+                <div className="left-col">ادرس المتتالية التناظرية <M>{`\\(u_{n+1} = \\dfrac{au_n+b}{cu_n+d}\\)`}</M></div>
                 <div className="mid-col">إثبات أنها ليست حسابية ولا هندسية</div>
-                <div className="right-col">يتم دائماً إعطاء متتالية مساعدة <M>{`\(v_n\)`}</M> كسرية لتحويلها إلى متتالية هندسية أو حسابية لتسهيل الحل.</div>
+                <div className="right-col">يتم دائماً إعطاء متتالية مساعدة <M>{`\\(v_n\\)`}</M> كسرية لتحويلها إلى متتالية هندسية أو حسابية لتسهيل الحل.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">دراسة متتالية بدلالة <M>{`\(\ln(v_n)\)`}</M> حيث <M>{`\(v_n\)`}</M> هندسية</div>
+                <div className="left-col">ادرس متتالية بدلالة <M>{`\\(\\ln(v_n)\\)`}</M> حيث <M>{`\\(v_n\\)`}</M> هندسية</div>
                 <div className="mid-col">تحول الجداء إلى مجموع والأس إلى ضرب</div>
                 <div className="right-col">اللوغاريتم يحول المتتالية الهندسية ذات الأساس الموجب إلى متتالية حسابية.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إثبات أن متتالية <M>{`\(w_n = u_{n+1} - u_n\)`}</M> هندسية</div>
-                <div className="mid-col">استعمالها لاستنتاج العبارة العامة لـ <M>{`\(u_n\)`}</M></div>
-                <div className="right-col">بما أن <M>{`\(w_n\)`}</M> هندسية، يمكن حساب مجموعها، والذي يساوي التلسكوب <M>{`\(u_n - u_0\)`}</M>.</div>
+                <div className="left-col">كيف نثبت أن متتالية دلتا <M>{`\\(w_n = u_{n+1} - u_n\\)`}</M> هندسية؟</div>
+                <div className="mid-col"><M>{`\\(\\dfrac{w_{n+1}}{w_n} = q\\)`}</M> (ثابت)</div>
+                <div className="right-col">نحسب <M>{`\\(w_{n+1}\\)`}</M> بدلالة <M>{`\\(u_{n+2}\\)`}</M> و <M>{`\\(u_{n+1}\\)`}</M>، نعوض العلاقة التراجعية، ثم نخرج <M>{`\\(w_n\\)`}</M> عاملاً مشتركاً. بما أن <M>{`\\(w_n\\)`}</M> هندسية، يمكن حساب مجموعها بالتلسكوب لإيجاد العبارة العامة <M>{`\\(u_n\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">نهاية متتالية من الشكل <M>{`\(u_n = q^n\)`}</M> مع وسيط</div>
+                <div className="left-col">احسب نهاية متتالية من الشكل <M>{`\\(u_n = q^n\\)`}</M> مع وسيط</div>
                 <div className="mid-col">مناقشة حسب تقاطع المجالات</div>
-                <div className="right-col">تكون متقاربة نحو الصفر إذا كان <M>{`\(-1 < q < 1\)`}</M>. نحو 1 إذا كان <M>{`\(q=1\)`}</M>. ومتباعدة عدا ذلك.</div>
+                <div className="right-col">تكون متقاربة نحو الصفر إذا كان <M>{`\\(-1 < q < 1\\)`}</M>. نحو 1 إذا كان <M>{`\\(q=1\\)`}</M>. ومتباعدة عدا ذلك.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">متتاليتان متجاورتان بمتوسط حسابي <M>{`\(u_{n+1} = \dfrac{u_n+v_n}{2}\)`}</M></div>
-                <div className="mid-col">تشكيل متتالية الفرق <M>{`\(u_n - v_n\)`}</M></div>
+                <div className="left-col">ادرس متتاليتان متجاورتان بمتوسط حسابي <M>{`\\(u_{n+1} = \\dfrac{u_n+v_n}{2}\\)`}</M></div>
+                <div className="mid-col">تشكيل متتالية الفرق <M>{`\\(u_n - v_n\\)`}</M></div>
                 <div className="right-col">غالباً تكون متتالية الفرق هندسية أساسها محصور بين -1 و 1، فنهايتها تؤول للصفر (شرط التجاور).</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إيجاد النهاية بالحصر بمتتاليتين هندسيتين</div>
-                <div className="mid-col">تطبيق مبرهنة الدرك (Gendarmes)</div>
+                <div className="left-col">أوجد النهاية بالحصر بمتتاليتين هندسيتين</div>
+                <div className="mid-col">حصر المتتالية ثم حساب نهايتي الطرفين</div>
                 <div className="right-col">بما أن المتتاليتين الحاصرتين تؤولان للصفر، فإن المتتالية المحصورة تؤول للصفر إجبارياً.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">المتتالية المعرفة بمشتقة الدالة المتكررة <M>{`\(u_n = f^{(n)}(x)\)`}</M></div>
+                <div className="left-col">ادرس المتتالية المعرفة بمشتقة الدالة المتكررة <M>{`\\(u_n = f^{(n)}(x)\\)`}</M></div>
                 <div className="mid-col">استنتاج النمط عبر المشتقات الأولى</div>
                 <div className="right-col">نشتق 3 مرات لملاحظة العلاقة التراجعية، ثم نبرهن النمط العام المكتشف بالتراجع.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">جداء حدود متتالية لوغاريتمية</div>
+                <div className="left-col">احسب جداء حدود متتالية لوغاريتمية</div>
                 <div className="mid-col">يتحول إلى مجموع داخل اللوغاريتم</div>
-                <div className="right-col">الجداء <M>{`\(e^{u_1} \cdot e^{u_2} \cdots e^{u_n}\)`}</M> يصبح <M>{`\(e^{u_1+u_2+\dots+u_n}\)`}</M> فنحسب المجموع في الأس.</div>
+                <div className="right-col">الجداء <M>{`\\(e^{u_1} \\cdot e^{u_2} \\cdots e^{u_n}\\) `}</M> يصبح <M>{`\\(e^{u_1+u_2+\\dots+u_n}\\) `}</M>فنحسب المجموع في الأس.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">تحديد اتجاه التغير بدلالة نسبة الحدود</div>
-                <div className="mid-col">مقارنة <M>{`\(\dfrac{u_{n+1}}{u_n}\)`}</M> مع 1</div>
+                <div className="left-col">حدد اتجاه التغير بدلالة نسبة الحدود</div>
+                <div className="mid-col">مقارنة <M>{`\\(\\dfrac{u_{n+1}}{u_n}\\) `}</M>مع 1</div>
                 <div className="right-col">صالحة فقط للمتتاليات موجبة الحدود تماماً. إذا كانت النسبة أكبر من 1 فهي متزايدة.</div>
             </div>
 
@@ -893,22 +894,22 @@ const BacIntelligence = () => {
                 <div className="col-header right-h">العمل الاستراتيجي</div>
             </div>
             <div className="step-row">
-                <div className="left-col">أحسب القيمة المتوسطة للدالة <M>{`\(f\)`}</M> على <M>{`\([a, b]\)`}</M></div>
+                <div className="left-col">أحسب القيمة المتوسطة للدالة <M>{`\\(f\\)`}</M> على <M>{`\\([a, b]\\)`}</M></div>
                 <div className="mid-col"><M>{`\\(M = \\dfrac{1}{b-a} \\int_a^b f(x)\\, dx\\)`}</M></div>
                 <div className="right-col">تطبيق القانون مباشرة. تحسب التكامل ثم تقسم على طول المجال.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">أحسب مساحة الحيز المحصور بين <M>{`\\(C_f\\)`}</M> ومحور الفواصل</div>
                 <div className="mid-col"><M>{`\\(A = \\int |f(x)|\\, dx\\)`}</M> بوحدة المساحة</div>
-                <div className="right-col">انتبه لإشارة <M>{`\(f(x)\)`}</M>. إذا كانت سالبة، نضرب في (−1) لأن المساحة موجبة.</div>
+                <div className="right-col">انتبه لإشارة <M>{`\\(f(x)\\)`}</M>. إذا كانت سالبة، نضرب في <span>{`\\((−1)\\)`}</span> لأن المساحة موجبة.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">استعمل التكامل بالتجزئة</div>
                 <div className="mid-col"><M>{`\\(\\int u \\cdot v' = [u \\cdot v] - \\int u' \\cdot v\\)`}</M></div>
-                <div className="right-col">نختار <M>{`\(u\)`}</M> بحيث يسهل اشتقاقها (تتبسط) و <M>{`\('v\)`}</M> بحيث يسهل تكاملها.</div>
+                <div className="right-col">نختار <M>{`\\(u\\)`}</M> بحيث يسهل اشتقاقها (تتبسط) و <M>{`\\(v'\\)`}</M> بحيث يسهل تكاملها.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">عين الدالة الأصلية <M>{`\(F\)`}</M> للدالة <M>{`\(f\)`}</M> والتي تنعدم عند 1</div>
+                <div className="left-col">عين الدالة الأصلية <M>{`\\(f\\)`}</M> للدالة <M>{`\\(f\\)`}</M> والتي تنعدم عند 1</div>
                 <div className="mid-col"><M>{`\\(F(x) = \\int f(t)\\, dt + C\\)`}</M> مع <M>{`\\(F(1)=0\\)`}</M></div>
                 <div className="right-col">نحسب التكامل العام ثم نجد الثابت C من شرط الانعدام.</div>
             </div>
@@ -935,7 +936,7 @@ const BacIntelligence = () => {
             <div className="step-row">
                 <div className="left-col">بين أن <M>{`\\(0 \\leq \\int f(x)\\, dx \\leq (b-a)M\\)`}</M></div>
                 <div className="mid-col">مبرهنة الخصائص الترتيبية للتكامل</div>
-                <div className="right-col">إذا كانت <M>{`\(f\)`}</M> محصورة بين 0 و <M>{`\(M\)`}</M>، فإدماج الأطراف يحافظ على المتباينة.</div>
+                <div className="right-col">إذا كانت <M>{`\\(f\\)`}</M> محصورة بين 0 و <M>{`\(M\)`}</M>، فإدماج الأطراف يحافظ على المتباينة.</div>
             </div>
 
             <div className="step-row">
@@ -994,47 +995,47 @@ const BacIntelligence = () => {
                 <div className="right-col">استغلال المشتقات المركبة المألوفة دون الدخول في تكامل بالتجزئة.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">تكامل دالة تتضمن قيمة مطلقة</div>
+                <div className="left-col">احسب تكامل دالة تتضمن قيمة مطلقة</div>
                 <div className="mid-col">تفكيك حسب علاقة شال عند نقطة الانعدام</div>
                 <div className="right-col">نقسم مجال التكامل إلى مجالين، في الأول نأخذ الموجب وفي الثاني نأخذ السالب.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إثبات متراجحة بين تكاملين <M>{`\\(\\int f \\le \\int g\\)`}</M> دون حسابهما</div>
+                <div className="left-col">أثبت متراجحة بين تكاملين <M>{`\\(\\int f \\le \\int g\\)`}</M> دون حسابهما</div>
                 <div className="mid-col">حفظ المتباينات</div>
                 <div className="right-col">يكفي أن نثبت أن <M>{`\\(f(x) \\le g(x)\\)`}</M> على مجال التكامل ثم ندخل التكامل على الطرفين.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">المكاملة بالتجزئة مرتين متتاليتين</div>
+                <div className="left-col">كامل بالتجزئة مرتين متتاليتين</div>
                 <div className="mid-col">التخلص من <M>{`\\(x^2\\)`}</M> المضروب في أسية أو لوغاريتم</div>
                 <div className="right-col">في المرة الأولى نصل إلى <M>{`\\(x\\)`}</M>، وفي الثانية يختفي ليصبح ثابتاً، مما يسمح بحساب التكامل النهائي.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">حساب الحجم الدوراني المحصور بين منحنيين</div>
+                <div className="left-col">احسب الحجم الدوراني المحصور بين منحنيين</div>
                 <div className="mid-col"><M>{`\\(\\pi \\int |[f(x)]^2 - [g(x)]^2| dx\\)`}</M></div>
                 <div className="right-col">حذار من خطأ شائع: الحجم ليس تكامل مربع الفرق <M>{`\\((f-g)^2\\)`}</M> بل فرق المربعين <M>{`\\(f^2 - g^2\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">القيمة المتوسطة لمجموع دالتين</div>
+                <div className="left-col">احسب القيمة المتوسطة لمجموع دالتين</div>
                 <div className="mid-col">توزيع التكامل (الخطية)</div>
                 <div className="right-col">القيمة المتوسطة للمجموع هي مجموع القيمتين المتوسطتين.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">تكامل دالة ناطقة مقلوبها درجته أعلى</div>
+                <div className="left-col">احسب تكامل دالة ناطقة مقلوبها درجته أعلى</div>
                 <div className="mid-col">استخراج الجزء الصحيح بالقسمة</div>
                 <div className="right-col">تتحول الدالة إلى <M>{`\\(ax+b + \\dfrac{c}{x-x_0}\\)`}</M> فيصبح التكامل بسيطاً (كثير حدود + لوغاريتم).</div>
             </div>
             <div className="step-row">
-                <div className="left-col">تكامل الدالة الفردية على مجال متناظر <M>{`\\([-a, a]\\)`}</M></div>
+                <div className="left-col">احسب تكامل الدالة الفردية على مجال متناظر <M>{`\\([-a, a]\\)`}</M></div>
                 <div className="mid-col">التكامل معدوم مباشرة</div>
                 <div className="right-col">المساحة فوق المحور تلغي المساحة تحته. يفضل ذكر هذه الخاصية لاختصار الحساب.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">نهاية تكامل لما يؤول حدوده إلى المالانهاية</div>
+                <div className="left-col">احسب نهاية تكامل لما يؤول حدوده إلى المالانهاية</div>
                 <div className="mid-col">حساب المساحة غير المحدودة</div>
                 <div className="right-col">نحسب التكامل بدلالة وسيط <M>{`\\(x\\)`}</M> أو <M>{`\\(\\alpha\\)`}</M> ثم نحسب نهاية النتيجة. إذا كانت منتهية فالمساحة متقاربة.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">استخدام المساحة لإيجاد قيمة وسيط <M>{`\\(m\\)`}</M> (عكسي)</div>
+                <div className="left-col">استخدم المساحة لإيجاد قيمة وسيط <M>{`\\(m\\)`}</M> (عكسي)</div>
                 <div className="mid-col">حل المعادلة <M>{`\\(S(m) = K\\)`}</M></div>
                 <div className="right-col">يُعطى الحجم أو المساحة بقيمة عددية، ويطلب إيجاد الحد الذي يحقق تلك المساحة.</div>
             </div>
@@ -1047,7 +1048,7 @@ const BacIntelligence = () => {
                 <div className="col-header right-h">العمل الاستراتيجي</div>
             </div>
             <div className="step-row">
-                <div className="left-col">أكتب <M>{`\(z\)`}</M> على الشكل الأسي</div>
+                <div className="left-col">أكتب <M>{`\\(z\\)`}</M> على الشكل الأسي</div>
                 <div className="mid-col"><M>{`\\(z = r \\cdot e^{i\\theta}\\)`}</M></div>
                 <div className="right-col">نحسب الطويلة r والعمدة θ. تذكر أن <M>{`\\(\\cos\\theta = \\dfrac{a}{r}\\)`}</M> و <M>{`\\(\\sin\\theta = \\dfrac{b}{r}\\)`}</M>.</div>
             </div>
@@ -1057,27 +1058,27 @@ const BacIntelligence = () => {
                 <div className="right-col">الطويلة تساوي 1 (متساوي الساقين) والعمدة <M>{`\\(\\pm\\dfrac{\\pi}{2}\\)`}</M> (قائم).</div>
             </div>
             <div className="step-row">
-                <div className="left-col">عين طبيعة التحويل النقطي <M>{`\(f\)`}</M> ذو العبارة <M>{`\\(z' = az + b\\)`}</M></div>
+                <div className="left-col">عين طبيعة التحويل النقطي <M>{`\\(f\\)`}</M> ذو العبارة <M>{`\\(z' = az + b\\)`}</M></div>
                 <div className="mid-col">انسحاب، تحاكي، أو دوران</div>
                 <div className="right-col">إذا كان <M>{`\\(a=1\\)`}</M> (انسحاب). إذا كان <M>{`\\(a \\in \\mathbb{R}^* \\setminus \\{1\\}\\)`}</M> (تحاكي). إذا كان <M>{`\\(|a|=1\\)`}</M> (دوران).</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن النقط <M>{`\(A\)`}</M>, B, C على استقامة واحدة</div>
+                <div className="left-col">بين أن النقط <M>{`\\(A\\)`}</M>, B, C على استقامة واحدة</div>
                 <div className="mid-col"><M>{`\\(\\dfrac{z_C - z_A}{z_B - z_A} \\in \\mathbb{R}\\)`}</M></div>
                 <div className="right-col">الارتباط الخطي للشعاعين يعني أن زاوية الميل بينهما هي 0 أو π.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">عين مجموعة النقط <M>{`\(M\)`}</M> حيث <M>{`\\(|z - z_A| = R\\)`}</M></div>
-                <div className="mid-col">دائرة مركزها <M>{`\(A\)`}</M> ونصف قطرها R</div>
+                <div className="mid-col">دائرة مركزها <M>{`\\(A\\)`}</M> ونصف قطرها R</div>
                 <div className="right-col">الطويلة تمثل المسافة. المسافة الثابتة عن نقطة هي تعريف الدائرة.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">عين مجموعة النقط <M>{`\(M\)`}</M> حيث <M>{`\\(|z - z_A| = |z - z_B|\\)`}</M></div>
                 <div className="mid-col">المحور القطاعي للقطعة [AB]</div>
-                <div className="right-col">المسافة بين <M>{`\(M\)`}</M> و <M>{`\(A\)`}</M> تساوي المسافة بين <M>{`\(M\)`}</M> و B.</div>
+                <div className="right-col">المسافة بين <M>{`\(M\)`}</M> و <M>{`\\(A\\)`}</M> تساوي المسافة بين <M>{`\(M\)`}</M> و B.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">أكتب <M>{`\(z\)`}</M> على الشكل المثلثي</div>
+                <div className="left-col">أكتب <M>{`\\(z\\)`}</M> على الشكل المثلثي</div>
                 <div className="mid-col"><M>{`\\(z = r(\\cos\\theta + i\\sin\\theta)\\)`}</M></div>
                 <div className="right-col">الخطوة البينية قبل الشكل الأسي.</div>
             </div>
@@ -1089,7 +1090,7 @@ const BacIntelligence = () => {
             <div className="step-row">
                 <div className="left-col">بين أن <M>{`\\(\\left(\\dfrac{z}{\\bar{z}}\\right)^n\\)`}</M> هو عدد حقيقي</div>
                 <div className="mid-col"><M>{`\\( \\arg(Z) = k\\pi \\)`}</M> حيث <M>{`\\( k \\in \\mathbb{Z} \\)`}</M></div>
-                <div className="right-col">نكتب <M>{`\(z\)`}</M> على الشكل الأسي، نطبق خاصية عمدة المرافق <M>{`\\( \\arg(\\bar{z}) = -\\theta \\)`}</M> لتصبح عمدة الكسر <M>{`\\( 2\theta \\)`}</M>، ثم نطبق دستور موافر.</div>
+                <div className="right-col">نكتب <M>{`\\(z\\)`}</M> على الشكل الأسي، نطبق خاصية عمدة المرافق <M>{`\\( \\arg(\\bar{z}) = -\\theta \\)`}</M> لتصبح عمدة الكسر <M>{`\\( 2\theta \\)`}</M>، ثم نطبق دستور موافر.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">عين اللاحقة <M>{`\\(z_G\\)`}</M> لمركز ثقل المثلث</div>
@@ -1097,7 +1098,7 @@ const BacIntelligence = () => {
                 <div className="right-col">الوسط الحسابي للنقط الثلاث.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن النقط <M>{`\(A\)`}</M>, B, C على دائرة واحدة</div>
+                <div className="left-col">بين أن النقط <M>{`\\(A\\)`}</M>, B, C على دائرة واحدة</div>
                 <div className="mid-col"><M>{`\\(\\Omega A = \\Omega B = \\Omega C = R\\)`}</M></div>
                 <div className="right-col">حساب أطوال الأشعة بين المركز <M>{`\\(\\Omega\\)`}</M> والنقط الثلاث، أو التحقق من أن طويلات فرق اللاحقات متساوية.</div>
             </div>
@@ -1114,10 +1115,10 @@ const BacIntelligence = () => {
             <div className="step-row">
                 <div className="left-col">أوجد قيم n بحيث يكون <M>{`\\(z^n\\)`}</M> تخيلياً صرفاً</div>
                 <div className="mid-col"><M>{`\\(\\arg(z^n) = \\dfrac{\\pi}{2} + k\\pi\\)`}</M></div>
-                <div className="right-col">تطبيق "موافر" <M>{`\\(n \\cdot \\theta = \\dfrac{\\pi}{2} + k\\pi\\)`}</M> واستنتاج n.</div>
+                <div className="right-col"><M>{`\\(n \\cdot \\theta = \\dfrac{\\pi}{2} + k\\pi\\)`}</M> واستنتاج n.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">عين اللاحقة لمركز التحاكي <M>{`\(h\)`}</M></div>
+                <div className="left-col">عين اللاحقة لمركز التحاكي <M>{`\\(h\\)`}</M></div>
                 <div className="mid-col">نقطة صامدة <M>{`\\(z = az+b \\Rightarrow \\omega = \\dfrac{b}{1-a}\\)`}</M></div>
                 <div className="right-col">النقطة التي لا تتغير بالتحويل.</div>
             </div>
@@ -1127,13 +1128,13 @@ const BacIntelligence = () => {
                 <div className="right-col">الحلول تكون دائماً مترافقة <M>{`\\(z = \\dfrac{-b \\pm i\\sqrt{-\\Delta}}{2a}\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن العدد مركزي (لاحقته <M>{`\(z\)`}</M>) ينتمي للقرص</div>
+                <div className="left-col">بين أن العدد مركزي (لاحقته <M>{`\\(z\\)`}</M>) ينتمي للقرص</div>
                 <div className="mid-col"><M>{`\\(|z - \\omega| \\leq R\\)`}</M></div>
                 <div className="right-col">المسافة أقل من أو تساوي نصف القطر.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">أوجد الجذور التربيعية لعدد مركب</div>
-                <div className="mid-col">حل جملة معادلات <M>{`\\(x^2-y^2=a,\\ 2xy=b,\\ x^2+y^2=r\\)`}</M></div>
+                <div className="left-col">عين العددين المركبين <M>{`\\(z\\)`}</M> بحيث <M>{`\\(z^2=a+ib\\)`}</M></div>
+                <div className="mid-col">حل جملة معادلات <M>{`\\(x^2-y^2=a\\)`}</M><M>{`\\(x^2+y^2=r=\\sqrt{a^2+b^2}\\)`}</M></div>
                 <div className="right-col">طريقة كلاسيكية لإيجاد جذور الأعداد المركبة التي ليست في شكل أسي بسيط.</div>
             </div>
             <div className="step-row">
@@ -1177,47 +1178,48 @@ const BacIntelligence = () => {
                 <div className="right-col">عكس الحقيقي السالب. هنا يجب أن تكون العمدة من مضاعفات <M>{`\\(2\\pi\\)`}</M>. نعطي لـ <M>{`\\(k\\)`}</M> القيمة 1 ونجد <M>{`\\(n\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إثبات أن النقط تنتمي لنفس الدائرة يطلب تعيين مركزها ونصف قطرها</div>
+                <div className="left-col">أثبت أن النقط تنتمي لنفس الدائرة يطلب تعيين مركزها ونصف قطرها</div>
                 <div className="mid-col">استعمال الدائرة المحيطة بمثلث قائم</div>
                 <div className="right-col">إذا كان لدينا مثلث قائم في <M>{`\\(A\\)`}</M> ومثلث قائم في <M>{`\\(B\\)`}</M> لهما نفس الوتر <M>{`\\([CD]\\)`}</M>، فالنقط الأربعة تنتمي لدائرة قطرها <M>{`\\([CD]\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">مجموعة النقط التي تحقق <M>{`\\(z + \\bar{z} = |z|^2\\)`}</M></div>
+                <div className="left-col">عين مجموعة النقط التي تحقق <M>{`\\(z + \\bar{z} = |z|^2\\)`}</M></div>
                 <div className="mid-col">استعمال الشكل الجبري <M>{`\\(z = x + iy\\)`}</M></div>
                 <div className="right-col">تتحول إلى معادلة ديكارتية <M>{`\\(2x = x^2 + y^2\\)`}</M> وهي معادلة دائرة يجب إتمام المربع لإيجاد مركزها.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">حساب المجموع <M>{`\\(1 + z + z^2 + \\dots + z^n\\)`}</M></div>
+                <div className="left-col">احسب المجموع <M>{`\\(1 + z + z^2 + \\dots + z^n\\)`}</M></div>
                 <div className="mid-col">مجموع حدود متتالية هندسية أساسها <M>{`\\(z\\)`}</M></div>
                 <div className="right-col">تطبيق القانون: <M>{`\\(\\dfrac{1 - z^{n+1}}{1 - z}\\)`}</M> وتبسيط الناتج باستعمال الشكل الأسي.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">استخدام دستور موافر لحساب <M>{`\\(\\cos(nx)\\)`}</M> بدلالة <M>{`\\(\\cos x\\)`}</M></div>
+                <div className="left-col">استخدم دستور موافر لحساب <M>{`\\(\\cos(nx)\\)`}</M> بدلالة <M>{`\\(\\cos x\\)`}</M></div>
                 <div className="mid-col">النشر باستعمال ثنائي الحد لنيوتن</div>
                 <div className="right-col">نكتب <M>{`\\((\\cos x + i\\sin x)^n\\)`}</M> وننشرها، ثم نطابق الأجزاء الحقيقية والتخيلية.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إثبات أن المعين هو مربع</div>
+                <div className="left-col">أثبت أن المعين هو مربع</div>
                 <div className="mid-col">إثبات أن قطراه متقايسان ومتعامدان</div>
                 <div className="right-col">باستخدام الأعداد المركبة نثبت أن <M>{`\\(\\dfrac{z_C - z_A}{z_D - z_B} = \\pm i\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">العبارة المركبة للتناظر المركزي</div>
+                <div className="left-col">أوجد العبارة المركبة للتناظر المركزي</div>
                 <div className="mid-col">دوران مركزه <M>{`\\(\\Omega\\)`}</M> وزاويته <M>{`\\(\\pi\\)`}</M></div>
                 <div className="right-col">تكتب على الشكل <M>{`\\(z' - \\omega = - (z - \\omega)\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">العبارة المركبة للتناظر المحوري (بالنسبة لمحور الفواصل)</div>
+                <div className="left-col">أوجد العبارة المركبة للتناظر المحوري (بالنسبة لمحور الفواصل)</div>
                 <div className="mid-col">العدد المرافق</div>
                 <div className="right-col">المعادلة هي ببساطة <M>{`\\(z' = \\bar{z}\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">تحويل نقطي غير مألوف يتضمن المرافق <M>{`\\(z' = i \\bar{z}\\)`}</M></div>
+                <div className="left-col">عين تحويل نقطي غير مألوف يتضمن المرافق <M>{`\\(z' = i \\bar{z}\\)`}</M></div>
                 <div className="mid-col">مركب تحويلين (تناظر محوري يليه دوران)</div>
                 <div className="right-col">التناظر بالنسبة لمحور الفواصل أولاً متبوعاً بدوران زاويته <M>{`\\(\\dfrac{\\pi}{2}\\)`}</M> ومركزه المبدأ.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">مجموعة النقط M حيث <M>{`\\(\\arg(z-a) + \\arg(z-b) = \\pi\\)`}</M></div>
+                <div className="left-col">عين مجموعة النقط M حيث <M>{`\\(\\arg(z-a)+\\arg(z-b)\\)`}</M>
+                    <M>{`\\(=\\pi\\)`}</M></div>
                 <div className="mid-col">تحويل المجموع إلى جداء داخل العمدة</div>
                 <div className="right-col">تصبح <M>{`\\(\\arg((z-a)(z-b)) = \\pi\\)`}</M>، يعني أن الجداء حقيقي سالب. نستخدم الشكل الجبري لتعيين مجموعة النقط.</div>
             </div>
@@ -1235,12 +1237,12 @@ const BacIntelligence = () => {
                 <div className="col-header right-h">العمل الاستراتيجي</div>
             </div>
             <div className="step-row">
-                <div className="left-col">نسحب في آن واحد 3 كرات</div>
+                <div className="left-col">ما احتمال أن نسحب في آن واحد 3 كرات</div>
                 <div className="mid-col">استعمال التوفيقات <M>{`\\(C_n^p\\)`}</M></div>
                 <div className="right-col">الترتيب غير مهم. نستعملها عند سحب حفنة واحدة من الكرات.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">نسحب على التوالي وبإرجاع</div>
+                <div className="left-col">ما احتمال أن نسحب على التوالي وبإرجاع</div>
                 <div className="mid-col">استعمال القوائم <M>{`\\(n^p\\)`}</M></div>
                 <div className="right-col">الترتيب مهم جداً والإرجاع يعني تكرار العناصر ممكن.</div>
             </div>
@@ -1255,12 +1257,12 @@ const BacIntelligence = () => {
                 <div className="right-col">المعدل المتوقع للربح أو الخسارة على المدى الطويل.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">احتمال سحب كرة بيضاء علماً أنها تحمل رقماً واحداً</div>
+                <div className="left-col">احسب احتمال سحب كرة بيضاء علماً أنها تحمل رقماً واحداً</div>
                 <div className="mid-col">الاحتمال الشرطي <M>{`\\(P(A|B) = \\dfrac{P(A\\cap B)}{P(B)}\\)`}</M></div>
                 <div className="right-col">نعتبر المجموعة الكلية هي فقط التي تحقق الشرط B.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن الحادثتين <M>{`\(A\)`}</M> و B مستقلتان</div>
+                <div className="left-col">بين أن الحادثتين <M>{`\\(A\\)`}</M> و B مستقلتان</div>
                 <div className="mid-col"><M>{`\\(P(A\\cap B) = P(A) \\cdot P(B)\\)`}</M></div>
                 <div className="right-col">إذا تحقق التساوي فهما مستقلتان، أي وقوع أحدهما لا يؤثر على الآخر.</div>
             </div>
@@ -1275,17 +1277,17 @@ const BacIntelligence = () => {
                 <div className="right-col">الجذر التربيعي للتباين.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">سحب كرتين من نفس اللون</div>
+                <div className="left-col">ما احتمال سحب كرتين من نفس اللون</div>
                 <div className="mid-col"><M>{`\\(P(3B) + P(3R) + P(3N)\\)`}</M></div>
                 <div className="right-col">نجمع احتمالات كل لون على حدة.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">سحب كرتين مختلفتين في اللون</div>
-                <div className="mid-col">الحادثة العكسية: <M>{`\\(1 - P(\\bar{A})\\)`}</M> حيث <M>{`\(A\)`}</M> = "نفس اللون"</div>
+                <div className="left-col">ما احتمال سحب كرتين مختلفتين في اللون</div>
+                <div className="mid-col">الحادثة العكسية: <M>{`\\(1 - P(\\bar{A})\\)`}</M> حيث <M>{`\\(A\\)`}</M> = "نفس اللون"</div>
                 <div className="right-col">الحادثة العكسية توفر وقتاً هائلاً في البكالوريا.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">سحب كرة بيضاء واحدة على الأقل</div>
+                <div className="left-col">ما احتمال سحب كرة بيضاء واحدة على الأقل</div>
                 <div className="mid-col"><M>{`\\(1 - P(\\bar{B})\\)`}</M> حيث B = "لا كرة بيضاء"</div>
                 <div className="right-col">كلمة "على الأقل" هي كلمة سر استعمال الحادثة العكسية.</div>
             </div>
@@ -1295,7 +1297,7 @@ const BacIntelligence = () => {
                 <div className="right-col">تأكد أن مجموع احتمالات الفروع المنطلقة من نفس العقدة يساوي 1.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">المتغير العشوائي يتبع التوزيع الثنائي B(n, p)</div>
+                <div className="left-col">ادرس المتغير العشوائي يتبع التوزيع الثنائي B(n, p)</div>
                 <div className="mid-col">قانون برنولي لـ n محاولة</div>
                 <div className="right-col">تستخدم عند تكرار نفس التجربة n مرة بصفة مستقلة.</div>
             </div>
@@ -1305,7 +1307,7 @@ const BacIntelligence = () => {
                 <div className="right-col">تصنيف الكرات حسب الأرقام قبل البدء في حساب الاحتمالات.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">سحب 3 كرات تحمل أرقاماً تشكل متتالية حسابية</div>
+                <div className="left-col">ما احتمال سحب 3 كرات تحمل أرقاماً تشكل متتالية حسابية</div>
                 <div className="mid-col">(1,2,3) أو (2,3,4)...</div>
                 <div className="right-col">يجب تعداد جميع الحالات الممكنة يدوياً ثم حساب احتمالها.</div>
             </div>
@@ -1320,12 +1322,12 @@ const BacIntelligence = () => {
                 <div className="right-col">ندخل اللوغاريتم النيبيري <M>{`\\(\\ln\\)`}</M> على الطرفين، مع الانتباه لتغير اتجاه المتباينة عند القسمة على عدد سالب مثل <M>{`\\(\\ln(p)\\)`}</M> حيث <M>{`\\(0 < p < 1\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">المتغير العشوائي <M>{`\\(X\\)`}</M> يمثل عدد السحبات حتى الحصول على كرة بيضاء</div>
+                <div className="left-col">ادرس المتغير العشوائي <M>{`\\(X\\)`}</M> يمثل عدد السحبات حتى الحصول على كرة بيضاء</div>
                 <div className="mid-col">التوزيع الهندسي (وقت الانتظار)</div>
                 <div className="right-col">القيم الممكنة هي 1, 2, 3... الاحتمال <M>{`\\(P(X=k)\\)`}</M> هو سحب <M>{`\\(k-1\\)`}</M> كرة غير بيضاء ثم كرة بيضاء في السحبة <M>{`\\(k\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">سحب كرة من صندوقين بعد اختيار الصندوق بنرد</div>
+                <div className="left-col">ما احتمال سحب كرة من صندوقين بعد اختيار الصندوق بنرد</div>
                 <div className="mid-col">الاحتمال الشرطي المركب (شجرة كاملة)</div>
                 <div className="right-col">المرحلة الأولى في الشجرة لاختيار الصندوق <M>{`\\(U_1\\)`}</M> أو <M>{`\\(U_2\\)`}</M> (حسب النرد)، والمرحلة الثانية للسحب من الصندوق المختار.</div>
             </div>
@@ -1340,47 +1342,47 @@ const BacIntelligence = () => {
                 <div className="right-col">تصبح الاحتمالات عبارة عن دالة كسرية بدلالة <M>{`\\(n\\)`}</M>، ويُطلب لاحقاً إيجاد <M>{`\\(n\\)`}</M> الذي يعظم الاحتمال (الاشتقاق).</div>
             </div>
             <div className="step-row">
-                <div className="left-col">المتغير العشوائي الذي يمثل الفرق المطلق بين رقمي كرتين</div>
+                <div className="left-col">ادرس المتغير العشوائي الذي يمثل الفرق المطلق بين رقمي كرتين</div>
                 <div className="mid-col">تعيين القيم الممكنة للفرق <M>{`\\(|X_1 - X_2|\\)`}</M></div>
                 <div className="right-col">نشكل جدولاً ذو مدخلين (رقم الكرة 1 ورقم الكرة 2) ونملأ الخانات بالفروق لتسهيل الحساب.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">التوزيع الاحتمالي الشرطي <M>{`\\(P(X=x_i | A)\\)`}</M></div>
+                <div className="left-col">عين التوزيع الاحتمالي الشرطي <M>{`\\(P(X=x_i | A)\\)`}</M></div>
                 <div className="mid-col">تضييق فضاء العينة إلى الحادثة <M>{`\\(A\\)`}</M></div>
                 <div className="right-col">نقسم احتمال التقاطع <M>{`\\(P(X=x_i \\cap A)\\)`}</M> على الاحتمال الشرطي <M>{`\\(P(A)\\)`}</M> لجميع قيم <M>{`\\(X\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">لعبة قمار مع قيمة وسيط <M>{`\\(m\\)`}</M> لتعيين اللعبة عادلة</div>
+                <div className="left-col">ادرس لعبة قمار مع قيمة وسيط <M>{`\\(m\\)`}</M> لتعيين اللعبة عادلة</div>
                 <div className="mid-col">حل المعادلة <M>{`\\(E(X) = 0\\)`}</M> حيث <M>{`\\(X\\)`}</M> بدلالة <M>{`\\(m\\)`}</M></div>
                 <div className="right-col">نكتب قيم المتغير كفروق <M>{`\\(Gain - m\\)`}</M> ونحسب الأمل الرياضياتي ثم نحلها كمعادلة خطية لإيجاد <M>{`\\(m\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">سحب كرات من أكياس مختلفة على التوالي</div>
+                <div className="left-col">ما احتمال سحب كرات من أكياس مختلفة على التوالي</div>
                 <div className="mid-col">استعمال مبدأ الجداء الأساسي</div>
                 <div className="right-col">الاحتمال هو جداء احتمالات السحب من كل كيس نظراً لأنها حوادث مستقلة تماماً.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">الدالة المساعدة <M>{`\\(g(p) = p(1-p)\\)`}</M> في الاحتمالات</div>
+                <div className="left-col">استخدم الدالة المساعدة <M>{`\\(g(p) = p(1-p)\\)`}</M> في الاحتمالات</div>
                 <div className="mid-col">البحث عن الاحتمال الأعظمي</div>
                 <div className="right-col">تشتق هذه الدالة وتدرس تغيراتها لتجد أن القيمة العظمى تقع عند <M>{`\\(p = 0.5\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">استغلال الاستقلال لسحبين متتاليين دون إرجاع</div>
+                <div className="left-col">استغل الاستقلال لسحبين متتاليين دون إرجاع</div>
                 <div className="mid-col">فخ بكالوريا: السحب دون إرجاع ليس مستقلاً</div>
                 <div className="right-col">السحب الأول يؤثر على تركيبة الصندوق في السحب الثاني، لذا نستخدم الاحتمال الشرطي وليس الجداء المباشر للاستقلال.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">تكوين لجان بمهام مختلفة (ترتيب) وأعضاء (بدون ترتيب)</div>
+                <div className="left-col">ما احتمال تكوين لجان بمهام مختلفة (ترتيب) وأعضاء (بدون ترتيب)</div>
                 <div className="mid-col">استعمال الترتيبات <M>{`\\(A_n^p\\)`}</M> والتوفيقات <M>{`\\(C_n^p\\)`}</M> معاً</div>
                 <div className="right-col">نختار أصحاب المهام المحددة (رئيس، نائب) بالترتيبات، ثم نختار بقية الأعضاء بالتوفيقات من الباقي.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">الحصول على لونين فقط من 3 ألوان موجودة بالصندوق</div>
+                <div className="left-col">ما احتمال الحصول على لونين فقط من 3 ألوان موجودة بالصندوق</div>
                 <div className="mid-col">الحادثة العكسية غير مفيدة جداً هنا</div>
                 <div className="right-col">يفضل جمع حالات: (أحمر وأخضر) + (أحمر وأصفر) + (أخضر وأصفر).</div>
             </div>
             <div className="step-row">
-                <div className="left-col">حساب الاحتمال إذا كان السحب يتوقف عند أول كرة حمراء</div>
+                <div className="left-col">احسب الاحتمال إذا كان السحب يتوقف عند أول كرة حمراء</div>
                 <div className="mid-col">تجربة عشوائية غير محددة العدد</div>
                 <div className="right-col">تعتمد على التوزيع الهندسي وتشكيل مجاميع متتاليات هندسية لحساب الاحتمال الكلي.</div>
             </div>
@@ -1393,8 +1395,8 @@ const BacIntelligence = () => {
                 <div className="col-header right-h">العمل الاستراتيجي</div>
             </div>
             <div className="step-row">
-                <div className="left-col">أكتب تمثيلاً وسيطياً للمستقيم <M>{`\((D)\)`}</M></div>
-                <div className="mid-col"><M>{`\\(x=x_0+at,\\ y=y_0+bt,\\ z=z_0+ct\\)`}</M></div>
+                <div className="left-col">أكتب تمثيلاً وسيطياً للمستقيم <M>{`\\((D)\\)`}</M></div>
+                <div className="mid-col"><M>{`\\(x=x_0+at,\\ y=y_0+bt\\)`}</M><M>{`\\(,\\ z=z_0+ct\\)`}</M></div>
                 <div className="right-col">نحتاج لنقطة منه وشعاع توجيه <M>{`\\(\\vec{u}(a,\\ b,\\ c)\\)`}</M>.</div>
             </div>
             <div className="step-row">
@@ -1403,17 +1405,17 @@ const BacIntelligence = () => {
                 <div className="right-col">نحسب الشعاع الناظمي <M>{`\\(\\vec{n}(a,\\ b,\\ c)\\)`}</M> باستعمال الجداء السلمي مع شعاعين من المستوي.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">أصل المسافة بين النقطة <M>{`\(A\)`}</M> والمستوي <M>{`\((P)\)`}</M></div>
+                <div className="left-col">أصل المسافة بين النقطة <M>{`\\(A\\)`}</M> والمستوي <M>{`\\((P)\\)`}</M></div>
                 <div className="mid-col">قانون المسافة الكسرية <M>{`\\(d = \\dfrac{|ax+by+cz+d|}{\\sqrt{a^2+b^2+c^2}}\\)`}</M></div>
                 <div className="right-col">يستخدم لإثبات التماس بين كرة ومستوي (المسافة تساوي نصف القطر).</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن المستقيمين <M>{`\((D)\)`}</M> و <M>{`\(\Delta\)`}</M> متقاطعان</div>
+                <div className="left-col">بين أن المستقيمين <M>{`\\(D\\)`}</M> و <M>{`\\(\\Delta\\)`}</M> متقاطعان</div>
                 <div className="mid-col">حل جملة معادلات الوسيطين s و t</div>
                 <div className="right-col">إذا وجدنا حلاً وحيداً فهما متقاطعان. إذا تعارضت الجملة ولم يكونا متوازيين فهما غير متصالبين.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">أثبت أن النقط <M>{`\(A\)`}</M>, B, C, D من نفس المستوي</div>
+                <div className="left-col">أثبت أن النقط <M>{`\\(A\\)`}</M>, B, C, D من نفس المستوي</div>
                 <div className="mid-col"><M>{`\\(\\det(\\overrightarrow{AB},\\ \\overrightarrow{AC},\\ \\overrightarrow{AD}) = 0\\)`}</M></div>
                 <div className="right-col">أو برهان أن الشعاع AD يكتب كتركيبة خطية لـ AB و AC.</div>
             </div>
@@ -1423,14 +1425,14 @@ const BacIntelligence = () => {
                 <div className="right-col">نصف طويلة الجداء الشعاعي.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">عين إحداثيات النقطة H المسقط العمودي لـ <M>{`\(A\)`}</M> على <M>{`\((P)\)`}</M></div>
-                <div className="mid-col">H نقطة تقاطع المستقيم المار بـ <M>{`\(A\)`}</M> والناظمي على <M>{`\((P)\)`}</M></div>
+                <div className="left-col">عين إحداثيات النقطة H المسقط العمودي لـ <M>{`\\(A\\)`}</M> على <M>{`\\(P\\)`}</M></div>
+                <div className="mid-col">H نقطة تقاطع المستقيم المار بـ <M>{`\\(A\\)`}</M> والناظمي على <M>{`\\(P\\)`}</M></div>
                 <div className="right-col">نكتب التمثيل الوسيطي للمستقيم (AH) ونعوضه في معادلة المستوي.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن <M>{`\((C_f)\)`}</M> هي سطح كرة</div>
-                <div className="mid-col">كتابة المعادلة من الشكل <M>{`\\((x-a)^2 + (y-b)^2 + (z-c)^2 = R^2\\)`}</M></div>
-                <div className="right-col">استعمال إتمام المربع لمتغيرات <M>{`\(x\)`}</M>, <M>{`\(y\)`}</M>, <M>{`\(z\)`}</M>.</div>
+                <div className="left-col">بين أن <M>{`\\((C_f)\\)`}</M> هي سطح كرة</div>
+                <div className="mid-col">كتابة المعادلة من الشكل <M>{`\\((x-a)^2 + (y-b)^2 + (z-c)^2 \\)`}</M><M>{`\\(= R^2\\)`}</M></div>
+                <div className="right-col">استعمال إتمام المربع لمتغيرات <M>{`\\(x\\)`}</M>, <M>{`\\(y\\)`}</M>, <M>{`\\(z\\)`}</M>.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">أوجد إحداثيات مركز الكرة <M>{`\\(\\Omega\\)`}</M> ونصف قطرها</div>
@@ -1438,7 +1440,7 @@ const BacIntelligence = () => {
                 <div className="right-col">تأكد أن الطرف الثاني للمعادلة موجب تماماً.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">ادرس الوضع النسبي لمستوي <M>{`\((P)\)`}</M> وسطح كرة (S)</div>
+                <div className="left-col">ادرس الوضع النسبي لمستوي <M>{`\\(P\\)`}</M> وسطح كرة (S)</div>
                 <div className="mid-col">مقارنة المسافة d مع نصف القطر R</div>
                 <div className="right-col">إذا كان d &lt; R يتقاطعان في دائرة. إذا كان d=R يتماسان. إذا كان d &gt; R لا يتقاطعان.</div>
             </div>
@@ -1448,7 +1450,7 @@ const BacIntelligence = () => {
                 <div className="right-col">مساحة القاعدة (المثلث) في الارتفاع المتعلق بها مقسومة على 3.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن الشعاعين <M>{`\(u\)`}</M> و <M>{`\(v\)`}</M> متعامدان</div>
+                <div className="left-col">بين أن الشعاعين <M>{`\\(u\\)`}</M> و <M>{`\(v\)`}</M> متعامدان</div>
                 <div className="mid-col">الجداء السلمي <M>{`\\(\\vec{u} \\cdot \\vec{v} = 0\\)`}</M></div>
                 <div className="right-col"><M>{`\\(xx' + yy' + zz' = 0\\)`}</M>.</div>
             </div>
@@ -1458,9 +1460,9 @@ const BacIntelligence = () => {
                 <div className="right-col">تطبيق قانون معادلة مستوي بمعرفة نقطة وشعاع ناظم.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">بين أن <M>{`\((D)\)`}</M> يوازي <M>{`\((P)\)`}</M></div>
+                <div className="left-col">بين أن <M>{`\\(D\\)`}</M> يوازي <M>{`\\(P\\)`}</M></div>
                 <div className="mid-col">الجداء السلمي بين شعاع التوجيه والناظم معدوم</div>
-                <div className="right-col"><M>{`\\(\\vec{u} \\cdot \\vec{n} = 0\\)`}</M> مع التأكد أن نقطة من <M>{`\((D)\)`}</M> ليست في <M>{`\((P)\)`}</M>.</div>
+                <div className="right-col"><M>{`\\(\\vec{u} \\cdot \\vec{n} = 0\\)`}</M> مع التأكد أن نقطة من <M>{`\\(D\\)`}</M> ليست في <M>{`\\(P\\)`}</M>.</div>
             </div>
             <div className="step-row">
                 <div className="left-col">عين جيب تمام الزاوية بين مستويين</div>
@@ -1488,7 +1490,7 @@ const BacIntelligence = () => {
                 <div className="right-col">التقاطع قد يكون نقطة وحيدة، مستقيماً، أو لا يوجد تقاطع (حسب الارتباط الخطي للأشعة الناظمية).</div>
             </div>
             <div className="step-row">
-                <div className="left-col">عين مجموعة النقط <M>{`\\(M\\)`}</M> حيث <M>{`\\(||\\overrightarrow{MA}+\\overrightarrow{MB}+\\overrightarrow{MC}|| = 3 ||\\overrightarrow{MA}-\\overrightarrow{MB}||\\)`}</M></div>
+                <div className="left-col">عين مجموعة النقط <M>{`\\(M\\)`}</M> حيث <M>{`\\(||\\overrightarrow{MA}+\\overrightarrow{MB}+\\overrightarrow{MC}|| \\)`}</M><M>{`\\(= 3 ||\\overrightarrow{MA}-\\overrightarrow{MB}||\\)`}</M></div>
                 <div className="mid-col">استعمال المرجح <M>{`\\(G\\)`}</M> وخواص الأشعة</div>
                 <div className="right-col">الطرف الأيسر يصبح <M>{`\\(3MG\\)`}</M>. الطرف الأيمن مبسط بعلاقة شال إلى <M>{`\\(3BA\\)`}</M> (ثابت). إذن <M>{`\\(MG = BA\\)`}</M> وهي معادلة سطح كرة مركزها <M>{`\\(G\\)`}</M>.</div>
             </div>
@@ -1503,32 +1505,28 @@ const BacIntelligence = () => {
                 <div className="right-col">الشعاع <M>{`\\(\\overrightarrow{\\Omega A}\\)`}</M> (من المركز إلى نقطة التماس) هو شعاع ناظمي لهذا المستوي المماس.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">تقاطع مستويين لتوليد مستقيم</div>
+                <div className="left-col">ادرس تقاطع مستويين لتوليد مستقيم</div>
                 <div className="mid-col">إيجاد التمثيل الوسيطي للتقاطع</div>
                 <div className="right-col">نضع أحد المتغيرات كـ <M>{`\\(t\\)`}</M> (مثلا <M>{`\\(z=t\\)`}</M>) ثم نحل الجملة لإيجاد <M>{`\\(x\\)`}</M> و <M>{`\\(y\\)`}</M> بدلالة <M>{`\\(t\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">المسافة بين نقطة ومستقيم في الفضاء</div>
+                <div className="left-col">احسب المسافة بين نقطة ومستقيم في الفضاء</div>
                 <div className="mid-col">استعمال المسقط العمودي أو جداء شعاعي (جامعي)</div>
                 <div className="right-col">في البكالوريا نستعمل المسقط العمودي: نعين المستوي المار بالنقطة والعمودي على المستقيم، ثم نجد نقطة التقاطع ونحسب المسافة.</div>
             </div>
+
             <div className="step-row">
-                <div className="left-col">إثبات أن المستقيمين متخالفان (Skew lines)</div>
-                <div className="mid-col">لا يتقاطعان ولا يتوازيان</div>
-                <div className="right-col">شعاعا التوجيه غير مرتبطين خطياً (ليسوا متوازيين)، وجملة معادلتي تقاطعهما ليس لها حل (لا يتقاطعان).</div>
-            </div>
-            <div className="step-row">
-                <div className="left-col">مجموعة النقط من الشكل <M>{`\\(MA^2 + MB^2 = k\\)`}</M></div>
+                <div className="left-col">عين مجموعة النقط من الشكل <M>{`\\(MA^2 + MB^2 = k\\)`}</M></div>
                 <div className="mid-col">مبرهنة المتوسط (مرجح نقطتين)</div>
                 <div className="right-col">ندخل منتصف <M>{`\\([AB]\\)`}</M> ولتكن <M>{`\\(I\\)`}</M> فتصبح <M>{`\\(2MI^2 + \\dfrac{AB^2}{2} = k\\)`}</M>. وهي معادلة كرة مركزها <M>{`\\(I\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">معادلة مستوي يشمل مستقيما <M>{`\\((D)\\)`}</M> ونقطة <M>{`\\(A\\)`}</M></div>
+                <div className="left-col">عين معادلة مستوي يشمل مستقيما <M>{`\\((D)\\)`}</M> ونقطة <M>{`\\(A\\)`}</M></div>
                 <div className="mid-col">تحديد شعاعين توجيه للمستوي</div>
                 <div className="right-col">الشعاع الأول هو شعاع توجيه المستقيم <M>{`\\(\\vec{u}\\)`}</M>، والشعاع الثاني هو <M>{`\\(\\overrightarrow{BM}\\)`}</M> حيث B نقطة من <M>{`\\((D)\\)`}</M>. الناظم هو جداءهما السلمي المتعامد.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">إثبات تعامد مستويين</div>
+                <div className="left-col">أثبت تعامد مستويين</div>
                 <div className="mid-col">تعامد الشعاعين الناظميين</div>
                 <div className="right-col">الجداء السلمي <M>{`\\(\\vec{n_1} \\cdot \\vec{n_2} = 0\\)`}</M>.</div>
             </div>
@@ -1538,17 +1536,17 @@ const BacIntelligence = () => {
                 <div className="right-col">نتمم المربع، فيظهر الطرف الأيمن بدلالة <M>{`\\(m\\)`}</M>. لتكون كرة يجب أن يكون الطرف الأيمن موجباً تماماً.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">مجموعة النقط <M>{`\\(M\\)`}</M> حيث <M>{`\\(\\overrightarrow{MA} \\cdot \\overrightarrow{MB} = k\\)`}</M></div>
+                <div className="left-col">عين مجموعة النقط <M>{`\\(M\\)`}</M> حيث <M>{`\\(\\overrightarrow{MA} \\cdot \\overrightarrow{MB} = k\\)`}</M></div>
                 <div className="mid-col">ندخل منتصف <M>{`\\([AB]\\)`}</M> لتكن <M>{`\\(I\\)`}</M></div>
                 <div className="right-col">تصبح <M>{`\\(MI^2 - \\dfrac{AB^2}{4} = k\\)`}</M>، وهي إما سطح كرة أو نقطة أو مجموعة خالية حسب قيمة <M>{`\\(k\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">حساب مساحة مثلث باستخدام الجداء السلمي وقانون السينوس</div>
+                <div className="left-col">احسب مساحة مثلث باستخدام الجداء السلمي وقانون السينوس</div>
                 <div className="mid-col"><M>{`\\(S = \\dfrac{1}{2} ||\\overrightarrow{AB}|| \\times ||\\overrightarrow{AC}|| \\sin \\theta\\)`}</M></div>
                 <div className="right-col">نحسب الكوسينوس من الجداء السلمي، ثم السينوس من العلاقة <M>{`\\(\\cos^2 + \\sin^2 = 1\\)`}</M> لتفادي الجداء الشعاعي المعقد.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">معادلة سطح الكرة المماسة لمستويين متوازيين</div>
+                <div className="left-col">عين معادلة سطح الكرة المماسة لمستويين متوازيين</div>
                 <div className="mid-col">تحديد المركز والقطر</div>
                 <div className="right-col">المركز يقع في المستوي المنتصف بينهما، والقطر هو المسافة العمودية بين المستويين.</div>
             </div>
@@ -1601,55 +1599,35 @@ const BacIntelligence = () => {
                 <div className="right-col">تذكر أن الأرقام المكتوبة في نظام التعداد ذي الأساس <M>{`\\(a\\)`}</M> يجب أن تكون أصغر تماماً من <M>{`\\(a\\)`}</M>.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">دراسة بواقي القسمة على 7 واستنتاج باقي مجاميع كبرى</div>
+                <div className="left-col">ادرس بواقي القسمة على 7 واستنتاج باقي مجاميع كبرى</div>
                 <div className="mid-col">تحليل الدورية وفصل الحدود</div>
                 <div className="right-col">نعوض كل حد بباقيه حسب دوره (مثال <M>{`\\(n=3k+1\\)`}</M>) ثم نجمع البواقي ونقسم على 7 لتصغير الناتج.</div>
             </div>
             <div className="step-row">
-                <div className="left-col">استعمال مبرهنة بيزو لإثبات أن الكسر غير قابل للاختزال</div>
-                <div className="mid-col">إثبات أن البسط والمقام أوليان فيما بينهما</div>
-                <div className="right-col">نجد توليفة خطية <M>{`\\(\\alpha \\times البسط + \\beta \\times المقام = 1\\)`}</M>. حسب بيزو فهما أوليان والكسر غير قابل للاختزال.</div>
+                <div className="left-col">كيف نثبت أن الكسر <M>{`\\(\\dfrac{P}{Q}\\)`}</M> غير قابل للاختزال باستعمال مبرهنة بيزو؟</div>
+                <div className="mid-col"><M>{`\\(\\alpha P + \\beta Q = 1\\)`}</M> مع <M>{`\\(\\alpha, \\beta \\in \\mathbb{Z}\\)`}</M></div>
+                <div className="right-col">نطبق خوارزمية إقليدس الممتدة على البسط والمقام للوصول إلى توليفة بيزو. الحصول على 1 يعني أن <M>{`\\(PGCD(P, Q) = 1\\)`}</M> أي أن الكسر غير قابل للاختزال.</div>
             </div>
+
             <div className="step-row">
-                <div className="left-col">حل معادلة ديوفانتية بمجهولين مع شروط هندسية <M>{`\\(x>0, y>0\\)`}</M></div>
-                <div className="mid-col">تأطير الوسيط الصحيح <M>{`\\(k\\)`}</M></div>
-                <div className="right-col">نجد الحل العام <M>{`\\(x=ak+b\\)`}</M> و <M>{`\\(y=ck+d\\)`}</M>، ثم نحل المتراجحتين لإيجاد قيم <M>{`\\(k\\)`}</M> المقبولة (غالبا أبعاد هندسية موجبة).</div>
-            </div>
-            <div className="step-row">
-                <div className="left-col">التعداد العكسي (إيجاد الأساس <M>{`\\(b\\)`}</M> لحل معادلة)</div>
+                <div className="left-col">استعمل التعداد العكسي (إيجاد الأساس <M>{`\\(b\\)`}</M> لحل معادلة)</div>
                 <div className="mid-col">تحويل المشكلة إلى معادلة من الدرجة الثانية</div>
-                <div className="right-col">ننشر العبارة المكتوبة بالأساس المجهول لتصبح <M>{`\\(x \\cdot b^2 + y \\cdot b + z = N\\)`}</M> ونحلها لإيجاد <M>{`\\(b\\)`}</M> الطبيعي.</div>
+                <div className="right-col">ننشر العبارة المكتوبة بالأساس المجهول لتصبح <M>{`\\(x \\cdot b^2 + y \\cdot b + z = N\\)`}</M> ونحلها لإيجاد <M>{`\\(b\\)`}</M></div>
             </div>
+
+
             <div className="step-row">
-                <div className="left-col">تطبيقات التشفير التآلفي البسيطة <M>{`\\(y \\equiv ax+b \\pmod{26}\\)`}</M></div>
-                <div className="mid-col">فك التشفير يعتمد على المعكوس الضربي</div>
-                <div className="right-col">لإيجاد دالة فك التشفير، نبحث عن العدد <M>{`\\(a'\\)`}</M> بحيث <M>{`\\(a \\times a' \\equiv 1 \\pmod{26}\\)`}</M>.</div>
-            </div>
-            <div className="step-row">
-                <div className="left-col">التوافق المزدوج (مبرهنة الباقي الصيني المبسطة)</div>
-                <div className="mid-col"><M>{`\\(x \\equiv a \\pmod m\\)`}</M> و <M>{`\\(x \\equiv b \\pmod n\\)`}</M></div>
-                <div className="right-col">نكتب <M>{`\\(x = mk + a\\)`}</M> ونعوضها في المعادلة الثانية لإيجاد الباقي المشترك الأصغر.</div>
-            </div>
-            <div className="step-row">
-                <div className="left-col">القاسم المشترك الأكبر للأعداد من الشكل <M>{`\\(2^n - 1\\)`}</M></div>
-                <div className="mid-col">خاصية <M>{`\\(PGCD(a^n-1, a^m-1) = a^{PGCD(n,m)} - 1\\)`}</M></div>
+                <div className="left-col">عين القاسم المشترك الأكبر للأعداد من الشكل <M>{`\\(2^n - 1\\)`}</M></div>
+                <div className="mid-col">خاصية <M>{`\\(PGCD(a^n-1, a^m-1)\\)`}</M><M>{`\\(= a^{PGCD(n,m)} - 1\\)`}</M></div>
                 <div className="right-col">طريقة سريعة جداً لاستنتاج القاسم المشترك في تمارين الأعداد الخاصة بشعبة الرياضيات.</div>
             </div>
+
             <div className="step-row">
-                <div className="left-col">استخدام المتتاليات في الموافقات <M>{`\\(u_{n+1} \\equiv 3u_n \\pmod 5\\)`}</M></div>
-                <div className="mid-col">تحويل المتتالية الحقيقية إلى متتالية بواقي</div>
-                <div className="right-col">يصبح دور البواقي هو الأساس لدراسة المتتالية، وتثبت دوريتها بسهولة (لأن البواقي الممكنة محدودة).</div>
-            </div>
-            <div className="step-row">
-                <div className="left-col">إثبات أولية عدد (اختبار القسمة)</div>
+                <div className="left-col">أثبت أولية عدد (اختبار القسمة)</div>
                 <div className="mid-col">القسمة على الأعداد الأولية حتى الجذر التربيعي</div>
                 <div className="right-col">إذا لم يقبل القسمة على أي عدد أولي أصغر من أو يساوي جذره التربيعي، فهو أولي حتماً.</div>
             </div>
-            <div className="step-row">
-                <div className="left-col">استنتاج حل المعادلة الديوفانتية من القسمة الإقليدية</div>
-                <div className="mid-col">الصعود في خوارزمية إقليدس (الخوارزمية الممتدة)</div>
-                <div className="right-col">نعكس مسار قسمة إقليدس خطوة بخطوة للوصول إلى علاقة بيزو التي تعطي الحل الخاص فوراً.</div>
-            </div>
+
         </>
     );
 };

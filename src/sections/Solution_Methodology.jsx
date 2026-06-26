@@ -55,23 +55,65 @@ const Solution_Methodology = () => {
             </div>
 
             <SolutionCard number="1" phase="المرحلة الأولى" title="التحليل الشامل للتمرين">
-                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>أ. توجيه السؤال 3:</div>
-                <p>يخبرنا السؤال 3 أن الدالة موجبة تماماً على كامل مجال تعريفها. هذا يُوجّهنا في السؤال 1: يجب أن تكون القيمة الحدية الصغرى في جدول التغيرات أكبر أو تساوي الصفر.</p>
-                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>ب. المعطى الضمني:</div>
-                <p>حتى تكون <span className="math">{"\\(f(x) \\geq 0\\)"}</span> دائماً، يجب أن تكون أخفض نقطة في المنحنى فوق محور الفواصل أو تلامسه، أي <span className="math">{"\\(f(x_{min}) \\geq 0\\)"}</span>.</p>
-                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>ج. حساب المشتقة:</div>
+
+                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>أ. قراءة ذكية للسؤال 3 (التوجيه العكسي):</div>
                 <p>
-                    <span className="math">{"\\(f'(x) = 2x e^{-x} - x^2 e^{-x} = x(2 - x)e^{-x}\\)"}</span>.<br />
-                    بما أن <span className="math">{"\\(e^{-x} > 0\\)"}</span>، فإن إشارة المشتقة من إشارة <span className="math">{"\\(x(2 - x)\\)"}</span>. تنعدم المشتقة عند <span className="math">{"\\(x=0\\)"}</span> وعند <span className="math">{"\\(x=2\\)"}</span>.<br />
-                    وعندها نجد <span className="math">{"\\(f(0) = 0\\)"}</span>، مما ينسجم تماماً مع أن القيمة الدنيا هي صفر، وبالتالي الدالة موجبة.
+                    السؤال 3 يخبرنا أن للدالة <span className="math">{"\\(f\\)"}</span> قيمة صغرى عند
+                    <span className="math">{"\\(x=0\\)"}</span> وأن سلوكها يرتبط بهذه النقطة.
+                    هذا يعني أن دراسة المشتقة في السؤال 1 ليست هدفاً مستقلاً، بل يجب أن تكشف عن نقطة حرجة تعطي هذا السلوك.
                 </p>
+
+                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>ب. التوقع قبل الحساب:</div>
+                <p>
+                    بما أن السؤال 3 يحدد وجود سلوك “أدنى قيمة” مرتبط بنقطة معينة،
+                    فهذا يعني أن:
+                    <span className="math">{"\\(f'(x)\\)"}</span>
+                    يجب أن تنعدم عند هذه النقطة، وأن تتغير إشارتها حولها.
+                    إذن قبل الحساب، نتوقع شكل عامل في المشتقة يعطي جذراً واضحاً (مثل <span className="math">{"\\(x\\)"}</span> أو <span className="math">{"\\(x-2\\)"}</span>).
+                </p>
+
+                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>ج. التحقق بعد الاشتقاق:</div>
+                <p>
+                    نحسب المشتقة:
+                    <br />
+                    <span className="math">
+                        {"\\(f'(x) = 2x e^{-x} - x^2 e^{-x} = x(2 - x)e^{-x}\\)"}
+                    </span>
+                    <br />
+
+                    بما أن
+                    <span className="math">{"\\(e^{-x} > 0\\)"}</span>
+                    فإن إشارة المشتقة تُحدد من:
+                    <span className="math">{"\\(x(2-x)\\)"}</span>.
+                    <br />
+
+                    إذن تنعدم المشتقة عند:
+                    <span className="math">{"\\(x=0\\)"}</span>
+                    و
+                    <span className="math">{"\\(x=2\\)"}</span>.
+                </p>
+
+                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>د. ربط النتيجة بالسؤال 3:</div>
+                <p>
+                    نلاحظ أن إحدى نقاط الانعدام هي <span className="math">{"\\(x=0\\)"}</span>، وبالتالي:
+                    <span className="math">{"\\(f(0)=0\\)"}</span> تمثل قيمة حدية.
+                    وهذا ينسجم مع فكرة السؤال 3 أن السلوك العام للدالة يمر بنقطة تحقق قيمة دنيا.
+                </p>
+
+                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>هـ. الاستنتاج المنهجي:</div>
+                <p>
+                    السؤال 3 لم يكن نتيجة نهائية فقط، بل كان “دليل بنية” يخبرنا مسبقاً أن:
+                    المشتقة يجب أن تحتوي على عوامل تجعل نقاط الانعدام واضحة،
+                    وأن جدول التغيرات يجب أن يفسر وجود قيمة حدية عند تلك النقاط.
+                </p>
+
             </SolutionCard>
 
             <SolutionCard number="2" phase="المرحلة الثانية" title="ترجمة السؤال إلى رياضيات">
                 <ul style={{ paddingRight: '20px' }}>
                     <li><strong>المنحنى يمر من النقطة (2, 3):</strong> <span className="math">{"\\(f(2) = 3\\)"}</span></li>
                     <li><strong>المتتالية محدودة من الأعلى بـ 5:</strong> <span className="math">{"\\(U_n \\leq 5\\)"}</span> لكل <span className="math">{"\\(n\\)"}</span></li>
-                    <li><strong>مقارب أفقي y = -2 عند +∞:</strong> <span className="math">{"\\(\\lim_{x \\to +\\infty} f(x) = -2\\)"}</span></li>
+                    <li><strong>مقارب أفقي y = -2 عند +∞:</strong> <span className="math">{"\\[\\lim_{x \\to +\\infty} f(x) = -2\\]"}</span></li>
                     <li><strong>المستقيم مماس عند النقطة ذات الفاصلة 1:</strong> معادلة المماس هي <span className="math">{"\\(y = f'(1)(x - 1) + f(1)\\)"}</span>، ومعامل التوجيه هو <span className="math">{"\\(f'(1)\\)"}</span></li>
                 </ul>
             </SolutionCard>
@@ -111,7 +153,7 @@ const Solution_Methodology = () => {
             <SolutionCard number="6" phase="المرحلة الرابعة — التقنيات" title="اختيار التقنية المناسبة">
                 <ul style={{ paddingRight: '20px' }}>
                     <li><strong>الحالة أ (متباينة دوال):</strong> استخدام <em>الدالة المساعدة</em>. نعرّف <span className="math">{"\\(g(x) = \\ln(x) - x + 1\\)"}</span> وندرس تغيراتها لإثبات أنها سالبة.</li>
-                    <li><strong>الحالة ب (حالة عدم تعيين بالجزور):</strong> استخدام تقنية <em>الإضافة والاختزال (الضرب في المرافق)</em> للتخلص من الجذور في البسط.</li>
+                    <li><strong>الحالة ب (حالة عدم تعيين ):</strong> استخدام تقنية <em>الإضافة والاختزال (الضرب في المرافق)</em> للتخلص من الجذور في البسط.</li>
                     <li><strong>الحالة ج (مجموع متتالية):</strong> هنا التقنية هي <em>الاستدلال بالتراجع</em> أو استغلال مجموع حدود متتالية حسابية.</li>
                     <li><strong>الحالة د (مجموع تربيعي معقد):</strong> استخدام <em>تغيير المتغير</em>. نلاحظ أن <span className="math">{"\\(U_n - 1 = 3^n\\)"}</span>، فنتعامل مع المربع بعد تبسيط المتتالية.</li>
                 </ul>
@@ -126,9 +168,6 @@ const Solution_Methodology = () => {
                 </ul>
             </SolutionCard>
 
-            <SolutionCard number="8" phase="شامل — جميع المراحل" title="تطبيق متكامل: دوال لوغاريتمية">
-                <p>هذا التمرين الشامل يدمج كل المراحل السابقة، فالسؤال 3 يُحل باستخدام الدالة المساعدة (تقنية)، والسؤال 4 يستفيد من إشارة الدالة التي درسناها في السؤال 2 لمعرفة وضعية المساحة. الترابط بين الأسئلة هنا واضح وضوح الشمس ويؤكد على أهمية المرحلة التمهيدية.</p>
-            </SolutionCard>
 
         </>
     );

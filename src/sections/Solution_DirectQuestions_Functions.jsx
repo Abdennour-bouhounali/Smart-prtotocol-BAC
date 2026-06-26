@@ -16,7 +16,7 @@ const Solution_DirectQuestions_Functions = () => {
             <div className="question-header no-break">التمرين 1 — النهايات وحالات عدم التعيين</div>
 
             {/* Q1.1 */}
-            <div className="sub-question">1) نهاية الكسر <span className="math">{"\\(\\lim_{x \\to +\\infty} \\frac{x^3}{\\ln x - x}\\)"}</span></div>
+            <div className="sub-question">1) نهاية الكسر <span className="math">{"\\[\\lim_{x \\to +\\infty} \\frac{x^3}{\\ln x - x}\\]"}</span></div>
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
@@ -28,7 +28,7 @@ const Solution_DirectQuestions_Functions = () => {
                     السؤال معطى بصيغة رياضية مباشرة. الهدف هو حساب نهاية الكسر بجوار المالانهاية مع التخلص من أي حالة عدم تعيين.
                 </div>
                 <div className="right-col">
-                    <strong>الهدف:</strong> حساب <span className="math">{"\\(\\lim_{x \\to +\\infty} \\frac{x^3}{\\ln x - x}\\)"}</span>
+                    <strong>الهدف:</strong> حساب <span className="math">{"\\[\\lim_{x \\to +\\infty} \\frac{x^3}{\\ln x - x}\\]"}</span>
                 </div>
             </div>
 
@@ -48,7 +48,7 @@ const Solution_DirectQuestions_Functions = () => {
                 <div className="right-col">
                     التعويض المباشر يعطي حالة عدم تعيين في المقام <span className="math">{"\\(+\\infty - \\infty\\)"}</span>.
                     <div className="math-block">{"\\[ = \\lim_{x \\to +\\infty} \\frac{x^3}{x \\left( \\frac{\\ln x}{x} - 1 \\right)} = \\lim_{x \\to +\\infty} \\frac{x^2}{\\frac{\\ln x}{x} - 1} \\]"}</div>
-                    بما أن <span className="math">{"\\(\\lim_{x\\to+\\infty}\\frac{\\ln x}{x} = 0\\)"}</span>، فإن نهاية المقام هي <span className="math">{"\\(-1\\)"}</span>. ونهاية البسط <span className="math">{"\\(+\\infty\\)"}</span>.<br />
+                    بما أن <span className="math">{"\\[\\lim_{x\\to+\\infty}\\frac{\\ln x}{x} = 0\\]"}</span>، فإن نهاية المقام هي <span className="math">{"\\(-1\\)"}</span>. ونهاية البسط <span className="math">{"\\(+\\infty\\)"}</span>.<br />
                     <strong>النتيجة:</strong> <span className="math">{"\\(-\\infty\\)"}</span>
 
                 </div>
@@ -59,7 +59,7 @@ const Solution_DirectQuestions_Functions = () => {
 
 
             {/* Q1.2 */}
-            <div className="sub-question">2) نهاية الدالة الأسية <span className="math">{"\\(\\lim_{x \\to 0} \\frac{e^{2x} - e^x}{x}\\)"}</span></div>
+            <div className="sub-question">2) نهاية الدالة الأسية <span className="math">{"\\[\\lim_{x \\to 0} \\frac{e^{2x} - e^x}{x}\\]"}</span></div>
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
@@ -70,7 +70,7 @@ const Solution_DirectQuestions_Functions = () => {
                     حساب نهاية الدالة الكسرية الأسية عند الصفر وإزالة حالة عدم التعيين المحتملة.
                 </div>
                 <div className="right-col">
-                    الهدف: إيجاد <span className="math">{"\\(\\lim_{x \\to 0} \\frac{e^{2x} - e^x}{x}\\)"}</span>.
+                    الهدف: إيجاد <span className="math">{"\\[\\lim_{x \\to 0} \\frac{e^{2x} - e^x}{x}\\]"}</span>.
                 </div>
             </div>
 
@@ -100,7 +100,7 @@ const Solution_DirectQuestions_Functions = () => {
 
 
             {/* Q1.3 */}
-            <div className="sub-question">3) النهاية الشهيرة بقوى متغيرة <span className="math">{"\\(\\lim_{x \\to 0^>} x^2 (\\ln x)^3\\)"}</span></div>
+            <div className="sub-question">3) النهاية الشهيرة بقوى متغيرة <span className="math">{"\\[\\lim_{x \\to 0^>} x^2 (\\ln x)^3\\]"}</span></div>
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
@@ -111,7 +111,7 @@ const Solution_DirectQuestions_Functions = () => {
                     حساب نهاية جداء دالتين (قوة ولوغاريتم) عند الصفر بقيم كبرى، وإزالة حالة عدم التعيين.
                 </div>
                 <div className="right-col">
-                    الهدف: إيجاد <span className="math">{"\\(\\lim_{x \\to 0^>} x^2 (\\ln x)^3\\)"}</span>.
+                    الهدف: إيجاد <span className="math">{"\\[\\lim_{x \\to 0^>} x^2 (\\ln x)^3\\]"}</span>.
                 </div>
             </div>
 
@@ -140,13 +140,13 @@ const Solution_DirectQuestions_Functions = () => {
                 </div>
                 <div className="right-col">
                     العبارة تصبح: <div className="math-block">{"\\[ \\left( X \\cdot \\frac{3}{2} \\ln X \\right)^3 = \\frac{27}{8} (X \\ln X)^3 \\]"}</div>
-                    نهاية الشهيرة <span className="math">{"\\(\\lim_{X \\to 0} X \\ln X = 0\\)"}</span>.<br />
+                    نهاية الشهيرة <span className="math">{"\\[\\lim_{X \\to 0} X \\ln X = 0\\]"}</span>.<br />
                     <strong>النتيجة:</strong> <span className="math">{"\\(0\\)"}</span>
                 </div>
             </div>
 
             {/* Q1.4 */}
-            <div className="sub-question">4) نهاية الجداء اللوغاريتمي <span className="math">{"\\(\\lim_{x \\to +\\infty} x \\ln\\left(1 + \\frac{1}{x}\\right)\\)"}</span></div>
+            <div className="sub-question">4) نهاية الجداء اللوغاريتمي <span className="math">{"\\[\\lim_{x \\to +\\infty} x \\ln\\left(1 + \\frac{1}{x}\\right)\\]"}</span></div>
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
@@ -157,7 +157,7 @@ const Solution_DirectQuestions_Functions = () => {
                     حساب النهاية بجوار المالانهاية لدالة تحتوي على لوغاريتم مركب وإزالة حالة عدم التعيين.
                 </div>
                 <div className="right-col">
-                    الهدف: حساب <span className="math">{"\\(\\lim_{x \\to +\\infty} x \\ln\\left(1 + \\frac{1}{x}\\right)\\)"}</span>.
+                    الهدف: حساب <span className="math">{"\\[\\lim_{x \\to +\\infty} x \\ln\\left(1 + \\frac{1}{x}\\right)\\]"}</span>.
                 </div>
             </div>
 
@@ -203,10 +203,10 @@ const Solution_DirectQuestions_Functions = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    الهدف: إيجاد مستقيم <span className="math">{"\\(y = ax+b\\)"}</span> بحيث <span className="math">{"\\(\\lim_{x\\to+\\infty} [f(x) - (ax+b)] = 0\\)"}</span>. أريد كتابة <span className="math">{"\\(f(x)\\)"}</span> على الشكل <span className="math">{"\\((ax+b) + \\epsilon(x)\\)"}</span>.
+                    الهدف: إيجاد مستقيم <span className="math">{"\\(y = ax+b\\)"}</span> بحيث <span className="math">{"\\[\\lim_{x\\to+\\infty} [f(x) - (ax+b)] = 0\\]"}</span>. أريد كتابة <span className="math">{"\\(f(x)\\)"}</span> على الشكل <span className="math">{"\\((ax+b) + \\epsilon(x)\\)"}</span>.
                 </div>
                 <div className="right-col">
-                    الهدف: إيجاد <span className="math">{"\\(a\\)"}</span> و <span className="math">{"\\(b\\)"}</span> بحيث <span className="math">{"\\(\\lim_{x\\to+\\infty} f(x) - (ax+b) = 0\\)"}</span>.
+                    الهدف: إيجاد <span className="math">{"\\(a\\)"}</span> و <span className="math">{"\\(b\\)"}</span> بحيث <span className="math">{"\\[\\lim_{x\\to+\\infty} f(x) - (ax+b) = 0\\]"}</span>.
                 </div>
             </div>
 

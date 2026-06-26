@@ -30,10 +30,9 @@ const tocData = [
     { title: "4.6 حلول الأسئلة المباشرة - الأعداد المركبة", id: "toc-sol-direct-complex", type: "section" },
     { title: "4.7 المحور الرابع: الحساب التكاملي والمعادلات التفاضلية", id: "toc-direct-integrals", type: "section" },
     { title: "4.8 حلول الأسئلة المباشرة - الحساب التكاملي والمعادلات التفاضلية", id: "toc-sol-direct-integrals", type: "section" },
-    { title: "4.9 المحور الخامس: الاحتمالات", id: "toc-direct-probabilities", type: "section" },
-    { title: "4.10 حلول الأسئلة المباشرة - الاحتمالات", id: "toc-sol-direct-probabilities", type: "section" },
-    { title: "الفصل 5: تمرين شامل 1 مع الحل الدقيق", id: "toc-comprehensive", type: "chapter" },
-    { title: "الفصل 6: تمرين شامل 2 — دراسة دالة لوغاريتمية ومتتالية تكاملية", id: "toc-exercice4", type: "chapter" },
+
+
+    { title: "التمرين الرابع بكالوريا 2016 شعبة رياضيات — دراسة دالة لوغاريتمية ومتتالية تكاملية", id: "toc-exercice4", type: "chapter" },
     { title: "الخاتمة", id: "toc-conclusion", type: "chapter" },
 ];
 
