@@ -6,7 +6,7 @@ import { useLayoutEffect, useCallback } from 'react';
  * @param {string} bookName - Name of the book for footer
  * @param {any} dependencies - Dependencies that trigger re-pagination
  */
-export const usePagination = (containerRef, bookName, dependencies = []) => {
+export const usePagination = (containerRef, bookName, dependencies = [], options = {}) => {
     const createPage = useCallback((editor, pageIndex) => {
         const page = document.createElement('div');
         page.className = 'page';
@@ -143,9 +143,17 @@ export const usePagination = (containerRef, bookName, dependencies = []) => {
 
         // Trigger MathJax if available
         if (window.MathJax && window.MathJax.typesetPromise) {
-            window.MathJax.typesetPromise([editor]);
+            window.MathJax.typesetPromise([editor]).then(() => {
+                if (options.isPrint) {
+                    applyPrintColorPipeline(editor);
+                }
+            });
+        } else {
+            if (options.isPrint) {
+                applyPrintColorPipeline(editor);
+            }
         }
-    }, [createPage, containerRef]);
+    }, [createPage, containerRef, options.isPrint]);
 
     useLayoutEffect(() => {
         // Initial pagination
@@ -176,4 +184,109 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(() => func(...args), wait);
     };
+}
+
+// RGB/RGBA to CMYK and back to RGB CMYK pipeline for printing
+function rgbToCmyk(r, g, b) {
+    const rn = r / 255;
+    const gn = g / 255;
+    const bn = b / 255;
+
+    let k = 1 - Math.max(rn, gn, bn);
+    let c = k === 1 ? 0 : (1 - rn - k) / (1 - k);
+    let m = k === 1 ? 0 : (1 - gn - k) / (1 - k);
+    let y = k === 1 ? 0 : (1 - bn - k) / (1 - k);
+
+    // Apply thresholds: if any channel is <= 0.05, make it 0.0 to prefer dominant channels
+    if (c <= 0.05) c = 0;
+    if (m <= 0.05) m = 0;
+    if (y <= 0.05) y = 0;
+    if (k <= 0.05) k = 0;
+
+    return {
+        c: Math.round(c * 10000) / 10000,
+        m: Math.round(m * 10000) / 10000,
+        y: Math.round(y * 10000) / 10000,
+        k: Math.round(k * 10000) / 10000
+    };
+}
+
+function cmykToRgb({ c, m, y, k }) {
+    const r = Math.round(255 * (1 - c) * (1 - k));
+    const g = Math.round(255 * (1 - m) * (1 - k));
+    const b = Math.round(255 * (1 - y) * (1 - k));
+    return { r, g, b };
+}
+
+function convertColorToPrintRgb(colorStr) {
+    if (!colorStr) return colorStr;
+    
+    // Normalize string and check if it's transparent
+    const trimmed = colorStr.trim().toLowerCase();
+    if (trimmed === 'transparent' || trimmed === 'rgba(0, 0, 0, 0)') {
+        return colorStr;
+    }
+
+    // Match rgb or rgba
+    const match = colorStr.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/);
+    if (!match) return colorStr; // Not a parseable RGB color (like inherit, initial, etc.)
+
+    const r = parseInt(match[1], 10);
+    const g = parseInt(match[2], 10);
+    const b = parseInt(match[3], 10);
+    const a = match[4] !== undefined ? parseFloat(match[4]) : 1.0;
+
+    if (a === 0) return colorStr;
+
+    // Convert to CMYK and back to RGB
+    const cmyk = rgbToCmyk(r, g, b);
+    const rgbOut = cmykToRgb(cmyk);
+
+    if (match[4] !== undefined) {
+        return `rgba(${rgbOut.r}, ${rgbOut.g}, ${rgbOut.b}, ${a})`;
+    } else {
+        return `rgb(${rgbOut.r}, ${rgbOut.g}, ${rgbOut.b})`;
+    }
+}
+
+function applyPrintColorPipeline(container) {
+    if (!container) return;
+
+    const properties = [
+        { name: 'color', attr: 'data-orig-color' },
+        { name: 'backgroundColor', attr: 'data-orig-bg-color' },
+        { name: 'borderColor', attr: 'data-orig-border-color' },
+        { name: 'borderTopColor', attr: 'data-orig-border-top-color' },
+        { name: 'borderRightColor', attr: 'data-orig-border-right-color' },
+        { name: 'borderBottomColor', attr: 'data-orig-border-bottom-color' },
+        { name: 'borderLeftColor', attr: 'data-orig-border-left-color' },
+        { name: 'fill', attr: 'data-orig-fill' },
+        { name: 'stroke', attr: 'data-orig-stroke' }
+    ];
+
+    // Get all elements within the container, plus the container itself
+    const elements = [container, ...Array.from(container.querySelectorAll('*'))];
+
+    elements.forEach(element => {
+        // Skip non-elements
+        if (element.nodeType !== Node.ELEMENT_NODE) return;
+
+        const computed = window.getComputedStyle(element);
+
+        properties.forEach(({ name, attr }) => {
+            let origVal = element.getAttribute(attr);
+            if (origVal === null) {
+                // Read original value: inline style takes priority, then stylesheet computed style, or fallback to empty
+                origVal = element.style[name] || computed[name] || '';
+                element.setAttribute(attr, origVal);
+            }
+
+            if (origVal && origVal !== 'initial' && origVal !== 'inherit' && origVal !== 'transparent' && origVal !== 'rgba(0, 0, 0, 0)') {
+                const converted = convertColorToPrintRgb(origVal);
+                if (converted && converted !== origVal) {
+                    element.style[name] = converted;
+                }
+            }
+        });
+    });
 }

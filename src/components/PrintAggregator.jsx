@@ -10,7 +10,7 @@ const PrintAggregator = ({ sections, bookName }) => {
     const editorRef = useRef(null);
 
     // Trigger pagination once all sections are mounted
-    usePagination(editorRef, bookName, [sections.map(s => s.id).join(',')]);
+    usePagination(editorRef, bookName, [sections.map(s => s.id).join(',')], { isPrint: true });
 
     return (
         <div className="print-only">

@@ -173,6 +173,22 @@ body {
     .sidebar {
         display: none !important;
     }
+
+    /* Thin hairline borders for printing to match webview */
+    .step-row,
+    .step-row-two {
+        border-bottom: 0.5px solid #eee !important;
+    }
+
+    .left-col,
+    .mid-col {
+        border-left: 0.5px solid #eee !important;
+    }
+
+    .col-header.left-h,
+    .col-header.mid-h {
+        border-left: 0.5px solid #fff !important;
+    }
 }
 
 /* ── COVER ── */

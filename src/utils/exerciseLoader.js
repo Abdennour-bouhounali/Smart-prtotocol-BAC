@@ -11,6 +11,7 @@ export const loadExercices = async () => {
         let displayName = name;
         if (name === 'TableOfContents') displayName = 'الفهرس';
         else if (name === 'Introduction') displayName = 'المقدمة';
+        else if (name === 'Summary') displayName = 'مخطط بروتوكول SMART الشامل';
         else if (name === 'Methodology') displayName = 'منهجية الحل';
         else if (name === 'Solution_Methodology') displayName = 'حلول تطبيقات بروتوكول SMART';
         else if (name === 'BacIntelligence') displayName = 'ذكاء ترجمة البكالوريا';
@@ -31,10 +32,11 @@ export const loadExercices = async () => {
         const orderMap = {
             'TableOfContents': 0,
             'Introduction': 1,
-            'Methodology': 2,
-            'Solution_Methodology': 3,
-            'TeacherSection': 4,
-            'BacIntelligence': 5,
+            'Summary': 2,
+            'Methodology': 3,
+            'Solution_Methodology': 4,
+            'TeacherSection': 5,
+            'BacIntelligence': 6,
             'DirectQuestionsIntro': 50,
             'DirectQuestions_Functions': 51,
             'Solution_DirectQuestions_Functions': 52,

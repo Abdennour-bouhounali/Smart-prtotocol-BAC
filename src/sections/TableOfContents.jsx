@@ -2,6 +2,7 @@ import React from 'react';
 
 const tocData = [
     { title: "المقدمة", id: "toc-introduction", type: "chapter" },
+    { title: "مخطط بروتوكول SMART الشامل", id: "toc-summary", type: "chapter" },
     { title: "الفصل 1: بروتوكول SMART لحل المسائل الرياضية", id: "toc-methodology", type: "chapter" },
     { title: "1.1 بروتوكول SMART", id: "toc-smart", type: "section" },
     { title: "1.1.1 المرحلة الأولى: تحليل التمرين (Scan)", id: "toc-step1", type: "subsection" },
