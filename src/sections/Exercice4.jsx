@@ -248,27 +248,18 @@ const Exercice4 = () => {
                 </div>
             </div>
 
-            {/* Q1 — RELATE */}
+            {/* Q1 — RELATE (WITH EXECUTION MERGED) */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     <strong>المعطى المفيد:</strong> <span className="math">{"\\(x > 0\\)"}</span> على كامل مجال التعريف.<br />
                     كيف نوظف <strong>قواعد الاشتقاق</strong> لإيجاد إشارة <span className="math">{"\\(g'(x)\\)"}</span>؟
-                </div>
-                <div className="right-col">
-                    من أجل كل <span className="math">{"\\(x \\in ]0,+\\infty[\\)"}</span>:
-                    <div className="math-block">{"\\[g'(x) = 2x + \\frac{2}{x}\\]"}</div>
-                </div>
-            </div>
-
-            {/* Q1 — EXECUTION */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ الجبري</span><br />
                     <div className="math-block">{"\\[g'(x) = \\frac{2x^2+2}{x} = \\frac{2(x^2+1)}{x}\\]"}</div>
                     البسط <span className="math">{"\\(2(x^2+1)>0\\)"}</span> والمقام <span className="math">{"\\(x>0\\)"}</span>، إذن <span className="math">{"\\(g'(x)>0\\)"}</span>.
                 </div>
                 <div className="right-col">
+                    من أجل كل <span className="math">{"\\(x \\in ]0,+\\infty[\\)"}</span>:
+                    <div className="math-block">{"\\[g'(x) = 2x + \\frac{2}{x}\\]"}</div>
                     <div className="math-block">{"\\[g'(x) = \\frac{2(x^2+1)}{x} > 0\\]"}</div>
                     إذن <span className="math">{"\\(g\\)"}</span> <strong>متزايدة تماماً</strong> على <span className="math">{"\\(]0,+\\infty[\\)"}</span>.
                 </div>
@@ -317,7 +308,7 @@ const Exercice4 = () => {
                 </div>
             </div>
 
-            {/* Q2 — RELATE */}
+            {/* Q2 — RELATE (WITH EXECUTION MERGED) */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
@@ -325,21 +316,12 @@ const Exercice4 = () => {
                     <br />• <span className="math">{"\\(g\\)"}</span> مستمرة ومتزايدة تماماً (Q1).
                     <br />• حدا المجال: <span className="math">{"\\(0.52\\)"}</span> و <span className="math">{"\\(0.53\\)"}</span>.<br />
                     كيف نوظف <strong>مبرهنة القيم المتوسطة</strong> (مع الرتابة) لإثبات وجود ووحدانية <span className="math">{"\\(\\alpha\\)"}</span>؟
-                </div>
-                <div className="right-col">
-                    <span className="math">{"\\(g\\)"}</span> مستمرة ورتيبة تماماً على <span className="math">{"\\([0.52,\,0.53]\\)"}</span>.
-                </div>
-            </div>
-
-            {/* Q2 — EXECUTION */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ العددي</span><br />
                     <div className="math-block">{"\\[g(0.52) \\approx 1 + 0.2704 - 1.3078 = -0.037 < 0\\]"}</div>
                     <div className="math-block">{"\\[g(0.53) \\approx 1 + 0.2809 - 1.2698 = 0.011 > 0\\]"}</div>
                     <span className="math">{"\\(g(0.52) \\cdot g(0.53) < 0\\)"}</span> ← تغيّر الإشارة محقق.
                 </div>
                 <div className="right-col">
+                    <span className="math">{"\\(g\\)"}</span> مستمرة ورتيبة تماماً على <span className="math">{"\\([0.52,\,0.53]\\)"}</span>.
                     <div className="math-block">{"\\[g(0.52) \\approx -0.037 < 0\\]"}</div>
                     <div className="math-block">{"\\[g(0.53) \\approx 0.011 > 0\\]"}</div>
                     بمبرهنة القيم المتوسطة، يوجد حل وحيد <span className="math">{"\\(\\alpha \\in ]0.52,0.53[\\)"}</span>.
@@ -387,7 +369,7 @@ const Exercice4 = () => {
                 </div>
             </div>
 
-            {/* Q3 — RELATE */}
+            {/* Q3 — RELATE (WITH EXECUTION MERGED) */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
@@ -395,20 +377,11 @@ const Exercice4 = () => {
                     <br />• <span className="math">{"\\(g\\)"}</span> متزايدة تماماً على <span className="math">{"\\(]0,+\\infty[\\)"}</span> (Q1).
                     <br />• <span className="math">{"\\(g(\\alpha)=0\\)"}</span> (Q2).<br />
                     كيف نوظف <strong>تعريف الرتابة</strong> لاستنتاج إشارة <span className="math">{"\\(g(x)\\)"}</span> حول <span className="math">{"\\(\\alpha\\)"}</span>؟
+                    جدول الإشارة النهائي:
                 </div>
                 <div className="right-col">
                     <br />• <span className="math">{"\\(x < \\alpha \\Rightarrow g(x) < g(\\alpha) = 0\\)"}</span>.
                     <br />• <span className="math">{"\\(x > \\alpha \\Rightarrow g(x) > g(\\alpha) = 0\\)"}</span>.
-                </div>
-            </div>
-
-            {/* Q3 — EXECUTION */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
-                    جدول الإشارة النهائي:
-                </div>
-                <div className="right-col">
                     <div className="table-img-wrap" style={{ marginTop: '8px' }}>
                         <img src={signeOfGImg} alt="جدول إشارة g(x)" style={{ maxWidth: '100%', width: '480px', height: 'auto' }} />
                     </div>
@@ -486,7 +459,7 @@ const Exercice4 = () => {
                 </div>
             </div>
 
-            {/* II.Q1 — RELATE */}
+            {/* II.Q1 — RELATE (WITH EXECUTION MERGED) */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
@@ -507,23 +480,6 @@ const Exercice4 = () => {
                     <p>
                         إذن نركز على الحد المسيطر في كل حالة.
                     </p>
-                </div>
-
-                <div className="right-col">
-                    <div className="math-block">
-                        {"\\[\\lim_{x\\to0^+}\\ln x = -\\infty\\]"}
-                    </div>
-
-                    <div className="math-block">
-                        {"\\[\\lim_{x\\to+\\infty}\\frac{\\ln x}{x} = 0\\]"}
-                    </div>
-                </div>
-            </div>
-
-            {/* II.Q1 — EXECUTION 1 */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ الجبري</span><br />
 
                     <p>
                         أدرس كل حد لوحده.
@@ -545,9 +501,31 @@ const Exercice4 = () => {
                     <p>
                         إذن هذا الحد هو الذي يحدد النهاية.
                     </p>
+
+                    <p>
+                        أفكك الكسر إلى حدود بسيطة.
+                    </p>
+
+                    <p>
+                        الحدود الكسرية تؤول إلى الصفر.
+                    </p>
+
+                    <p>
+                        يبقى الحد
+                        <span className="math">{"\\(-x\\)"}</span>
+                        وهو الذي يسيطر عند اللانهاية.
+                    </p>
                 </div>
 
                 <div className="right-col">
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to0^+}\\ln x = -\\infty\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to+\\infty}\\frac{\\ln x}{x} = 0\\]"}
+                    </div>
+
                     <div className="math-block">
                         {"\\[\\lim_{x \\to 0^+} f(x)=\\lim_{x \\to 0^+}\\left[-x+(3+2\\ln x)\\frac1x\\right]\\]"}
                     </div>
@@ -567,30 +545,7 @@ const Exercice4 = () => {
                     <div className="math-block">
                         {"\\[\\lim_{x \\to 0^+}f(x)=-\\infty\\]"}
                     </div>
-                </div>
-            </div>
 
-            {/* II.Q1 — EXECUTION 2 */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ الجبري</span><br />
-
-                    <p>
-                        أفكك الكسر إلى حدود بسيطة.
-                    </p>
-
-                    <p>
-                        الحدود الكسرية تؤول إلى الصفر.
-                    </p>
-
-                    <p>
-                        يبقى الحد
-                        <span className="math">{"\\(-x\\)"}</span>
-                        وهو الذي يسيطر عند اللانهاية.
-                    </p>
-                </div>
-
-                <div className="right-col">
                     <div className="math-block">
                         {"\\[\\frac{3+2\\ln x}{x}=\\frac3x+2\\frac{\\ln x}{x}\\]"}
                     </div>
@@ -677,7 +632,7 @@ const Exercice4 = () => {
                 </div>
             </div>
 
-            {/* II.Q2.A — RELATE */}
+            {/* II.Q2.A — RELATE (WITH EXECUTION MERGED) */}
             <div className="step-row-two">
                 {/* LEFT = طريقة التفكير */}
                 <div className="left-col thinking-col">
@@ -694,6 +649,20 @@ const Exercice4 = () => {
 
                     <p>
                         الهدف هو ربط المشتقة بالدالة المساعدة.
+                    </p>
+
+                    <p>
+                        الآن نوحد المقامات للحصول على كسر واحد.
+                    </p>
+
+                    <p>
+                        ثم نستخرج العامل المشترك حتى تظهر عبارة
+                        <span className="math">{"\\(g(x)\\)"}</span>.
+                    </p>
+
+                    <p>
+                        بهذا نستطيع كتابة المشتقة بدلالة
+                        <span className="math">{"\\(g(x)\\)"}</span>.
                     </p>
                 </div>
 
@@ -716,33 +685,6 @@ const Exercice4 = () => {
                     <div className="math-block">
                         {"\\[f'(x) = -1 + \\frac{-1 - 2\\ln x}{x^2}\\]"}
                     </div>
-                </div>
-            </div>
-
-            {/* II.Q2.A — EXECUTION */}
-            <div className="step-row-two">
-                {/* LEFT = طريقة التفكير */}
-                <div className="left-col thinking-col">
-                    <span className="phase-label start">الفكرة</span>
-
-                    <p>
-                        الآن نوحد المقامات للحصول على كسر واحد.
-                    </p>
-
-                    <p>
-                        ثم نستخرج العامل المشترك حتى تظهر عبارة
-                        <span className="math">{"\\(g(x)\\)"}</span>.
-                    </p>
-
-                    <p>
-                        بهذا نستطيع كتابة المشتقة بدلالة
-                        <span className="math">{"\\(g(x)\\)"}</span>.
-                    </p>
-                </div>
-
-                {/* RIGHT = الحساب */}
-                <div className="right-col calc-col">
-                    <span className="phase-label exec">الحساب</span>
 
                     <div className="math-block">
                         {"\\[f'(x) = \\frac{-x^2}{x^2} + \\frac{-1-2\\ln x}{x^2}\\]"}
@@ -796,7 +738,7 @@ const Exercice4 = () => {
                 </div>
             </div>
 
-            {/* II.Q2.B — RELATE */}
+            {/* II.Q2.B — RELATE (WITH EXECUTION MERGED) */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
@@ -805,20 +747,11 @@ const Exercice4 = () => {
                     <br />• إشارة <span className="math">{"\\(g\\)"}</span> معروفة (I.Q3): عكسها = إشارة <span className="math">{"\\(f'\\)"}</span>.
                     <br />• نهايتا <span className="math">{"\\(f\\)"}</span> = <span className="math">{"\\(-\\infty\\)"}</span> (II.Q1).<br />
                     كيف نوظف <strong>إشارة <span className="math">{"\\(f'\\)"}</span></strong> لبناء جدول تغيرات <span className="math">{"\\(f\\)"}</span>؟
+                    جدول التغيرات النهائي:
                 </div>
                 <div className="right-col">
                     • <span className="math">{"\\(x\\in]0,\\alpha]\\Rightarrow f'(x)>0\\)"}</span>: متزايدة.
                     <br />• <span className="math">{"\\(x\\in[\\alpha,+\\infty[\\Rightarrow f'(x)<0\\)"}</span>: متناقصة.
-                </div>
-            </div>
-
-            {/* II.Q2.B — EXECUTION */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ</span><br />
-                    جدول التغيرات النهائي:
-                </div>
-                <div className="right-col">
                     <div className="table-img-wrap" style={{ marginTop: '8px' }}>
                         <img src={variationTableOfFImg} alt="جدول تغيرات الدالة f(x)" style={{ maxWidth: '100%', width: '480px', height: 'auto' }} />
                     </div>
@@ -876,7 +809,7 @@ const Exercice4 = () => {
                 </div>
             </div>
 
-            {/* II.Q2.C — RELATE */}
+            {/* II.Q2.C — RELATE (WITH EXECUTION MERGED) */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
@@ -920,26 +853,6 @@ const Exercice4 = () => {
                         <span className="math">{"\\(f(\\alpha)\\)"}</span>
                         حتى يختفي اللوغاريتم.
                     </p>
-                </div>
-
-                <div className="right-col">
-                    <div className="math-block">
-                        {"\\[1+\\alpha^2+2\\ln(\\alpha)=0\\]"}
-                    </div>
-
-                    <div className="math-block">
-                        {"\\[2\\ln(\\alpha)=-1-\\alpha^2\\]"}
-                    </div>
-
-                    <div className="math-block">
-                        {"\\[f(\\alpha)=-\\alpha+\\frac{3+2\\ln(\\alpha)}{\\alpha}\\]"}
-                    </div>
-                </div>
-            </div>
-            {/* II.Q2.C — EXECUTION */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ الجبري والعددي</span><br />
 
                     <p>
                         بعد التبسيط حصلنا على:
@@ -993,6 +906,18 @@ const Exercice4 = () => {
                 </div>
 
                 <div className="right-col">
+                    <div className="math-block">
+                        {"\\[1+\\alpha^2+2\\ln(\\alpha)=0\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[2\\ln(\\alpha)=-1-\\alpha^2\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[f(\\alpha)=-\\alpha+\\frac{3+2\\ln(\\alpha)}{\\alpha}\\]"}
+                    </div>
+
                     <div className="math-block">
                         {"\\[f(\\alpha)=-\\alpha+\\frac{2-\\alpha^2}{\\alpha}\\]"}
                     </div>
@@ -1078,7 +1003,7 @@ const Exercice4 = () => {
                 </div>
             </div>
 
-            {/* II.Q3.A — RELATE */}
+            {/* II.Q3.A — RELATE (WITH EXECUTION MERGED) */}
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
@@ -1096,27 +1021,6 @@ const Exercice4 = () => {
                     <p>
                         لذلك أفكك الكسر إلى حدود بسيطة حتى أستعمل النهايات المعروفة.
                     </p>
-                </div>
-
-                <div className="right-col">
-                    <div className="math-block">
-                        {"\\[\\frac{3+2\\ln x}{x}=\\frac3x+2\\frac{\\ln x}{x}\\]"}
-                    </div>
-
-                    <div className="math-block">
-                        {"\\[\\lim_{x\\to+\\infty}\\frac3x=0\\]"}
-                    </div>
-
-                    <div className="math-block">
-                        {"\\[\\lim_{x\\to+\\infty}\\frac{\\ln x}{x}=0\\]"}
-                    </div>
-                </div>
-            </div>
-
-            {/* II.Q3.A — EXECUTION */}
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label start">التنفيذ الجبري</span><br />
 
                     <p>
                         أعوض بالنهايات المعروفة.
@@ -1139,6 +1043,18 @@ const Exercice4 = () => {
                 </div>
 
                 <div className="right-col">
+                    <div className="math-block">
+                        {"\\[\\frac{3+2\\ln x}{x}=\\frac3x+2\\frac{\\ln x}{x}\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to+\\infty}\\frac3x=0\\]"}
+                    </div>
+
+                    <div className="math-block">
+                        {"\\[\\lim_{x\\to+\\infty}\\frac{\\ln x}{x}=0\\]"}
+                    </div>
+
                     <div className="math-block">
                         {"\\[\\lim_{x\\to+\\infty}[f(x)+x]=\\lim_{x\\to+\\infty}\\left(\\frac3x+2\\frac{\\ln x}{x}\\right)\\]"}
                     </div>
