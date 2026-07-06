@@ -22,9 +22,9 @@ export const usePagination = (containerRef, bookName, dependencies = [], options
         footer.contentEditable = "false";
 
         footer.innerHTML = `
-        <div class="footer-bac-plus" dir="ltr" style="font-weight: 900; color: #000000ff; letter-spacing: 1px; text-align: right; font-size: 11pt; padding-right: 15px;">BAC+</div>
+        <div class="footer-bac-plus" dir="ltr" style="font-weight: 900; color: #000000ff; letter-spacing: 1px; text-align: right; font-size: 11pt; padding-right: 15px;">BAC</div>
         <div class="footer-page-num">صفحة ${pageIndex + 1}</div>
-        <div class="footer-book-name" dir="rtl">${bookName || ''}</div>
+        <div class="footer-book-name" dir="ltr">${bookName || ''}</div>
     `;
 
         page.appendChild(footer);
@@ -44,6 +44,7 @@ export const usePagination = (containerRef, bookName, dependencies = [], options
 
             if (pages.length > 0) {
                 pages.forEach(page => {
+                    if (page.classList.contains('color-report-page')) return;
                     const content = page.querySelector('.page-content');
                     if (content) {
                         Array.from(content.childNodes).forEach(node => {
@@ -55,6 +56,7 @@ export const usePagination = (containerRef, bookName, dependencies = [], options
             } else {
                 Array.from(editor.childNodes).forEach(node => {
                     if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() === '') return;
+                    if (node.classList && node.classList.contains('color-report-page')) return;
                     nodes.push(node);
                 });
             }
@@ -220,7 +222,7 @@ function cmykToRgb({ c, m, y, k }) {
 
 function convertColorToPrintRgb(colorStr) {
     if (!colorStr) return colorStr;
-    
+
     // Normalize string and check if it's transparent
     const trimmed = colorStr.trim().toLowerCase();
     if (trimmed === 'transparent' || trimmed === 'rgba(0, 0, 0, 0)') {
@@ -252,6 +254,10 @@ function convertColorToPrintRgb(colorStr) {
 function applyPrintColorPipeline(container) {
     if (!container) return;
 
+    // Clean up previous report pages
+    const oldReports = container.querySelectorAll('.color-report-page');
+    oldReports.forEach(el => el.remove());
+
     const properties = [
         { name: 'color', attr: 'data-orig-color' },
         { name: 'backgroundColor', attr: 'data-orig-bg-color' },
@@ -266,10 +272,16 @@ function applyPrintColorPipeline(container) {
 
     // Get all elements within the container, plus the container itself
     const elements = [container, ...Array.from(container.querySelectorAll('*'))];
+    
+    // Track unique color conversions
+    const conversions = new Map();
 
     elements.forEach(element => {
         // Skip non-elements
         if (element.nodeType !== Node.ELEMENT_NODE) return;
+        
+        // Skip elements inside a previous color report if any slipped through
+        if (element.closest('.color-report-page')) return;
 
         const computed = window.getComputedStyle(element);
 
@@ -286,7 +298,172 @@ function applyPrintColorPipeline(container) {
                 if (converted && converted !== origVal) {
                     element.style[name] = converted;
                 }
+
+                // Parse and track the color info for the report
+                const trimmed = origVal.trim().toLowerCase();
+                const match = trimmed.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/);
+                if (match) {
+                    const r = parseInt(match[1], 10);
+                    const g = parseInt(match[2], 10);
+                    const b = parseInt(match[3], 10);
+                    
+                    const cmyk = rgbToCmyk(r, g, b);
+                    const key = `${r},${g},${b}`;
+                    if (!conversions.has(key)) {
+                        conversions.set(key, {
+                            original: origVal,
+                            converted: converted,
+                            cmyk
+                        });
+                    }
+                }
             }
         });
     });
+
+    if (conversions.size > 0) {
+        // Log to console for debugging/developer review
+        console.group('%c SMART Book - Color Transformation Report (CMYK) ', 'background: #2c3e50; color: #fff; font-weight: bold; padding: 4px;');
+        const logTable = [];
+        conversions.forEach((info) => {
+            logTable.push({
+                'Original Color': info.original,
+                'CMYK values': `C: ${(info.cmyk.c * 100).toFixed(0)}%, M: ${(info.cmyk.m * 100).toFixed(0)}%, Y: ${(info.cmyk.y * 100).toFixed(0)}%, K: ${(info.cmyk.k * 100).toFixed(0)}%`,
+                'Transformed RGB': info.converted,
+                'Changed?': info.original !== info.converted ? 'Yes' : 'No'
+            });
+        });
+        console.table(logTable);
+        console.groupEnd();
+
+        // Create and append the physical printed page report
+        appendColorReportPage(container, conversions);
+    }
+}
+
+function appendColorReportPage(container, conversions) {
+    const reportPage = document.createElement('div');
+    reportPage.className = 'page color-report-page';
+    reportPage.contentEditable = "false";
+    reportPage.style.pageBreakBefore = 'always';
+    reportPage.style.breakBefore = 'page';
+    
+    const content = document.createElement('div');
+    content.className = 'page-content';
+    content.style.width = '100%';
+    content.style.height = 'calc(100% - 25px)';
+    content.style.display = 'flex';
+    content.style.flexDirection = 'column';
+    
+    const header = document.createElement('div');
+    header.style.textAlign = 'center';
+    header.style.borderBottom = '2px solid #2c3e50';
+    header.style.paddingBottom = '10px';
+    header.style.marginBottom = '15px';
+    
+    const title = document.createElement('h2');
+    title.textContent = 'تقرير تحويل الألوان للطباعة (CMYK)';
+    title.style.margin = '0';
+    title.style.fontSize = '15pt';
+    title.style.fontWeight = 'bold';
+    title.style.color = '#2c3e50';
+    header.appendChild(title);
+    
+    const subtitle = document.createElement('p');
+    subtitle.textContent = 'جدول يوضح الألوان المستخدمة في الكتاب بعد تحويلها لـ CMYK وإعادة حسابها لـ RGB لضمان مطابقة الطباعة.';
+    subtitle.style.margin = '5px 0 0 0';
+    subtitle.style.fontSize = '10pt';
+    subtitle.style.color = '#555';
+    header.appendChild(subtitle);
+    
+    content.appendChild(header);
+
+    // Build Table
+    const table = document.createElement('table');
+    table.style.width = '100%';
+    table.style.borderCollapse = 'collapse';
+    table.style.fontSize = '9.5pt';
+    table.style.direction = 'rtl';
+    table.style.textAlign = 'right';
+
+    // Table Header
+    const thead = document.createElement('thead');
+    thead.innerHTML = `
+        <tr style="background-color: #2c3e50; color: white;">
+            <th style="padding: 6px 10px; border: 1px solid #ddd; text-align: right;">اللون الأصلي</th>
+            <th style="padding: 6px 10px; border: 1px solid #ddd; text-align: center;">نموذج</th>
+            <th style="padding: 6px 10px; border: 1px solid #ddd; text-align: left; direction: ltr;">CMYK قيم</th>
+            <th style="padding: 6px 10px; border: 1px solid #ddd; text-align: right;">اللون المحول (RGB)</th>
+            <th style="padding: 6px 10px; border: 1px solid #ddd; text-align: center;">نموذج</th>
+            <th style="padding: 6px 10px; border: 1px solid #ddd; text-align: center;">تغيير</th>
+        </tr>
+    `;
+    table.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+    let index = 0;
+    conversions.forEach((info) => {
+        const cmykText = `C:${(info.cmyk.c * 100).toFixed(0)}% M:${(info.cmyk.m * 100).toFixed(0)}% Y:${(info.cmyk.y * 100).toFixed(0)}% K:${(info.cmyk.k * 100).toFixed(0)}%`;
+        const hasChanged = info.original !== info.converted;
+        const changeStatusHtml = hasChanged 
+            ? `<span style="color: #922b21; font-weight: bold;">معدل</span>` 
+            : `<span style="color: #117a65;">ثابت</span>`;
+        
+        const row = document.createElement('tr');
+        row.style.backgroundColor = index % 2 === 0 ? '#fcfcfc' : '#f4f6f7';
+        row.innerHTML = `
+            <td style="padding: 5px 8px; border: 1px solid #ddd; font-family: monospace; font-size: 8.5pt;">${info.original}</td>
+            <td style="padding: 5px 8px; border: 1px solid #ddd; text-align: center;">
+                <div style="width: 24px; height: 14px; border: 1px solid #999; border-radius: 2px; background-color: ${info.original}; margin: 0 auto;"></div>
+            </td>
+            <td style="padding: 5px 8px; border: 1px solid #ddd; font-family: monospace; font-size: 8.5pt; text-align: left; direction: ltr;">${cmykText}</td>
+            <td style="padding: 5px 8px; border: 1px solid #ddd; font-family: monospace; font-size: 8.5pt;">${info.converted}</td>
+            <td style="padding: 5px 8px; border: 1px solid #ddd; text-align: center;">
+                <div style="width: 24px; height: 14px; border: 1px solid #999; border-radius: 2px; background-color: ${info.converted}; margin: 0 auto;"></div>
+            </td>
+            <td style="padding: 5px 8px; border: 1px solid #ddd; text-align: center; font-size: 9pt;">${changeStatusHtml}</td>
+        `;
+        tbody.appendChild(row);
+        index++;
+    });
+    table.appendChild(tbody);
+    content.appendChild(table);
+
+    // Legend / explanatory note below table
+    const note = document.createElement('div');
+    note.style.marginTop = '15px';
+    note.style.padding = '8px 12px';
+    note.style.backgroundColor = '#fdfefe';
+    note.style.border = '1px solid #d5dbdb';
+    note.style.borderRadius = '4px';
+    note.style.fontSize = '8.5pt';
+    note.style.color = '#555';
+    note.style.lineHeight = '1.4';
+    note.innerHTML = `
+        <strong>ملاحظات فنية حول نظام ألوان الطباعة:</strong>
+        <ul style="margin: 5px 0 0 0; padding-right: 15px;">
+            <li>يتم تحويل الألوان من نظام RGB إلى CMYK باستخدام طريقة الحساب القياسية للمطابع.</li>
+            <li>تُطبق عتبة استبعاد بنسبة 5% (threshold &lt;= 0.05) للقنوات غير المهيمنة لتفضيل الألوان الصافية وتجنب تشتت الحبر في الطباعة.</li>
+            <li>الخلفيات الفاتحة جداً (مثل اللون الرمادي الفاتح جداً والأحمر الفاتح الخاص بالتنبيهات) تم تحويلها تلقائياً إلى اللون الأبيض الصافي لضمان عدم طباعة خلفيات باهتة تشوش على قراءة النصوص والرموز الرياضية.</li>
+        </ul>
+    `;
+    content.appendChild(note);
+
+    reportPage.appendChild(content);
+
+    // Footer
+    const footer = document.createElement('div');
+    footer.className = 'page-footer';
+    
+    // Find current page number
+    const totalPages = container.querySelectorAll('.page').length;
+    
+    footer.innerHTML = `
+        <div class="footer-bac-plus" dir="ltr" style="font-weight: 900; color: #000000ff; letter-spacing: 1px; text-align: right; font-size: 11pt; padding-right: 15px;">BAC</div>
+        <div class="footer-page-num">صفحة ${totalPages + 1}</div>
+        <div class="footer-book-name" dir="ltr">تقرير ألوان الطباعة</div>
+    `;
+    reportPage.appendChild(footer);
+    
+    container.appendChild(reportPage);
 }
