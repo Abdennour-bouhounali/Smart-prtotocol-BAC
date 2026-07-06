@@ -56,7 +56,7 @@ const TeacherSection = () => {
 
 
 
-            <div className="exercise-statement" style={{ fontStyle: 'italic', marginTop: '30px', textAlign: 'center', borderTop: '1px solid #ccc', paddingTop: '20px' }}>
+            <div className="exercise-statement" style={{ fontStyle: 'italic', marginTop: '30px', textAlign: 'center', borderTop: '1px solid #CCCCCC', paddingTop: '20px' }}>
                 تذكر دائماً أن هدفك ليس إنهاء البرنامج الدراسي فحسب، بل بناء "العقلية التحليلية الصارمة" التي تجعل الطالب قادراً على مقارعة المسائل المستفزة والخروج من منطقة الراحة. أنت لا تعلمهم قوانين الرياضيات، أنت تسلحهم بـ "قوة حل المشكلات".
             </div>
         </>

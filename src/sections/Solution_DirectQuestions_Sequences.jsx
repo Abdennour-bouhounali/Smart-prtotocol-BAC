@@ -30,7 +30,7 @@ const Solution_DirectQuestions_Sequences = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أربط العلاقة التراجعية بالدالة المرفقة لتسهيل الانتقال بين الحدود. أتحقق من شرط البداية (الأساس)، ثم أصيغ فرضية التراجع. أدرس اتجاه تغير الدالة المرفقة لإثبات خطوة التراجع مع الحفاظ على ترتيب المتباينة.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> توظيف تزايد الدالة المرفقة للمحافظة على اتجاه المتباينة والانتقال من فرضية التراجع إلى خطوة البرهان.
                     </div>
                 </div>
@@ -64,7 +64,7 @@ const Solution_DirectQuestions_Sequences = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أدمج الخاصيتين في متباينة واحدة لتسهيل البرهان. أتحقق من الحد الأول والثاني كأساس للتراجع، ثم أفرض صحة المتباينة وأستعمل البناء الجبري (إضافة عدد ثم التجذير) لنقلها إلى الحد الموالي مستفيداً من تزايد دالة الجذر.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> بناء حدود التراجع الموالية بإضافة الثابت وجر الأطراف تحت دالة الجذر التربيعي المتزايدة دون تغيير اتجاه المتراجحة.
                     </div>
                 </div>
@@ -135,7 +135,7 @@ const Solution_DirectQuestions_Sequences = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أربط حصر حدود المتتالية بإشارة بسط ومقام كسر الفرق. أحلل إشارة المقام أولاً، ثم أحلل إشارة البسط ككثيرة حدود من الدرجة الثانية بإيجاد جذورها وتحديد إشارتها داخل وخارج مجال الجذور.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> دراسة البسط والمقام بشكل مستقل لتركيب إشارة كسر الفرق النهائي.
 
                     </div>
@@ -148,7 +148,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     ندرس إشارة كثيرة الحدود في البسط <span className="math">{"\\(P(x) = -x^2 + x + 2\\)"}</span>. الجذور هي <span className="math">{"\\(x_1 = -1\\)"}</span> و <span className="math">{"\\(x_2 = 2\\)"}</span>.<br />
                     إشارة كثيرة الحدود تكون موجبة داخل مجال الجذرين، أي على المجال <span className="math">{"\\(]-1, 2[\\)"}</span>.<br />
                     بما أن <span className="math">{"\\(u_n \\in ]0, 2[ \\subset ]-1, 2[\\)"}</span>، فإن البسط <span className="math">{"\\(-u_n^2 + u_n + 2 > 0\\)"}</span>.
-                    بما أن البسط والمقام موجبان تماماً، فإن الفرق موجباً تماماً، وعليه                  <span style={{ color: "#1e40af", fontSize: '11pt' }}>المتتالية متزايدة تماماً.
+                    بما أن البسط والمقام موجبان تماماً، فإن الفرق موجباً تماماً، وعليه                  <span style={{ color: "#003399", fontSize: '11pt' }}>المتتالية متزايدة تماماً.
 
                     </span>                 </div>
 
@@ -227,7 +227,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     </ul>
                     <strong>سؤال التفكير المنهجي:</strong> كيف يمكنني الربط بين هذه المعطيات الثلاثة للانتقال من الحد <span className="math">{"\\(v_n\\)"}</span> إلى <span className="math">{"\\(v_{n+1}\\)"}</span> وتحديد الثوابت المطلوبة؟
 
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> مقارنة النتائج لاستبعاد القيمة التي تلغي مقام المتتالية المساعدة وتحديد الأساس q المقابل للقيمة المقبولة.
                     </div>
                 </div>
@@ -286,7 +286,7 @@ const Solution_DirectQuestions_Sequences = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أربط المجموع بالقانون العام لمجموع حدود متتالية هندسية بتعيين الحد الأول والأساس وعدد الحدود بدقة ثم التعويض المباشر والتبسيط.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> حساب عدد الحدود بدقة لتفادي الأخطاء في الأسس عند كتابة العبارة المغلقة للمجموع.
                     </div>
                 </div>
@@ -335,7 +335,7 @@ S_n &= v_0 \\frac{1 - q^{n+1}}{1 - q} \\\\
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أربط جداء القوى بجمع الأسس لتحويل الجداء إلى قوى مرفوعة لمجموع متتالية حسابية. أحسب هذا المجموع الحسابي باستخراج حده الأول والأخير وعدد الحدود ثم التعويض في قانونه الخاص.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> حساب مجموع الأسس في الأس كخطوة وسيطة قبل رفع الناتج كأساس للعدد 2.
                     </div>
                 </div>
@@ -402,7 +402,7 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
 
                     لتحويل المسألة إلى مجموع متتالية حسابية واستعمال قانونها مباشرة.
 
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> الإشارة الذهنية:</strong>
                         لوغاريتمات + جمع ⇐ ابحث عن متتالية حسابية.
                     </div>
@@ -439,7 +439,7 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أوحد المقامات داخل اللوغاريتم، ثم أحلل البسط كفرق مربعين. أستعمل خواص اللوغاريتم لتفكيك المقادير إلى فروق بين حدود متتالية لتوليد مجموع تلسكوبي تختزل حدوده الوسطية تلقائياً.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> كتابة الحد العام على شكل فرق حدين متتاليين لتسريع عملية الاختزال عند الجمع.
                     </div>
                 </div>
@@ -535,12 +535,12 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                     <span className="math">{"\\(n\\)"}</span>.
 
                     <div style={{
-                        backgroundColor: "#eef2ff",
-                        border: "1px dashed #3b82f6",
+                        backgroundColor: "#DDEEFF",
+                        border: "1px dashed #0080FF",
                         padding: "5px",
                         borderRadius: "5px",
                         marginTop: "5px",
-                        color: "#1e40af",
+                        color: "#003399",
                         fontSize: '11pt'
                     }}>
                         <strong><BellIcon /> ما الذي أبحث عنه؟</strong><br />
@@ -617,7 +617,7 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
 
                     عندما أسمع كلمة:
 
-                    <strong style={{ color: '#1e3a5f' }}> رتابة متتالية </strong>
+                    <strong style={{ color: '#004D99' }}> رتابة متتالية </strong>
 
                     أفكر مباشرة في الفرق:
 
@@ -651,12 +651,12 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                     وبالتالي الفرق سالب.
 
                     <div style={{
-                        backgroundColor: "#eef2ff",
-                        border: "1px dashed #3b82f6",
+                        backgroundColor: "#DDEEFF",
+                        border: "1px dashed #0080FF",
                         padding: "5px",
                         borderRadius: "5px",
                         marginTop: "5px",
-                        color: "#1e40af",
+                        color: "#003399",
                         fontSize: '11pt'
                     }}>
                         <strong><BellIcon /> الفكرة الذهنية:</strong><br />
@@ -910,12 +910,12 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                         {"\\(0\\le I_n\\le\\frac{e}{n+1}\\)"}
                     </span>.
                     <div style={{
-                        backgroundColor: "#eef2ff",
-                        border: "1px dashed #3b82f6",
+                        backgroundColor: "#DDEEFF",
+                        border: "1px dashed #0080FF",
                         padding: "5px",
                         borderRadius: "5px",
                         marginTop: "5px",
-                        color: "#1e40af",
+                        color: "#003399",
                         fontSize: '11pt'
                     }}>
                         <strong><BellIcon /> الفكرة :</strong><br />
@@ -1110,12 +1110,12 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                         {"\\[\\lim_{n\\to+\\infty}(v_n-u_n)=0\\]"}
                     </span>.
                     <div style={{
-                        backgroundColor: "#eef2ff",
-                        border: "1px dashed #3b82f6",
+                        backgroundColor: "#DDEEFF",
+                        border: "1px dashed #0080FF",
                         padding: "5px",
                         borderRadius: "5px",
                         marginTop: "5px",
-                        color: "#1e40af",
+                        color: "#003399",
                         fontSize: '11pt'
                     }}>
                         <strong><BellIcon /> الفكرة:</strong><br />
@@ -1156,12 +1156,12 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                     إذن أستفيد من النتيجة السابقة بدل إعادة العمل من البداية.
 
                     <div style={{
-                        backgroundColor: "#eef2ff",
-                        border: "1px dashed #3b82f6",
+                        backgroundColor: "#DDEEFF",
+                        border: "1px dashed #0080FF",
                         padding: "5px",
                         borderRadius: "5px",
                         marginTop: "5px",
-                        color: "#1e40af",
+                        color: "#003399",
                         fontSize: '11pt'
                     }}>
                         <strong><BellIcon /> الفكرة :</strong><br />

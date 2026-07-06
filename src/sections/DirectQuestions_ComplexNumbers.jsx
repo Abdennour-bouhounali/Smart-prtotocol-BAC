@@ -12,16 +12,16 @@ const DirectQuestions_ComplexNumbers = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -43,11 +43,11 @@ const DirectQuestions_ComplexNumbers = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -72,16 +72,16 @@ const DirectQuestions_ComplexNumbers = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -99,7 +99,7 @@ const DirectQuestions_ComplexNumbers = () => {
                     <div style={{
                         marginRight: '0px',
                         lineHeight: '1.7',
-                        color: '#1e3a5f',
+                        color: '#004D99',
                         fontWeight: '600',
                         fontSize: '11pt',
                         paddingRight: '0px',
@@ -115,11 +115,11 @@ const DirectQuestions_ComplexNumbers = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -140,16 +140,16 @@ const DirectQuestions_ComplexNumbers = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -167,7 +167,7 @@ const DirectQuestions_ComplexNumbers = () => {
                     <div style={{
                         marginRight: '0px',
                         lineHeight: '1.7',
-                        color: '#1e3a5f',
+                        color: '#004D99',
                         fontWeight: '600',
                         fontSize: '11pt',
                         paddingRight: '0px',
@@ -187,11 +187,11 @@ const DirectQuestions_ComplexNumbers = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -216,16 +216,16 @@ const DirectQuestions_ComplexNumbers = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -243,7 +243,7 @@ const DirectQuestions_ComplexNumbers = () => {
                     <div style={{
                         marginRight: '0px',
                         lineHeight: '1.7',
-                        color: '#1e3a5f',
+                        color: '#004D99',
                         fontWeight: '600',
                         fontSize: '11pt',
                         paddingRight: '0px',
@@ -261,11 +261,11 @@ const DirectQuestions_ComplexNumbers = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'

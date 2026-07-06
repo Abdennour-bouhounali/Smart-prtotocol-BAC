@@ -39,12 +39,10 @@ const Solution_DirectQuestions_Functions = () => {
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     <strong>جرد المعطيات:</strong> التعويض المباشر يعطي في البسط <span className="math">{"\\(+\\infty\\)"}</span> وفي المقام <span className="math">{"\\(+\\infty - \\infty\\)"}</span> (حالة عدم تعيين مركبة).<br />
                     <strong>الربط بالهدف (الاستراتيجية):</strong> للوصول للهدف، يجب فك هذه الحالة. أعلم من مكتسباتي القبلية أن <span className="math">{"\\(x\\)"}</span> أقوى من <span className="math">{"\\(\\ln x\\)"}</span> بجوار المالانهاية. لذا سأستخرج <span className="math">{"\\(x\\)"}</span> كعامل مشترك في المقام لتوليد النهاية الشهيرة <span className="math">{"\\(\\frac{\\ln x}{x}\\)"}</span>.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> أستخرج <span className="math">{"\\(x\\)"}</span> كعامل مشترك في المقام <strong>فقط</strong> لأتمكن من إظهار النهاية الشهيرة <span className="math">{"\\(\\frac{\\ln x}{x} \\to 0\\)"}</span> والتخلص من حالة عدم التعيين.
                     </div>
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong><BellIcon /> تذكير بالهدف:</strong> أغير المتغيرات وأدمج القوى <strong>فقط</strong> لأستخرج النهاية الشهيرة <span className="math">{"\\(X \\ln X \\to 0\\)"}</span>. يجب ألا أغيب عن هذا الهدف.
-                    </div>
+
                 </div>
                 <div className="right-col">
                     التعويض المباشر يعطي حالة عدم تعيين في المقام <span className="math">{"\\(+\\infty - \\infty\\)"}</span>.
@@ -80,7 +78,7 @@ const Solution_DirectQuestions_Functions = () => {
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     <strong>المعطيات:</strong> التعويض بـ 0 يعطي <span className="math">{"\\(1 - 1 = 0\\)"}</span> في البسط، و 0 في المقام. حالة <span className="math">{"\\(0/0\\)"}</span>.<br />
                     <strong>الاستراتيجية:</strong> كلما رأيت عبارة من الشكل <span className="math">{"\\(\\frac{g(x)-g(a)}{x-a}\\)"}</span> عندما <span className="math">{"\\(x \\to a\\)"}</span>، أترجمها فوراً إلى <span className="math">{"\\(g'(a)\\)"}</span>. هنا أضع <span className="math">{"\\(g(x) = e^{2x} - e^x\\)"}</span> وألاحظ أن <span className="math">{"\\(g(0) = 0\\)"}</span>.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> أحسب مشتقة الدالة <span className="math">{"\\(g(x)\\)"}</span> عند الصفر <strong>لأن</strong> النهاية المطلوبة تتطابق تماماً مع تعريف العدد المشتق. هذا يجنبنا التفكيك المعقد.
                     </div>
                     أشتق الدالة <span className="math">{"\\(g(x)\\)"}</span> .<br />
@@ -134,7 +132,7 @@ const Solution_DirectQuestions_Functions = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><CheckIcon /> تحقيق الهدف:</strong> ممتاز! لقد ظهر الشكل <span className="math">{"\\(X \\ln X\\)"}</span> الذي خططت له. الآن يمكنني إنهاء الحساب.
                     </div>
                     لما <span className="math">{"\\(x \\to 0\\)"}</span>، فإن <span className="math">{"\\(X \\to 0\\)"}</span>. الحد داخل القوس يصبح <span className="math">{"\\(\\frac{3}{2} X \\ln X\\)"}</span> الذي يؤول إلى 0. ومكعب الصفر هو 0.
@@ -166,7 +164,7 @@ const Solution_DirectQuestions_Functions = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     بوجود <span className="math">{"\\(x \\to +\\infty\\)"}</span> ووجود المقلوب <span className="math">{"\\(1/x\\)"}</span>، الاستراتيجية الأفضل هي تبديل المتغير ليؤول إلى الصفر ونستفيد من النهايات الشهيرة للوغاريتم.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> أضع <span className="math">{"\\(X = 1/x\\)"}</span> <strong>لغرض وحيد</strong> وهو إظهار النهاية الشهيرة <span className="math">{"\\(\\frac{\\ln(1+X)}{X}\\)"}</span> عند الصفر التي أعرف نتيجتها مسبقاً.
                     </div>
                 </div>
@@ -216,10 +214,10 @@ const Solution_DirectQuestions_Functions = () => {
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     <strong>المعطيات:</strong> الدالة تحت الجذر هي كثيرة حدود. بجوار <span className="math">{"\\(+\\infty\\)"}</span> تتصرف مثل <span className="math">{"\\(|x|\\)"}</span>.<br />
                     <strong>الاستراتيجية:</strong> الطريقة الأسرع لتخمين المقارب هي كتابة ما تحت الجذر على الشكل النموذجي <span className="math">{"\\((x+c)^2 + d\\)"}</span> واستخراج المربع.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> أبحث عن الشكل النموذجي <strong>لكي</strong> أستخرج مربعاً كاملاً من تحت الجذر، مما يكشف لي مباشرة عن معادلة المقارب المائل.
                     </div>
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><CheckIcon /> تحقيق الهدف:</strong> بضرب المرافق، أثبتنا أن الباقي يؤول للصفر، مما يؤكد صحة المقارب المائل.
                     </div>
                     أضرب في المرافق لإزالة عدم التعيين، أجد أن النتيجة تساوي 0 فعلاً.
@@ -267,7 +265,7 @@ const Solution_DirectQuestions_Functions = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     إشارة الفرق تعتمد كلياً على الكسر المتبقي. نلاحظ أن المقام يحتوي على <span className="math">{"\\(e^x - 1\\)"}</span> الذي تتغير إشارته عند الصفر.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> ندرس إشارة الكسر <span className="math">{"\\(\\frac{x}{e^x-1}\\)"}</span> <strong>فقط</strong> لنعرف متى يكون الفرق موجباً أو سالباً لتحديد وضعية المنحنى بدقة.
                     </div>
                 </div>
@@ -315,7 +313,7 @@ const Solution_DirectQuestions_Functions = () => {
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     <strong>المعطيات:</strong> الدالة هي مركب دالتين، لوغاريتمية وجذرية.<br />
                     <strong>الاستراتيجية:</strong> أطبق قاعدة السلسلة لمشتقة اللوغاريتم <span className="math">{"\\(\\frac{u'}{u}\\)"}</span> حيث <span className="math">{"\\(u = x + \\sqrt{x^2+1}\\)"}</span>.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> هدفي الأول هو التعبير عن <span className="math">{"\\(u'\\)"}</span> بشكل صحيح وتجنب الأخطاء في مشتقة الجذر لتعويضها في قانون مشتقة اللوغاريتم.
                     </div>
                 </div>
@@ -351,7 +349,7 @@ const Solution_DirectQuestions_Functions = () => {
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     <strong>المعطيات:</strong> الدالة <span className="math">{"\\(x^x\\)"}</span> تحتوي على متغير في الأساس ومتغير في الأس.<br />
                     <strong>الاستراتيجية:</strong> القاعدة الذهبية هنا: لا أملك قاعدة اشتقاق مباشرة لها. أستخدم الخواص اللوغاريتمية الأسية لتحويلها: <span className="math">{"\\(x^x = e^{\\ln(x^x)} = e^{x \\ln x}\\)"}</span>.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> قمت بالتحويل إلى الشكل الأسي <span className="math">{"\\(e^{x \\ln x}\\)"}</span> <strong>لأنني</strong> لا أملك قاعدة مباشرة لاشتقاق متغير أس متغير، والآن يمكنني تطبيق قاعدة مشتقة الجداء.
                     </div>
                 </div>
@@ -404,7 +402,7 @@ const Solution_DirectQuestions_Functions = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     حتى نطبق المبرهنة، يجب توفر استمرارية الدالة، رتابتها التامة (تزايد أو تناقص)، وأن الصورتين في طرفي المجال متعاكستان في الإشارة.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> أحسب المشتقة والصور <strong>فقط</strong> لأثبت الشروط الثلاثة: الاستمرارية، الرتابة التامة، وتغير الإشارة.
                     </div>
                 </div>
@@ -522,7 +520,7 @@ const Solution_DirectQuestions_Functions = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     في هذا النوع من المناقشات، المستقيم الأفقي <span className="math">{"\\(y = g(m)\\)"}</span> لا يتحرك عشوائياً، بل يتحرك صعوداً ونزولاً بناءً على تغيرات الدالة <span className="math">{"\\(g\\)"}</span> نفسها عندما يتغير <span className="math">{"\\(m\\)"}</span> من <span className="math">{"\\(-\\infty\\)"}</span> إلى <span className="math">{"\\(+\\infty\\)"}</span>.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> أقوم بمسح محور الفواصل بالوسيط <span className="math">{"\\(m\\)"}</span> من اليسار إلى اليمين، <strong>وأراقب</strong> كيف يتصرف المستقيم الأفقي <span className="math">{"\\(y=g(m)\\)"}</span> لاستنتاج عدد الحلول.
                     </div>
                 </div>
@@ -542,7 +540,7 @@ const Solution_DirectQuestions_Functions = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><CheckIcon /> تحقيق الهدف:</strong> حتماً <span className="math">{"\\(x = m\\)"}</span> هو دائماً حل بديهي للمعادلة <span className="math">{"\\(g(x)=g(m)\\)"}</span>! وهذا يؤكد أن التقاطع مضمون دائماً.
                     </div>
                     بما أن <span className="math">{"\\(m\\)"}</span> ينتمي لمجموعة التعريف، فإن المستقيم <span className="math">{"\\(y=g(m)\\)"}</span> يقطع المنحنى على الأقل في النقطة ذات الفاصلة <span className="math">{"\\(m\\)"}</span>. المناقشة كانت سليمة ومنطقية.
@@ -573,7 +571,7 @@ const Solution_DirectQuestions_Functions = () => {
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     <strong>المعطيات:</strong> <span className="math">{"\\(f(x)\\)"}</span> فيها لوغاريتم، بينما المعادلة المعطاة فيها <span className="math">{"\\(e^{-m}\\)"}</span>.<br />
                     <strong>الاستراتيجية:</strong> أعزل القيمة المطلقة ثم أُدخل الدالة اللوغاريتمية على الطرفين لإيجاد الرابط بين العبارتين.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> أجري هذه التحويلات على المعادلة <strong>خصيصاً</strong> لكي تظهر لي عبارة الدالة <span className="math">{"\\(f(x)\\)"}</span> واضحة للتمكن من مناقشتها بيانياً.
                     </div>
                 </div>
@@ -591,7 +589,7 @@ const Solution_DirectQuestions_Functions = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><CheckIcon /> تحقيق الهدف:</strong> بظهور <span className="math">{"\\(f(x) = x + m\\)"}</span>، أصبح بإمكاني مباشرة ربطها بالمستقيمات المقاربة المائلة ومناقشة الحلول بسهولة.
                     </div>
                     الشكل <span className="math">{"\\(f(x) = x + m\\)"}</span> يمثل مناقشة مائلة. المستقيمات <span className="math">{"\\(y = x + m\\)"}</span> توازي المستقيم <span className="math">{"\\(y = x\\)"}</span>.
@@ -626,7 +624,7 @@ const Solution_DirectQuestions_Functions = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     حساب المشتقة ومعرفة متى تنعدم هو المفتاح للوصول إلى جدول التغيرات.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> أنا أدرس اتجاه التغير <strong>ليس</strong> حباً في المشتقة، بل لأصل إلى القيمة الحدية الصغرى التي ستحدد لي إشارة الدالة بأكملها.
                     </div>
                 </div>
@@ -642,7 +640,7 @@ const Solution_DirectQuestions_Functions = () => {
             <div className="step-row-two">
                 <div className="left-col">
                     <span className="phase-label verify">T. التحقق (Test)</span><br />
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><CheckIcon /> تحقيق الهدف:</strong> بما أن أدنى نقطة يبلغها المنحنى هي 0، فهذا يثبت فوراً أن الدالة موجبة تماماً كما أردنا إثباته.
                     </div>
                     أحسب <span className="math">{"\\(g(1) = 1 - 1 - 0 = 0\\)"}</span>. بما أن أدنى قيمة هي الصفر، فإن الدالة دائماً موجبة! <span className="math">{"\\(g(x) \\ge 0\\)"}</span>.
@@ -710,7 +708,7 @@ const Solution_DirectQuestions_Functions = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     المعادلة من الرتبة الثانية خطية ذات معاملات ثابتة. نحتاج لحساب المميز للمعادلة المميزة.
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong><BellIcon /> تذكير بالهدف:</strong> أحسب المشتقة الأولى والثانية بدقة <strong>لغرض</strong> تعويضهما في المعادلة التفاضلية والتأكد من أن المجموع يساوي الصفر.
                     </div>
                 </div>

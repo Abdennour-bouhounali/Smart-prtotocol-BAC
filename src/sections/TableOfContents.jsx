@@ -58,7 +58,7 @@ const TableOfContents = () => {
                             marginTop: isChapter && index > 0 ? '10px' : '0',
                             marginBottom: '8px',
                             fontWeight: isChapter ? '700' : (isSection ? '600' : '400'),
-                            color: isChapter ? '#2c3e50' : '#333',
+                            color: isChapter ? '#003366' : '#333333',
                             fontSize: isChapter ? '13pt' : isSection ? '11.5pt' : '10.5pt',
                             pageBreakInside: 'avoid',
                             breakInside: 'avoid',
@@ -68,7 +68,7 @@ const TableOfContents = () => {
                     >
                         <span style={{
                             paddingLeft: '8px',
-                            background: '#fff',
+                            background: '#FFFFFF',
                             zIndex: 1
                         }}>
                             {(() => {
@@ -87,15 +87,15 @@ const TableOfContents = () => {
                         </span>
                         <span style={{
                             flexGrow: 1,
-                            borderBottom: '2px dotted #bdc3c7',
+                            borderBottom: '2px dotted #BBCCCC',
                             position: 'relative',
                             top: '-4px',
                             zIndex: 0
                         }}></span>
                         <span className="toc-page-num" data-target-id={item.id} style={{
                             fontWeight: 'bold',
-                            color: isChapter ? '#2c3e50' : '#1a5276',
-                            background: '#fff',
+                            color: isChapter ? '#003366' : '#003380',
+                            background: '#FFFFFF',
                             paddingRight: '8px',
                             zIndex: 1
                         }}>

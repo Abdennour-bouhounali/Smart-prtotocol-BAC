@@ -9,22 +9,22 @@ const DirectQuestionsIntro = () => {
             </div>
 
             <div className="radar-box">
-                <div className="radar-box-title" style={{ color: '#2980b9' }}>تحذير تربوي: العبرة ليست في "الحل"</div>
+                <div className="radar-box-title" style={{ color: '#0066B3' }}>تحذير تربوي: العبرة ليست في "الحل"</div>
                 <p>
                     عزيزي الطالب، الإنترنت يعج بآلاف التمارين والحلول المجانية. إذا كان هدفك هو مجرد رؤية "كيف يُحل التمرين" لتنتقل لغيره، فأنت تضيع وقتك.
                     الهدف من هذا القسم ليس إعطاؤك تمارين جديدة، بل هو <strong>تغيير طريقة عمل عقلك</strong> أثناء مواجهة المشكلة.
                 </p>
             </div>
 
-            <div className="radar-box" style={{ borderRightColor: '#3498db' }}>
-                <div className="radar-box-title" style={{ color: '#2980b9' }}>أهمية "التراكم" والنمذجة العقلية</div>
+            <div className="radar-box" style={{ borderRightColor: '#007ACC' }}>
+                <div className="radar-box-title" style={{ color: '#0066B3' }}>أهمية "التراكم" والنمذجة العقلية</div>
                 <p>
                     المهارة الرياضية تشبه العضلة؛ لا تنمو بمشاهدة الآخرين يرفعون الأوزان، بل برفعها بنفسك. حل عدد كبير من الأسئلة المباشرة يبني عندك <strong>"الحدس الرياضي"</strong>، بحيث يصبح عقلك يتعرف على الأنماط بسرعة البرق دون تفكير مجهد.
                     نحن نستخدم هذه الأسئلة كمختبر لتطبيق بروتوكول <strong>SMART</strong>. الهدف هو أن تنتقل من العشوائية في التفكير إلى النظام.
                 </p>
             </div>
 
-            <div className="strategy-box" style={{ padding: '10px', margin: '0px 0' }}>
+            <div className="strategy-box" style={{ padding: '10px', margin: '15px 0' }}>
                 <div className="strategy-box-title" style={{ fontSize: '13pt' }}><RocketIcon /> تحدي الصفحتين (قاعدة الـ A4)</div>
                 <p style={{ fontSize: '11.5pt' }}>
                     قبل أن تفتح صفحة الحلول، نضع بين يديك هذا التحدي الصارم:
@@ -45,7 +45,7 @@ const DirectQuestionsIntro = () => {
                     <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                     <div className="col-header right-h">الحل التفصيلي</div>
                 </div>
-                <div className="step-row-two" style={{ borderBottom: '1px solid #ddd' }}>
+                <div className="step-row-two" style={{ borderBottom: '1px solid #DDDDDD' }}>
                     <div className="left-col" style={{ fontSize: '11pt' }}>
                         يشرح لك <strong>"كيف أفكر"</strong>. هنا نطبق مراحل SMART (تحديد الهدف، الترجمة، الربط..). نخبرك لماذا اخترنا هذه الطريقة دون غيرها، وما هي الفخاخ التي تجنبناها.
                     </div>

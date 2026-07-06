@@ -12,16 +12,16 @@ const DirectQuestions_Functions = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -43,11 +43,11 @@ const DirectQuestions_Functions = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -77,16 +77,16 @@ const DirectQuestions_Functions = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -108,11 +108,11 @@ const DirectQuestions_Functions = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -141,16 +141,16 @@ const DirectQuestions_Functions = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -172,11 +172,11 @@ const DirectQuestions_Functions = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -201,16 +201,16 @@ const DirectQuestions_Functions = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -232,11 +232,11 @@ const DirectQuestions_Functions = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -272,16 +272,16 @@ const DirectQuestions_Functions = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -305,11 +305,11 @@ const DirectQuestions_Functions = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -357,10 +357,10 @@ const DirectQuestions_Functions = () => {
                                 maxWidth: '100%',
                                 width: '420px',
                                 height: 'auto',
-                                border: '1px solid #e2e8f0',
+                                border: '1px solid #E0E8F5',
                                 borderRadius: '6px',
                                 padding: '6px',
-                                background: '#f8fafc',
+                                background: '#F7FAFD',
                                 display: 'block'
                             }}
                         />
@@ -375,16 +375,16 @@ const DirectQuestions_Functions = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -406,11 +406,11 @@ const DirectQuestions_Functions = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -437,16 +437,16 @@ const DirectQuestions_Functions = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -462,17 +462,17 @@ const DirectQuestions_Functions = () => {
                         7
                     </span>
                     <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
-                        <strong style={{ color: '#475569' }}>المعطيات:</strong> <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = (x+1)e^{-x}\\)"}</span>
+                        <strong style={{ color: '#445566' }}>المعطيات:</strong> <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = (x+1)e^{-x}\\)"}</span>
                     </div>
                 </div>
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -491,16 +491,16 @@ const DirectQuestions_Functions = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -516,17 +516,17 @@ const DirectQuestions_Functions = () => {
                         8
                     </span>
                     <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
-                        <strong style={{ color: '#475569' }}>المعطيات:</strong> <span>{"لتكن الدالة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = \\frac{x^2+3}{x+1}\\)"}</span><span>{" ولتكن النقطة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(A(0, -1)\\)"}</span><span>{"."}</span>
+                        <strong style={{ color: '#445566' }}>المعطيات:</strong> <span>{"لتكن الدالة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = \\frac{x^2+3}{x+1}\\)"}</span><span>{" ولتكن النقطة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(A(0, -1)\\)"}</span><span>{"."}</span>
                     </div>
                 </div>
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -545,16 +545,16 @@ const DirectQuestions_Functions = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -570,17 +570,17 @@ const DirectQuestions_Functions = () => {
                         9
                     </span>
                     <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
-                        <strong style={{ color: '#475569' }}>المعطيات:</strong> <span>{"لتكن الدالة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = \\frac{2x^2-4x+5}{x-1}\\)"}</span><span>{"."}</span>
+                        <strong style={{ color: '#445566' }}>المعطيات:</strong> <span>{"لتكن الدالة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = \\frac{2x^2-4x+5}{x-1}\\)"}</span><span>{"."}</span>
                     </div>
                 </div>
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -599,16 +599,16 @@ const DirectQuestions_Functions = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -626,7 +626,7 @@ const DirectQuestions_Functions = () => {
                     <div style={{
                         marginRight: '0px',
                         lineHeight: '1.7',
-                        color: '#1e3a5f',
+                        color: '#004D99',
                         fontWeight: '600',
                         fontSize: '11pt',
                         paddingRight: '0px',
@@ -647,16 +647,16 @@ const DirectQuestions_Functions = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -672,17 +672,17 @@ const DirectQuestions_Functions = () => {
                         11
                     </span>
                     <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
-                        <strong style={{ color: '#475569' }}>المعطيات:</strong> <span>{"لتكن الدالة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = \\ln|x|\\)"}</span><span>{" و "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(k(x) = |f(|x|)|\\)"}</span><span>{"."}</span>
+                        <strong style={{ color: '#445566' }}>المعطيات:</strong> <span>{"لتكن الدالة "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(x) = \\ln|x|\\)"}</span><span>{" و "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(k(x) = |f(|x|)|\\)"}</span><span>{"."}</span>
                     </div>
                 </div>
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'

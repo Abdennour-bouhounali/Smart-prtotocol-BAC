@@ -12,16 +12,16 @@ const DirectQuestions_Sequences = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -43,11 +43,11 @@ const DirectQuestions_Sequences = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -87,16 +87,16 @@ const DirectQuestions_Sequences = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -118,11 +118,11 @@ const DirectQuestions_Sequences = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -151,16 +151,16 @@ const DirectQuestions_Sequences = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -182,11 +182,11 @@ const DirectQuestions_Sequences = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -209,16 +209,16 @@ const DirectQuestions_Sequences = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -240,11 +240,11 @@ const DirectQuestions_Sequences = () => {
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -291,16 +291,16 @@ const DirectQuestions_Sequences = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -316,17 +316,17 @@ const DirectQuestions_Sequences = () => {
                         5
                     </span>
                     <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
-                        <strong style={{ color: '#475569' }}>المعطيات:</strong> <span>{"لتكن المتتالية التكاملية "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(I_n = \\int_0^1 x^n e^x dx\\)"}</span><span>{"."}</span>
+                        <strong style={{ color: '#445566' }}>المعطيات:</strong> <span>{"لتكن المتتالية التكاملية "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(I_n = \\int_0^1 x^n e^x dx\\)"}</span><span>{"."}</span>
                     </div>
                 </div>
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'
@@ -357,16 +357,16 @@ const DirectQuestions_Sequences = () => {
                 background: 'white',
                 padding: '6px 12px',
                 borderRadius: '6px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #E0E8F5',
                 marginBottom: '4px',
-                borderRight: '4px solid #1e3a5f',
+                borderRight: '4px solid #004D99',
                 fontSize: '11pt',
                 direction: 'rtl',
                 textAlign: 'right'
             }}>
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '5px' }}>
                     <span style={{
-                        background: '#1e3a5f',
+                        background: '#004D99',
                         color: 'white',
                         borderRadius: '4px',
                         minWidth: '20px',
@@ -382,17 +382,17 @@ const DirectQuestions_Sequences = () => {
                         6
                     </span>
                     <div style={{ lineHeight: '1.5', fontSize: '11pt', textAlign: 'right' }}>
-                        <strong style={{ color: '#475569' }}>المعطيات:</strong> <span>{"لتكن "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(u_{n+1} = \\frac{u_n + v_n}{2}, v_{n+1} = \\frac{u_n + 2v_n}{3}\\)"}</span><span>{" مع "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(u_0 = 1, v_0 = 2\\)"}</span><span>{"."}</span>
+                        <strong style={{ color: '#445566' }}>المعطيات:</strong> <span>{"لتكن "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(u_{n+1} = \\frac{u_n + v_n}{2}, v_{n+1} = \\frac{u_n + 2v_n}{3}\\)"}</span><span>{" مع "}</span><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(u_0 = 1, v_0 = 2\\)"}</span><span>{"."}</span>
                     </div>
                 </div>
                 <div style={{
                     marginRight: '20px',
                     lineHeight: '1.7',
-                    color: '#1e3a5f',
+                    color: '#004D99',
                     fontWeight: '600',
                     fontSize: '11pt',
                     paddingRight: '8px',
-                    borderRight: '2px solid #93c5fd',
+                    borderRight: '2px solid #66AAFF',
                     direction: 'rtl',
                     textAlign: 'right',
                     unicodeBidi: 'plaintext'

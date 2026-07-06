@@ -45,7 +45,7 @@ const Solution_DirectQuestions_Integrals = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. الربط (Relate)</span><br />
 
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "6px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "6px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong>1. أحدد الهدف:</strong><br />
                         المطلوب هو إيجاد أصلية لـ
                         <span className="math">{"\\((x^2+1)e^x\\)"}</span>.
@@ -69,7 +69,6 @@ const Solution_DirectQuestions_Integrals = () => {
                     <strong>3. كيف أصل إلى الهدف؟</strong><br />
                     بما أن الهدف من هذه العائلة، فأختار أصلية من نفس العائلة، وأجعل كثير الحدود من نفس الدرجة، ثم أحدد معاملاته بالمطابقة.
 
-                    <div style={{ background: "#eef6ff", borderRight: "3px solid #2563eb", padding: "6px 10px", borderRadius: "4px", marginTop: "6px", fontSize: "10.8pt" }}> <strong>تذكير:</strong> هذه نفس فكرة <strong>التحليل العكسي</strong>: نفترض النتيجة (شكل الأصلية)، ثم نشتقها للتحقق منها، وبعد اكتشافها نكتب الحل في الاتجاه الأمامي. </div>
                 </div>
 
                 <div className="right-col">
@@ -97,6 +96,8 @@ const Solution_DirectQuestions_Integrals = () => {
 
                     فنجد:
                     <span className="math">{"\\(a=1,\\;b=-2,\\;c=3\\)"}</span>.
+                    <div style={{ background: "#DFF0FF", borderRight: "3px solid #0055CC", padding: "6px 10px", borderRadius: "4px", marginTop: "6px", fontSize: "10.8pt" }}> <strong>تذكير:</strong> هذه نفس فكرة <strong>التحليل العكسي</strong>: نفترض النتيجة (شكل الأصلية)، ثم نشتقها للتحقق منها، وبعد اكتشافها نكتب الحل في الاتجاه الأمامي. </div>
+
                 </div>
             </div>
 
@@ -135,7 +136,7 @@ const Solution_DirectQuestions_Integrals = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. الربط (Relate)</span><br />
 
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "6px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "6px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong>1. أحدد الهدف:</strong><br />
                         أريد إيجاد أصلية لـ
                         <span className="math">{"\\(\\frac{\\ln x}{x}\\)"}</span>.
@@ -149,7 +150,7 @@ const Solution_DirectQuestions_Integrals = () => {
                     موجودة ومعها مشتقتها
                     <span className="math">{"\\(\\frac{1}{x}\\)"}</span>.
 
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "6px", marginTop: "6px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "6px", marginTop: "6px", color: "#003399", fontSize: '11pt' }}>
                         <strong>فكرة:</strong> عندما أرى دالة ومعها مشتقتها مضروبتين، أبحث مباشرة عن قاعدة
                         <span className="math">{"\\(u'u^n\\)"}</span>.
                     </div>
@@ -226,7 +227,7 @@ const Solution_DirectQuestions_Integrals = () => {
                 <div className="left-col">
                     <span className="phase-label data">R. الربط (Relate)</span><br />
 
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "6px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "6px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
                         <strong>1. أحدد الهدف:</strong><br />
                         أريد إيجاد أصلية لـ
                         <span className="math">{"\\(\\cos^2x\\)"}</span>.
@@ -238,7 +239,7 @@ const Solution_DirectQuestions_Integrals = () => {
                     ألاحظ أن الدالة تحتوي على قوة زوجية للدالة المثلثية، ولا توجد قاعدة مباشرة لحساب
                     <span className="math">{"\\(\\int \\cos^2x\\,dx\\)"}</span>.
 
-                    <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "6px", marginTop: "6px", color: "#1e40af", fontSize: '11pt' }}>
+                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "6px", marginTop: "6px", color: "#003399", fontSize: '11pt' }}>
                         <strong>فكرة:</strong> عندما أرى
                         <span className="math">{"\\(\\cos^2x\\)"}</span>
                         أو
@@ -323,13 +324,13 @@ const Solution_DirectQuestions_Integrals = () => {
                     <span className="phase-label data">R. الربط (Relate)</span><br />
 
                     <div style={{
-                        backgroundColor: "#eef2ff",
-                        border: "1px dashed #3b82f6",
+                        backgroundColor: "#DDEEFF",
+                        border: "1px dashed #0080FF",
                         padding: "5px",
                         borderRadius: "5px",
                         marginBottom: "6px",
                         marginTop: "4px",
-                        color: "#1e40af",
+                        color: "#003399",
                         fontSize: "11pt"
                     }}>
                         <strong>1. ألاحظ الهدف:</strong><br />
@@ -347,13 +348,13 @@ const Solution_DirectQuestions_Integrals = () => {
                     <strong>أي أداة تحول هذا الجداء إلى تكامل أبسط؟</strong>
 
                     <div style={{
-                        backgroundColor: "#eef2ff",
-                        border: "1px dashed #3b82f6",
+                        backgroundColor: "#DDEEFF",
+                        border: "1px dashed #0080FF",
                         padding: "5px",
                         borderRadius: "5px",
                         marginBottom: "6px",
                         marginTop: "6px",
-                        color: "#1e40af",
+                        color: "#003399",
                         fontSize: "11pt"
                     }}>
                         <strong>فكرة:</strong>
@@ -521,13 +522,13 @@ const Solution_DirectQuestions_Integrals = () => {
                     <span className="phase-label data">R. الربط (Relate)</span><br />
 
                     <div style={{
-                        backgroundColor: "#eef2ff",
-                        border: "1px dashed #3b82f6",
+                        backgroundColor: "#DDEEFF",
+                        border: "1px dashed #0080FF",
                         padding: "5px",
                         borderRadius: "5px",
                         marginBottom: "6px",
                         marginTop: "4px",
-                        color: "#1e40af",
+                        color: "#003399",
                         fontSize: "11pt"
                     }}>
                         <strong>1. أحدد الهدف:</strong><br />
@@ -547,13 +548,13 @@ const Solution_DirectQuestions_Integrals = () => {
                     <strong>هل الدالة موجبة أم سالبة على المجال؟</strong>
 
                     <div style={{
-                        backgroundColor: "#eef2ff",
-                        border: "1px dashed #3b82f6",
+                        backgroundColor: "#DDEEFF",
+                        border: "1px dashed #0080FF",
                         padding: "5px",
                         borderRadius: "5px",
                         marginBottom: "6px",
                         marginTop: "6px",
-                        color: "#1e40af",
+                        color: "#003399",
                         fontSize: "11pt"
                     }}>
                         <strong>فكرة:</strong>
@@ -606,8 +607,8 @@ const Solution_DirectQuestions_Integrals = () => {
                         {"\\[A=(2-\\ln2)-1=1-\\ln2\\;(u.a)\\]"}
                     </div>
                     <div style={{
-                        background: "#eef6ff",
-                        borderRight: "3px solid #2563eb",
+                        background: "#DFF0FF",
+                        borderRight: "3px solid #0055CC",
                         padding: "6px 10px",
                         borderRadius: "4px",
                         marginTop: "8px",
@@ -638,12 +639,12 @@ const Solution_DirectQuestions_Integrals = () => {
                     </ol>
 
                     <div style={{
-                        backgroundColor: "#eef2ff",
-                        border: "1px dashed #3b82f6",
+                        backgroundColor: "#DDEEFF",
+                        border: "1px dashed #0080FF",
                         padding: "5px",
                         borderRadius: "5px",
                         marginTop: "6px",
-                        color: "#1e40af",
+                        color: "#003399",
                         fontSize: "11pt"
                     }}>
                         <strong>فحص منطقي:</strong>

@@ -13,7 +13,7 @@ const BacIntelligence = () => {
                 التحليل الاستراتيجي لأسئلة البكالوريا
             </div>
 
-            <div className="exercise-statement" style={{ fontSize: '1.1rem', lineHeight: '2.2', color: '#1e293b', textAlign: 'justify', direction: 'rtl', marginBottom: '30px' }}>
+            <div className="exercise-statement" style={{ fontSize: '1.1rem', lineHeight: '2.2', color: '#003355', textAlign: 'justify', direction: 'rtl', marginBottom: '30px' }}>
                 <p style={{ marginBottom: '10px' }}>
                     أسئلة البكالوريا ليست عشوائية، بل تعتمد على أفكار وأنماط تتكرر من سنة إلى أخرى. لكل سؤال هدف رياضي محدد، ولكل عبارة ترجمة ذهنية تساعد على فهم المطلوب بسرعة.
                 </p>
@@ -24,7 +24,7 @@ const BacIntelligence = () => {
                     <li><strong>الترجمة الرياضية</strong> .</li>
                     <li><strong>الاستراتيجية المناسبة</strong> للحل.</li>
                 </ul>
-                <p style={{ marginBottom: '0', fontWeight: 'bold', color: '#0f172a' }}>
+                <p style={{ marginBottom: '0', fontWeight: 'bold', color: '#00001A' }}>
                     الهدف ليس حفظ الحلول، بل تعلم طريقة التفكير والتحليل أثناء التعامل مع التمارين الرياضية.
                 </p>
             </div>

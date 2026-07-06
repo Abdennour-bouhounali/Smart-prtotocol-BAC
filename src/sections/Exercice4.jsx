@@ -17,9 +17,9 @@ const Exercice4 = () => {
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    border: 1.5px solid #aab7c4;
+                    border: 1.5px solid #AABBCC;
                     border-radius: 6px;
-                    background: #f5f7fa;
+                    background: #F3F6FA;
                     padding: 10px 8px 6px;
                     margin: 8px auto;
                     max-width: 100%;
@@ -36,7 +36,7 @@ const Exercice4 = () => {
                 .graph-caption {
                     margin-top: 5px;
                     font-size: 10.5pt;
-                    color: #34495e;
+                    color: #004080;
                     text-align: center;
                     font-style: italic;
                     direction: rtl;
@@ -47,8 +47,8 @@ const Exercice4 = () => {
 
                 /* ── Section Divider (Part heading) ── */
                 .section-divider {
-                    background: #1a5276;
-                    color: #fff;
+                    background: #003380;
+                    color: #FFFFFF;
                     padding: 5px 12px;
                     font-size: 12pt;
                     font-weight: 700;
@@ -72,10 +72,10 @@ const Exercice4 = () => {
 
                 /* ── phase-label.link (missing variant) ── */
                 .phase-label.link {
-                    background: #5d6d7e;
+                    background: #737373;
                 }
                 .phase-label.execution {
-                    background: #6c3483;
+                    background: #111144;
                 }
 
                 /* ── Table image centering ── */
@@ -91,7 +91,7 @@ const Exercice4 = () => {
             `}</style>
 
             {/* ── Exercise Title ── */}
-            <div id="toc-exercice4" className="exercise-title">
+            <div id="toc-exercice4" >
                 التمرين الرابع بكالوريا 2016 شعبة رياضيات — دراسة دالة لوغاريتمية ومتتالية تكاملية
             </div>
 
@@ -215,7 +215,7 @@ const Exercice4 = () => {
                 PART I — Q1
             ============================================================ */}
             <div className="question-header">
-                الجزء I — دراسة الدالة المساعدة <span className="math" style={{ color: '#fff' }}>{"\\(g\\)"}</span>
+                الجزء I — دراسة الدالة المساعدة <span className="math" style={{ color: '#FFFFFF' }}>{"\\(g\\)"}</span>
             </div>
 
             <div className="sub-question">
@@ -404,7 +404,7 @@ const Exercice4 = () => {
                 PART II — Q1
             ============================================================ */}
             <div className="question-header">
-                الجزء II — دراسة الدالة الرئيسية <span className="math" style={{ color: '#fff' }}>{"\\(f\\)"}</span>
+                الجزء II — دراسة الدالة الرئيسية <span className="math" style={{ color: '#FFFFFF' }}>{"\\(f\\)"}</span>
             </div>
 
             <div className="sub-question">
@@ -1227,9 +1227,9 @@ const Exercice4 = () => {
                         أحل المعادلة:
                     </p>
 
-                    <div className="math-block">
+                    <span className="math">
                         {"\\[3+2\\ln x=0\\]"}
-                    </div>
+                    </span>
 
                     <p>
                         ثم أستعمل الدالة الأسية لإزالة اللوغاريتم.
@@ -1831,7 +1831,7 @@ const Exercice4 = () => {
     PART III — Q1
 ============================================================ */}
             <div className="question-header">
-                الجزء III — المتتالية التكاملية <span className="math" style={{ color: '#fff' }}>{"\\((u_n)\\)"}</span>
+                الجزء III — المتتالية التكاملية <span className="math" style={{ color: '#FFFFFF' }}>{"\\((u_n)\\)"}</span>
             </div>
 
             <div className="sub-question">

@@ -38,7 +38,7 @@ const SectionNav = ({ sections, activeSectionId, onSectionSelect, bookName, onBo
                 id="print-pdf-btn"
                 className="btn-book-view"
                 onClick={onPrint}
-                style={{ background: '#e67e22', marginBottom: '8px' }}
+                style={{ background: '#553300', marginBottom: '8px' }}
             >
                 🖨️ تصدير PDF
             </button>

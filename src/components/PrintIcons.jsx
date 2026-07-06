@@ -5,9 +5,9 @@ export const BellIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#d97706" 
+        stroke="#555500" 
         strokeWidth="2.5" 
-        fill="#fef3c7" 
+        fill="#FFFAE0" 
         style={{ 
             verticalAlign: 'middle', 
             marginLeft: '6px', 
@@ -25,7 +25,7 @@ export const CheckIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#16a34a" 
+        stroke="#006666" 
         strokeWidth="3" 
         fill="none" 
         strokeLinecap="round" 
@@ -46,7 +46,7 @@ export const CrossIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#dc2626" 
+        stroke="#111144" 
         strokeWidth="3" 
         fill="none" 
         strokeLinecap="round" 
@@ -68,9 +68,9 @@ export const ThoughtIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#2563eb" 
+        stroke="#0055CC" 
         strokeWidth="2.5" 
-        fill="#dbeafe" 
+        fill="#C8DDFF" 
         style={{ 
             verticalAlign: 'middle', 
             marginLeft: '6px', 
@@ -87,9 +87,9 @@ export const PackageIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#b45309" 
+        stroke="#4D3300" 
         strokeWidth="2.5" 
-        fill="#fef3c7" 
+        fill="#FFFAE0" 
         style={{ 
             verticalAlign: 'middle', 
             marginLeft: '6px', 
@@ -109,9 +109,9 @@ export const WarningIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#d97706" 
+        stroke="#555500" 
         strokeWidth="2.5" 
-        fill="#fef3c7" 
+        fill="#FFFAE0" 
         style={{ 
             verticalAlign: 'middle', 
             marginLeft: '6px', 
@@ -130,7 +130,7 @@ export const TargetIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#dc2626" 
+        stroke="#111144" 
         strokeWidth="2.5" 
         fill="none" 
         style={{ 
@@ -142,7 +142,7 @@ export const TargetIcon = () => (
     >
         <circle cx="12" cy="12" r="10"></circle>
         <circle cx="12" cy="12" r="6"></circle>
-        <circle cx="12" cy="12" r="2" fill="#dc2626"></circle>
+        <circle cx="12" cy="12" r="2" fill="#111144"></circle>
     </svg>
 );
 
@@ -151,9 +151,9 @@ export const FlagIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#dc2626" 
+        stroke="#111144" 
         strokeWidth="2.5" 
-        fill="#fee2e2" 
+        fill="#EEEEFF" 
         style={{ 
             verticalAlign: 'middle', 
             marginLeft: '6px', 
@@ -171,7 +171,7 @@ export const SearchIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#2563eb" 
+        stroke="#0055CC" 
         strokeWidth="2.5" 
         fill="none" 
         style={{ 
@@ -191,9 +191,9 @@ export const AlertIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#dc2626" 
+        stroke="#111144" 
         strokeWidth="2.5" 
-        fill="#fee2e2" 
+        fill="#EEEEFF" 
         style={{ 
             verticalAlign: 'middle', 
             marginLeft: '6px', 
@@ -212,9 +212,9 @@ export const RocketIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#0284c7" 
+        stroke="#0066B3" 
         strokeWidth="2.5" 
-        fill="#e0f2fe" 
+        fill="#CCEBFF" 
         style={{ 
             verticalAlign: 'middle', 
             marginLeft: '6px', 
@@ -233,9 +233,9 @@ export const FlashIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#d97706" 
+        stroke="#555500" 
         strokeWidth="2.5" 
-        fill="#fef3c7" 
+        fill="#FFFAE0" 
         style={{ 
             verticalAlign: 'middle', 
             marginLeft: '6px', 
@@ -252,9 +252,9 @@ export const QuestionIcon = () => (
         viewBox="0 0 24 24" 
         width="16" 
         height="16" 
-        stroke="#7c3aed" 
+        stroke="#222266" 
         strokeWidth="2.5" 
-        fill="#f3e8ff" 
+        fill="#EEE5FF" 
         style={{ 
             verticalAlign: 'middle', 
             marginLeft: '6px', 
@@ -273,9 +273,9 @@ export const BlueDiamondIcon = () => (
         viewBox="0 0 24 24" 
         width="12" 
         height="12" 
-        stroke="#0284c7" 
+        stroke="#0066B3" 
         strokeWidth="2.5" 
-        fill="#0284c7" 
+        fill="#0066B3" 
         style={{ 
             verticalAlign: 'middle', 
             marginLeft: '6px', 

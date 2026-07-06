@@ -3,11 +3,11 @@ import React from 'react';
 const SolutionCard = ({ number, phase, title, children }) => {
     return (
         <div className="radar-box" style={{
-            border: '2px solid #16a34a',
+            border: '2px solid #006666',
             borderRadius: '12px',
             padding: '20px 22px',
             margin: '18px 0',
-            background: '#f0fdf4',
+            background: '#E5FFF5',
             position: 'relative',
             direction: 'rtl',
             textAlign: 'right',
@@ -17,8 +17,8 @@ const SolutionCard = ({ number, phase, title, children }) => {
                 position: 'absolute',
                 top: '-14px',
                 right: '20px',
-                background: '#16a34a',
-                color: '#fff',
+                background: '#006666',
+                color: '#FFFFFF',
                 borderRadius: '20px',
                 padding: '3px 16px',
                 fontSize: '11pt',
@@ -30,8 +30,8 @@ const SolutionCard = ({ number, phase, title, children }) => {
             </div>
 
             <div className="radar-box-title" style={{
-                color: '#16a34a',
-                borderBottom: '2px solid #bbf7d0',
+                color: '#006666',
+                borderBottom: '2px solid #AAEEDD',
                 paddingBottom: '8px',
                 marginBottom: '14px',
                 marginTop: '6px',
@@ -40,7 +40,7 @@ const SolutionCard = ({ number, phase, title, children }) => {
                 {title}
             </div>
 
-            <div style={{ lineHeight: '1.9', color: '#334155', fontSize: '0.95rem' }}>
+            <div style={{ lineHeight: '1.9', color: '#334466', fontSize: '0.95rem' }}>
                 {children}
             </div>
         </div>
@@ -56,14 +56,14 @@ const Solution_Methodology = () => {
 
             <SolutionCard number="1" phase="المرحلة الأولى" title="التحليل الشامل للتمرين">
 
-                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>أ. قراءة ذكية للسؤال 3 (التوجيه العكسي):</div>
+                <div style={{ fontWeight: 'bold', color: '#006666' }}>أ. قراءة ذكية للسؤال 3 (التوجيه العكسي):</div>
                 <p>
                     السؤال 3 يخبرنا أن للدالة <span className="math">{"\\(f\\)"}</span> قيمة صغرى عند
                     <span className="math">{"\\(x=0\\)"}</span> وأن سلوكها يرتبط بهذه النقطة.
                     هذا يعني أن دراسة المشتقة في السؤال 1 ليست هدفاً مستقلاً، بل يجب أن تكشف عن نقطة حرجة تعطي هذا السلوك.
                 </p>
 
-                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>ب. التوقع قبل الحساب:</div>
+                <div style={{ fontWeight: 'bold', color: '#006666' }}>ب. التوقع قبل الحساب:</div>
                 <p>
                     بما أن السؤال 3 يحدد وجود سلوك “أدنى قيمة” مرتبط بنقطة معينة،
                     فهذا يعني أن:
@@ -72,7 +72,7 @@ const Solution_Methodology = () => {
                     إذن قبل الحساب، نتوقع شكل عامل في المشتقة يعطي جذراً واضحاً (مثل <span className="math">{"\\(x\\)"}</span> أو <span className="math">{"\\(x-2\\)"}</span>).
                 </p>
 
-                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>ج. التحقق بعد الاشتقاق:</div>
+                <div style={{ fontWeight: 'bold', color: '#006666' }}>ج. التحقق بعد الاشتقاق:</div>
                 <p>
                     نحسب المشتقة:
                     <br />
@@ -93,14 +93,14 @@ const Solution_Methodology = () => {
                     <span className="math">{"\\(x=2\\)"}</span>.
                 </p>
 
-                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>د. ربط النتيجة بالسؤال 3:</div>
+                <div style={{ fontWeight: 'bold', color: '#006666' }}>د. ربط النتيجة بالسؤال 3:</div>
                 <p>
                     نلاحظ أن إحدى نقاط الانعدام هي <span className="math">{"\\(x=0\\)"}</span>، وبالتالي:
                     <span className="math">{"\\(f(0)=0\\)"}</span> تمثل قيمة حدية.
                     وهذا ينسجم مع فكرة السؤال 3 أن السلوك العام للدالة يمر بنقطة تحقق قيمة دنيا.
                 </p>
 
-                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>هـ. الاستنتاج المنهجي:</div>
+                <div style={{ fontWeight: 'bold', color: '#006666' }}>هـ. الاستنتاج المنهجي:</div>
                 <p>
                     السؤال 3 لم يكن نتيجة نهائية فقط، بل كان “دليل بنية” يخبرنا مسبقاً أن:
                     المشتقة يجب أن تحتوي على عوامل تجعل نقاط الانعدام واضحة،
@@ -119,11 +119,11 @@ const Solution_Methodology = () => {
             </SolutionCard>
 
             <SolutionCard number="3" phase="المرحلة الثانية" title="جرد المعطيات وتصفيتها — متتاليات">
-                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>أ. الترجمة الرياضية:</div>
+                <div style={{ fontWeight: 'bold', color: '#006666' }}>أ. الترجمة الرياضية:</div>
                 <p>إثبات أن <span className="math">{"\\(U_{n+1} - U_n < 0\\)"}</span>.</p>
-                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>ب. صياغة الهدف:</div>
+                <div style={{ fontWeight: 'bold', color: '#006666' }}>ب. صياغة الهدف:</div>
                 <p>الوصول إلى متباينة مبسطة تبين أن الفرق سالب.</p>
-                <div style={{ fontWeight: 'bold', color: '#16a34a' }}>ج. تصفية المعطيات:</div>
+                <div style={{ fontWeight: 'bold', color: '#006666' }}>ج. تصفية المعطيات:</div>
                 <ul>
                     <li><strong>(A) العلاقة التراجعية:</strong> ضروري. لأننا نحتاجه لحساب <span className="math">{"\\(U_{n+1} - U_n\\)"}</span>.</li>
                     <li><strong>(C) نتيجة الجزء 1:</strong> ضروري. لأننا بعد حساب الفرق سنجد <span className="math">{"\\(-\\dfrac{1}{2}U_n + 1\\)"}</span>، ولتحديد إشارته سنحتاج للمعلومة <span className="math">{"\\(U_n > 2\\)"}</span>.</li>
@@ -161,10 +161,10 @@ const Solution_Methodology = () => {
 
             <SolutionCard number="7" phase="المرحلة الخامسة" title="التحقق المنطقي — صحيح أم خاطئ؟">
                 <ul style={{ paddingRight: '20px' }}>
-                    <li><strong>السؤال 1 (جدول التغيرات):</strong> <span style={{ color: '#dc2626', fontWeight: 'bold' }}>خاطئ</span>. لا يمكن لدالة أن تنزل إلى +∞، النهاية الكبرى لا تكون أسفل قيمة عظمى. تناقض صارخ.</li>
-                    <li><strong>السؤال 2 (النهايات والقيمة المطلقة):</strong> <span style={{ color: '#dc2626', fontWeight: 'bold' }}>خاطئ</span>. عند إخراج <span className="math">{"\\(x^2\\)"}</span> من الجذر يصبح <span className="math">{"\\(|x|\\)"}</span>. وبما أن النهاية عند -∞ فإن <span className="math">{"\\(|x| = -x\\)"}</span>، وبالتالي النهاية الصحيحة هي -1.</li>
-                    <li><strong>السؤال 3 (المعادلات اللوغاريتمية):</strong> <span style={{ color: '#dc2626', fontWeight: 'bold' }}>خاطئ</span>. شرط تعريف المعادلة هو <span className="math">{"\\(x - 1 > 0\\)"}</span> و <span className="math">{"\\(x - 2 > 0\\)"}</span> أي <span className="math">{"\\(x > 2\\)"}</span>. الحل <span className="math">{"\\(x = 0\\)"}</span> مرفوض، والحل الوحيد هو <span className="math">{"\\(S=\\{3\\}\\)"}</span>.</li>
-                    <li><strong>السؤال 4 (خلط الاستقلالية بالتنافي):</strong> <span style={{ color: '#dc2626', fontWeight: 'bold' }}>خاطئ</span>. الاستقلالية تعني <span className="math">{"\\(P(A \\cap B) = P(A)P(B) = 0.12\\)"}</span>. التقاطع لا ينعدم! الحساب الصحيح: <span className="math">{"\\(P(A \\cup B) = 0.4 + 0.3 - 0.12 = 0.58\\)"}</span>.</li>
+                    <li><strong>السؤال 1 (جدول التغيرات):</strong> <span style={{ color: '#111144', fontWeight: 'bold' }}>خاطئ</span>. لا يمكن لدالة أن تنزل إلى +∞، النهاية الكبرى لا تكون أسفل قيمة عظمى. تناقض صارخ.</li>
+                    <li><strong>السؤال 2 (النهايات والقيمة المطلقة):</strong> <span style={{ color: '#111144', fontWeight: 'bold' }}>خاطئ</span>. عند إخراج <span className="math">{"\\(x^2\\)"}</span> من الجذر يصبح <span className="math">{"\\(|x|\\)"}</span>. وبما أن النهاية عند -∞ فإن <span className="math">{"\\(|x| = -x\\)"}</span>، وبالتالي النهاية الصحيحة هي -1.</li>
+                    <li><strong>السؤال 3 (المعادلات اللوغاريتمية):</strong> <span style={{ color: '#111144', fontWeight: 'bold' }}>خاطئ</span>. شرط تعريف المعادلة هو <span className="math">{"\\(x - 1 > 0\\)"}</span> و <span className="math">{"\\(x - 2 > 0\\)"}</span> أي <span className="math">{"\\(x > 2\\)"}</span>. الحل <span className="math">{"\\(x = 0\\)"}</span> مرفوض، والحل الوحيد هو <span className="math">{"\\(S=\\{3\\}\\)"}</span>.</li>
+                    <li><strong>السؤال 4 (خلط الاستقلالية بالتنافي):</strong> <span style={{ color: '#111144', fontWeight: 'bold' }}>خاطئ</span>. الاستقلالية تعني <span className="math">{"\\(P(A \\cap B) = P(A)P(B) = 0.12\\)"}</span>. التقاطع لا ينعدم! الحساب الصحيح: <span className="math">{"\\(P(A \\cup B) = 0.4 + 0.3 - 0.12 = 0.58\\)"}</span>.</li>
                 </ul>
             </SolutionCard>
 

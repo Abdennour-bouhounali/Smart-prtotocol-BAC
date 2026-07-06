@@ -4,10 +4,105 @@
     padding: 0;
 }
 
-/* REAL PDF PAGE SIZE */
+:root {
+    /* ── CMYK-safe C+K 2-plate system (screen RGB approximations) ── */
+    --ink-primary: #004D99;
+    /* C100 K70  */
+    --ink-secondary: #003380;
+    /* C100 K60  */
+    --ink-accent: #006666;
+    /* C80  K20  */
+    --ink-danger: #1A1A4D;
+    /* C15  K70  */
+    --ink-warning: #404040;
+    /* C0   K75  */
+    --ink-success: #006699;
+    /* C75  K10  */
+    --ink-text: #111111;
+    /* C0   K93  */
+    --ink-muted: #737373;
+    /* C0   K55  */
+    --ink-bg-page: #FFFFFF;
+    /* C0   K0   */
+    --ink-bg-muted: #F7FAFD;
+    /* C2   K2   */
+    --ink-bg-soft-red: #F5F5FF;
+    /* C4   K2   */
+    --ink-bg-soft-blue: #AAD9FF;
+    /* C28  K0   */
+    --ink-bg-soft-green: #DDFFF0;
+    /* C8   K0   */
+    --ink-bg-soft-yellow: #FFFCF0;
+    /* C0   K3   */
+    --ink-border-light: #DDDDDD;
+    /* C0   K13  */
+    --ink-border-slate: #CCDDEE;
+    /* C8   K10  */
+}
+
+@media print {
+    :root {
+        /*
+         * C+K 2-plate CMYK values converted to RGB hex for Puppeteer/Chromium.
+         * device-cmyk() is NOT supported in Chromium — it silently fails and
+         * makes backgrounds transparent (white), causing elements to disappear.
+         * These hex values are the exact RGB equivalents of the CMYK formulas.
+         */
+        --ink-primary: #004D99;
+        /* C100 K70  → rgb(0,   77,  153) */
+        --ink-secondary: #003380;
+        /* C100 K60  → rgb(0,   51,  128) */
+        --ink-accent: #006666;
+        /* C80  K20  → rgb(0,  102,  102) */
+        --ink-danger: #1A1A4D;
+        /* C15  K70  → rgb(26,  26,   77) */
+        --ink-warning: #404040;
+        /* C0   K75  → rgb(64,  64,   64) */
+        --ink-success: #006699;
+        /* C75  K10  → rgb(0,  102,  153) */
+        --ink-text: #111111;
+        /* C0   K93  → rgb(17,  17,   17) */
+        --ink-muted: #737373;
+        /* C0   K55  → rgb(115, 115,  115) */
+        --ink-bg-page: #FFFFFF;
+        /* C0   K0   → white */
+        --ink-bg-muted: #F7FAFD;
+        /* C2   K2   */
+        --ink-bg-soft-red: #F5F5FF;
+        /* C4   K2   */
+        --ink-bg-soft-blue: #AAD9FF;
+        /* C28  K0   */
+        --ink-bg-soft-green: #DDFFF0;
+        /* C8   K0   */
+        --ink-bg-soft-yellow: #FFFCF0;
+        /* C0   K3   */
+        --ink-border-light: #DDDDDD;
+        /* C0   K13  */
+        --ink-border-slate: #CCDDEE;
+        /* C8   K10  */
+    }
+}
+
+
+/* REAL PDF PAGE SIZE
+   margin: 0 — the .page div owns ALL spacing internally.
+   The footer occupies the bottom 1cm zone of the page div.
+   @page :right / :left handle mirror margins for the PDF output.
+*/
 @page {
     size: 170mm 240mm;
     margin: 0;
+}
+
+/* Odd pages (impaire): binding on the right for RTL book
+   bottom: 0 → footer is embedded inside the .page content area */
+@page :right {
+    margin: 1cqi 1.5cm 0 1cm;
+}
+
+/* Even pages (pair): binding on the left for RTL book */
+@page :left {
+    margin: 1cm 1cm 0 1.5cm;
 }
 
 html,
@@ -20,8 +115,8 @@ body {
     font-family: "Amiri", "Traditional Arabic", serif;
     font-size: 11.5pt;
     direction: rtl;
-    color: #111;
-    background: #e0e0e0;
+    color: var(--ink-text);
+    background: #ffffff;
 
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
@@ -40,7 +135,22 @@ body {
     padding: 20px 0;
 }
 
-/* PAGE */
+/*
+  PAGE LAYOUT
+  ┌─────────────────────────────────────────┐
+  │  top: 1cm                               │
+  │  ┌───── .page-content ───────────────┐  │
+  │  │  height: calc(100% - 20px)        │  │
+  │  │  ... text content ...             │  │
+  │  └───────────────────────────────────┘  │
+  │  ── .page-footer (border-top) ────────  │
+  │  BAC        صفحة N        bookName      │
+  ├─────────────────────────────────────────┤
+  │  bottom: 1cm  (empty padding zone)      │
+  └─────────────────────────────────────────┘
+  Footer is position:absolute at bottom:0 of
+  the padding box = top of the 1cm empty zone.
+*/
 .page {
     width: 170mm;
     min-width: 170mm;
@@ -50,25 +160,39 @@ body {
     min-height: 240mm;
     max-height: 240mm;
 
-    background: white;
+    background: #ffffff;
 
     margin: 0 auto;
 
-    padding: 0.5cm 1cm 0.5cm 0.5cm;
+    /* bottom 1cm = empty zone below the footer line */
+    padding: 1cm 1.5cm 1cm 1cm;
 
     position: relative;
 
     overflow: hidden;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
 
     page-break-after: always;
     break-after: page;
 }
 
+/* ── MIRROR MARGINS (screen) ──
+   Odd  (impaire): top 0.5cm | right/binding 1.5cm | bottom 1cm | left 1cm
+   Even (pair)  : top 0.5cm | right         1cm   | bottom 1cm | left/binding 1.5cm
+*/
+.page:nth-child(odd) {
+    padding: 1cm 1.5cm 1cm 1cm;
+}
+
+.page:nth-child(even) {
+    padding: 1cm 1cm 1cm 1.5cm;
+}
+
 .page-content {
     width: 100%;
-    height: calc(100% - 20px);
+    /* Leave ~20px at the bottom for the footer bar */
+    height: calc(100% - 15px);
 
     overflow: hidden;
 
@@ -79,26 +203,39 @@ body {
 }
 
 .page-footer {
+    /*
+     * Sits at bottom:0 of the padding box = just above the 1cm
+     * empty bottom padding zone. Spans full inner width.
+     */
     position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
 
-    bottom: 8px;
-    left: 1.5cm;
-    right: 1.5cm;
+    /* Default horizontal padding matches odd pages */
+    padding: 0cm 1.5cm 1cm 1cm;
 
-    padding-top: 4px;
-
-    border-top: 1px solid #7f8c8d;
+    border-top: 1px solid var(--ink-muted);
 
     font-size: 11pt;
-    color: #555;
+    color: var(--ink-muted);
 
     user-select: none;
     pointer-events: none;
 
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-
     align-items: center;
+}
+
+/* Mirror horizontal padding to match each page's text column */
+.page:nth-child(odd) .page-footer {
+    padding: 0.2cm 1.5cm 1cm 1cm;
+}
+
+.page:nth-child(even) .page-footer {
+    padding: 0.2cm 1cm 1cm 1.5cm;
 }
 
 .footer-page-num {
@@ -168,6 +305,35 @@ body {
         overflow: hidden;
     }
 
+    /*
+     * CRITICAL: Neutralize all break-avoid hints for print.
+     * usePagination.js already placed every node correctly before printing.
+     * If the native CSS print algorithm sees break-after:avoid it will try
+     * to reflow elements, pushing them outside the fixed-height page div
+     * which clips them via overflow:hidden — making them disappear in PDF.
+     */
+    .question-header,
+    .question-header.no-break,
+    .sub-question,
+    .step-row,
+    .step-row-two,
+    .step-row-rule,
+    .arrow-row,
+    .strategy-box,
+    .verify-box,
+    .danger-box,
+    .trigger-box,
+    .radar-box,
+    .exercise-statement,
+    .col-header-row {
+        break-before: auto !important;
+        break-after: auto !important;
+        break-inside: auto !important;
+        page-break-before: auto !important;
+        page-break-after: auto !important;
+        page-break-inside: auto !important;
+    }
+
     .screen-only,
     .controls-bar,
     .sidebar {
@@ -177,17 +343,17 @@ body {
     /* Thin hairline borders for printing to match webview */
     .step-row,
     .step-row-two {
-        border-bottom: 0.5px solid #eee !important;
+        border-bottom: 0.5px solid #EEEEEE !important;
     }
 
     .left-col,
     .mid-col {
-        border-left: 0.5px solid #eee !important;
+        border-left: 0.5px solid #EEEEEE !important;
     }
 
     .col-header.left-h,
     .col-header.mid-h {
-        border-left: 0.5px solid #fff !important;
+        border-left: 0.5px solid #FFFFFF !important;
     }
 }
 
@@ -196,19 +362,19 @@ body {
     text-align: center;
     padding: 18px 0 22px;
     margin-bottom: 18px;
-    border-bottom: 3px double #2c3e50;
+    border-bottom: 3px double var(--ink-primary);
 }
 
 .cover-title {
     font-size: 20pt;
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--ink-primary);
     margin-bottom: 4px
 }
 
 .cover-sub {
     font-size: 12pt;
-    color: #555
+    color: var(--ink-muted)
 }
 
 /* ── QUESTION HEADER ── */
@@ -217,15 +383,19 @@ body {
     break-before: auto;
     page-break-after: avoid;
     break-after: avoid;
-    background: #2c3e50;
-    color: #fff;
-    padding: 6px 12px;
+    background: var(--ink-primary);
+    color: #FFFFFF;
+    padding: 4px 12px;
     font-size: 13pt;
     font-weight: 700;
-    margin-top: 6px;
-    margin-bottom: 4px;
+    margin-top: 3px;
+    margin-bottom: 2px;
     border-radius: 4px;
+    /* Force Chrome/Puppeteer to preserve background in PDF export */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
+
 
 .question-header.no-break {
     page-break-before: auto;
@@ -238,9 +408,9 @@ body {
     break-after: avoid;
     font-weight: 700;
     font-size: 12pt;
-    color: #1a5276;
-    margin: 6px 0 4px;
-    border-right: 4px solid #1a5276;
+    color: #003380;
+    margin: 3px 0 2px;
+    border-right: 4px solid #003380;
     padding-right: 8px;
 }
 
@@ -249,23 +419,20 @@ body {
     display: grid;
     grid-template-columns: 1.1fr 1.3fr 1.6fr;
     gap: 0;
-    margin-bottom: 2px;
-    /* Reduced margin */
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 4px;
-    /* Reduced padding */
+    margin-bottom: 1px;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 2px;
     page-break-inside: avoid;
     break-inside: avoid;
 }
-
 
 .step-row-two {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
-    margin-bottom: 2px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 2px;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 1px;
     page-break-inside: avoid;
     break-inside: avoid;
 }
@@ -274,13 +441,29 @@ body {
     border-bottom: none
 }
 
+/* ── RULE ROW (القاعدة) — 1/4 label + 3/4 content ── */
+.step-row-rule {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 1px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.step-row-rule:last-child {
+    border-bottom: none;
+}
+
 /* ── CELLS ── */
 .left-col {
-    border-left: 1px solid #ddd;
+    border-left: 1px solid #DDDDDD;
     padding: 4px 6px;
-    background: #fdfdfd;
+    background: #FDFEFE;
     font-size: 11pt;
-    color: #444;
+    color: #444444;
     font-style: italic;
     min-width: 0;
     overflow: visible;
@@ -289,11 +472,11 @@ body {
 }
 
 .mid-col {
-    border-left: 1px solid #ddd;
+    border-left: 1px solid #DDDDDD;
     padding: 4px 6px;
-    background: #f8f9fa;
+    background: #F8FAFC;
     font-size: 11pt;
-    color: #1a5276;
+    color: #003380;
     min-width: 0;
     overflow: visible;
     overflow-wrap: break-word;
@@ -302,7 +485,7 @@ body {
 
 .right-col {
     padding: 4px 8px;
-    background: #fff;
+    background: #FFFFFF;
     font-size: 11pt;
     min-width: 0;
     overflow: visible;
@@ -313,51 +496,51 @@ body {
 /* ── PHASE LABELS ── */
 .phase-label {
     display: inline-block;
-    color: #fff;
+    color: #FFFFFF;
     font-size: 11pt;
     font-weight: 700;
-    padding: 2px 7px;
+    padding: 1px 7px;
     border-radius: 10px;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
     font-style: normal;
 }
 
 .phase-label.translate {
-    background: #922b21
+    background: #1A1A3B
 }
 
 .phase-label.goal {
-    background: #1a5276
+    background: #003380
 }
 
 .phase-label.data {
-    background: #1e8449
+    background: #006666
 }
 
 .phase-label.start {
-    background: #784212
+    background: #404040
 }
 
 .phase-label.solution {
-    background: #212f3d
+    background: #002244
 }
 
 .phase-label.verify {
-    background: #117a65
+    background: #006666
 }
 
 .phase-label.radar {
-    background: #2c3e50
+    background: #003366
 }
 
 /* ── ARROW ROW ── */
 .arrow-row {
     text-align: center;
-    padding: 5px 0;
-    color: #7f8c8d;
+    padding: 2px 0;
+    color: #737373;
     font-size: 11pt;
-    border-bottom: 1px dashed #bbb;
-    margin-bottom: 5px;
+    border-bottom: 1px dashed #BBBBBB;
+    margin-bottom: 2px;
     page-break-inside: avoid;
     break-inside: avoid;
 }
@@ -369,29 +552,28 @@ body {
     break-inside: avoid;
     page-break-inside: avoid;
     border-radius: 6px;
-    padding: 5px 5px;
-    margin: 2px 0;
+    padding: 3px 5px;
+    margin: 1px 0;
 }
 
 .radar-box {
     border-radius: 6px;
-    padding: 5px;
-    /* Reduced padding to keep consistency */
-    margin: 4px 0;
+    padding: 3px;
+    margin: 0px 0;
 }
 
 .exercise-statement_2 {
     border-radius: 6px;
-    padding: 6px 10px;
-    margin: 8px 0;
-    border: 1.5px solid #2c3e50;
-    background-color: #f0f3f4;
+    padding: 4px 10px;
+    margin: 4px 0;
+    border: 1.5px solid #003366;
+    background-color: #F2F5F8;
 }
 
 .radar-box-title {
     font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 6px;
+    color: #003366;
+    margin-bottom: 3px;
     font-size: 11pt
 }
 
@@ -401,33 +583,33 @@ body {
 }
 
 .radar-list li {
-    padding: 3px 0;
-    color: #333;
+    padding: 1px 0;
+    color: #333333;
     font-size: 11pt
 }
 
 .radar-list li::before {
     content: "◆ ";
-    color: #2c3e50;
+    color: #003366;
     font-size: 11pt
 }
 
 .pedagogical-list {
     list-style: none;
     padding-right: 25px;
-    margin: 8px 0;
+    margin: 4px 0;
 }
 
 .pedagogical-list li {
-    padding: 4px 0;
-    color: #333;
+    padding: 2px 0;
+    color: #333333;
     font-size: 11pt;
     position: relative;
 }
 
 .pedagogical-list li::before {
     content: "•";
-    color: #2c3e50;
+    color: #003366;
     font-weight: bold;
     display: inline-block;
     width: 20px;
@@ -436,26 +618,26 @@ body {
 }
 
 .strategy-box {
-    background: #fef9e7;
-    border: 1.5px solid #f0b44c
+    background: #FFFCF0;
+    border: 1.5px solid #665500
 }
 
 .strategy-box-title {
     font-weight: 700;
-    color: #784212;
-    margin-bottom: 6px;
+    color: #404040;
+    margin-bottom: 3px;
     font-size: 11pt
 }
 
 .verify-box {
-    background: #eafaf1;
-    border: 1.5px solid #1e8449
+    background: #DDFFF0;
+    border: 1.5px solid #006666
 }
 
 .verify-box-title {
     font-weight: 700;
-    color: #117a65;
-    margin-bottom: 6px;
+    color: #006666;
+    margin-bottom: 3px;
     font-size: 11pt
 }
 
@@ -463,16 +645,16 @@ body {
     break-inside: avoid;
     page-break-inside: avoid;
     border-radius: 6px;
-    padding: 8px 12px;
-    margin: 8px 0;
-    border: 1.5px solid #e74c3c;
-    background-color: #fdf2f2;
+    padding: 4px 10px;
+    margin: 4px 0;
+    border: 1.5px solid #1A1A4D;
+    background-color: #F5F5FF;
 }
 
 .danger-box-title {
     font-weight: 700;
-    color: #922b21;
-    margin-bottom: 6px;
+    color: #1A1A3B;
+    margin-bottom: 3px;
     font-size: 11pt;
 }
 
@@ -480,16 +662,16 @@ body {
     break-inside: avoid;
     page-break-inside: avoid;
     border-radius: 6px;
-    padding: 8px 12px;
-    margin: 8px 0;
-    border: 1.5px solid #3498db;
-    background-color: #ebf5fb;
+    padding: 4px 10px;
+    margin: 4px 0;
+    border: 1.5px solid #007ACC;
+    background-color: #DAF0FF;
 }
 
 .trigger-box-title {
     font-weight: 700;
-    color: #1a5276;
-    margin-bottom: 6px;
+    color: #003380;
+    margin-bottom: 3px;
     font-size: 11pt;
 }
 
@@ -561,22 +743,22 @@ mjx-container[display="true"] {
     font-size: 11pt;
     font-weight: 700;
     padding: 4px 6px;
-    color: #fff;
+    color: #FFFFFF;
     border-radius: 3px 3px 0 0;
 }
 
 .col-header.left-h {
-    background: #5d6d7e;
-    border-left: 1px solid #fff;
+    background: #737373;
+    border-left: 1px solid #FFFFFF;
 }
 
 .col-header.mid-h {
-    background: #34495e;
-    border-left: 1px solid #fff;
+    background: #004080;
+    border-left: 1px solid #FFFFFF;
 }
 
 .col-header.right-h {
-    background: #2c3e50;
+    background: #003366;
 }
 
 /* ── UI REACT COMPONENTS ── */
@@ -586,7 +768,7 @@ mjx-container[display="true"] {
     overflow: visible;
     overflow-wrap: break-word;
     word-break: break-word;
-    background: #e0e0e0;
+    background: #E0E0E0;
 }
 
 .sidebar-wrapper {
@@ -616,7 +798,7 @@ mjx-container[display="true"] {
     position: absolute;
     top: 15px;
     z-index: 1000;
-    background: #34495e;
+    background: #004080;
     color: white;
     border: none;
     border-radius: 5px;
@@ -632,7 +814,7 @@ mjx-container[display="true"] {
 }
 
 .sidebar-toggle:hover {
-    background: #2c3e50;
+    background: #003366;
 }
 
 .sidebar-toggle.open {
@@ -660,7 +842,7 @@ mjx-container[display="true"] {
 .sidebar {
     width: 300px;
     min-width: 300px;
-    background: #2c3e50;
+    background: #003366;
     color: white;
     padding: 20px;
     overflow-y: auto;
@@ -695,7 +877,7 @@ mjx-container[display="true"] {
 }
 
 .exercise-item.active {
-    background: #3498db;
+    background: #007ACC;
 }
 
 .sidebar-title {
@@ -707,7 +889,7 @@ mjx-container[display="true"] {
 }
 
 .btn-book-view {
-    background: #1e8449;
+    background: #006666;
     color: white;
     border: none;
     padding: 10px;
@@ -717,7 +899,7 @@ mjx-container[display="true"] {
 }
 
 .btn-book-view:hover {
-    background: #27ae60;
+    background: #006699;
 }
 
 .reorder-btns {
@@ -743,15 +925,15 @@ mjx-container[display="true"] {
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
-    color: #2c3e50;
-    border-bottom: 2px solid #2c3e50;
+    color: #003366;
+    border-bottom: 2px solid #003366;
     padding-bottom: 10px;
 }
 
 /* ── RADAR CARD & ARSENAL SECTION ── */
 .radar-card {
-    background: #fff;
-    /* border: 1.5px solid #2c3e50; */
+    background: #FFFFFF;
+    /* border: 1.5px solid #003366; */
     border-radius: 12px;
     margin: 24px 0;
     overflow: visible;
@@ -761,7 +943,7 @@ mjx-container[display="true"] {
 }
 
 .radar-header {
-    background: #2c3e50;
+    background: #003366;
     color: white;
     padding: 14px 20px;
     display: flex;
@@ -787,7 +969,7 @@ mjx-container[display="true"] {
     /* Positioned on the left for RTL consistency if needed, or right */
     width: 10px;
     height: 10px;
-    background: #e74c3c;
+    background: #1A1A4D;
     border-radius: 50%;
     box-shadow: 0 0 0 rgba(231, 76, 60, 0.4);
     animation: radar-pulse 2s infinite;
@@ -811,12 +993,12 @@ mjx-container[display="true"] {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0;
-    background: #fff;
+    background: #FFFFFF;
 }
 
 .arsenal-section {
     padding: 0px 10px;
-    border-bottom: 1.5px solid #ecf0f1;
+    border-bottom: 1.5px solid #EBF0F2;
 }
 
 .strategy-section {
@@ -824,11 +1006,11 @@ mjx-container[display="true"] {
 }
 
 .section-subtitle {
-    color: #1a5276;
+    color: #003380;
     font-size: 12pt;
     margin-bottom: 5px;
     font-weight: 700;
-    border-bottom: 2px solid #3498db;
+    border-bottom: 2px solid #007ACC;
     padding-bottom: 3px;
     width: fit-content;
 }
@@ -845,15 +1027,15 @@ mjx-container[display="true"] {
 }
 
 .tag.direct {
-    background: #c0392b;
+    background: #1A1A4D;
 }
 
 .tag.inferred {
-    background: #2980b9;
+    background: #0066B3;
 }
 
 .tag.stored {
-    background: #27ae60;
+    background: #006699;
 }
 
 /* ── CONNECTION MAP ── */
@@ -878,35 +1060,35 @@ mjx-container[display="true"] {
 }
 
 .map-item.target {
-    background: #1a5276;
+    background: #003380;
     color: white;
-    border: 1.5px solid #1a5276;
+    border: 1.5px solid #003380;
 }
 
 .map-item.draft {
-    background: #fef9e7;
-    color: #784212;
-    border: 1.5px dashed #f0b44c;
+    background: #FFFCF0;
+    color: #404040;
+    border: 1.5px dashed #665500;
 }
 
 .map-item.resource {
-    color: #2c3e50;
+    color: #003366;
 }
 
 .arrow {
     font-size: 14pt;
-    color: #1a5276;
+    color: #003380;
     line-height: 1;
 }
 
 .tip-box {
     margin-top: 15px;
-    background: #fff9db;
-    border-right: 5px solid #f1c40f;
+    background: #FFFCE0;
+    border-right: 5px solid #555500;
     padding: 12px 18px;
     font-size: 11pt;
     border-radius: 4px;
-    color: #5d4037;
+    color: #444444;
     line-height: 1.6;
 }
 
@@ -916,8 +1098,18 @@ mjx-container[display="true"] {
     padding: 0 4px;
     font-family: inherit;
     border-radius: 3px;
-    border: 0.5px solid #ddd;
+    border: 0.5px solid #DDDDDD;
     margin: 0 4px;
+}
+
+#toc-exercice4 {
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 10px;
 }
 
 /* ── PRINT UTILITIES ── */
@@ -936,7 +1128,7 @@ mjx-container[display="true"] {
 
 @media print {
     body {
-        background: #fff;
+        background: #FFFFFF;
         padding: 0;
         margin: 0;
     }
@@ -972,7 +1164,7 @@ mjx-container[display="true"] {
 
 /* ── DISCOVERY MAP ── */
 .discovery-map-container {
-    border: 2px solid #e2e8f0;
+    border: 2px solid #E0E8F5;
     border-radius: 16px;
     padding: 20px;
     direction: rtl;
@@ -1019,12 +1211,12 @@ mjx-container[display="true"] {
 }
 
 .target-node {
-    border-color: #ef4444;
-    background: #fff1f2;
+    border-color: #333366;
+    background: #F5F5FF;
 }
 
 .resource-node {
-    border-color: #3b82f6;
+    border-color: #0080FF;
 }
 
 .high-priority {
@@ -1041,33 +1233,33 @@ mjx-container[display="true"] {
 
 .node-label {
     font-size: 11pt;
-    color: #ef4444;
+    color: #333366;
     font-weight: bold;
 }
 
 .tag-sm {
     font-size: 11pt;
     display: block;
-    color: #64748b;
+    color: #667799;
     margin-bottom: 4px;
 }
 
 .dash-line {
     fill: none;
-    stroke: #94a3b8;
+    stroke: #99AACC;
     stroke-width: 2;
     stroke-dasharray: 6;
     animation: dashmove 20s linear infinite;
 }
 
 .link-between {
-    stroke: #cbd5e1;
+    stroke: #CCDDEE;
     stroke-width: 1.5;
 }
 
 .connection-path {
     fill: none;
-    stroke: #94a3b8;
+    stroke: #99AACC;
     stroke-width: 2.5;
     stroke-linecap: round;
 }
@@ -1081,7 +1273,7 @@ mjx-container[display="true"] {
 .map-legend {
     margin-top: 15px;
     padding: 12px 18px;
-    background: #eef2f7;
+    background: #EBF0F8;
     border-radius: 8px;
     font-size: 11pt;
     line-height: 1.6;
@@ -1091,7 +1283,7 @@ mjx-container[display="true"] {
 .bac-example {
     margin: 15px 0;
     border-radius: 10px;
-    border: 1.5px solid #bae6fd;
+    border: 1.5px solid #AAD9FF;
     overflow: visible;
     overflow-wrap: break-word;
     word-break: break-word;
@@ -1100,7 +1292,7 @@ mjx-container[display="true"] {
 }
 
 .bac-example-header {
-    background: #0369a1;
+    background: #004D99;
     color: white;
     padding: 6px 14px;
     font-size: 11pt;
@@ -1114,17 +1306,17 @@ mjx-container[display="true"] {
     padding: 12px 16px;
     font-size: 11pt;
     line-height: 1.8;
-    color: #1e293b;
+    color: #003355;
 }
 
 .bac-example-body .ex-label {
     font-weight: bold;
-    color: #0369a1;
+    color: #004D99;
 }
 
 .bac-example-body .ex-target {
-    background: #fef2f2;
-    border-right: 3px solid #ef4444;
+    background: #F5F5FF;
+    border-right: 3px solid #333366;
     padding: 4px 10px;
     margin: 6px 0;
     border-radius: 0 6px 6px 0;
@@ -1132,8 +1324,8 @@ mjx-container[display="true"] {
 }
 
 .bac-example-body .ex-insight {
-    background: #f0fdf4;
-    border-right: 3px solid #22c55e;
+    background: #E5FFF5;
+    border-right: 3px solid #007777;
     padding: 4px 10px;
     margin: 6px 0;
     border-radius: 0 6px 6px 0;
@@ -1149,8 +1341,8 @@ mjx-container[display="true"] {
 }
 
 .starting-point-card {
-    background: #fff5f5;
-    border: 2px solid #feb2b2;
+    background: #F8F8FF;
+    border: 2px solid #CCDDE6;
     border-radius: 12px;
     padding: 15px;
     display: flex;
@@ -1173,7 +1365,7 @@ mjx-container[display="true"] {
 }
 
 .roadmap-card {
-    border: 1.5px solid #bae6fd;
+    border: 1.5px solid #AAD9FF;
     border-radius: 12px;
     padding: 15px;
     position: relative;
@@ -1204,11 +1396,11 @@ mjx-container[display="true"] {
     padding: 5px 10px;
     border-radius: 6px;
     font-size: 11pt;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #E0E8F5;
 }
 
 .process-arrow {
-    color: #3498db;
+    color: #007ACC;
     font-weight: bold;
 }
 
@@ -1230,18 +1422,18 @@ mjx-container[display="true"] {
 }
 
 .tactical-analogy {
-    background: #fdf2f2;
-    border-right: 4px solid #e74c3c;
+    background: #F5F5FF;
+    border-right: 4px solid #1A1A4D;
     padding: 10px;
     margin: 15px 0;
     border-radius: 4px 12px 12px 4px;
     font-style: italic;
-    color: #444;
+    color: #444444;
 }
 
 .analogy-title {
     font-weight: bold;
-    color: #c0392b;
+    color: #1A1A4D;
     margin-bottom: 8px;
     display: flex;
     align-items: center;
@@ -1257,7 +1449,7 @@ mjx-container[display="true"] {
 
 .step-card {
     flex: 1;
-    border: 1.5px solid #cbd5e1;
+    border: 1.5px solid #CCDDEE;
     border-radius: 12px;
     padding: 12px;
     text-align: center;
@@ -1267,14 +1459,14 @@ mjx-container[display="true"] {
 
 .step-card:hover {
     transform: translateY(-2px);
-    border-color: #3498db;
+    border-color: #007ACC;
 }
 
 .step-num {
     position: absolute;
     top: -10px;
     right: -10px;
-    background: #2c3e50;
+    background: #003366;
     color: white;
     width: 24px;
     height: 24px;
@@ -1305,7 +1497,7 @@ mjx-container[display="true"] {
 
 .data-card {
     background: white;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #E0E8F5;
     border-radius: 10px;
     padding: 12px;
     display: flex;
@@ -1322,7 +1514,7 @@ mjx-container[display="true"] {
 
 .data-card-content {
     font-size: 0.95rem;
-    color: #334155;
+    color: #334466;
     line-height: 1.5;
 }
 
