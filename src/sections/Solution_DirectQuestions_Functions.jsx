@@ -17,89 +17,7 @@ const Solution_DirectQuestions_Functions = () => {
             <div className="question-header no-break">التمرين 1 — النهايات وحالات عدم التعيين</div>
 
             {/* Q1.1 */}
-            <div className="sub-question">1) نهاية الكسر <span className="math">{"\\[\\lim_{x \\to +\\infty} \\frac{x^3}{\\ln x - x}\\]"}</span></div>
-            <div className="col-header-row-two">
-                <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
-                <div className="col-header right-h">الحل التفصيلي</div>
-            </div>
-
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    السؤال معطى بصيغة رياضية مباشرة. الهدف هو حساب نهاية الكسر بجوار المالانهاية مع التخلص من أي حالة عدم تعيين.
-                </div>
-                <div className="right-col">
-                    <strong>الهدف:</strong> حساب <span className="math">{"\\[\\lim_{x \\to +\\infty} \\frac{x^3}{\\ln x - x}\\]"}</span>
-                </div>
-            </div>
-
-
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    <strong>جرد المعطيات:</strong> التعويض المباشر يعطي في البسط <span className="math">{"\\(+\\infty\\)"}</span> وفي المقام <span className="math">{"\\(+\\infty - \\infty\\)"}</span> (حالة عدم تعيين مركبة).<br />
-                    <strong>الربط بالهدف (الاستراتيجية):</strong> للوصول للهدف، يجب فك هذه الحالة. أعلم من مكتسباتي القبلية أن <span className="math">{"\\(x\\)"}</span> أقوى من <span className="math">{"\\(\\ln x\\)"}</span> بجوار المالانهاية. لذا سأستخرج <span className="math">{"\\(x\\)"}</span> كعامل مشترك في المقام لتوليد النهاية الشهيرة <span className="math">{"\\(\\frac{\\ln x}{x}\\)"}</span>.
-                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
-                        <strong><BellIcon /> تذكير بالهدف:</strong> أستخرج <span className="math">{"\\(x\\)"}</span> كعامل مشترك في المقام <strong>فقط</strong> لأتمكن من إظهار النهاية الشهيرة <span className="math">{"\\(\\frac{\\ln x}{x} \\to 0\\)"}</span> والتخلص من حالة عدم التعيين.
-                    </div>
-
-                </div>
-                <div className="right-col">
-                    التعويض المباشر يعطي حالة عدم تعيين في المقام <span className="math">{"\\(+\\infty - \\infty\\)"}</span>.
-                    <div className="math-block">{"\\[ = \\lim_{x \\to +\\infty} \\frac{x^3}{x \\left( \\frac{\\ln x}{x} - 1 \\right)} = \\lim_{x \\to +\\infty} \\frac{x^2}{\\frac{\\ln x}{x} - 1} \\]"}</div>
-                    بما أن <span className="math">{"\\[\\lim_{x\\to+\\infty}\\frac{\\ln x}{x} = 0\\]"}</span>، فإن نهاية المقام هي <span className="math">{"\\(-1\\)"}</span>. ونهاية البسط <span className="math">{"\\(+\\infty\\)"}</span>.<br />
-                    <strong>النتيجة:</strong> <span className="math">{"\\(-\\infty\\)"}</span>
-
-                </div>
-            </div>
-
-
-
-
-
-            {/* Q1.2 */}
-            <div className="sub-question">2) نهاية الدالة الأسية <span className="math">{"\\[\\lim_{x \\to 0} \\frac{e^{2x} - e^x}{x}\\]"}</span></div>
-            <div className="col-header-row-two">
-                <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
-                <div className="col-header right-h">الحل التفصيلي</div>
-            </div>
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label goal">A. تحديد الهدف (Aim)</span><br />
-                    حساب نهاية الدالة الكسرية الأسية عند الصفر وإزالة حالة عدم التعيين المحتملة.
-                </div>
-                <div className="right-col">
-                    الهدف: إيجاد <span className="math">{"\\[\\lim_{x \\to 0} \\frac{e^{2x} - e^x}{x}\\]"}</span>.
-                </div>
-            </div>
-
-            <div className="step-row-two">
-                <div className="left-col">
-                    <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
-                    <strong>المعطيات:</strong> التعويض بـ 0 يعطي <span className="math">{"\\(1 - 1 = 0\\)"}</span> في البسط، و 0 في المقام. حالة <span className="math">{"\\(0/0\\)"}</span>.<br />
-                    <strong>الاستراتيجية:</strong> كلما رأيت عبارة من الشكل <span className="math">{"\\(\\frac{g(x)-g(a)}{x-a}\\)"}</span> عندما <span className="math">{"\\(x \\to a\\)"}</span>، أترجمها فوراً إلى <span className="math">{"\\(g'(a)\\)"}</span>. هنا أضع <span className="math">{"\\(g(x) = e^{2x} - e^x\\)"}</span> وألاحظ أن <span className="math">{"\\(g(0) = 0\\)"}</span>.
-                    <div style={{ backgroundColor: "#DDEEFF", border: "1px dashed #0080FF", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#003399", fontSize: '11pt' }}>
-                        <strong><BellIcon /> تذكير بالهدف:</strong> أحسب مشتقة الدالة <span className="math">{"\\(g(x)\\)"}</span> عند الصفر <strong>لأن</strong> النهاية المطلوبة تتطابق تماماً مع تعريف العدد المشتق. هذا يجنبنا التفكيك المعقد.
-                    </div>
-                    أشتق الدالة <span className="math">{"\\(g(x)\\)"}</span> .<br />
-                    و أحسب قيمتها عند <span className="math">{"\\(x=0\\)"}</span>
-
-                </div>
-                <div className="right-col">
-                    التعويض المباشر يعطي <span className="math">{"\\(\\frac{0}{0}\\)"}</span> (ح.ع.ت).
-                    نضع الدالة <span className="math">{"\\(g(x) = e^{2x} - e^x\\)"}</span>، القابلة للاشتقاق عند 0.<br />
-                    لدينا <span className="math">{"\\(g(0) = 0\\)"}</span>، إذن النهاية هي:
-                    <div className="math-block">{"\\[ \\lim_{x \\to 0} \\frac{g(x) - g(0)}{x - 0} = g'(0) \\]"}</div>
-                    المشتقة: <span className="math">{"\\(g'(x) = 2e^{2x} - e^x\\)"}</span>.<br />
-                    <span className="math">{"\\(g'(0) = 2(1) - 1 = 1\\)"}</span>.<br />
-                    <strong>النتيجة:</strong> <span className="math">{"\\(1\\)"}</span>
-                </div>
-            </div>
-
-
-
-            {/* Q1.3 */}
-            <div className="sub-question">3) النهاية الشهيرة بقوى متغيرة <span className="math">{"\\[\\lim_{x \\to 0^>} x^2 (\\ln x)^3\\]"}</span></div>
+            <div className="sub-question">1) النهاية الشهيرة بقوى متغيرة <span className="math">{"\\[\\lim_{x \\to 0^>} x^2 (\\ln x)^3\\]"}</span></div>
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>
@@ -144,8 +62,8 @@ const Solution_DirectQuestions_Functions = () => {
                 </div>
             </div>
 
-            {/* Q1.4 */}
-            <div className="sub-question">4) نهاية الجداء اللوغاريتمي <span className="math">{"\\[\\lim_{x \\to +\\infty} x \\ln\\left(1 + \\frac{1}{x}\\right)\\]"}</span></div>
+            {/* Q1.2 */}
+            <div className="sub-question">2) نهاية الجداء اللوغاريتمي <span className="math">{"\\[\\lim_{x \\to +\\infty} x \\ln\\left(1 + \\frac{1}{x}\\right)\\]"}</span></div>
             <div className="col-header-row-two">
                 <div className="col-header left-h">التفكير الداخلي (بروتوكول SMART)</div>
                 <div className="col-header right-h">الحل التفصيلي</div>

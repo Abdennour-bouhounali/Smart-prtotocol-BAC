@@ -54,19 +54,10 @@ const DirectQuestions_Functions = () => {
                 }}>
                     <div style={{ marginBottom: '4px' }}>
                         <span>{"1) "}</span>
-                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\[\\lim_{x \\to +\\infty} \\frac{x^3}{\\ln x - x}\\]"}</span>
-                    </div>
-                    <div style={{ marginBottom: '4px' }}>
-                        <span>{"2) "}</span>
-                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\[\\lim_{x \\to 0} \\frac{e^{2x} - e^x}{x}\\]"}</span>
-                        <span>{" (باستخدام تعريف العدد المشتق)"}</span>
-                    </div>
-                    <div style={{ marginBottom: '4px' }}>
-                        <span>{"3) "}</span>
                         <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\[\\lim_{x \\to 0^>} x^2 (\\ln x)^3\\]"}</span>
                     </div>
                     <div style={{ marginBottom: '4px' }}>
-                        <span>{"4) "}</span>
+                        <span>{"2) "}</span>
                         <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\[\\lim_{x \\to +\\infty} x \\ln\\left(1 + \\frac{1}{x}\\right)\\]"}</span>
                     </div>
                 </div>
