@@ -7,7 +7,7 @@ const SolutionCard = ({ number, phase, title, children }) => {
             borderRadius: '12px',
             padding: '20px 22px',
             margin: '18px 0',
-            background: 'linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%)',
+            background: '#f0fdf4',
             position: 'relative',
             direction: 'rtl',
             textAlign: 'right',

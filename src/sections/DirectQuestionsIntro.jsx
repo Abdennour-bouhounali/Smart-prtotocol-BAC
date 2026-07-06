@@ -1,4 +1,5 @@
 import React from 'react';
+import { RocketIcon } from '../components/PrintIcons';
 
 const DirectQuestionsIntro = () => {
     return (
@@ -24,7 +25,7 @@ const DirectQuestionsIntro = () => {
             </div>
 
             <div className="strategy-box" style={{ padding: '10px', margin: '0px 0' }}>
-                <div className="strategy-box-title" style={{ fontSize: '13pt' }}>🚀 تحدي الصفحتين (قاعدة الـ A4)</div>
+                <div className="strategy-box-title" style={{ fontSize: '13pt' }}><RocketIcon /> تحدي الصفحتين (قاعدة الـ A4)</div>
                 <p style={{ fontSize: '11.5pt' }}>
                     قبل أن تفتح صفحة الحلول، نضع بين يديك هذا التحدي الصارم:
                     <br />

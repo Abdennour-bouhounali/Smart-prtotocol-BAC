@@ -1,4 +1,5 @@
 import React from 'react';
+import { BellIcon } from '../components/PrintIcons';
 
 const Solution_DirectQuestions_Sequences = () => {
     return (
@@ -30,7 +31,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أربط العلاقة التراجعية بالدالة المرفقة لتسهيل الانتقال بين الحدود. أتحقق من شرط البداية (الأساس)، ثم أصيغ فرضية التراجع. أدرس اتجاه تغير الدالة المرفقة لإثبات خطوة التراجع مع الحفاظ على ترتيب المتباينة.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> توظيف تزايد الدالة المرفقة للمحافظة على اتجاه المتباينة والانتقال من فرضية التراجع إلى خطوة البرهان.
+                        <strong><BellIcon /> تذكير بالهدف:</strong> توظيف تزايد الدالة المرفقة للمحافظة على اتجاه المتباينة والانتقال من فرضية التراجع إلى خطوة البرهان.
                     </div>
                 </div>
                 <div className="right-col">
@@ -64,7 +65,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أدمج الخاصيتين في متباينة واحدة لتسهيل البرهان. أتحقق من الحد الأول والثاني كأساس للتراجع، ثم أفرض صحة المتباينة وأستعمل البناء الجبري (إضافة عدد ثم التجذير) لنقلها إلى الحد الموالي مستفيداً من تزايد دالة الجذر.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> بناء حدود التراجع الموالية بإضافة الثابت وجر الأطراف تحت دالة الجذر التربيعي المتزايدة دون تغيير اتجاه المتراجحة.
+                        <strong><BellIcon /> تذكير بالهدف:</strong> بناء حدود التراجع الموالية بإضافة الثابت وجر الأطراف تحت دالة الجذر التربيعي المتزايدة دون تغيير اتجاه المتراجحة.
                     </div>
                 </div>
                 <div className="right-col">
@@ -135,7 +136,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أربط حصر حدود المتتالية بإشارة بسط ومقام كسر الفرق. أحلل إشارة المقام أولاً، ثم أحلل إشارة البسط ككثيرة حدود من الدرجة الثانية بإيجاد جذورها وتحديد إشارتها داخل وخارج مجال الجذور.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> دراسة البسط والمقام بشكل مستقل لتركيب إشارة كسر الفرق النهائي.
+                        <strong><BellIcon /> تذكير بالهدف:</strong> دراسة البسط والمقام بشكل مستقل لتركيب إشارة كسر الفرق النهائي.
 
                     </div>
                     أستنتج رتابة المتتالية بناءً على الإشارة الموجبة تماماً للفرق.
@@ -227,7 +228,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     <strong>سؤال التفكير المنهجي:</strong> كيف يمكنني الربط بين هذه المعطيات الثلاثة للانتقال من الحد <span className="math">{"\\(v_n\\)"}</span> إلى <span className="math">{"\\(v_{n+1}\\)"}</span> وتحديد الثوابت المطلوبة؟
 
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> مقارنة النتائج لاستبعاد القيمة التي تلغي مقام المتتالية المساعدة وتحديد الأساس q المقابل للقيمة المقبولة.
+                        <strong><BellIcon /> تذكير بالهدف:</strong> مقارنة النتائج لاستبعاد القيمة التي تلغي مقام المتتالية المساعدة وتحديد الأساس q المقابل للقيمة المقبولة.
                     </div>
                 </div>
                 <div className="right-col">
@@ -286,7 +287,7 @@ const Solution_DirectQuestions_Sequences = () => {
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أربط المجموع بالقانون العام لمجموع حدود متتالية هندسية بتعيين الحد الأول والأساس وعدد الحدود بدقة ثم التعويض المباشر والتبسيط.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> حساب عدد الحدود بدقة لتفادي الأخطاء في الأسس عند كتابة العبارة المغلقة للمجموع.
+                        <strong><BellIcon /> تذكير بالهدف:</strong> حساب عدد الحدود بدقة لتفادي الأخطاء في الأسس عند كتابة العبارة المغلقة للمجموع.
                     </div>
                 </div>
                 <div className="right-col">
@@ -335,7 +336,7 @@ S_n &= v_0 \\frac{1 - q^{n+1}}{1 - q} \\\\
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أربط جداء القوى بجمع الأسس لتحويل الجداء إلى قوى مرفوعة لمجموع متتالية حسابية. أحسب هذا المجموع الحسابي باستخراج حده الأول والأخير وعدد الحدود ثم التعويض في قانونه الخاص.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> حساب مجموع الأسس في الأس كخطوة وسيطة قبل رفع الناتج كأساس للعدد 2.
+                        <strong><BellIcon /> تذكير بالهدف:</strong> حساب مجموع الأسس في الأس كخطوة وسيطة قبل رفع الناتج كأساس للعدد 2.
                     </div>
                 </div>
                 <div className="right-col">
@@ -402,7 +403,7 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                     لتحويل المسألة إلى مجموع متتالية حسابية واستعمال قانونها مباشرة.
 
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 الإشارة الذهنية:</strong>
+                        <strong><BellIcon /> الإشارة الذهنية:</strong>
                         لوغاريتمات + جمع ⇐ ابحث عن متتالية حسابية.
                     </div>
                 </div>
@@ -439,7 +440,7 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                     <span className="phase-label data">R. المعطيات والربط (Relate)</span><br />
                     أوحد المقامات داخل اللوغاريتم، ثم أحلل البسط كفرق مربعين. أستعمل خواص اللوغاريتم لتفكيك المقادير إلى فروق بين حدود متتالية لتوليد مجموع تلسكوبي تختزل حدوده الوسطية تلقائياً.
                     <div style={{ backgroundColor: "#eef2ff", border: "1px dashed #3b82f6", padding: "5px", borderRadius: "5px", marginBottom: "4px", marginTop: "4px", color: "#1e40af", fontSize: '11pt' }}>
-                        <strong>🔔 تذكير بالهدف:</strong> كتابة الحد العام على شكل فرق حدين متتاليين لتسريع عملية الاختزال عند الجمع.
+                        <strong><BellIcon /> تذكير بالهدف:</strong> كتابة الحد العام على شكل فرق حدين متتاليين لتسريع عملية الاختزال عند الجمع.
                     </div>
                 </div>
                 <div className="right-col">
@@ -542,7 +543,7 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                         color: "#1e40af",
                         fontSize: '11pt'
                     }}>
-                        <strong>🔔 ما الذي أبحث عنه؟</strong><br />
+                        <strong><BellIcon /> ما الذي أبحث عنه؟</strong><br />
                         لست أبحث عن قيمة التكامل، بل عن إعادة ظهور
                         <span className="math">{"\\(I_n\\)"}</span>
                         داخل الحساب.
@@ -658,7 +659,7 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                         color: "#1e40af",
                         fontSize: '11pt'
                     }}>
-                        <strong>🔔 الفكرة الذهنية:</strong><br />
+                        <strong><BellIcon /> الفكرة الذهنية:</strong><br />
                         الرتابة تتحول غالباً إلى دراسة إشارة
                         <span className="math">{"\\(u_{n+1}-u_n\\)"}</span>.
                     </div>
@@ -917,7 +918,7 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                         color: "#1e40af",
                         fontSize: '11pt'
                     }}>
-                        <strong>🔔 الفكرة :</strong><br />
+                        <strong><BellIcon /> الفكرة :</strong><br />
                         لم أبدأ من المعطيات ثم وصلت إلى الحصر،
                         بل بدأت من الحصر المطلوب،
                         وسألت نفسي:
@@ -1117,7 +1118,7 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                         color: "#1e40af",
                         fontSize: '11pt'
                     }}>
-                        <strong>🔔 الفكرة:</strong><br />
+                        <strong><BellIcon /> الفكرة:</strong><br />
                         عندما يكون الهدف هو إثبات أن متتاليتين تقتربان من بعضهما،
                         أول شيء أبحث عنه هو الفرق بينهما،
                         لأنه يقيس هذه المسافة مباشرة.
@@ -1163,7 +1164,7 @@ S'_n &= \\frac{n+1}{2}(u_0 + u_n)
                         color: "#1e40af",
                         fontSize: '11pt'
                     }}>
-                        <strong>🔔 الفكرة :</strong><br />
+                        <strong><BellIcon /> الفكرة :</strong><br />
                         كل نتيجة قوية أثبتها أحاول إعادة استعمالها لاحقاً.
                         الرياضيات ليست سلسلة من الحسابات المنفصلة،
                         بل بناء متدرج للنتائج.

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FlashIcon, QuestionIcon, WarningIcon } from '../components/PrintIcons';
 import signeOfGImg from '../images/signe_of_g.png';
 import variationTableOfFImg from '../images/variation_table_of_f.png';
 import graphesFTDImg from '../images/graphes_f_T_D.png';
@@ -277,7 +278,7 @@ const Exercice4 = () => {
             </div>
 
             <div className="trigger-box">
-                <div className="trigger-box-title">⚡ دليل المحفزات البصرية (Trigger)</div>
+                <div className="trigger-box-title"><FlashIcon /> دليل المحفزات البصرية (Trigger)</div>
                 عندما تطلب منك البكالوريا دراسة "اتجاه تغير دالة" مساعدة، فإن الهدف الأساسي هو إيجاد إشارة المشتقة وتوظيف رتابتها لإثبات وجود جذر وحيد لاحقاً. لا تتوقف عند حساب المشتقة بل بسطها حتى تصبح الإشارة واضحة تماماً.
             </div>
 
@@ -340,7 +341,7 @@ const Exercice4 = () => {
             </div>
 
             <div className="strategy-box">
-                <div className="strategy-box-title">❓ لماذا نذكر شرط الرتابة؟ (Why)</div>
+                <div className="strategy-box-title"><QuestionIcon /> لماذا نذكر شرط الرتابة؟ (Why)</div>
                 بدون شرط "الرتابة تماماً"، تخبرنا مبرهنة القيم المتوسطة بوجود "حل على الأقل" وليس "حل وحيد". الرتابة تضمن أن المنحنى يقطع محور الفواصل صعوداً أو نزولاً دون التواءات أو تقاطعات أخرى.
             </div>
 
@@ -592,7 +593,7 @@ const Exercice4 = () => {
                 </div>
             </div>
             <div className="danger-box">
-                <div className="danger-box-title">⚠️ احذر من الخلط في شكل المالانهاية على الصفر!</div>
+                <div className="danger-box-title"><WarningIcon />️ احذر من الخلط في شكل المالانهاية على الصفر!</div>
                 يقع بعض الطلاب في حفرة التفكير أن النهاية من شكل
                 <span className="math">{"\\(\\frac{-\\infty}{0}\\)"}</span>
                 هي حالة عدم تعيين ويضيعون الوقت في إزالتها. تذكر دائماً: عدد حقيقي غير معدوم على صفر يعطي مالانهاية، فكيف إذا كان البسط مالانهاية أصلاً! النتيجة حتماً مالانهاية بإشارتها المناسبة.
@@ -1096,7 +1097,7 @@ const Exercice4 = () => {
                 </div>
             </div>
             <div className="trigger-box">
-                <div className="trigger-box-title">⚡ دليل المحفزات البصرية (Trigger)</div>
+                <div className="trigger-box-title"><FlashIcon /> دليل المحفزات البصرية (Trigger)</div>
                 كلما رأيت في البكالوريا عبارة "احسب نهاية الفرق وتأكد أو فسر" أو كانت الدالة من الشكل
                 <span className="math">{"\\(ax+b + h(x)\\)"}</span>
                 حيرة تؤول
@@ -1506,7 +1507,7 @@ const Exercice4 = () => {
                 </div>
             </div>
             <div className="danger-box">
-                <div className="danger-box-title">⚠️ احذر من الخلط بين التوازي والتقاطع!</div>
+                <div className="danger-box-title"><WarningIcon />️ احذر من الخلط بين التوازي والتقاطع!</div>
                 يقع بعض الطلاب في خطأ فادح ويقومون بحل المعادلة
                 <span className="math">{"\\(f(x) = -x\\)"}</span>
                 وهذا يعطيك نقاط التقاطع وليس نقاط التوازي. التوازي هو شرط يرتبط بالمشتقة
@@ -1977,7 +1978,7 @@ const Exercice4 = () => {
             </div>
 
             <div className="trigger-box">
-                <div className="trigger-box-title">⚡ دليل المحفزات البصرية (Trigger)</div>
+                <div className="trigger-box-title"><FlashIcon /> دليل المحفزات البصرية (Trigger)</div>
                 كلما رأيت سؤالاً يطلب التفسير الهندسي لتكامل من شكل
                 <span className="math">{"\\(\\int_a^b [f(x) - y] dx\\)"}</span>
                 فهو يرمز دوماً للمساحة المحصورة بين المنحنى والمستقيم. انتبه للوضعية النسبية لضمان كتابة الفرق بالشكل الصحيح للحصول على مساحة موجبة هندسياً.
@@ -2084,7 +2085,7 @@ const Exercice4 = () => {
             </div>
 
             <div className="danger-box">
-                <div className="danger-box-title">⚠️ انتبه لمربع اللوغاريتم!</div>
+                <div className="danger-box-title"><WarningIcon />️ انتبه لمربع اللوغاريتم!</div>
                 يقع بعض الطلاب في خطأ عند تربيع الحدود، فيظنون أن
                 <span className="math">{"\\((\\ln x)^2 = 2\\ln x\\)"}</span>
                 وهذا خلط فادح مع الخاصية

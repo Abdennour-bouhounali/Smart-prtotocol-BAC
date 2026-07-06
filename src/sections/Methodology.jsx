@@ -2,6 +2,7 @@ import { DiscoveryProblem, DiscoveryTranslation, DiscoveryInventory } from '../c
 import errorCloud from '../images/Error_cloud.jpeg';
 import variationTableImg from '../images/variation_table_contradiction.png';
 import React, { useState } from 'react';
+import { CheckIcon, CrossIcon, FlagIcon, PackageIcon, SearchIcon, TargetIcon, ThoughtIcon, WarningIcon } from '../components/PrintIcons';
 
 
 /* ============================================================
@@ -15,7 +16,7 @@ const ExerciseCard = ({ number, phase, title, children }) => {
             padding: '20px 22px',
             paddingBottom: '6px',
             margin: '10px 0',
-            background: 'linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%)',
+            background: '#f0f4ff',
             position: 'relative',
             direction: 'rtl',
             textAlign: 'right',
@@ -130,7 +131,7 @@ const QuizMCQ = ({ id, question, options, correctIndex, explanation }) => {
             {revealed && (
                 <div className="strategy-box" style={{ marginTop: '12px', padding: '12px 16px', textAlign: 'right' }}>
                     <div className="strategy-box-title" style={{ marginBottom: '6px' }}>
-                        {selected === correctIndex ? '✅ إجابة صحيحة!' : '❌ إجابة خاطئة'}
+                        {selected === correctIndex ? <><CheckIcon /> إجابة صحيحة!</> : <><CrossIcon /> إجابة خاطئة</>}
                     </div>
                     <div style={{ fontSize: '0.92rem', lineHeight: '1.8', color: '#334155' }}>
                         {explanation}
@@ -237,7 +238,7 @@ const Methodology = () => {
             <div id="toc-step1" className="question-header" style={{ backgroundColor: '#2c3e50' }}>المرحلة الأولى: تحليل التمرين (Scan)</div>
 
             <div className="step-row-two">
-                <div className="left-col">💭 القاعدة</div>
+                <div className="left-col"><ThoughtIcon /> القاعدة</div>
                 <div className="right-col">لا تقرأ أسئلة التمرين بشكل منعزل؛ بل حلل التمرين بشكل مترابط حيث تتصل أفكار الأسئلة مع بعضها البعض.</div>
             </div>
 
@@ -389,7 +390,7 @@ const Methodology = () => {
             <div id="toc-step2" className="question-header" style={{ backgroundColor: '#922b21' }}>المرحلة الثانية: ترجمة نص التمرين و السؤال (Math Translate)</div>
 
             <div className="step-row-two">
-                <div className="left-col">💭 القاعدة</div>
+                <div className="left-col"><ThoughtIcon /> القاعدة</div>
                 <div className="right-col">ترجمة اللغة الانسانية الى لغة الرياضيات هي أول خطوة نحو استيعاب المشكل و الانطلاق في الحل.</div>
             </div>
             <div className="exercise-statement">
@@ -499,7 +500,7 @@ const Methodology = () => {
             {/* ===================== المرحلة الثالثة ===================== */}
             <div id="toc-step3" className="question-header" style={{ backgroundColor: '#1a5276' }}>المرحلة الثالثة: تحديد الهدف الحقيقي رياضيا (Aim)</div>
             <div className="step-row-two">
-                <div className="left-col">💭 القاعدة</div>
+                <div className="left-col"><ThoughtIcon /> القاعدة</div>
                 <div className="right-col">لا تبدأ بالحل قبل أن تعرف ما الذي تبحث عنه رياضياً.</div>
             </div>
             <div className="exercise-statement">
@@ -836,14 +837,14 @@ const Methodology = () => {
 
                     {/* الحل المنهجي هو:
                     <br /> */}
-                    ✔ أعبر عن <span className="math">{"\\(u_n\\)"}</span> بدلالة <span className="math">{"\\(v_n\\)"}</span> من العلاقة المعطاة
+                    <CheckIcon /> أعبر عن <span className="math">{"\\(u_n\\)"}</span> بدلالة <span className="math">{"\\(v_n\\)"}</span> من العلاقة المعطاة
                     <span style={{ marginRight: '8px', fontWeight: 'bold', color: '#1e3a5f' }}>
                         ← نحصل على: <span className="math">{"\\(u_n = \\frac{2 + 3v_n}{1 - v_n}\\)"}</span>
                     </span>
 
                     <br />
 
-                    ✔ أعوض هذا التعبير في صيغة <span className="math">{"\\(v_{n+1}\\)"}</span>
+                    <CheckIcon /> أعوض هذا التعبير في صيغة <span className="math">{"\\(v_{n+1}\\)"}</span>
                     <span style={{ marginRight: '8px', fontWeight: 'bold', color: '#1e3a5f' }}>
                         ← بعد التعويض : <span className="math">{"\\(v_{n+1} = \\frac{\\frac{2 + 3v_n}{1 - v_n} - 1}{\\frac{2 + 3v_n}{1 - v_n} + 2}\\)"}
                         </span>
@@ -851,7 +852,7 @@ const Methodology = () => {
 
                     <br />
 
-                    ✔ أبسط التعبير لأحصل على علاقة من الشكل:
+                    <CheckIcon /> أبسط التعبير لأحصل على علاقة من الشكل:
                     <span className="math">{"\\(v_{n+1} = q v_n\\)"}</span> فأجد أن
                     <span style={{ marginRight: '8px', fontWeight: 'bold', color: '#1e3a5f' }}>
                         : <span className="math">{"\\(q = \\frac{1}{4}\\)"}</span> و بالتالي <span className="math">{"\\(v_n\\)"}</span> هندسية.
@@ -892,7 +893,7 @@ const Methodology = () => {
                         fontSize: '11pt', borderRight: '4px solid #1e3a5f',
                         paddingRight: '12px', lineHeight: '1.6'
                     }}>
-                        📦 بنك المعطيات{' '}
+                        <PackageIcon /> بنك المعطيات{' '}
                         <span style={{ fontWeight: 400, color: '#64748b', fontSize: '11pt' }}>
                             (بعضها مفيد لهذا الجزء، وبعضها لا علاقة له به)
                         </span>
@@ -1016,7 +1017,7 @@ const Methodology = () => {
                             <strong>✓</strong>{' '}في المربع المجاور لكل معطى{' '}
                             <strong>ضروري</strong>{' '}لإثبات الهدف في (ب). علّل كل اختيار بجملة.
                             {/* <div style={{ marginTop: '10px', padding: '10px 14px', background: '#fefce8', border: '1px dashed #ca8a04', borderRadius: '6px', fontSize: '11pt', color: '#78350f' }}>
-                                ⚠ تنبيه: بعض المعطيات صحيحة لكنها خاصة بأجزاء أخرى وليست بهذا الجزء. اختر فقط ما يخدم إثبات التناقص.
+                                <WarningIcon /> تنبيه: بعض المعطيات صحيحة لكنها خاصة بأجزاء أخرى وليست بهذا الجزء. اختر فقط ما يخدم إثبات التناقص.
                             </div> */}
                         </div>
                     </div>
@@ -1059,7 +1060,7 @@ const Methodology = () => {
                     borderRight: '4px solid #0284c7',
                     fontSize: '11pt', color: '#334155', lineHeight: '1.8'
                 }}>
-                    <strong style={{ color: '#0284c7' }}>🎯 تنبيه منهجي:</strong>{' '}
+                    <strong style={{ color: '#0284c7' }}><TargetIcon /> تنبيه منهجي:</strong>{' '}
                     ليس كل معطى مذكور في السؤال ضرورياً للجزء الذي تحله.{' '}
                     قدرتك على <em>تصفية البيانات واختيار المفيد منها</em>{' '}
                     هي مهارة أساسية تميّز الطالب المتمكّن عن غيره.
@@ -1094,12 +1095,12 @@ const Methodology = () => {
             </div>
 
             <div className="step-row-two">
-                <div className="left-col">💭 القاعدة</div>
+                <div className="left-col"><ThoughtIcon /> القاعدة</div>
                 <div className="right-col" style={{ fontWeight: "bold" }}>اسأل نفسك: "ما الذي علي أن أستخدمه من هاته المعطيات لأصل إلى هذا الهدف أو إلى جزء منه؟"</div>
             </div>
             <div className="starting-point-container">
                 <div className="starting-point-card">
-                    <div className="starting-point-icon">🚩</div>
+                    <div className="starting-point-icon"><FlagIcon /></div>
                     <div className="strategy-box-title" style={{ margin: 0 }}>نقطة الانطلاق الأولى</div>
                     <p style={{ fontSize: '11pt', color: '#444', marginTop: '5px' }}>
                         أهم معطى هو الأقرب "شكلاً أو مفهوماً" للهدف. اكتشافه يمثل 50% من الطريق نحو الحل.
@@ -1113,7 +1114,7 @@ const Methodology = () => {
                     <div className="process-steps">
                         <div className="process-node">الهدف</div>
                         <div className="process-arrow">←</div>
-                        <div className="process-node">أقرب معطى 🚩</div>
+                        <div className="process-node">أقرب معطى <FlagIcon /></div>
                         <div className="process-arrow">←</div>
                         <div className="process-node">شبكة المعطيات</div>
                     </div>
@@ -1431,7 +1432,7 @@ const Methodology = () => {
             <div id="toc-step5" className="question-header" style={{ backgroundColor: '#117a65' }}>المرحلة الخامسة: التحقق من النتيجة (Test)</div>
 
             <div className="strategy-box">
-                <div className="strategy-box-title">🔍 معايير التحقق المنطقي</div>
+                <div className="strategy-box-title"><SearchIcon /> معايير التحقق المنطقي</div>
                 <ul className="pedagogical-list">
                     <li>هل وجدت احتمالاً <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(P(A) > 1\\)'}</span> أو <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(P(A) \\leq 0\\)'}</span>؟ (مستحيل، هناك خطأ حتمي).</li>
                     <li>هل وجدت دالة أسية <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(e^x \\leq 0\\)'}</span>؟ (مستحيل قطعياً).</li>
@@ -1536,7 +1537,7 @@ const Methodology = () => {
                 borderRadius: '12px',
                 padding: '20px 22px',
                 margin: '0px 0',
-                background: 'linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%)',
+                background: '#f0f4ff',
                 position: 'relative'
             }}>
 

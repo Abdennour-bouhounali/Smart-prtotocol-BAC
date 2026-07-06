@@ -1,4 +1,5 @@
 import React from 'react';
+import { BlueDiamondIcon } from '../components/PrintIcons';
 // BacIntelligence.jsx
 // Helper component: renders LaTeX inline via KaTeX auto-render delimiters
 const M = ({ children }) => (
@@ -27,7 +28,7 @@ const BacIntelligence = () => {
                     الهدف ليس حفظ الحلول، بل تعلم طريقة التفكير والتحليل أثناء التعامل مع التمارين الرياضية.
                 </p>
             </div>
-            <div id="toc-bac-functions" className="question-header">🔹 الدوال العددية</div>
+            <div id="toc-bac-functions" className="question-header"><BlueDiamondIcon /> الدوال العددية</div>
 
             <div className="col-header-row">
                 <div className="col-header left-h">العبارة في التمرين</div>
@@ -252,7 +253,7 @@ const BacIntelligence = () => {
             </div>
 
 
-            <div id="toc-bac-limits" className="question-header">🔹 النهايات</div>
+            <div id="toc-bac-limits" className="question-header"><BlueDiamondIcon /> النهايات</div>
 
             <div className="col-header-row">
                 <div className="col-header left-h">العبارة في التمرين</div>
@@ -393,7 +394,7 @@ const BacIntelligence = () => {
             </div>
 
 
-            <div id="toc-bac-derivatives" className="question-header">🔹 الاشتقاق </div>
+            <div id="toc-bac-derivatives" className="question-header"><BlueDiamondIcon /> الاشتقاق </div>
 
             <div className="col-header-row">
                 <div className="col-header left-h">العبارة في التمرين</div>
@@ -540,7 +541,7 @@ const BacIntelligence = () => {
                 <div className="right-col">الدالة المحددة بالتكامل مشتقتها هي ما بداخل التكامل (بشرط اتصال الدالة المكاملة).</div>
             </div>
 
-            <div id="toc-bac-variations" className="question-header">🔹 دراسة التغيرات </div>
+            <div id="toc-bac-variations" className="question-header"><BlueDiamondIcon /> دراسة التغيرات </div>
 
             <div className="col-header-row">
                 <div className="col-header left-h">العبارة في التمرين</div>
@@ -662,7 +663,7 @@ const BacIntelligence = () => {
                 <div className="right-col">إذا كان الجدول يقول أن القيم سالبة بينما تجد حلاً لـ <M>{`\\(f(x)=0\\)`}</M>، يجب مراجعة الاشتقاق فوراً.</div>
             </div>
 
-            <div id="toc-bac-sequences" className="question-header">🔹 المتتاليات</div>
+            <div id="toc-bac-sequences" className="question-header"><BlueDiamondIcon /> المتتاليات</div>
 
             <div className="col-header-row">
                 <div className="col-header left-h">العبارة في التمرين</div>
@@ -886,7 +887,7 @@ const BacIntelligence = () => {
                 <div className="right-col">ندخل الفرق داخل التكامل المشترك: <M>{`\\(\\int x^n(x-1)e^{-x} dx\\)`}</M> وندرس إشارة الدالة المكاملة على مجال التكامل.</div>
             </div>
 
-            <div id="toc-bac-integrals" className="question-header">🔹 التكامل </div>
+            <div id="toc-bac-integrals" className="question-header"><BlueDiamondIcon /> التكامل </div>
 
             <div className="col-header-row">
                 <div className="col-header left-h">العبارة في التمرين</div>
@@ -1040,7 +1041,7 @@ const BacIntelligence = () => {
                 <div className="right-col">يُعطى الحجم أو المساحة بقيمة عددية، ويطلب إيجاد الحد الذي يحقق تلك المساحة.</div>
             </div>
 
-            <div id="toc-bac-complex" className="question-header">🔹 الأعداد المركبة </div>
+            <div id="toc-bac-complex" className="question-header"><BlueDiamondIcon /> الأعداد المركبة </div>
 
             <div className="col-header-row">
                 <div className="col-header left-h">العبارة في التمرين</div>
@@ -1229,7 +1230,7 @@ const BacIntelligence = () => {
                 <div className="right-col">نحل معادلة الجذور النونية لـ <M>{`\\(Z^n = a\\)`}</M> ثم نعود للمتغير الأصلي <M>{`\\(z = Z + z_0\\)`}</M> بإزاحة جذور الوحدة.</div>
             </div>
 
-            <div id="toc-bac-probabilities" className="question-header">🔹 الاحتمالات </div>
+            <div id="toc-bac-probabilities" className="question-header"><BlueDiamondIcon /> الاحتمالات </div>
 
             <div className="col-header-row">
                 <div className="col-header left-h">العبارة في التمرين</div>
@@ -1387,7 +1388,7 @@ const BacIntelligence = () => {
                 <div className="right-col">تعتمد على التوزيع الهندسي وتشكيل مجاميع متتاليات هندسية لحساب الاحتمال الكلي.</div>
             </div>
 
-            <div id="toc-bac-geometry" className="question-header">🔹 الهندسة في الفضاء </div>
+            <div id="toc-bac-geometry" className="question-header"><BlueDiamondIcon /> الهندسة في الفضاء </div>
 
             <div className="col-header-row">
                 <div className="col-header left-h">العبارة في التمرين</div>
@@ -1551,7 +1552,7 @@ const BacIntelligence = () => {
                 <div className="right-col">المركز يقع في المستوي المنتصف بينهما، والقطر هو المسافة العمودية بين المستويين.</div>
             </div>
 
-            <div id="toc-bac-arithmetic" className="question-header">🔹 الحساب والموافقات (شعبة رياضيات وتقني رياضي)</div>
+            <div id="toc-bac-arithmetic" className="question-header"><BlueDiamondIcon /> الحساب والموافقات (شعبة رياضيات وتقني رياضي)</div>
 
             <div className="col-header-row">
                 <div className="col-header left-h">العبارة في التمرين</div>

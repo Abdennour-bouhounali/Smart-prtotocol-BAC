@@ -1,4 +1,5 @@
 import React from 'react';
+import { AlertIcon } from '../components/PrintIcons';
 
 const TeacherSection = () => {
     return (
@@ -49,7 +50,7 @@ const TeacherSection = () => {
             </div>
 
             <div className="strategy-box">
-                <div className="strategy-box-title">🚨 تكتيك "غيمة التحذير"</div>
+                <div className="strategy-box-title"><AlertIcon /> تكتيك "غيمة التحذير"</div>
                 وجّه طلابك بلا هوادة إلى ممارسة "الترميز البصري" للأخطاء في كراسات التمارين. عند اكتشاف خطأ، لا يكتفي الطالب بالتصحيح، بل يرسم "غيمة" بجانب الحل الخاطئ يكتب فيها بوضوح القاعدة الذهبية التي نسيها. يوجه الطالب سهماً من الغيمة إلى مكان الخطأ الدقيق. هذا التجسيد البصري يمنع العقل من تجاوز الخطأ مرور الكرام.
             </div>
 
