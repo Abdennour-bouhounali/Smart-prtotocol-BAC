@@ -3,24 +3,24 @@ import React from 'react';
 const SolutionCard = ({ number, phase, title, children }) => {
     return (
         <div className="radar-box" style={{
-            border: '2px solid #006666',
-            borderRadius: '12px',
+            border: '1.5px solid #006666',
+            borderRadius: '6px',
             padding: '20px 22px',
-            margin: '18px 0',
-            background: '#E5FFF5',
+            margin: '22px 0',
+            background: '#FFFFFF',
             position: 'relative',
             direction: 'rtl',
             textAlign: 'right',
             unicodeBidi: 'plaintext'
         }}>
+            {/* Editorial Intersecting Label */}
             <div style={{
                 position: 'absolute',
-                top: '-14px',
+                top: '-12px',
                 right: '20px',
-                background: '#006666',
-                color: '#FFFFFF',
-                borderRadius: '20px',
-                padding: '3px 16px',
+                background: '#FFFFFF',
+                color: '#006666',
+                padding: '0 10px',
                 fontSize: '11pt',
                 fontWeight: 700,
                 letterSpacing: '0.04em',
@@ -31,7 +31,7 @@ const SolutionCard = ({ number, phase, title, children }) => {
 
             <div className="radar-box-title" style={{
                 color: '#006666',
-                borderBottom: '2px solid #AAEEDD',
+                borderBottom: '1px solid #DDDDDD',
                 paddingBottom: '8px',
                 marginBottom: '14px',
                 marginTop: '6px',
@@ -40,7 +40,7 @@ const SolutionCard = ({ number, phase, title, children }) => {
                 {title}
             </div>
 
-            <div style={{ lineHeight: '1.9', color: '#334466', fontSize: '0.95rem' }}>
+            <div style={{ lineHeight: '1.9', color: '#111111', fontSize: '11pt' }}>
                 {children}
             </div>
         </div>
