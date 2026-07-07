@@ -59,7 +59,7 @@ const App = () => {
     // Scroll Persistence per section
     useEffect(() => {
         if (!activeSectionId) return;
-        
+
         const scrollKey = `scrollPos_${activeSectionId}`;
 
         const restoreScroll = () => {
@@ -125,9 +125,9 @@ const App = () => {
         <div className="app-container" dir="rtl">
             {/* ── SCREEN VIEW ── */}
             <div className="screen-only" style={{ display: 'flex', width: '100%', height: '100%', position: 'relative' }}>
-                
+
                 {/* Sidebar Toggle Button */}
-                <button 
+                <button
                     className={`sidebar-toggle ${sidebarOpen ? 'open' : 'closed'}`}
                     onClick={() => setSidebarOpen(!sidebarOpen)}
                     aria-label="Toggle Sidebar"

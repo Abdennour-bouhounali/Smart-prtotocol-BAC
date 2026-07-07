@@ -26,7 +26,7 @@ export const usePagination = (containerRef, bookName, dependencies = [], options
         footer.innerHTML = `
         <div class="footer-bac-plus" dir="ltr" style="font-weight:900;color:#000000;letter-spacing:1px;text-align:right;font-size:11pt;padding-right:15px;">BAC</div>
         <div class="footer-page-num">صفحة ${pageIndex + 1}</div>
-        <div class="footer-book-name" dir="ltr">${bookName || ''}</div>
+        <div class="footer-book-name" dir="rtl">${bookName || ''}</div>
     `;
 
         page.appendChild(footer);

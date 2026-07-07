@@ -1460,7 +1460,7 @@ const Methodology = () => {
                 </div>
 
                 {/* ── السؤال 1: جدول تغيرات متناقض ── */}
-                <div style={{ margin: '12px 0', padding: '10px 14px', background: '#FFFFFF', border: '1px solid #CCCCCC', pageBreakInside: 'avoid', breakInside: 'avoid' }}>
+                <div style={{ margin: '6px 0', padding: '5px 5px', background: '#FFFFFF', border: '1px solid #CCCCCC', pageBreakInside: 'avoid', breakInside: 'avoid' }}>
                     <div style={{ fontWeight: 700, color: '#004D99', marginBottom: '10px', fontSize: '0.92rem' }}>
                         السؤال 1 — جدول التغيرات
                     </div>
@@ -1478,13 +1478,13 @@ const Methodology = () => {
                     </div>
 
                     <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '8px' }}>
-                        <div style={{ width: '22px', height: '22px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
+                        <div style={{ width: '15px', height: '15px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
                         <span style={{ fontSize: '11pt', color: '#334466' }}>
                             صحيح — لا يوجد تناقض في هذا الجدول.
                         </span>
                     </div>
                     <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '6px' }}>
-                        <div style={{ width: '22px', height: '22px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
+                        <div style={{ width: '15px', height: '15px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
                         <span style={{ fontSize: '11pt', color: '#334466' }}>
                             خاطئ — يوجد تناقض. الجهة المتناقضة هي: <span style={{ borderBottom: '1px dashed #CCDDEE', minWidth: '120px', display: 'inline-block' }}>&nbsp;</span>
                         </span>
@@ -1492,7 +1492,7 @@ const Methodology = () => {
                 </div>
 
                 {/* ── السؤال 2: فخ القيمة المطلقة في النهايات ── */}
-                <div style={{ margin: '12px 0', padding: '10px 14px', background: '#FFFFFF', border: '1px solid #CCCCCC', pageBreakInside: 'avoid', breakInside: 'avoid' }}>
+                <div style={{ margin: '6px 0', padding: '10px 14px', background: '#FFFFFF', border: '1px solid #CCCCCC', pageBreakInside: 'avoid', breakInside: 'avoid' }}>
                     <div style={{ fontWeight: 700, color: '#004D99', marginBottom: '6px', fontSize: '0.92rem' }}>
                         السؤال 2 — النهايات والقيمة المطلقة
                     </div>
@@ -1509,6 +1509,16 @@ const Methodology = () => {
                         بعد الاختزال:{' '}
                         <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\[\\displaystyle\\lim_{x\\to-\\infty} f(x) = 1\\]'}</span>.
                     </div>
+                    <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '8px' }}>
+                        <div style={{ width: '15px', height: '15px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
+                        <span style={{ fontSize: '11pt', color: '#334466' }}>صحيح — النهاية تساوي 1.</span>
+                    </div>
+                    <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '6px' }}>
+                        <div style={{ width: '15px', height: '15px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
+                        <span style={{ fontSize: '11pt', color: '#334466' }}>
+                            خاطئ. الخطأ في: <span style={{ borderBottom: '1px dashed #CCDDEE', minWidth: '160px', display: 'inline-block' }}>&nbsp;</span>
+                        </span>
+                    </div>
 
                 </div>
 
@@ -1517,16 +1527,7 @@ const Methodology = () => {
 
             <div className="radar-box">
 
-                <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '8px' }}>
-                    <div style={{ width: '28px', height: '28px', border: '2px solid #99AACC', borderRadius: '4px', background: '#FFFFFF', flexShrink: 0 }} />
-                    <span style={{ fontSize: '11pt', color: '#334466' }}>صحيح — النهاية تساوي 1.</span>
-                </div>
-                <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '6px' }}>
-                    <div style={{ width: '28px', height: '28px', border: '2px solid #99AACC', borderRadius: '4px', background: '#FFFFFF', flexShrink: 0 }} />
-                    <span style={{ fontSize: '11pt', color: '#334466' }}>
-                        خاطئ. الخطأ في: <span style={{ borderBottom: '1px dashed #CCDDEE', minWidth: '160px', display: 'inline-block' }}>&nbsp;</span>
-                    </span>
-                </div>
+
                 {/* ── فاصل صفحة: السؤال 3 والسؤال 4 في صفحة جديدة ── */}
                 <div style={{ pageBreakBefore: 'always', breakBefore: 'page' }} />
 
@@ -1549,13 +1550,13 @@ const Methodology = () => {
                         إذن{' '}<span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(S=\\{0,\\,3\\}\\)'}</span>.
                     </div>
                     <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '8px' }}>
-                        <div style={{ width: '22px', height: '22px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
+                        <div style={{ width: '15px', height: '15px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
                         <span style={{ fontSize: '11pt', color: '#334466' }}>
                             صحيح — <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(S = \\{0, 3\\}\\)'}</span>.
                         </span>
                     </div>
                     <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '6px' }}>
-                        <div style={{ width: '22px', height: '22px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
+                        <div style={{ width: '15px', height: '15px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
                         <span style={{ fontSize: '11pt', color: '#334466' }}>
                             خاطئ. الخطأ في: <span style={{ borderBottom: '1px dashed #CCDDEE', minWidth: '160px', display: 'inline-block' }}>&nbsp;</span>
                         </span>
@@ -1582,13 +1583,13 @@ const Methodology = () => {
                         <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(P(A\\cup B) = P(A)+P(B) = 0{,}4+0{,}3 = 0{,}7\\)'}</span>.
                     </div>
                     <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '8px' }}>
-                        <div style={{ width: '28px', height: '28px', border: '2px solid #99AACC', borderRadius: '4px', background: '#FFFFFF', flexShrink: 0 }} />
+                        <div style={{ width: '15px', height: '15px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
                         <span style={{ fontSize: '11pt', color: '#334466' }}>
                             صحيح — <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(P(A\\cup B)=0{,}7\\)'}</span>.
                         </span>
                     </div>
                     <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '6px' }}>
-                        <div style={{ width: '28px', height: '28px', border: '2px solid #99AACC', borderRadius: '4px', background: '#FFFFFF', flexShrink: 0 }} />
+                        <div style={{ width: '15px', height: '15px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
                         <span style={{ fontSize: '11pt', color: '#334466' }}>
                             خاطئ. الخطأ في: <span style={{ borderBottom: '1px dashed #CCDDEE', minWidth: '160px', display: 'inline-block' }}>&nbsp;</span>
                         </span>
