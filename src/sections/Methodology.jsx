@@ -11,12 +11,13 @@ import { CheckIcon, CrossIcon, FlagIcon, PackageIcon, SearchIcon, TargetIcon, Th
 const ExerciseCard = ({ number, phase, title, children }) => {
     return (
         <div className="radar-box" style={{
-            border: '2px solid #004D99',
-            borderRadius: '12px',
-            padding: '10px 22px',
+            border: '1px solid #CCCCCC',
+            borderTop: '3px solid #004D99',
+            borderRadius: '0',
+            padding: '10px 18px',
             paddingBottom: '6px',
-            margin: '10px 0',
-            background: '#E5F0FF',
+            margin: '8px 0',
+            background: '#FFFFFF',
             position: 'relative',
             direction: 'rtl',
             textAlign: 'right',
@@ -24,27 +25,28 @@ const ExerciseCard = ({ number, phase, title, children }) => {
         }}>
             {/* شارة رقم التمرين */}
             <div style={{
-                position: 'absolute',
-                top: '-14px',
-                right: '20px',
-                background: '#004D99',
-                color: '#FFFFFF',
-                borderRadius: '20px',
-                padding: '3px 16px',
-                fontSize: '11pt',
+                display: 'inline-block',
+                background: 'transparent',
+                color: '#004D99',
+                border: '1.5px solid #004D99',
+                borderRadius: '0',
+                padding: '2px 14px',
+                fontSize: '9.5pt',
                 fontWeight: 700,
-                letterSpacing: '0.04em',
-                direction: 'rtl'
+                letterSpacing: '0.08em',
+                marginBottom: '8px',
+                direction: 'rtl',
+                textTransform: 'uppercase',
             }}>
                 تمرين {number} — {phase}
             </div>
 
             <div className="radar-box-title" style={{
                 color: '#004D99',
-                borderBottom: '2px solid #E0E8F5',
+                borderBottom: '1px solid #DDDDDD',
                 paddingBottom: '4px',
                 marginBottom: '4px',
-                marginTop: '6px',
+                marginTop: '2px',
                 textAlign: 'right'
             }}>
                 {title}
@@ -73,22 +75,22 @@ const QuizMCQ = ({ id, question, options, correctIndex, explanation }) => {
     };
 
     return (
-        <div style={{ margin: '14px 0', direction: 'rtl', textAlign: 'right' }}>
-            <div style={{ fontWeight: 'bold', color: '#334466', marginBottom: '10px', lineHeight: '1.8' }}>
+        <div style={{ margin: '10px 0', direction: 'rtl', textAlign: 'right' }}>
+            <div style={{ fontWeight: 'bold', color: '#111111', marginBottom: '8px', lineHeight: '1.7' }}>
                 {question}
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '12px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '10px' }}>
                 {options.map((opt, idx) => {
-                    let bg = '#F7FAFD';
-                    let border = '1.5px solid #CCDDEE';
-                    let color = '#334466';
+                    let border = '1px solid #CCCCCC';
+                    let color = '#222222';
+                    let bg = '#FFFFFF';
 
                     if (revealed) {
-                        if (idx === correctIndex) { bg = '#CCFFEE'; border = '1.5px solid #006666'; color = '#005555'; }
-                        else if (idx === selected) { bg = '#EEEEFF'; border = '1.5px solid #111144'; color = '#0D0D33'; }
+                        if (idx === correctIndex) { border = '2px solid #006666'; color = '#004444'; bg = '#FFFFFF'; }
+                        else if (idx === selected) { border = '2px solid #333366'; color = '#111133'; bg = '#FFFFFF'; }
                     } else if (idx === selected) {
-                        bg = '#D5E5FF'; border = '1.5px solid #2233AA'; color = '#1A2299';
+                        border = '2px solid #004D99'; color = '#003366'; bg = '#FFFFFF';
                     }
 
                     return (
@@ -97,10 +99,9 @@ const QuizMCQ = ({ id, question, options, correctIndex, explanation }) => {
                             onClick={() => handleSelect(idx)}
                             style={{
                                 background: bg, border, color,
-                                borderRadius: '8px', padding: '10px 14px',
+                                borderRadius: '2px', padding: '8px 12px',
                                 cursor: revealed ? 'default' : 'pointer',
-                                transition: 'all 0.2s',
-                                fontSize: '0.92rem', lineHeight: '1.7',
+                                fontSize: '11pt', lineHeight: '1.6',
                                 display: 'flex', alignItems: 'flex-start', gap: '8px'
                             }}
                         >
@@ -118,10 +119,10 @@ const QuizMCQ = ({ id, question, options, correctIndex, explanation }) => {
                     onClick={handleReveal}
                     disabled={selected === null}
                     style={{
-                        background: selected !== null ? '#004D99' : '#99AACC',
-                        color: '#FFFFFF', border: 'none', borderRadius: '8px',
-                        padding: '8px 20px', cursor: selected !== null ? 'pointer' : 'not-allowed',
-                        fontSize: '11pt', fontWeight: 600, transition: 'background 0.2s'
+                        background: selected !== null ? '#003366' : '#BBBBBB',
+                        color: '#FFFFFF', border: 'none', borderRadius: '2px',
+                        padding: '7px 18px', cursor: selected !== null ? 'pointer' : 'not-allowed',
+                        fontSize: '11pt', fontWeight: 600
                     }}
                 >
                     تحقق من إجابتك
@@ -129,11 +130,11 @@ const QuizMCQ = ({ id, question, options, correctIndex, explanation }) => {
             )}
 
             {revealed && (
-                <div className="strategy-box" style={{ marginTop: '12px', padding: '12px 16px', textAlign: 'right' }}>
-                    <div className="strategy-box-title" style={{ marginBottom: '6px' }}>
+                <div className="strategy-box" style={{ marginTop: '10px', padding: '10px 14px', textAlign: 'right' }}>
+                    <div className="strategy-box-title" style={{ marginBottom: '4px' }}>
                         {selected === correctIndex ? <><CheckIcon /> إجابة صحيحة!</> : <><CrossIcon /> إجابة خاطئة</>}
                     </div>
-                    <div style={{ fontSize: '0.92rem', lineHeight: '1.8', color: '#334466' }}>
+                    <div style={{ fontSize: '11pt', lineHeight: '1.7', color: '#333333' }}>
                         {explanation}
                     </div>
                 </div>
@@ -166,29 +167,25 @@ const QuizOrder = ({ steps, correctOrder, hint }) => {
     const isCorrect = JSON.stringify(userOrder) === JSON.stringify(correctOrder);
 
     return (
-        <div style={{ margin: '14px 0' }}>
-            <div style={{ fontWeight: 'bold', color: '#445566', marginBottom: '10px', fontSize: '11pt' }}>
+        <div style={{ margin: '10px 0' }}>
+            <div style={{ fontWeight: 'bold', color: '#222222', marginBottom: '8px', fontSize: '11pt' }}>
                 رتّب الخطوات التالية بالترتيب الصحيح:
             </div>
             {userOrder.map((stepIdx, pos) => (
                 <div key={stepIdx} style={{
                     display: 'flex', alignItems: 'center', gap: '8px',
-                    background: checked ? (isCorrect ? '#CCFFEE' : (JSON.stringify(userOrder) === JSON.stringify(correctOrder) ? '#CCFFEE' : '#FFFAF0')) : '#F7FAFD',
-                    border: `1.5px solid ${checked ? (pos === correctOrder.indexOf(stepIdx) ? '#006666' : '#553300') : '#CCDDEE'}`,
-                    borderRadius: '8px', padding: '8px 12px', marginBottom: '6px',
-                    transition: 'all 0.2s'
+                    background: '#FFFFFF',
+                    border: checked
+                        ? `2px solid ${pos === correctOrder.indexOf(stepIdx) ? '#006666' : '#883300'}`
+                        : '1px solid #CCCCCC',
+                    borderRadius: '2px', padding: '7px 10px', marginBottom: '5px'
                 }}>
-                    <span style={{ fontWeight: 700, color: '#99AACC', minWidth: '24px' }}>{pos + 1}.</span>
-                    <span style={{ flex: 1, fontSize: '11pt', color: '#334466', lineHeight: '1.7' }}>
+                    <span style={{ fontWeight: 700, color: '#888888', minWidth: '22px' }}>{pos + 1}.</span>
+                    <span style={{ flex: 1, fontSize: '11pt', color: '#222222', lineHeight: '1.6' }}>
                         {steps[stepIdx]}
                     </span>
-                    {/* <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-                        <button onClick={() => moveUp(pos)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#667799', fontSize: '11pt' }}>▲</button>
-                        <button onClick={() => moveDown(pos)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#667799', fontSize: '11pt' }}>▼</button>
-                    </div> */}
                 </div>
             ))}
-
         </div>
     );
 };
@@ -235,7 +232,7 @@ const Methodology = () => {
             <div id="toc-smart" style={{ display: 'none' }}></div>
 
             {/* ===================== المرحلة الصفرية ===================== */}
-            <div id="toc-step1" className="question-header" style={{ backgroundColor: '#003366' }}>المرحلة الأولى: تحليل التمرين (Scan)</div>
+            <div id="toc-step1" className="question-header">المرحلة الأولى: تحليل التمرين (Scan)</div>
 
             <div className="step-row-rule">
                 <div className="left-col"><ThoughtIcon /> القاعدة</div>
@@ -252,27 +249,28 @@ const Methodology = () => {
             </div>
 
             {/* مثال تطبيقي المرحلة الصفرية */}
-            <div className="radar-box" style={{ background: '#FFFFFF', border: '1.5px solid #CCDDEE', borderRadius: '10px', padding: '18px 20px', margin: '5px 0' }}>
-                <div className="radar-box-title" style={{ color: '#004D99', borderBottom: '2px solid #E0E8F5', paddingBottom: '8px', marginBottom: '12px' }}>مثال :</div>
+            <div className="example-box">
+                <div className="example-box-title">تحليل التمرين كاملاً قبل الحل</div>
                 <p style={{ marginBottom: '10px', lineHeight: '1.8' }}>
                     <strong>الوضعية:</strong> لتكن الدالة:
                 </p>
-                <div style={{ textAlign: 'center', margin: '12px 0 16px' }}>
-                    <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr', fontSize: '1.1em' }}>
+                <div>
+                    <span className="math">
                         {"\\(f(x) = \\dfrac{x^2 + 1}{x + 1}\\)"}
                     </span>
                 </div>
                 <ul style={{ paddingRight: '20px', lineHeight: '2.2' }}>
-                    <li><strong>السؤال 1:</strong> احسب مشتقة الدالة <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f'(x)\\)"}</span> ثم ادرس إشارتها.</li>
-                    <li><strong>السؤال 2:</strong> أنشئ جدول تغيرات الدالة <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f\\)"}</span> .</li>
-                    <li><strong>السؤال 3:</strong> بيّن أن المستقيم <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(y = x - 1\\)"}</span> مقارب للمنحنى.</li>
+                    <li><strong>السؤال 1:</strong> احسب مشتقة الدالة <span className="math">{"\\(f'(x)\\)"}</span> ثم ادرس إشارتها.</li>
+                    <li><strong>السؤال 2:</strong> أنشئ جدول تغيرات الدالة <span className="math">{"\\(f\\)"}</span> .</li>
+                    <li><strong>السؤال 3:</strong> بيّن أن المستقيم <span className="math">{"\\(y = x - 1\\)"}</span> مقارب للمنحنى.</li>
                     <li><strong>السؤال 4:</strong> استنتج وضعية المنحنى بالنسبة إلى المستقيم المقارب.</li>
                 </ul>
             </div>
 
             {/* شرح أهمية التحليل الشامل */}
-            <div className="radar-box" style={{ background: '#FFFFFF', border: '1.5px solid #CCDDEE', borderRadius: '10px', padding: '18px 20px', margin: '15px 0' }}>
-                <div style={{ fontWeight: 'bold', fontSize: '1.05rem', color: '#004D99', marginBottom: '12px' }}>
+            <div className="example-box-extention">
+                <div className="editorial-label">تلميح منهجي</div>
+                <div style={{ fontWeight: 'bold', fontSize: '11pt', marginBottom: '8px' }}>
                     أين تظهر أهمية "التحليل الشامل"؟
                 </div>
                 <p style={{ lineHeight: '1.9', marginBottom: '14px' }}>
@@ -280,19 +278,19 @@ const Methodology = () => {
                 </p>
                 <p style={{ lineHeight: '1.9', marginBottom: '10px' }}>
                     بما أن السؤال 3 يتحدث عن مقارب مائل من الشكل{' '}
-                    <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(y = x - 1\\)"}</span>
+                    <span className="math">{"\\(y = x - 1\\)"}</span>
                     {' '}، فهذا يعني غالباً أن الدالة يمكن كتابتها على الشكل:
                 </p>
-                <div style={{ textAlign: 'center', margin: '10px 0 14px', padding: '10px', background: '#F7FAFD', borderRadius: '8px' }}>
-                    <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr', fontSize: '1.05em' }}>
+                <div style={{ textAlign: 'center', margin: '10px 0 14px' }}>
+                    <span className="math">
                         {"\\(f(x) = x - 1 + \\dfrac{k}{x + 1}\\)"}
                     </span>
                 </div>
                 <p style={{ lineHeight: '1.9', marginBottom: '10px' }}>
                     وهنا يصبح الحل أذكى بكثير، لأنك تقوم مباشرة بالقسمة:
                 </p>
-                <div style={{ textAlign: 'center', margin: '10px 0 14px', padding: '10px', background: '#F7FAFD', borderRadius: '8px' }}>
-                    <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr', fontSize: '1.05em' }}>
+                <div style={{ textAlign: 'center', margin: '8px 0 12px' }}>
+                    <span className="math">
                         {"\\(f(x) = x - 1 + \\dfrac{2}{x + 1}\\)"}
                     </span>
                 </div>
@@ -301,13 +299,13 @@ const Methodology = () => {
                     <li>أصبح المقارب المائل واضحاً مباشرةً دون تفكير طويل.</li>
                     <li>
                         السؤال 4 أصبح سهلاً جداً لأن:{' '}
-                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>
+                        <span className="math">
                             {"\\(f(x) - (x - 1) = \\dfrac{2}{x + 1}\\)"}
                         </span>
                     </li>
                     <li>
                         وبالتالي وضعية المنحنى تعتمد فقط على إشارة{' '}
-                        <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(x + 1\\)"}</span> .
+                        <span className="math">{"\\(x + 1\\)"}</span> .
                     </li>
                     <li>وحتى دراسة المشتقة أصبحت أبسط لأن كتابة الدالة الجديدة أسهل للاشتقاق.</li>
                 </ul>
@@ -329,7 +327,7 @@ const Methodology = () => {
                     <strong>الوضعية:</strong> اقرأ التمرين كاملاً قبل البدء في الحل، ثم حاول أن تتوقع ما ستحتاج إليه في السؤال الأول.
                 </div>
 
-                <div className="radar-box" style={{ background: '#FFFFFF', border: '1px solid #E0E8F5', padding: '16px', margin: '10px 0' }}>
+                <div className="radar-box">
                     <ul style={{ paddingRight: '18px', lineHeight: '2.2' }}>
                         <li>
                             <strong>السؤال 1:</strong>
@@ -355,7 +353,7 @@ const Methodology = () => {
                     </ul>
                 </div>
 
-                <div className="step-row-two">
+                <div className="step-row-rule">
                     <div className="left-col">المطلوب أ</div>
                     <div className="right-col">
                         قبل أن تبدأ بالحساب، ماذا يخبرك السؤال الثالث عن إشارة
@@ -365,7 +363,7 @@ const Methodology = () => {
                     </div>
                 </div>
 
-                <div className="step-row-two">
+                <div className="step-row-rule">
                     <div className="left-col">المطلوب ب</div>
                     <div className="right-col">
                         ماذا تتوقع أن يكون جدول إشارة
@@ -375,7 +373,7 @@ const Methodology = () => {
                     </div>
                 </div>
 
-                <div className="step-row-two">
+                <div className="step-row-rule">
                     <div className="left-col">المطلوب ج</div>
                     <div className="right-col">
                         بعد إنجاز السؤال الأول، قارن النتيجة التي وجدتها بما كنت تتوقعه بعد قراءة السؤال الثالث.
@@ -387,7 +385,7 @@ const Methodology = () => {
             {/* ---- فاصل صفحة A4 ---- */}
 
             {/* ===================== المرحلة الأولى ===================== */}
-            <div id="toc-step2" className="question-header" style={{ backgroundColor: '#1A1A3B' }}>المرحلة الثانية: ترجمة نص التمرين و السؤال (Math Translate)</div>
+            <div id="toc-step2" className="question-header">المرحلة الثانية: ترجمة نص التمرين و السؤال (Math Translate)</div>
 
             <div className="step-row-rule">
                 <div className="left-col"><ThoughtIcon /> القاعدة</div>
@@ -405,55 +403,33 @@ const Methodology = () => {
                 </div>
                 <div className="step-row-two">
                     <div className="left-col">المماس أفقي</div>
-                    <div className="right-col"><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f'(x_0) = 0\\)"}</span></div>
+                    <div className="right-col"><span className="math">{"\\(f'(x_0) = 0\\)"}</span></div>
                 </div>
                 <div className="step-row-two">
                     <div className="left-col">مركز تناظر</div>
-                    <div className="right-col"><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(2a-x)+f(x)=2b\\)"}</span></div>
+                    <div className="right-col"><span className="math">{"\\(f(2a-x)+f(x)=2b\\)"}</span></div>
                 </div>
                 <div className="step-row-two">
                     <div className="left-col">متزايدة</div>
-                    <div className="right-col"><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(U_{n+1} - U_n > 0\\)"}</span></div>
+                    <div className="right-col"><span className="math">{"\\(U_{n+1} - U_n > 0\\)"}</span></div>
                 </div>
                 <div className="step-row-two">
                     <div className="left-col">هندسية</div>
-                    <div className="right-col"><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(\\frac{U_{n+1}}{U_n} = q\\)"}</span></div>
+                    <div className="right-col"><span className="math">{"\\(\\frac{U_{n+1}}{U_n} = q\\)"}</span></div>
                 </div>
                 <div className="step-row-two">
                     <div className="left-col">يقطع التراتيب</div>
-                    <div className="right-col"><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(f(0)\\)"}</span></div>
+                    <div className="right-col"><span className="math">{"\\(f(0)\\)"}</span></div>
                 </div>
                 <div className="step-row-two">
                     <div className="left-col">محدودة</div>
-                    <div className="right-col"><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(U_n \\leq M\\)"}</span></div>
+                    <div className="right-col"><span className="math">{"\\(U_n \\leq M\\)"}</span></div>
                 </div>
                 <div className="step-row-two">
                     <div className="left-col">نهاية</div>
-                    <div className="right-col"><span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\[\\lim_{x \\to x_0} f(x) = L\\]"}</span></div>
+                    <div className="right-col"><span className="math">{"\\[\\lim_{x \\to x_0} f(x) = L\\]"}</span></div>
                 </div>
             </div>
-
-            {/* مثال تطبيقي المرحلة الأولى */}
-            {/* <div className="radar-box" style={{ background: '#FFFFFF', border: '1.5px solid #CCDDEE', borderRadius: '10px', padding: '18px 20px', margin: '1px 0' }}>
-                <div className="radar-box-title" style={{ color: '#004D99', borderBottom: '2px solid #E0E8F5', paddingBottom: '8px', marginBottom: '12px' }}>مثال: متتاليات</div>
-                <div style={{ marginBottom: '12px' }}>
-                    <strong>نص السؤال:</strong> "أثبت أن المتتالية <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\((U_n)\\)"}</span> متناقصة ومحدودة من الأسفل."
-                </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-                    <div style={{ borderRight: '3px solid #99AACC', padding: '12px' }}>
-                        <div style={{ fontWeight: 'bold', color: '#445566', marginBottom: '6px' }}>قبل الترجمة (خطأ شائع)</div>
-                        <p style={{ fontSize: '11pt', margin: 0 }}>يبدأ الطالب في حساب <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(U_{n+1}\\)"}</span> بشكل عشوائي دون هدف واضح.</p>
-                    </div>
-                    <div style={{ borderRight: '3px solid #4D3300', padding: '12px' }}>
-                        <div style={{ fontWeight: 'bold', color: '#004D99', marginBottom: '6px' }}>بعد الترجمة (الصواب)</div>
-                        <p style={{ fontSize: '11pt', margin: 0 }}>
-                            <strong>الهدف 1 — التناقص:</strong> <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(U_{n+1} - U_n < 0\\)"}</span><br />
-                            <strong>الهدف 2 — المحدودية:</strong> <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(U_n \\geq L\\)"}</span> (إيجاد القيمة L)
-                        </p>
-                    </div>
-                </div>
-                <strong>النتيجة:</strong> مجرد ترجمة السؤال أعطاك خارطة طريق واضحة بهدفين منفصلين تسعى لإثباتهما.
-            </div> */}
 
             {/* ---- فاصل صفحة A4 ---- */}
 
@@ -466,7 +442,7 @@ const Methodology = () => {
                     ترجم كل عبارة من العبارات التالية إلى علاقة رياضية دقيقة، كما في النموذج.
                 </div>
 
-                <div className="radar-box" style={{ background: '#FFFFFF', border: '1px solid #E0E8F5', padding: '6px', margin: '4px 0' }}>
+                <div className="radar-box">
                     <div className="col-header-row-two">
                         <div className="col-header left-h">العبارة اللفظية</div>
                         <div className="col-header right-h">الترجمة الرياضية المطلوبة</div>
@@ -478,9 +454,9 @@ const Methodology = () => {
                         'المستقيم \\((T)\\) مماسّ للمنحنى \\((C_f)\\) عند النقطة ذات الفاصلة \\(x_0=1\\)',
                     ].map((expr, i) => (
                         <div className="step-row-two" key={i}>
-                            <div className="left-col" style={{ fontSize: '11pt', color: '#334466' }}>{expr}</div>
-                            <div className="right-col" style={{ minHeight: '30px', borderBottom: '1px dashed #E0E8F5', padding: '4px 0' }}>
-                                <span style={{ textAlign: 'right', width: '100%', marginRight: '20px', fontSize: '11pt', color: '#004D99' }}>..............................................</span>
+                            <div className="left-col">{expr}</div>
+                            <div className="right-col">
+                                <span>..............................................</span>
                             </div>
                         </div>
                     ))}
@@ -498,7 +474,7 @@ const Methodology = () => {
             {/* ---- فاصل صفحة A4 ---- */}
             <br />
             {/* ===================== المرحلة الثالثة ===================== */}
-            <div id="toc-step3" className="question-header" style={{ backgroundColor: '#003380' }}>المرحلة الثالثة: تحديد الهدف الحقيقي رياضيا (Aim)</div>
+            <div id="toc-step3" className="question-header">المرحلة الثالثة: تحديد الهدف الحقيقي رياضيا (Aim)</div>
             <div className="step-row-rule">
                 <div className="left-col"><ThoughtIcon /> القاعدة</div>
                 <div className="right-col">لا تبدأ بالحل قبل أن تعرف ما الذي تبحث عنه رياضياً.</div>
@@ -512,7 +488,7 @@ const Methodology = () => {
                 <div className="left-col">مثال متتاليات</div>
                 <div className="right-col">
                     لإثبات أن المتتالية متزايدة، أثبت أن:
-                    <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(U_{n+1} - U_n > 0\\)"}</span>
+                    <span className="math">{"\\(U_{n+1} - U_n > 0\\)"}</span>
                 </div>
             </div>
 
@@ -522,16 +498,14 @@ const Methodology = () => {
             </div>
 
             {/* مثال تطبيقي المرحلة الثالثة (تحديد الهدف الحقيقي) */}
-            {/* مثال تطبيقي المرحلة الثالثة (تحديد الهدف الحقيقي) */}
-            <div className="radar-box" style={{ background: '#FFFFFF', border: '1.5px solid #CCDDEE', borderRadius: '10px', padding: '18px 20px', margin: '15px 0' }}>
-
-                <div className="radar-box-title" style={{ color: '#004D99', borderBottom: '2px solid #E0E8F5', paddingBottom: '8px', marginBottom: '12px' }}>
-                    مثال: تحويل الهدف إلى صيغة رياضية دقيقة
+            <div className="example-box">
+                <div className="example-box-title">
+                    تحويل الهدف إلى صيغة رياضية دقيقة
                 </div>
 
                 <div style={{ marginBottom: '5px' }}>
                     <strong>السؤال:</strong> أثبت أن المستقيم
-                    <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>
+                    <span className="math">
                         {"\\((\\Delta): y = x - 2\\)"}
                     </span>
                     مقارب مائل للمنحنى
@@ -544,7 +518,7 @@ const Methodology = () => {
                     </span>.
                 </div>
 
-                <div style={{ borderRight: '2px solid #E0E8F5', paddingRight: '14px', lineHeight: '2' }}>
+                <div style={{ borderRight: '2px solid #DDDDDD', paddingRight: '12px', lineHeight: '1.9' }}>
 
                     <div><strong>الخطوة 1 — الترجمة (Translate):</strong></div>
                     <div style={{ margin: '2px 0', paddingRight: '12px', color: '#445566' }}>
@@ -597,7 +571,7 @@ const Methodology = () => {
             {/* ══════════════════════════════════════════════
                 تمرين 3 — المرحلة الثانية
                ══════════════════════════════════════════════ */}
-            <ExerciseCard number="4" phase="المرحلة الثالثة" title="تحديد الهدف الرياضي وكتابته">
+            <ExerciseCard number="3" phase="المرحلة الثالثة" title="تحديد الهدف الرياضي وكتابته">
 
                 <div className="exercise-statement">
                     <strong>الوضعية:</strong> لكل سؤال من الأسئلة التالية، حدّد الهدف الرياضي الدقيق الذي ستسعى لإثباته:
@@ -646,28 +620,25 @@ const Methodology = () => {
             </ExerciseCard>
             {/* ===================== المرحلة الرابعة ===================== */}
             {/* ===================== المرحلة الرابعة ===================== */}
-            <div id="toc-step4" className="question-header" style={{ backgroundColor: '#006666' }}>المرحلة الرابعة: تحديد المعطيات و ربطها للوصول للحل (Relate)</div>
+            <div id="toc-step4" className="question-header">المرحلة الرابعة: تحديد المعطيات و ربطها للوصول للحل (Relate)</div>
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                fontSize: '1.1rem',
+                fontSize: '11pt',
                 fontWeight: 'bold',
                 color: '#004D99',
-                backgroundColor: '#E5F5FF',
-                padding: '8px 15px',
-                borderRadius: '6px',
-                borderRight: '4px solid #0066B3',
-                marginBottom: '1px',
-                marginTop: '10px',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
+                borderBottom: '1px solid #DDDDDD',
+                paddingBottom: '4px',
+                marginBottom: '4px',
+                marginTop: '8px',
             }}>
                 <span style={{
-                    backgroundColor: '#0066B3',
+                    background: '#004D99',
                     color: '#FFFFFF',
-                    padding: '1px 8px',
-                    borderRadius: '4px',
-                    marginLeft: '10px',
-                    fontSize: '1rem'
+                    padding: '1px 7px',
+                    borderRadius: '2px',
+                    marginLeft: '8px',
+                    fontSize: '10.5pt'
                 }}>أ</span>
                 جرد المعطيات وتصفيتها
             </div>
@@ -722,9 +693,9 @@ const Methodology = () => {
 
             {/* مثال تطبيقي المرحلة الثالثة */}
             {/* مثال تطبيقي المرحلة الرابعة */}
-            <div className="radar-box" style={{ background: '#FFFFFF', border: '1.5px solid #CCDDEE', borderRadius: '10px', padding: '10px 20px', margin: '3px' }}>
+            <div className="example-box">
 
-                <div className="radar-box-title" style={{ color: '#004D99', borderBottom: '2px solid #E0E8F5', paddingBottom: '4px', marginBottom: '4px' }}>
+                <div className="example-box-title">
                     مثال: المتتاليات
                 </div>
 
@@ -758,8 +729,8 @@ const Methodology = () => {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '3px', marginTop: '6px' }}>
 
                     {/* Direct data */}
-                    <div style={{ borderRadius: '6px', padding: '2px', textAlign: 'center' }}>
-                        <div style={{ fontWeight: 'bold', color: '#334466', marginBottom: '2px' }}>
+                    <div style={{ padding: '2px', textAlign: 'center' }}>
+                        <div style={{ fontWeight: 'bold', color: '#003366', marginBottom: '2px' }}>
                             معطيات مباشرة
                         </div>
                         <div style={{ fontSize: '11pt' }}>
@@ -772,8 +743,8 @@ const Methodology = () => {
                     </div>
 
                     {/* Inferred data */}
-                    <div style={{ borderRadius: '6px', padding: '2px', textAlign: 'center' }}>
-                        <div style={{ fontWeight: 'bold', color: '#334466', marginBottom: '2px' }}>
+                    <div style={{ padding: '2px', textAlign: 'center' }}>
+                        <div style={{ fontWeight: 'bold', color: '#003366', marginBottom: '2px' }}>
                             نتائج مستنتجة
                         </div>
                         <div style={{ fontSize: '11pt' }}>
@@ -787,8 +758,8 @@ const Methodology = () => {
                     </div>
 
                     {/* Prior knowledge */}
-                    <div style={{ borderRadius: '6px', padding: '2px', textAlign: 'center' }}>
-                        <div style={{ fontWeight: 'bold', color: '#334466', marginBottom: '2px' }}>
+                    <div style={{ padding: '2px', textAlign: 'center' }}>
+                        <div style={{ fontWeight: 'bold', color: '#003366', marginBottom: '2px' }}>
                             مكتسب قبلية
                         </div>
                         <div style={{ fontSize: '11pt' }}>
@@ -803,7 +774,7 @@ const Methodology = () => {
 
                 {/* Linking insight */}
                 {/* Linking insight */}
-                <div style={{ marginTop: '0px', fontSize: '11pt', color: '#334466', lineHeight: '1.9' }}>
+                <div style={{ marginTop: '0px', fontSize: '11pt', color: '#222222', lineHeight: '1.9' }}>
 
                     بعد الترجمة وتحديد الهدف : إثبات أن
                     <span className="math">{"\\(v_{n+1} = q v_n\\)"}</span>،
@@ -869,7 +840,7 @@ const Methodology = () => {
             {/* ══════════════════════════════════════════════
                 تمرين 4 — المرحلة الثالثة
                ══════════════════════════════════════════════ */}
-            <ExerciseCard number="3" phase="المرحلة الثانية" title="جرد المعطيات وتصفيتها — متتاليات">
+            <ExerciseCard number="4-أ" phase="المرحلة الرابعة" title="جرد المعطيات وتصفيتها — متتاليات">
 
                 {/* ── نص الوضعية ── */}
                 <div className="exercise-statement">
@@ -943,29 +914,29 @@ const Methodology = () => {
                             },
                         ].map((item) => (
                             <div key={item.id} style={{
-                                background: '#F7FAFD',
-                                border: '1.5px solid #E0E8F5',
-                                borderRadius: '8px',
-                                padding: '10px 05px',
+                                background: '#FFFFFF',
+                                border: '1px solid #CCCCCC',
+                                borderRadius: '2px',
+                                padding: '8px',
                                 display: 'flex',
                                 gap: '5px',
                                 alignItems: 'flex-start',
                             }}>
                                 {/* مربع الاختيار */}
                                 <div style={{
-                                    width: '20px', height: '20px', border: '2px solid #99AACC',
-                                    borderRadius: '4px', flexShrink: 0, marginTop: '3px',
+                                    width: '18px', height: '18px', border: '1px solid #AAAAAA',
+                                    borderRadius: '2px', flexShrink: 0, marginTop: '4px',
                                     background: '#FFFFFF'
                                 }} />
-                                <div style={{ fontSize: '11pt', color: '#334466', lineHeight: '1.8' }}>
+                                <div style={{ fontSize: '11pt', color: '#222222', lineHeight: '1.7' }}>
                                     <span style={{
-                                        display: 'inline-block', background: '#004D99', color: '#FFFFFF',
-                                        borderRadius: '4px', padding: '1px 7px', fontSize: '11pt',
-                                        fontWeight: 700, marginLeft: '6px', letterSpacing: '0.03em'
+                                        display: 'inline-block', background: '#003366', color: '#FFFFFF',
+                                        borderRadius: '2px', padding: '1px 6px', fontSize: '10.5pt',
+                                        fontWeight: 700, marginLeft: '6px', letterSpacing: '0.02em'
                                     }}>
                                         ({item.id})
                                     </span>
-                                    <span style={{ color: '#667799', fontSize: '11pt', marginLeft: '4px' }}>
+                                    <span style={{ color: '#666666', fontSize: '11pt', marginLeft: '4px' }}>
                                         {item.label}:{' '}
                                     </span>
                                     <strong>{item.content}</strong>
@@ -976,7 +947,7 @@ const Methodology = () => {
                 </div>
 
                 {/* ── الأسئلة الموجّهة ── */}
-                <div style={{ marginTop: '10px', borderTop: '2px solid #E0E8F5', paddingTop: '16px' }}>
+                <div style={{ marginTop: '8px', borderTop: '1px solid #DDDDDD', paddingTop: '12px' }}>
 
                     {/* السؤال أ — الترجمة */}
                     <div className="step-row-rule">
@@ -1028,17 +999,10 @@ const Methodology = () => {
 
 
             {/* ── الأسئلة الموجّهة ── */}
-            <div className="radar-box" style={{
-                border: '2px solid #004D99',
-                borderRadius: '12px',
-                padding: '20px 22px',
-                margin: '0px 0',
-                background: 'linear-gradient(135deg, #E5F0FF 0%, #FFFFFF 100%)',
-                position: 'relative'
-            }}>
+            <div className="radar-box">
 
 
-                <div style={{ marginTop: '0px', paddingTop: '16px' }}>
+                <div style={{ marginTop: '0px', paddingTop: '12px' }}>
                     {/* السؤال د — التطبيق */}
                     <div className="step-row-rule">
                         <div className="left-col" style={{ fontWeight: 'bold', color: '#004D99' }}>
@@ -1054,13 +1018,8 @@ const Methodology = () => {
                 </div>
 
                 {/* ── تنبيه منهجي ── */}
-                <div style={{
-                    marginTop: '10px', padding: '12px 16px',
-                    background: '#E5F5FF', borderRadius: '8px',
-                    borderRight: '4px solid #0066B3',
-                    fontSize: '11pt', color: '#334466', lineHeight: '1.8'
-                }}>
-                    <strong style={{ color: '#0066B3' }}><TargetIcon /> تنبيه منهجي:</strong>{' '}
+                <div className="trigger-box">
+                    <span className="trigger-box-title"><TargetIcon /> تنبيه منهجي:</span>{' '}
                     ليس كل معطى مذكور في السؤال ضرورياً للجزء الذي تحله.{' '}
                     قدرتك على <em>تصفية البيانات واختيار المفيد منها</em>{' '}
                     هي مهارة أساسية تميّز الطالب المتمكّن عن غيره.
@@ -1072,24 +1031,21 @@ const Methodology = () => {
             <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                fontSize: '1.1rem',
+                fontSize: '11pt',
                 fontWeight: 'bold',
                 color: '#004D99',
-                backgroundColor: '#E5F5FF',
-                padding: '8px 15px',
-                borderRadius: '6px',
-                borderRight: '4px solid #0066B3',
-                marginBottom: '15px',
-                marginTop: '5px',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
+                borderBottom: '1px solid #DDDDDD',
+                paddingBottom: '4px',
+                marginBottom: '4px',
+                marginTop: '8px',
             }}>
                 <span style={{
-                    backgroundColor: '#0066B3',
+                    background: '#004D99',
                     color: '#FFFFFF',
-                    padding: '1px 8px',
-                    borderRadius: '4px',
-                    marginLeft: '10px',
-                    fontSize: '1rem'
+                    padding: '1px 7px',
+                    borderRadius: '2px',
+                    marginLeft: '8px',
+                    fontSize: '10.5pt'
                 }}>ب</span>
                 توظيف المعطيات وربطها بالهدف
             </div>
@@ -1122,7 +1078,7 @@ const Methodology = () => {
             </div>
 
             {/* مثال تطبيقي المرحلة الرابعة */}
-            <div className="radar-box" style={{ background: '#FFFFFF', border: '1.5px solid #CCDDEE', borderRadius: '10px', padding: '16px 20px', margin: '10px 0' }}>
+            <div className="example-box">
                 {/* <div className="radar-box-title" style={{ color: '#004D99', borderBottom: '2px solid #E0E8F5', paddingBottom: '8px', marginBottom: '12px' }}>مثال: متتاليات </div> */}
 
                 <DiscoveryProblem />
@@ -1151,7 +1107,7 @@ const Methodology = () => {
             {/* ══════════════════════════════════════════════
                 تمرين 5 — المرحلة الرابعة (توظيف المعطيات)
                ══════════════════════════════════════════════ */}
-            <ExerciseCard number="5" phase="المرحلة الرابعة" title="ترتيب خطوات الحل (متتاليات)">
+            <ExerciseCard number="4-ب" phase="المرحلة الرابعة" title="ترتيب خطوات الحل (متتاليات)">
 
                 <div className="exercise-statement">
                     <strong>الوضعية:</strong> لإثبات أن المتتالية المعرّفة بـ{' '}
@@ -1272,8 +1228,8 @@ const Methodology = () => {
                 </div>
 
                 {/* أخطاء شائعة */}
-                <div style={{ background: '#F7FAFD', border: '1.5px solid #CCDDEE', borderRadius: '8px', padding: '14px 16px', marginTop: '14px', lineHeight: '1.9' }}>
-                    <div style={{ fontWeight: 'bold', color: '#004D99', marginBottom: '10px' }}>أخطاء شائعة يجب تجنبها</div>
+                <div className="danger-box">
+                    <div className="danger-box-title">أخطاء شائعة يجب تجنبها</div>
                     <ol style={{ paddingRight: '20px', margin: 0 }}>
                         <li style={{ marginBottom: '8px' }}>
                             <strong>خطوات غير قابلة للعكس:</strong> انتبه للعمليات التي لا يمكن عكسها بسهولة. مثلاً التربيع ليس قابلاً للعكس دائماً لأن{' '}
@@ -1429,7 +1385,7 @@ const Methodology = () => {
             {/* ---- فاصل صفحة A4 ---- */}
 
             {/* ===================== المرحلة الخامسة ===================== */}
-            <div id="toc-step5" className="question-header" style={{ backgroundColor: '#006666' }}>المرحلة الخامسة: التحقق من النتيجة (Test)</div>
+            <div id="toc-step5" className="question-header">المرحلة الخامسة: التحقق من النتيجة (Test)</div>
 
             <div className="strategy-box">
                 <div className="strategy-box-title"><SearchIcon /> معايير التحقق المنطقي</div>
@@ -1443,8 +1399,8 @@ const Methodology = () => {
             </div>
 
             {/* مثال تطبيقي المرحلة الخامسة */}
-            <div className="radar-box" style={{ background: '#FFFFFF', border: '1.5px solid #CCDDEE', borderRadius: '10px', padding: '18px 20px', margin: '15px 0' }}>
-                <div className="radar-box-title" style={{ color: '#004D99', borderBottom: '2px solid #E0E8F5', paddingBottom: '8px', marginBottom: '12px' }}>مثال: احتمالات</div>
+            <div className="example-box">
+                <div className="example-box-title">مثال: احتمالات</div>
                 <div style={{ marginBottom: '10px' }}>
                     <strong>الوضعية:</strong> يجد طالب بعد الحساب أن <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{"\\(P(A) = 1.2\\)"}</span>.
                 </div>
@@ -1468,7 +1424,7 @@ const Methodology = () => {
             {/* ══════════════════════════════════════════════
                 تمرين 7 — المرحلة الخامسة
                ══════════════════════════════════════════════ */}
-            <ExerciseCard number="7" phase="المرحلة الخامسة" title="التحقق المنطقي — صحيح أم خاطئ؟">
+            <ExerciseCard number="5" phase="المرحلة الخامسة" title="التحقق المنطقي — صحيح أم خاطئ؟">
 
                 <div className="exercise-statement">
                     <strong>الوضعية:</strong>{' '}
@@ -1477,7 +1433,7 @@ const Methodology = () => {
                 </div>
 
                 {/* ── السؤال 1: جدول تغيرات متناقض ── */}
-                <div style={{ margin: '16px 0', padding: '14px 16px', background: '#F7FAFD', borderRadius: '10px', border: '1px solid #E0E8F5', pageBreakInside: 'avoid', breakInside: 'avoid' }}>
+                <div style={{ margin: '12px 0', padding: '10px 14px', background: '#FFFFFF', border: '1px solid #CCCCCC', pageBreakInside: 'avoid', breakInside: 'avoid' }}>
                     <div style={{ fontWeight: 700, color: '#004D99', marginBottom: '10px', fontSize: '0.92rem' }}>
                         السؤال 1 — جدول التغيرات
                     </div>
@@ -1495,13 +1451,13 @@ const Methodology = () => {
                     </div>
 
                     <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '8px' }}>
-                        <div style={{ width: '28px', height: '28px', border: '2px solid #99AACC', borderRadius: '4px', background: '#FFFFFF', flexShrink: 0 }} />
+                        <div style={{ width: '22px', height: '22px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
                         <span style={{ fontSize: '11pt', color: '#334466' }}>
                             صحيح — لا يوجد تناقض في هذا الجدول.
                         </span>
                     </div>
                     <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '6px' }}>
-                        <div style={{ width: '28px', height: '28px', border: '2px solid #99AACC', borderRadius: '4px', background: '#FFFFFF', flexShrink: 0 }} />
+                        <div style={{ width: '22px', height: '22px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
                         <span style={{ fontSize: '11pt', color: '#334466' }}>
                             خاطئ — يوجد تناقض. الجهة المتناقضة هي: <span style={{ borderBottom: '1px dashed #CCDDEE', minWidth: '120px', display: 'inline-block' }}>&nbsp;</span>
                         </span>
@@ -1509,7 +1465,7 @@ const Methodology = () => {
                 </div>
 
                 {/* ── السؤال 2: فخ القيمة المطلقة في النهايات ── */}
-                <div style={{ margin: '16px 0', padding: '14px 16px', background: '#F7FAFD', borderRadius: '10px', border: '1px solid #E0E8F5', pageBreakInside: 'avoid', breakInside: 'avoid' }}>
+                <div style={{ margin: '12px 0', padding: '10px 14px', background: '#FFFFFF', border: '1px solid #CCCCCC', pageBreakInside: 'avoid', breakInside: 'avoid' }}>
                     <div style={{ fontWeight: 700, color: '#004D99', marginBottom: '6px', fontSize: '0.92rem' }}>
                         السؤال 2 — النهايات والقيمة المطلقة
                     </div>
@@ -1519,7 +1475,7 @@ const Methodology = () => {
                         للدالة{' '}
                         <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(f(x) = \\dfrac{\\sqrt{x^2+1}}{x}\\)'}</span>.
                     </div>
-                    <div style={{ fontSize: '11pt', color: '#111144', lineHeight: '1.9', background: '#F5F5FF', padding: '10px 14px', borderRadius: '8px', border: '1px solid #E8E8FF', marginBottom: '8px' }}>
+                    <div style={{ fontSize: '11pt', color: '#222222', lineHeight: '1.9', background: '#FFFFFF', padding: '8px 12px', border: '1px solid #DDDDDD', marginBottom: '8px' }}>
                         <strong>الحل المقترح من الطالب:</strong>{' '}
                         نعمّل{' '}<span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(x^2\\)'}</span>{' '}داخل الجذر:{' '}
                         <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(f(x) = \\dfrac{\\sqrt{x^2\\left(1+\\frac{1}{x^2}\\right)}}{x} = \\dfrac{x\\sqrt{1+\\frac{1}{x^2}}}{x}\\)'}</span>.{' '}
@@ -1532,14 +1488,7 @@ const Methodology = () => {
 
             </ExerciseCard>
 
-            <div className="radar-box" style={{
-                border: '2px solid #004D99',
-                borderRadius: '12px',
-                padding: '20px 22px',
-                margin: '0px 0',
-                background: '#E5F0FF',
-                position: 'relative'
-            }}>
+            <div className="radar-box">
 
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '8px' }}>
                     <div style={{ width: '28px', height: '28px', border: '2px solid #99AACC', borderRadius: '4px', background: '#FFFFFF', flexShrink: 0 }} />
@@ -1555,7 +1504,7 @@ const Methodology = () => {
                 <div style={{ pageBreakBefore: 'always', breakBefore: 'page' }} />
 
                 {/* ── السؤال 3: حلول وهمية في المعادلات اللوغاريتمية ── */}
-                <div style={{ margin: '16px 0', padding: '14px 16px', background: '#F7FAFD', borderRadius: '10px', border: '1px solid #E0E8F5', pageBreakInside: 'avoid', breakInside: 'avoid' }}>
+                <div style={{ margin: '12px 0', padding: '10px 14px', background: '#FFFFFF', border: '1px solid #CCCCCC', pageBreakInside: 'avoid', breakInside: 'avoid' }}>
                     <div style={{ fontWeight: 700, color: '#004D99', marginBottom: '6px', fontSize: '0.92rem' }}>
                         السؤال 3 — المعادلات اللوغاريتمية
                     </div>
@@ -1563,7 +1512,7 @@ const Methodology = () => {
                         السياق: حل المعادلة{' '}
                         <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(\\ln(x-1) + \\ln(x-2) = \\ln(2)\\)'}</span>.
                     </div>
-                    <div style={{ fontSize: '11pt', color: '#111144', lineHeight: '1.9', background: '#F5F5FF', padding: '10px 14px', borderRadius: '8px', border: '1px solid #E8E8FF', marginBottom: '8px' }}>
+                    <div style={{ fontSize: '11pt', color: '#222222', lineHeight: '1.9', background: '#FFFFFF', padding: '8px 12px', border: '1px solid #DDDDDD', marginBottom: '8px' }}>
                         <strong>الحل المقترح من الطالب:</strong>{' '}
                         <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(\\ln[(x-1)(x-2)] = \\ln 2\\)'}</span>{' '}
                         إذن{' '}
@@ -1573,13 +1522,13 @@ const Methodology = () => {
                         إذن{' '}<span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(S=\\{0,\\,3\\}\\)'}</span>.
                     </div>
                     <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '8px' }}>
-                        <div style={{ width: '28px', height: '28px', border: '2px solid #99AACC', borderRadius: '4px', background: '#FFFFFF', flexShrink: 0 }} />
+                        <div style={{ width: '22px', height: '22px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
                         <span style={{ fontSize: '11pt', color: '#334466' }}>
                             صحيح — <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(S = \\{0, 3\\}\\)'}</span>.
                         </span>
                     </div>
                     <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginTop: '6px' }}>
-                        <div style={{ width: '28px', height: '28px', border: '2px solid #99AACC', borderRadius: '4px', background: '#FFFFFF', flexShrink: 0 }} />
+                        <div style={{ width: '22px', height: '22px', border: '1px solid #AAAAAA', borderRadius: '2px', background: '#FFFFFF', flexShrink: 0 }} />
                         <span style={{ fontSize: '11pt', color: '#334466' }}>
                             خاطئ. الخطأ في: <span style={{ borderBottom: '1px dashed #CCDDEE', minWidth: '160px', display: 'inline-block' }}>&nbsp;</span>
                         </span>
@@ -1587,7 +1536,7 @@ const Methodology = () => {
                 </div>
 
                 {/* ── السؤال 4: خلط الاستقلالية بالتنافي ── */}
-                <div style={{ margin: '16px 0', padding: '14px 16px', background: '#F7FAFD', borderRadius: '10px', border: '1px solid #E0E8F5', pageBreakInside: 'avoid', breakInside: 'avoid', orphans: 4, widows: 4 }}>
+                <div style={{ margin: '12px 0', padding: '10px 14px', background: '#FFFFFF', border: '1px solid #CCCCCC', pageBreakInside: 'avoid', breakInside: 'avoid', orphans: 4, widows: 4 }}>
                     <div style={{ fontWeight: 700, color: '#004D99', marginBottom: '6px', fontSize: '0.92rem' }}>
                         السؤال 4 — الاحتمالات
                     </div>
@@ -1598,7 +1547,7 @@ const Methodology = () => {
                         والحدثان{' '}<span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(A\\)'}</span>{' '}و{' '}<span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(B\\)'}</span>{' '}
                         <strong>مستقلان</strong>. أحسب{' '}<span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(P(A\\cup B)\\)'}</span>.
                     </div>
-                    <div style={{ fontSize: '11pt', color: '#111144', lineHeight: '1.9', background: '#F5F5FF', padding: '10px 14px', borderRadius: '8px', border: '1px solid #E8E8FF', marginBottom: '8px' }}>
+                    <div style={{ fontSize: '11pt', color: '#222222', lineHeight: '1.9', background: '#FFFFFF', padding: '8px 12px', border: '1px solid #DDDDDD', marginBottom: '8px' }}>
                         <strong>الحل المقترح من الطالب:</strong>{' '}
                         بما أن الحدثين مستقلان، فهما لا يتقاطعان، أي{' '}
                         <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(A\\cap B=\\emptyset\\)'}</span>.{' '}
@@ -1665,39 +1614,20 @@ const Methodology = () => {
             <br />
             <div style={{ margin: "20px", padding: "5px", fontSize: "14pt", fontWeight: "800" }}>مثال تطبيقي: حساب المشتقة والتمثيل البصري</div>
             <div style={{
-                margin: '25px auto',
-                padding: '20px',
+                margin: '12px auto',
+                padding: '12px',
                 background: '#FFFFFF',
-                border: '1px solid #E0E8F5',
-                borderRadius: '20px',
-                boxShadow: '0 12px 30px rgba(0,0,0,0.06)',
+                border: '1px solid #CCCCCC',
+                borderTop: '3px solid #004D99',
                 maxWidth: '640px',
                 textAlign: 'center',
-                position: 'relative'
             }}>
-                <div style={{
-                    position: 'absolute',
-                    top: '-12px',
-                    right: '25px',
-                    background: '#F7FAFD',
-                    padding: '2px 12px',
-                    borderRadius: '8px',
-                    fontSize: '11pt',
-                    fontWeight: 700,
-                    color: '#99AACC',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.05em',
-                    border: '1px solid #E0E8F5'
-                }}>
-                    توضيح منهجي
-                </div>
                 <img
                     src={errorCloud}
                     alt="غيمة التحذير"
                     style={{
                         width: '90%',
                         height: 'auto',
-                        borderRadius: '12px',
                         display: 'block'
                     }}
                 />

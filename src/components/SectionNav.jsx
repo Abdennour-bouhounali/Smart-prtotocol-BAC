@@ -11,8 +11,8 @@ const SectionNav = ({ sections, activeSectionId, onSectionSelect, bookName, onBo
             <div className="sidebar-title">📚 فصول الكتاب</div>
 
             {/* Book name editor */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                <label style={{ fontWeight: 'bold', fontSize: '10pt', opacity: 0.8 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                <label style={{ fontWeight: '700', fontSize: '10pt', color: '#555555' }}>
                     اسم الكتاب:
                 </label>
                 <input
@@ -21,11 +21,11 @@ const SectionNav = ({ sections, activeSectionId, onSectionSelect, bookName, onBo
                     value={bookName}
                     onChange={(e) => onBookNameChange(e.target.value)}
                     style={{
-                        padding: '6px 8px',
-                        borderRadius: '4px',
-                        border: '1px solid rgba(255,255,255,0.3)',
-                        background: 'rgba(255,255,255,0.1)',
-                        color: 'white',
+                        padding: '5px 8px',
+                        borderRadius: '2px',
+                        border: '1px solid #BBBBBB',
+                        background: '#FFFFFF',
+                        color: '#111111',
                         fontSize: '10pt',
                         direction: 'rtl',
                         width: '100%',
@@ -38,13 +38,12 @@ const SectionNav = ({ sections, activeSectionId, onSectionSelect, bookName, onBo
                 id="print-pdf-btn"
                 className="btn-book-view"
                 onClick={onPrint}
-                style={{ background: '#553300', marginBottom: '8px' }}
             >
                 🖨️ تصدير PDF
             </button>
 
             {/* Section list */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', flex: 1, overflowY: 'auto' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '5px', flex: 1, overflowY: 'auto' }}>
                 {sections.map((section) => (
                     <div
                         key={section.id}

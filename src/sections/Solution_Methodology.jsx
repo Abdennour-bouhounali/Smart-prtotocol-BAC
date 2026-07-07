@@ -117,8 +117,15 @@ const Solution_Methodology = () => {
                     <li><strong>المستقيم مماس عند النقطة ذات الفاصلة 1:</strong> معادلة المماس هي <span className="math">{"\\(y = f'(1)(x - 1) + f(1)\\)"}</span>، ومعامل التوجيه هو <span className="math">{"\\(f'(1)\\)"}</span></li>
                 </ul>
             </SolutionCard>
+            <SolutionCard number="3" phase="المرحلة الثالثة" title="تحديد الهدف الرياضي وكتابته">
+                <ul style={{ paddingRight: '20px' }}>
+                    <li><strong>السؤال أ:</strong> إثبات أن <span className="math">{"\\(f(2(1) - x) + f(x) = 2(2)\\)"}</span> أي <span className="math">{"\\(f(2 - x) + f(x) = 4\\)"}</span>.</li>
+                    <li><strong>السؤال ب:</strong> إثبات أن النسبة <span className="math">{"\\(\\dfrac{V_{n+1}}{V_n} = q\\)"}</span> (حيث q عدد حقيقي ثابت)، أو <span className="math">{"\\(V_{n+1} = q \\cdot V_n\\)"}</span>.</li>
+                    <li><strong>السؤال ج:</strong> إيجاد جذر بديهي (مثل <span className="math">{"\\(x=1\\)"}</span>) ثم كتابة الهدف: إيجاد العوامل a, b, c بحيث <span className="math">{"\\(x^3 - 3x + 2 = (x - 1)(ax^2 + bx + c)\\)"}</span>.</li>
+                </ul>
+            </SolutionCard>
 
-            <SolutionCard number="3" phase="المرحلة الثانية" title="جرد المعطيات وتصفيتها — متتاليات">
+            <SolutionCard number="4-أ" phase="المرحلة الرابعة" title="جرد المعطيات وتصفيتها — متتاليات">
                 <div style={{ fontWeight: 'bold', color: '#006666' }}>أ. الترجمة الرياضية:</div>
                 <p>إثبات أن <span className="math">{"\\(U_{n+1} - U_n < 0\\)"}</span>.</p>
                 <div style={{ fontWeight: 'bold', color: '#006666' }}>ب. صياغة الهدف:</div>
@@ -131,15 +138,9 @@ const Solution_Methodology = () => {
                 </ul>
             </SolutionCard>
 
-            <SolutionCard number="4" phase="المرحلة الثالثة" title="تحديد الهدف الرياضي وكتابته">
-                <ul style={{ paddingRight: '20px' }}>
-                    <li><strong>السؤال أ:</strong> إثبات أن <span className="math">{"\\(f(2(1) - x) + f(x) = 2(2)\\)"}</span> أي <span className="math">{"\\(f(2 - x) + f(x) = 4\\)"}</span>.</li>
-                    <li><strong>السؤال ب:</strong> إثبات أن النسبة <span className="math">{"\\(\\dfrac{V_{n+1}}{V_n} = q\\)"}</span> (حيث q عدد حقيقي ثابت)، أو <span className="math">{"\\(V_{n+1} = q \\cdot V_n\\)"}</span>.</li>
-                    <li><strong>السؤال ج:</strong> إيجاد جذر بديهي (مثل <span className="math">{"\\(x=1\\)"}</span>) ثم كتابة الهدف: إيجاد العوامل a, b, c بحيث <span className="math">{"\\(x^3 - 3x + 2 = (x - 1)(ax^2 + bx + c)\\)"}</span>.</li>
-                </ul>
-            </SolutionCard>
 
-            <SolutionCard number="5" phase="المرحلة الرابعة" title="ترتيب خطوات الحل (متتاليات)">
+
+            <SolutionCard number="4-ب" phase="المرحلة الرابعة" title="ترتيب خطوات الحل (متتاليات)">
                 <p>الترتيب المنهجي الصحيح هو:</p>
                 <ol style={{ paddingRight: '20px' }}>
                     <li><strong>ترجمة السؤال:</strong> اقرأ السؤال وترجمه: "متناقصة" ⇔ <span className="math">{"\\(U_{n+1} - U_n < 0\\)"}</span>.</li>
@@ -150,16 +151,7 @@ const Solution_Methodology = () => {
                 </ol>
             </SolutionCard>
 
-            <SolutionCard number="6" phase="المرحلة الرابعة — التقنيات" title="اختيار التقنية المناسبة">
-                <ul style={{ paddingRight: '20px' }}>
-                    <li><strong>الحالة أ (متباينة دوال):</strong> استخدام <em>الدالة المساعدة</em>. نعرّف <span className="math">{"\\(g(x) = \\ln(x) - x + 1\\)"}</span> وندرس تغيراتها لإثبات أنها سالبة.</li>
-                    <li><strong>الحالة ب (حالة عدم تعيين ):</strong> استخدام تقنية <em>الإضافة والاختزال (الضرب في المرافق)</em> للتخلص من الجذور في البسط.</li>
-                    <li><strong>الحالة ج (مجموع متتالية):</strong> هنا التقنية هي <em>الاستدلال بالتراجع</em> أو استغلال مجموع حدود متتالية حسابية.</li>
-                    <li><strong>الحالة د (مجموع تربيعي معقد):</strong> استخدام <em>تغيير المتغير</em>. نلاحظ أن <span className="math">{"\\(U_n - 1 = 3^n\\)"}</span>، فنتعامل مع المربع بعد تبسيط المتتالية.</li>
-                </ul>
-            </SolutionCard>
-
-            <SolutionCard number="7" phase="المرحلة الخامسة" title="التحقق المنطقي — صحيح أم خاطئ؟">
+            <SolutionCard number="5" phase="المرحلة الخامسة" title="التحقق المنطقي — صحيح أم خاطئ؟">
                 <ul style={{ paddingRight: '20px' }}>
                     <li><strong>السؤال 1 (جدول التغيرات):</strong> <span style={{ color: '#111144', fontWeight: 'bold' }}>خاطئ</span>. لا يمكن لدالة أن تنزل إلى +∞، النهاية الكبرى لا تكون أسفل قيمة عظمى. تناقض صارخ.</li>
                     <li><strong>السؤال 2 (النهايات والقيمة المطلقة):</strong> <span style={{ color: '#111144', fontWeight: 'bold' }}>خاطئ</span>. عند إخراج <span className="math">{"\\(x^2\\)"}</span> من الجذر يصبح <span className="math">{"\\(|x|\\)"}</span>. وبما أن النهاية عند -∞ فإن <span className="math">{"\\(|x| = -x\\)"}</span>، وبالتالي النهاية الصحيحة هي -1.</li>
