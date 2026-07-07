@@ -1081,7 +1081,7 @@ const Methodology = () => {
                 </div>
                 <div className="roadmap-card">
                     <div className="strategy-box-title" style={{ color: '#004D99' }}>منهجية بناء "خطة الحل"</div>
-                    <p style={{ fontSize: '0.95rem', color: '#000000ff' }}>
+                    <p style={{ fontSize: '0.95rem', color: '#00000000' }}>
                         لا تبدأ بالحل عشوائياً؛ ابدأ بالربط التتابعي. قارن شكلياً، صِل المعطيات بالهدف، ثم صلها ببعضها البعض حتى تكتمل الشبكة.
                     </p>
                     <div className="process-steps">
