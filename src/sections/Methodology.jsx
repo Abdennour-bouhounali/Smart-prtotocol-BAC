@@ -213,14 +213,17 @@ const ArsenalSteps = ({ steps }) => (
 );
 
 const DataClassification = ({ items }) => (
-    <div className="data-classification-grid">
-        {items.map((item, idx) => (
-            <div className="data-card" key={idx}>
-                <span className={`tag ${item.tagClass}`}>{item.tagName}</span>
-                <div className="data-card-content">{item.content}</div>
-            </div>
-        ))}
-    </div>
+    <>
+        <div className="section-subtitle">تصنيف المعطيات :</div>
+
+        <div className="data-classification-grid">
+            {items.map((item, idx) => (
+                <div className="data-card" key={idx}>
+                    <span className={`tag ${item.tagClass}`}>{item.tagName}</span>
+                    <div className="data-card-content">{item.content}</div>
+                </div>
+            ))}
+        </div></>
 );
 
 const Methodology = () => {
@@ -384,7 +387,19 @@ const Methodology = () => {
             </ExerciseCard>
             {/* ---- فاصل صفحة A4 ---- */}
 
-            {/* ===================== المرحلة الأولى ===================== */}
+            {/* ===================== المرحلة الثانية ===================== */}
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+
             <div id="toc-step2" className="question-header">المرحلة الثانية: ترجمة نص التمرين و السؤال (Math Translate)</div>
 
             <div className="step-row-rule">
@@ -425,10 +440,10 @@ const Methodology = () => {
                     <div className="left-col">محدودة</div>
                     <div className="right-col"><span className="math">{"\\(U_n \\leq M\\)"}</span></div>
                 </div>
-                <div className="step-row-two">
+                {/* <div className="step-row-two">
                     <div className="left-col">نهاية</div>
                     <div className="right-col"><span className="math">{"\\[\\lim_{x \\to x_0} f(x) = L\\]"}</span></div>
-                </div>
+                </div> */}
             </div>
 
             {/* ---- فاصل صفحة A4 ---- */}
@@ -472,7 +487,7 @@ const Methodology = () => {
 
 
             {/* ---- فاصل صفحة A4 ---- */}
-            <br />
+
             {/* ===================== المرحلة الثالثة ===================== */}
             <div id="toc-step3" className="question-header">المرحلة الثالثة: تحديد الهدف الحقيقي رياضيا (Aim)</div>
             <div className="step-row-rule">
@@ -658,11 +673,13 @@ const Methodology = () => {
                     { title: "استخراج المعطيات", description: "حصر المعلومات التي لها علاقة بالبنية الرياضية للهدف." }
                 ]}
             />
-            <br />
-            <br />
-            <br />
 
-            <div className="section-subtitle">تصنيف المعطيات :</div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <DataClassification
                 items={[
                     {
@@ -1064,7 +1081,7 @@ const Methodology = () => {
                 </div>
                 <div className="roadmap-card">
                     <div className="strategy-box-title" style={{ color: '#004D99' }}>منهجية بناء "خطة الحل"</div>
-                    <p style={{ fontSize: '0.95rem', color: '#334466' }}>
+                    <p style={{ fontSize: '0.95rem', color: '#000000ff' }}>
                         لا تبدأ بالحل عشوائياً؛ ابدأ بالربط التتابعي. قارن شكلياً، صِل المعطيات بالهدف، ثم صلها ببعضها البعض حتى تكتمل الشبكة.
                     </p>
                     <div className="process-steps">
@@ -1383,6 +1400,16 @@ const Methodology = () => {
 
 
             {/* ---- فاصل صفحة A4 ---- */}
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
 
             {/* ===================== المرحلة الخامسة ===================== */}
             <div id="toc-step5" className="question-header">المرحلة الخامسة: التحقق من النتيجة (Test)</div>

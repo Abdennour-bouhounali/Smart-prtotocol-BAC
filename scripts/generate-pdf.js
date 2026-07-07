@@ -153,9 +153,7 @@ server.listen(port, async () => {
             const matches = val.match(/device-cmyk\(([^)]+)\)/);
             if (matches) {
               const channels = matches[1].split(',').map(v => parseFloat(v.trim()));
-              const m = channels[1] || 0;
-              const y = channels[2] || 0;
-              if (m > 0 || y > 0) {
+              if (channels.filter(v => v > 0).length > 2) {
                 violations.push({
                   element: el.tagName + (el.className ? '.' + el.className.split(' ').join('.') : ''),
                   property: prop,
@@ -172,10 +170,10 @@ server.listen(port, async () => {
     if (colorViolations.length > 0) {
       console.warn(`⚠️ Warning: Found ${colorViolations.length} color separation violations:`);
       colorViolations.slice(0, 10).forEach(v => {
-        console.warn(`  - Element <${v.element}> property "${v.property}" has M/Y channels: "${v.value}"`);
+        console.warn(`  - Element <${v.element}> property "${v.property}" has more than 2 active channels: "${v.value}"`);
       });
     } else {
-      console.log('✅ Color separation validation check: 100% compliant. Only Cyan and Black plates active.');
+      console.log('✅ Color separation validation check: 100% compliant. Maximum 2 plates active per color.');
     }
 
     // 8. Generate print-ready PDF file

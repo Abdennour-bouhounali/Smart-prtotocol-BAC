@@ -1,16 +1,14 @@
 /**
  * apply_cmyk_colors.cjs
- * CMYK-safe 2-channel (C+K plates only) color migration.
+ * CMYK-safe 2-channel (Any 2 plates) color migration.
  * IRON RULE: Only color values are changed. No content, layout, or logic touched.
  *
- * CONSTRAINT: Every color → max 2 non-zero CMYK channels. M=0, Y=0 always.
+ * CONSTRAINT: Every color → max 2 non-zero CMYK channels.
  * Strategy:
- *   Blues/Teals/Greens  → C + K
- *   Reds/Oranges/Warns  → K only (darkened neutral)
- *   Whites/Near-whites  → K only (very light)
- *   Grays/Blacks        → K only
+ *   Ensure that at least 2 out of the 4 CMYK channels are always zero, 
+ *   regardless of which two colors are mixed.
  *
- * RGB derivation: R=G=255*(1-C/100)*(1-K/100), B=255*(1-K/100)
+ * RGB derivation: Custom per color profile.
  */
 'use strict';
 const fs   = require('fs');
@@ -18,7 +16,7 @@ const path = require('path');
 
 // ---------------------------------------------------------------------------
 // MASTER COLOR MAP  →  { screen: '#RRGGBB', cmyk: [C,M,Y,K] }
-// ALL entries: M=0, Y=0, at most 2 non-zero channels
+// ALL entries: at most 2 non-zero channels
 // ---------------------------------------------------------------------------
 const MAP = {
   // ── Core brand blues ─────────────────────────────────────────────────────
@@ -44,36 +42,36 @@ const MAP = {
   '#3498db': { screen:'#007ACC', cmyk:[80,0,0,5]   },
   '#5d6d7e': { screen:'#737373', cmyk:[0,0,0,55]   },
 
-  // ── Warning/brown tones → K-only ──────────────────────────────────────────
-  '#784212': { screen:'#404040', cmyk:[0,0,0,75]   },
-  '#733f11': { screen:'#404040', cmyk:[0,0,0,75]   },
-  '#78350f': { screen:'#444400', cmyk:[0,0,0,68]   },
-  '#5d4037': { screen:'#444444', cmyk:[0,0,0,73]   },
+  // ── Warning/brown tones → Y+K or M+K (2 plates) ──────────────────────────
+  '#784212': { screen:'#784212', cmyk:[0,0,50,70]   },
+  '#733f11': { screen:'#733F11', cmyk:[0,0,50,70]   },
+  '#78350f': { screen:'#78350F', cmyk:[0,0,60,70]   },
+  '#5d4037': { screen:'#5D4037', cmyk:[0,20,0,70]   },
 
-  // ── Danger/red tones → C+K (dark navy-blue reading) ──────────────────────
-  '#922b21': { screen:'#1A1A3B', cmyk:[20,0,0,75]  },
-  '#8c2a23': { screen:'#1A1A3D', cmyk:[10,0,0,75]  },
-  '#c0392b': { screen:'#1A1A4D', cmyk:[15,0,0,70]  },
-  '#e74c3c': { screen:'#1A1A4D', cmyk:[15,0,0,65]  },
-  '#ef4444': { screen:'#333366', cmyk:[20,0,0,60]  },
-  '#dc2626': { screen:'#111144', cmyk:[15,0,0,70]  },
-  '#b91c1c': { screen:'#0D0D33', cmyk:[10,0,0,75]  },
-  '#e11d48': { screen:'#1A1A4D', cmyk:[15,0,0,65]  },
-  '#991b1b': { screen:'#0D0D33', cmyk:[10,0,0,78]  },
-  '#f24949': { screen:'#333366', cmyk:[18,0,0,60]  },
+  // ── Danger/red tones → True Reds (M+Y plates) ────────────────────────────
+  '#922b21': { screen:'#C0392B', cmyk:[0,90,90,0]   },
+  '#8c2a23': { screen:'#C0392B', cmyk:[0,90,90,0]   },
+  '#c0392b': { screen:'#C0392B', cmyk:[0,85,85,0]   },
+  '#e74c3c': { screen:'#E74C3C', cmyk:[0,80,75,0]   },
+  '#ef4444': { screen:'#EF4444', cmyk:[0,80,70,0]   },
+  '#dc2626': { screen:'#DC2626', cmyk:[0,85,80,0]   },
+  '#b91c1c': { screen:'#B91C1C', cmyk:[0,100,100,0] },
+  '#e11d48': { screen:'#E11D48', cmyk:[0,90,50,0]   },
+  '#991b1b': { screen:'#B91C1C', cmyk:[0,100,100,0] },
+  '#f24949': { screen:'#F24949', cmyk:[0,75,65,0]   },
 
-  // ── Orange / yellow / warning → K-only ───────────────────────────────────
-  '#f0b44c': { screen:'#665500', cmyk:[0,0,0,60]   },
-  '#ca8a04': { screen:'#555500', cmyk:[0,0,0,62]   },
-  '#f59e0b': { screen:'#665500', cmyk:[0,0,0,58]   },
-  '#d97706': { screen:'#555500', cmyk:[0,0,0,62]   },
-  '#d9770b': { screen:'#555500', cmyk:[0,0,0,62]   },
-  '#b45309': { screen:'#4D3300', cmyk:[0,0,0,68]   },
-  '#e67e22': { screen:'#553300', cmyk:[0,0,0,63]   },
-  '#f1c40f': { screen:'#555500', cmyk:[0,0,0,55]   },
-  '#f29d0c': { screen:'#665500', cmyk:[0,0,0,58]   },
-  '#f2b649': { screen:'#665500', cmyk:[0,0,0,55]   },
-  '#f97316': { screen:'#553300', cmyk:[0,0,0,63]   },
+  // ── Orange / yellow / warning → True Warm tones (M+Y or Y plates) ────────
+  '#f0b44c': { screen:'#F0B44C', cmyk:[0,30,80,0]   },
+  '#ca8a04': { screen:'#CA8A04', cmyk:[0,40,100,0]  },
+  '#f59e0b': { screen:'#F59E0B', cmyk:[0,45,100,0]  },
+  '#d97706': { screen:'#D97706', cmyk:[0,55,100,0]  },
+  '#d9770b': { screen:'#D97706', cmyk:[0,55,100,0]  },
+  '#b45309': { screen:'#B45309', cmyk:[0,65,100,0]  },
+  '#e67e22': { screen:'#E67E22', cmyk:[0,50,90,0]   },
+  '#f1c40f': { screen:'#F1C40F', cmyk:[0,15,100,0]  },
+  '#f29d0c': { screen:'#F29D0C', cmyk:[0,40,100,0]  },
+  '#f2b649': { screen:'#F2B649', cmyk:[0,30,80,0]   },
+  '#f97316': { screen:'#F97316', cmyk:[0,60,100,0]  },
 
   // ── Blues UI interactive ──────────────────────────────────────────────────
   '#3b82f6': { screen:'#0080FF', cmyk:[75,0,0,0]   },
@@ -100,30 +98,30 @@ const MAP = {
   '#e0e7ff': { screen:'#D5E5FF', cmyk:[12,0,0,2]   },
   '#f3e8ff': { screen:'#EEE5FF', cmyk:[8,0,0,2]    },
 
-  // ── Green backgrounds ─────────────────────────────────────────────────────
-  '#dcfce7': { screen:'#CCFFEE', cmyk:[12,0,0,0]   },
-  '#bbf7d0': { screen:'#AAEEDD', cmyk:[20,0,0,0]   },
-  '#f0fdf4': { screen:'#E5FFF5', cmyk:[6,0,0,0]    },
-  '#eafaf1': { screen:'#DDFFF0', cmyk:[8,0,0,0]    },
-  '#e6f2f2': { screen:'#E0F0F0', cmyk:[8,0,0,3]    },
+  // ── Green backgrounds → True light green (C+Y) ───────────────────────────
+  '#dcfce7': { screen:'#DCFCE7', cmyk:[10,0,15,0]   },
+  '#bbf7d0': { screen:'#BBF7D0', cmyk:[20,0,30,0]   },
+  '#f0fdf4': { screen:'#F0FDF4', cmyk:[5,0,8,0]     },
+  '#eafaf1': { screen:'#EAFAF1', cmyk:[6,0,10,0]    },
+  '#e6f2f2': { screen:'#E6F2F2', cmyk:[8,0,5,0]     },
 
-  // ── Red/pink backgrounds → very light C+K ────────────────────────────────
-  '#fef2f2': { screen:'#F5F5FF', cmyk:[4,0,0,2]    },
-  '#fdf2f2': { screen:'#F5F5FF', cmyk:[4,0,0,2]    },
-  '#fee2e2': { screen:'#EEEEFF', cmyk:[6,0,0,3]    },
-  '#fecaca': { screen:'#E8E8FF', cmyk:[8,0,0,3]    },
-  '#fff1f2': { screen:'#F5F5FF', cmyk:[3,0,0,2]    },
-  '#fff5f5': { screen:'#F8F8FF', cmyk:[3,0,0,1]    },
-  '#feb2b2': { screen:'#CCDDE6', cmyk:[12,0,0,10]  },
+  // ── Red/pink backgrounds → True light red (M+Y) ──────────────────────────
+  '#fef2f2': { screen:'#FEF2F2', cmyk:[0,4,3,0]     },
+  '#fdf2f2': { screen:'#FEF2F2', cmyk:[0,4,3,0]     },
+  '#fee2e2': { screen:'#FEE2E2', cmyk:[0,10,8,0]    },
+  '#fecaca': { screen:'#FECACA', cmyk:[0,18,15,0]   },
+  '#fff1f2': { screen:'#FFF1F2', cmyk:[0,5,3,0]     },
+  '#fff5f5': { screen:'#FFF5F5', cmyk:[0,3,2,0]     },
+  '#feb2b2': { screen:'#FEB2B2', cmyk:[0,25,20,0]   },
 
-  // ── Yellow/warm backgrounds → K-only ─────────────────────────────────────
-  '#fef9e7': { screen:'#FFFCF0', cmyk:[0,0,0,3]    },
-  '#fef3c7': { screen:'#FFFAE0', cmyk:[0,0,0,2]    },
-  '#fefce8': { screen:'#FFFFEE', cmyk:[0,0,0,2]    },
-  '#fffbeb': { screen:'#FFFDE5', cmyk:[0,0,0,2]    },
-  '#fff7ed': { screen:'#FFFAF0', cmyk:[0,0,0,2]    },
-  '#fff9db': { screen:'#FFFCE0', cmyk:[0,0,0,2]    },
-  '#ffffe6': { screen:'#FFFFF0', cmyk:[0,0,0,2]    },
+  // ── Yellow/warm backgrounds → True Yellow (Y only) ───────────────────────
+  '#fef9e7': { screen:'#FEF9E7', cmyk:[0,0,10,0]    },
+  '#fef3c7': { screen:'#FEF3C7', cmyk:[0,0,15,0]    },
+  '#fefce8': { screen:'#FEFCE8', cmyk:[0,0,8,0]     },
+  '#fffbeb': { screen:'#FFFBEB', cmyk:[0,0,10,0]    },
+  '#fff7ed': { screen:'#FFF7ED', cmyk:[0,0,8,0]     },
+  '#fff9db': { screen:'#FFF9DB', cmyk:[0,0,12,0]    },
+  '#ffffe6': { screen:'#FFFFE6', cmyk:[0,0,10,0]    },
 
   // ── Layout neutral backgrounds ────────────────────────────────────────────
   '#e2e8f0': { screen:'#E0E8F5', cmyk:[8,0,0,5]    },
@@ -231,21 +229,21 @@ css = css.replace(/:root\s*\{[^}]*\}/s, `:root {
 // Replace @media print :root block
 css = css.replace(/@media print\s*\{\s*:root\s*\{[^}]*\}\s*\}/s, `@media print {
   :root {
-    /* ── CMYK device-cmyk() — C+K plates only, M=0 Y=0 always ── */
+    /* ── CMYK device-cmyk() — max 2 non-zero channels ── */
     --ink-primary:        device-cmyk(100% 0% 0% 70%);
     --ink-secondary:      device-cmyk(100% 0% 0% 60%);
     --ink-accent:         device-cmyk(80%  0% 0% 20%);
-    --ink-danger:         device-cmyk(15%  0% 0% 70%);
-    --ink-warning:        device-cmyk(0%   0% 0% 75%);
-    --ink-success:        device-cmyk(75%  0% 0% 10%);
+    --ink-danger:         device-cmyk(0%   85% 85% 0%);
+    --ink-warning:        device-cmyk(0%   50% 100% 0%);
+    --ink-success:        device-cmyk(75%  0% 75% 0%);
     --ink-text:           device-cmyk(0%   0% 0% 93%);
     --ink-muted:          device-cmyk(0%   0% 0% 55%);
     --ink-bg-page:        device-cmyk(0%   0% 0% 0%);
     --ink-bg-muted:       device-cmyk(2%   0% 0% 2%);
-    --ink-bg-soft-red:    device-cmyk(4%   0% 0% 2%);
+    --ink-bg-soft-red:    device-cmyk(0%   5% 5% 0%);
     --ink-bg-soft-blue:   device-cmyk(28%  0% 0% 0%);
-    --ink-bg-soft-green:  device-cmyk(8%   0% 0% 0%);
-    --ink-bg-soft-yellow: device-cmyk(0%   0% 0% 3%);
+    --ink-bg-soft-green:  device-cmyk(10%  0% 15% 0%);
+    --ink-bg-soft-yellow: device-cmyk(0%   0% 10% 0%);
     --ink-border-light:   device-cmyk(0%   0% 0% 13%);
     --ink-border-slate:   device-cmyk(8%   0% 0% 10%);
   }
@@ -266,11 +264,10 @@ for (const f of files) {
 console.log(`\n✨ Done. ${changed}/${files.length} files updated.`);
 
 // ---------------------------------------------------------------------------
-// STEP 3 — Validate: no M/Y violations
+// STEP 3 — Validate: max 2 non-zero channels
 // ---------------------------------------------------------------------------
 let ok = true;
 for (const [hex,{cmyk:[c,m,y,k]}] of Object.entries(MAP)) {
-  if (m!==0||y!==0) { console.error(`❌ VIOLATION M/Y: ${hex}`); ok=false; }
   if ([c,m,y,k].filter(v=>v>0).length>2) { console.error(`❌ VIOLATION >2ch: ${hex}`); ok=false; }
 }
-console.log(ok ? '✅ All CMYK entries comply (C+K only, max 2 channels)' : '❌ Fix violations before print!');
+console.log(ok ? '✅ All CMYK entries comply (max 2 channels)' : '❌ Fix violations before print!');
