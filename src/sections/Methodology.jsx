@@ -1075,13 +1075,13 @@ const Methodology = () => {
                 <div className="starting-point-card">
                     <div className="starting-point-icon"><FlagIcon /></div>
                     <div className="strategy-box-title" style={{ margin: 0 }}>نقطة الانطلاق الأولى</div>
-                    <p style={{ fontSize: '11pt', color: '#444444', marginTop: '5px' }}>
+                    <p style={{ fontSize: '11pt', color: '#000000', marginTop: '5px' }}>
                         أهم معطى هو الأقرب "شكلاً أو مفهوماً" للهدف. اكتشافه يمثل 50% من الطريق نحو الحل.
                     </p>
                 </div>
                 <div className="roadmap-card">
                     <div className="strategy-box-title" style={{ color: '#004D99' }}>منهجية بناء "خطة الحل"</div>
-                    <p style={{ fontSize: '0.95rem', color: '#00000000' }}>
+                    <p style={{ fontSize: '11pt', color: '#000000' }}>
                         لا تبدأ بالحل عشوائياً؛ ابدأ بالربط التتابعي. قارن شكلياً، صِل المعطيات بالهدف، ثم صلها ببعضها البعض حتى تكتمل الشبكة.
                     </p>
                     <div className="process-steps">
@@ -1139,7 +1139,7 @@ const Methodology = () => {
                         <>استنتج إشارة <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(U_{n+1} - U_n\\)'}</span> وأثبت أنها سالبة بشرط أن <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(U_n > 2\\)'}</span>.</>,
                         <>اكتب الهدف الرياضي: نريد إثبات <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(U_{n+1} - U_n < 0\\)'}</span>.</>,
                         <>احسب <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(U_{n+1} - U_n = \\dfrac{U_n}{2} + 1 - U_n = -\\dfrac{U_n}{2} + 1\\)'}</span>.</>,
-                        <>اقرأ السؤال وترجمه: "متناقصة" <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\(\\Leftrightarrow U_{n+1} - U_n < 0\\)'}</span>.</>
+                        <>اقرأ السؤال و أترجمه : "متناقصة" تكافئ <span className="math" style={{ unicodeBidi: 'embed', direction: 'ltr' }}>{'\\( U_{n+1} - U_n < 0 \\)'}</span>.</>
                     ]}
                     correctOrder={[4, 2, 0, 3, 1]}
                     hint={
@@ -1188,9 +1188,9 @@ const Methodology = () => {
                 وما ستراه هنا هو فقط <strong>نماذج من أدوات كثيرة</strong> ستتعلم اختيارها تدريجياً مع الممارسة.
 
 
-
-                والهدف دائما ليس حفظ هذه التقنيات، و إنما
-                <strong>تطوير القدرة على اكتشاف الحيلة المناسبة لكل تمرين.</strong>
+                <span style={{ fontSize: '11pt', color: '#000000' }}>والهدف دائما ليس حفظ هذه التقنيات، و إنما
+                </span>
+                <strong style={{ marginRight: '5px' }}>تطوير القدرة على اكتشاف الحيلة المناسبة لكل تمرين.</strong>
             </div>
             {/* <div style={{ display: 'flex', flexDirection: 'column', gap: '18px', margin: '10px 0' }}> */}
             {/* 1. تغيير المتغير */}
